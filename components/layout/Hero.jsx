@@ -5,7 +5,9 @@ import { useTranslations } from 'next-intl'
 // Components
 import Image from "next/image"
 import Cta from "@/components/Cta"
-import Bubble from "@/components/Bubble"
+
+// Ornaments
+import Bubble from "@/components/ornaments/Bubble"
 
 
 /**
@@ -13,24 +15,20 @@ import Bubble from "@/components/Bubble"
  */
 export default function Hero() {
 
-  const t = useTranslations('HomePage.hero')
+  const t = useTranslations('HomePage.Hero')
   const tMeta = useTranslations('Meta')
 
   return (
-    <div
+    <section
       id="hero"
       className={`
         hero
-        container
-        mx-auto
-        flex
-        flex-col md:flex-row
-        items-center
-        justify-center
         relative
+        w-full
+        overflow-hidden
       `}
     >
-      {/* Decorators */}
+      {/* Ornaments */}
       <Bubble
         className={`
           top-0
@@ -44,7 +42,7 @@ export default function Hero() {
 
       <Bubble
         className={`
-          bottom-0
+          bottom-20
           right-0
           -mr-16
           scale-75 md:scale-125
@@ -54,72 +52,83 @@ export default function Hero() {
       {/* Content */}
       <div
         className={`
-          text
-          text-center md:text-left
+          container
+          mx-auto
+          flex
+          flex-col md:flex-row
+          items-center
+          justify-center
         `}
       >
-        <h1
+        <div
           className={`
-            font-bold
-            text-2xl sm:text-3xl md:text-4xl lg:text-5xl
-            ${fontTitle.className}
+            text
+            text-center md:text-left
           `}
         >
-          <span>
-            {t('title.beforeText')}
-          </span>
-          <br />
-          <span
+          <h1
             className={`
-              text-blue
-              text-3xl sm:text-4xl md:text-5xl lg:text-6xl
+              font-bold
+              text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+              ${fontTitle.className}
             `}
           >
-            {tMeta('company')}&nbsp;
-          </span>
-          <span>
-            - {t('title.afterText')}
-          </span>
-        </h1>
+            <span>
+              {t('title.beforeText')}
+            </span>
+            <br />
+            <span
+              className={`
+                text-blue
+                text-3xl sm:text-4xl md:text-5xl lg:text-6xl
+              `}
+            >
+              {tMeta('company')}&nbsp;
+            </span>
+            <span>
+              - {t('title.afterText')}
+            </span>
+          </h1>
 
-        <Cta
-          href="/cotizar"
-          text={t('cta')}
-        />
+          <Cta
+            href="/cotizar"
+            text={t('cta')}
+          />
 
-        <p
-          className={`
-            mt-6
-          `}
-        >
-          <span>
-            {t('text.beforeText')}&nbsp;
-          </span>
-          <span
+          <p
             className={`
-            text-blue
-            font-bold
-          `}
+              mt-6
+            `}
           >
-            {tMeta('company')}&nbsp;
-          </span>
-          <span>
-            {t('text.afterText')}
-          </span>
-        </p>
+            <span>
+              {t('text.beforeText')}&nbsp;
+            </span>
+            <span
+              className={`
+              text-blue
+              font-bold
+            `}
+            >
+              {tMeta('company')}&nbsp;
+            </span>
+            <span>
+              {t('text.afterText')}
+            </span>
+          </p>
 
+        </div>
+
+        <Image
+          src="/images/hero.svg"
+          width={800}
+          height={800}
+          alt={t('imgAlt')}
+          className={`
+            w-full md:w-1/2
+          `}
+        />
       </div>
 
-      <Image
-        src="/images/hero.svg"
-        width={800}
-        height={800}
-        className={`
-          w-full md:w-1/2
-        `}
-        alt={t('imgAlt')}
-      />
-
-    </div >
+    </section >
   )
 }

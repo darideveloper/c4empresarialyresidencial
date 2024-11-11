@@ -18,6 +18,7 @@ export default function Bubble({ className }) {
         h-80
         opacity-10
         blur-lg
+        z-20
       `}
     >
 

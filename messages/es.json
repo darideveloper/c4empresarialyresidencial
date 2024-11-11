@@ -3,7 +3,7 @@
     "company": "C4 Empresarial y Recidencial"
   },
   "HomePage": {
-    "hero": {
+    "Hero": {
       "title": {
         "beforeText": "Bienvenido a",
         "afterText": "Seguridad en Mérida, Yucatán"
@@ -13,6 +13,23 @@
       "text": {
         "beforeText": "En",
         "afterText": "nos especializamos en ofrecer soluciones de seguridad a medida para hogares y negocios en Mérida, Yucatán. Con una amplia gama de cámaras de seguridad y un servicio de monitoreo profesional, estamos aquí para proteger lo que más valoras."
+      }
+    },
+    "WhyUs": {
+      "title": "¿Por qué elegirnos?",
+      "cards": {
+        "1": {
+          "title": "Tecnología Avanzada", 
+          "description": "Nuestras cámaras están equipadas con la última tecnología en videovigilancia, garantizando imágenes nítidas y claras, incluso en condiciones de poca luz."
+        },
+        "2": {
+          "title": "Monitoreo 24/7",
+          "description": "Ofrecemos un servicio de monitoreo continuo, asegurando que tu propiedad esté protegida en todo momento. Nuestro equipo está listo para responder a cualquier eventualidad." 
+        },
+        "3": {
+          "title": "Instalación Profesional",
+          "description": "Contamos con técnicos altamente capacitados que realizan la instalación de manera rápida y eficiente, asegurando que cada cámara esté posicionada para maximizar su efectividad." 
+        }
       }
     }
   }
