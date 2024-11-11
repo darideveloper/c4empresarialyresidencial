@@ -1,6 +1,19 @@
 {
-    "HomePage": {
-      "title": "Hola mundo!",
-      "about": "Ir a la página de acerca de"
+  "Meta": {
+    "company": "C4 Empresarial y Recidencial"
+  },
+  "HomePage": {
+    "hero": {
+      "title": {
+        "beforeText": "Bienvenido a",
+        "afterText": "Seguridad en Mérida, Yucatán"
+      },
+      "cta": "Solicitar Cotización",
+      "imgAlt": "Ilustración de persona gestionando la seguridad de su hogar",
+      "text": {
+        "beforeText": "En",
+        "afterText": "nos especializamos en ofrecer soluciones de seguridad a medida para hogares y negocios en Mérida, Yucatán. Con una amplia gama de cámaras de seguridad y un servicio de monitoreo profesional, estamos aquí para proteger lo que más valoras."
+      }
     }
   }
+}

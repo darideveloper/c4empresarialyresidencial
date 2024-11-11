@@ -1,6 +1,9 @@
 {
-    "HomePage": {
-      "title": "Hello world!",
-      "about": "Go to the about page"
+  "HomePage": {
+    "hero": {
+        "beforeText": "Bienvenido a",
+        "company": "C4 Empresarial y Recidencial",
+        "afterText": "Seguridad en Mérida, Yucatán"
     }
   }
+}
