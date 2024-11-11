@@ -1,8 +1,12 @@
-/** @type {import('postcss-load-config').Config} */
-const config = {
+import createNextIntlPlugin from 'next-intl/plugin'
+
+const withNextIntl = createNextIntlPlugin()
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   plugins: {
     tailwindcss: {},
   },
-};
+}
 
-export default config;
+export default withNextIntl(nextConfig)
