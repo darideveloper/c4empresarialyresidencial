@@ -1,10 +1,12 @@
-// Components
-import Image from "next/image"
-import Cta from "@/components/Cta"
-
 // Libs
 import { fontTitle } from "@/libs/fonts"
 import { useTranslations } from 'next-intl'
+
+// Components
+import Image from "next/image"
+import Cta from "@/components/Cta"
+import Bubble from "@/components/Bubble"
+
 
 /**
  * Hero section for homepage
@@ -25,8 +27,31 @@ export default function Hero() {
         flex-col md:flex-row
         items-center
         justify-center
+        relative
       `}
     >
+      {/* Decorators */}
+      <Bubble
+        className={`
+          top-0
+          left-0
+          -mt-32
+          -ml-32
+          md:scale-150
+        `}
+      />
+
+
+      <Bubble
+        className={`
+          bottom-0
+          right-0
+          -mr-16
+          scale-75 md:scale-125
+        `}
+      />
+
+      {/* Content */}
       <div
         className={`
           text
