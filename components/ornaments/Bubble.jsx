@@ -3,7 +3,7 @@
  * Bubble component (background decoration)
  * 
  * @param {object} props - Props object
- * @param {str} props.className - Additional classes
+ * @param {string} props.className - Additional classes
  */
 export default function Bubble({ className }) {
   return (

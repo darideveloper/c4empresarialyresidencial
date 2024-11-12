@@ -1,12 +1,12 @@
 import { useTranslations } from 'next-intl'
 
 /**
- * InfoCard component
+ * Card with svg icon, title and description
  * 
  * @param {object} props - Props object
- * @param {str} props.svgPath - Path of the SVG icon
- * @param {str} props.title - Title of the card
- * @param {str} props.description - Description of the card
+ * @param {string} props.svgPath - Path of the SVG icon
+ * @param {string} props.title - Title of the card
+ * @param {string} props.description - Description of the card
  * @returns 
  */
 export default function InfoCard({ svgPath, title, description }) {

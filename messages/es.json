@@ -19,16 +19,31 @@
       "title": "¿Por qué elegirnos?",
       "cards": {
         "1": {
-          "title": "Tecnología Avanzada", 
+          "title": "Tecnología Avanzada",
           "description": "Nuestras cámaras están equipadas con la última tecnología en videovigilancia, garantizando imágenes nítidas y claras, incluso en condiciones de poca luz."
         },
         "2": {
           "title": "Monitoreo 24/7",
-          "description": "Ofrecemos un servicio de monitoreo continuo, asegurando que tu propiedad esté protegida en todo momento. Nuestro equipo está listo para responder a cualquier eventualidad." 
+          "description": "Ofrecemos un servicio de monitoreo continuo, asegurando que tu propiedad esté protegida en todo momento. Nuestro equipo está listo para responder a cualquier eventualidad."
         },
         "3": {
           "title": "Instalación Profesional",
-          "description": "Contamos con técnicos altamente capacitados que realizan la instalación de manera rápida y eficiente, asegurando que cada cámara esté posicionada para maximizar su efectividad." 
+          "description": "Contamos con técnicos altamente capacitados que realizan la instalación de manera rápida y eficiente, asegurando que cada cámara esté posicionada para maximizar su efectividad."
+        }
+      }
+    },
+    "HomeCompany": {
+      "title": "Elije tu servicio",
+      "services": {
+        "home": {
+          "text": "Residencial",
+          "textHover": "Protege tu hogar y a tu familia",
+          "imgAlt": "Ilustración una casa"
+        },
+        "company": {
+          "text": "Empresarial",
+          "textHover": "Incrementa la seguridad de tu negocio",
+          "imgAlt": "Ilustración de un edificio de oficinas"
         }
       }
     }

@@ -4,6 +4,10 @@ import Title from '@/components/Title'
 import InfoCard from "@/components/InfoCard"
 import DividerTriangle from "@/components/ornaments/DividerTriangle"
 
+
+/**
+ * WhyUs section for homepage
+ */
 export default function WhyUs() {
   const t = useTranslations('HomePage.WhyUs')
 
@@ -20,9 +24,9 @@ export default function WhyUs() {
         why-us
         relative
         bg-greylight
-        pt-28 md:pt-40 lg:pt-48
+        pt-28 md:pt-40 lg:pt-48 xl:pt-60
         -mt-10 md:mt-10 xl:-mt-20
-        pb-16
+        pb-0
         text-white
       `}
     >
@@ -70,6 +74,15 @@ export default function WhyUs() {
 
         </section>
       </div>
+
+      {/* Divider */}
+      <DividerTriangle 
+        className={`
+          -scale-y-100
+          mt-20
+          fill-white
+        `}
+      />
 
     </section>
 
