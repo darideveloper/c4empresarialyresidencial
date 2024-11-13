@@ -46,6 +46,23 @@
           "imgAlt": "Ilustración de un edificio de oficinas"
         }
       }
+    },
+    "Products": {
+      "title": "Protección Integral para Tu Tranquilidad",
+      "products": {
+        "camera": {
+          "title": "Cámaras de Alta Definición",
+          "description": "Vigilancia discreta y efectiva para interior y exterior, adaptable a cualquier entorno."
+        },
+        "security": {
+          "title": "Sistemas de Alerta Inteligente",
+          "description": "Alarmas avanzadas que detectan y notifican sobre actividades sospechosas en tiempo real."
+        },
+        "control": {
+          "title": "Control Total a Distancia",
+          "description": "Acceso remoto a tu sistema de seguridad desde cualquier dispositivo, en cualquier momento."
+        }
+      }
     }
   }
 }

@@ -26,6 +26,7 @@ export default function Hero() {
         relative
         w-full
         overflow-hidden
+        py-8
       `}
     >
       {/* Ornaments */}

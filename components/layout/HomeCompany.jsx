@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl'
 import Title from '@/components/Title'
 import CtaXL from '@/components/CtaXL'
 
+
 /**
  * Home Company section for homepage
  */

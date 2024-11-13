@@ -1,6 +1,6 @@
-import { Link } from '@/i18n/routing'
 import { fontTitle } from '@/libs/fonts'
 
+import { Link } from '@/i18n/routing'
 import ArrowSvg from '@/components/ornaments/ArrowSvg'
 
 /**

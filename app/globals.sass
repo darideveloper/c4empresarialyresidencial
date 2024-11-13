@@ -2,11 +2,10 @@
 @tailwind components
 @tailwind utilities
 
-:root
-  --white: theme('colors.white')
-  --grey: theme('colors.grey')
-  --grey-light: theme('colors.greylight')
-  --blue: theme('colors.blue')
+$white: theme('colors.white')
+$grey: theme('colors.grey')
+$grey-light: theme('colors.greylight')
+$blue: theme('colors.blue')
 
 body
   color: var(--grey)
@@ -18,3 +17,28 @@ body
 
 .container
   padding: 0 1rem
+
+// swipper custom styles
+.swiper-button-next, .swiper-button-prev
+  color: $blue !important
+  background-color: $blue !important
+  width: 30px !important
+  height: 30px !important
+  color: $white !important
+  border-radius: 50%
+
+.swiper-button-next::after, .swiper-button-prev::after
+  font-size: 15px !important
+
+.swiper-pagination-bullet-active
+  background-color: $blue !important
+
+.small
+  .swiper-button-next, .swiper-button-prev
+    background-color: $white !important
+    border-radius: 50%
+    width: 30px
+    height: 30px
+
+    &:after
+      font-size: 20px

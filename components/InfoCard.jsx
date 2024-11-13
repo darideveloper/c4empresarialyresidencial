@@ -1,5 +1,3 @@
-import { useTranslations } from 'next-intl'
-
 /**
  * Card with svg icon, title and description
  * 
@@ -7,24 +5,21 @@ import { useTranslations } from 'next-intl'
  * @param {string} props.svgPath - Path of the SVG icon
  * @param {string} props.title - Title of the card
  * @param {string} props.description - Description of the card
+ * @param {string} props.className - Additional classes
+ * @param {string} props.svgClassName - Additional classes for the SVG icon
  * @returns 
  */
-export default function InfoCard({ svgPath, title, description }) {
-
-  const t = useTranslations('HomePage.WhyUs')
+export default function InfoCard({ svgPath, title, description, className, svgClassName }) {
 
   return (
     <article
       className={`
-        card
         border-2
-        border-white hover:border-blue
+        card
         rounded-lg
         p-8
-        group
-        hover:bg-blue
-        duration-700
-        hover:scale-105
+        duration-300
+        ${className}
       `}
     >
 
@@ -32,12 +27,8 @@ export default function InfoCard({ svgPath, title, description }) {
         width="24"
         height="24"
         viewBox="0 0 24 24"
-        className={`
-          fill-current
-          w-20 h-20
-          mx-auto
-          group-hover:scale-50
-          duration-500
+        className={`          
+          ${svgClassName}
         `}
       >
         <path d={svgPath} />
@@ -49,8 +40,8 @@ export default function InfoCard({ svgPath, title, description }) {
           text-xl
           font-bold
           my-4
-          group-hover:text-3xl
-          duration-300
+          group-hover:text-2xl
+          duration-700
         `}
       >
         {title}

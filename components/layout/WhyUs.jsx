@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl'
 
 import Title from '@/components/Title'
-import InfoCard from "@/components/InfoCard"
+import InfoCard from '@/components/InfoCard'
 import DividerTriangle from "@/components/ornaments/DividerTriangle"
 
 
@@ -52,13 +52,13 @@ export default function WhyUs() {
           {t('title')}
         </Title>
 
-        <section 
+        <section
           className={`
             cards
             grid
             grid-cols-1 md:grid-cols-3
             text-center
-            gap-8
+            gap-12
           `}
         >
           {
@@ -68,15 +68,27 @@ export default function WhyUs() {
                 svgPath={svgPath}
                 title={t(`cards.${index + 1}.title`)}
                 description={t(`cards.${index + 1}.description`)}
+                className={`
+                  border-white hover:border-blue
+                  bg-transparent hover:bg-blue
+                  text-white
+                  group
+                  hover:scale-105
+                `}
+                svgClassName={`
+                  fill-current
+                  mx-auto
+                  w-20 h-20
+                `}
               />
+
             ))
           }
-
         </section>
       </div>
 
       {/* Divider */}
-      <DividerTriangle 
+      <DividerTriangle
         className={`
           -scale-y-100
           mt-20
