@@ -19,7 +19,7 @@ export default function CtaXL({ text, textHover, imageSrc, imageAlt, href, class
       href={href}
       className={`
         rounded-xl
-        bg-greylight hover:bg-blue
+        bg-blue hover:bg-greylight
         text-white
         ${className}
         relative
