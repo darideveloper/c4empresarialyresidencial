@@ -1,9 +1,68 @@
 {
+  "Meta": {
+    "company": "C4 Empresarial y Recidencial"
+  },
   "HomePage": {
-    "hero": {
-        "beforeText": "Bienvenido a",
-        "company": "C4 Empresarial y Recidencial",
-        "afterText": "Seguridad en Mérida, Yucatán"
+    "Hero": {
+      "title": {
+        "beforeText": "Welcome to",
+        "afterText": "Security in Mérida, Yucatán"
+      },
+      "cta": "Request a Quote",
+      "imgAlt": "Illustration of a person managing home security",
+      "text": {
+        "beforeText": "At",
+        "afterText": "we specialize in providing tailored security solutions for homes and businesses in Mérida, Yucatán. With a wide range of security cameras and professional monitoring service, we are here to protect what you value most."
+      }
+    },
+    "WhyUs": {
+      "title": "Why Choose Us?",
+      "cards": {
+        "1": {
+          "title": "Advanced Technology",
+          "description": "Our cameras are equipped with the latest video surveillance technology, ensuring sharp and clear images, even in low light conditions."
+        },
+        "2": {
+          "title": "24/7 Monitoring",
+          "description": "We offer continuous monitoring service, ensuring that your property is protected at all times. Our team is ready to respond to any situation."
+        },
+        "3": {
+          "title": "Professional Installation",
+          "description": "We have highly trained technicians who perform quick and efficient installations, ensuring each camera is positioned to maximize its effectiveness."
+        }
+      }
+    },
+    "HomeCompany": {
+      "title": "Choose Your Service",
+      "services": {
+        "home": {
+          "text": "Residential",
+          "textHover": "Protect your home and family",
+          "imgAlt": "Illustration of a house"
+        },
+        "company": {
+          "text": "Business",
+          "textHover": "Increase the security of your business",
+          "imgAlt": "Illustration of an office building"
+        }
+      }
+    },
+    "Products": {
+      "title": "Comprehensive Protection for Your Peace of Mind",
+      "products": {
+        "camera": {
+          "title": "High-Definition Cameras",
+          "description": "Discreet and effective surveillance for indoor and outdoor settings, adaptable to any environment."
+        },
+        "security": {
+          "title": "Smart Alert Systems",
+          "description": "Advanced alarms that detect and notify you of suspicious activities in real-time."
+        },
+        "control": {
+          "title": "Total Remote Control",
+          "description": "Remote access to your security system from any device, anytime."
+        }
+      }
     }
   }
 }
