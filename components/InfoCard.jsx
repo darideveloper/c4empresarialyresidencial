@@ -19,54 +19,63 @@ export default function InfoCard({
   aosDelay = 0
 }) {
 
-  console.log({aosDelay})
+  console.log({ aosDelay })
 
   return (
     <article
       className={`
-        border-2
         card
-        rounded-lg
-        p-8
-        duration-300
-        ${className}
+        duration-1000
+        group
       `}
       data-aos="zoom-in"
       data-aos-delay={aosDelay}
     >
 
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        className={`          
-          ${svgClassName}
+      <div 
+        className={`
+          border-2
+          rounded-lg
+          p-8
+          content
+          duration-300
+          w-full
+          h-full
+          ${className}
         `}
       >
-        <path d={svgPath} />
-      </svg>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          className={`          
+          ${svgClassName}
+        `}
+        >
+          <path d={svgPath} />
+        </svg>
 
 
-      <h3
-        className={`
+        <h3
+          className={`
           text-xl
           font-bold
           my-4
-          group-hover:text-2xl
           duration-700
         `}
-        data-aos="fade-up"
-        data-aos-delay={aosDelay + 300}
-      >
-        {title}
-      </h3>
+          data-aos="fade-up"
+          data-aos-delay={aosDelay + 300}
+        >
+          {title}
+        </h3>
 
-      <p
-        data-aos="fade-up"
-        data-aos-delay={aosDelay + 500}
-      >
-        {description}
-      </p>
+        <p
+          data-aos="fade-up"
+          data-aos-delay={aosDelay + 500}
+        >
+          {description}
+        </p>
+      </div>
     </article>
   )
 }
