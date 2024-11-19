@@ -80,6 +80,7 @@ export default function WhyUs() {
                   mx-auto
                   w-20 h-20
                 `}
+                aosDelay={index * 300}
               />
 
             ))

@@ -13,6 +13,8 @@ import Footer from '@/components/layout/Footer'
 
 // Css
 import '@/app/globals.sass'
+import "aos/dist/aos.css"
+
 
 export default async function LocaleLayout({ children, params }) {
 

@@ -7,9 +7,19 @@
  * @param {string} props.description - Description of the card
  * @param {string} props.className - Additional classes
  * @param {string} props.svgClassName - Additional classes for the SVG icon
+ * @param {number} props.aosDelay - Delay for AOS animation. Default is 0
  * @returns 
  */
-export default function InfoCard({ svgPath, title, description, className, svgClassName }) {
+export default function InfoCard({
+  svgPath,
+  title,
+  description,
+  className,
+  svgClassName,
+  aosDelay = 0
+}) {
+
+  console.log({aosDelay})
 
   return (
     <article
@@ -21,6 +31,8 @@ export default function InfoCard({ svgPath, title, description, className, svgCl
         duration-300
         ${className}
       `}
+      data-aos="zoom-in"
+      data-aos-delay={aosDelay}
     >
 
       <svg
@@ -43,11 +55,16 @@ export default function InfoCard({ svgPath, title, description, className, svgCl
           group-hover:text-2xl
           duration-700
         `}
+        data-aos="fade-up"
+        data-aos-delay={aosDelay + 300}
       >
         {title}
       </h3>
 
-      <p>
+      <p
+        data-aos="fade-up"
+        data-aos-delay={aosDelay + 500}
+      >
         {description}
       </p>
     </article>
