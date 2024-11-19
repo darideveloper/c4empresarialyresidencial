@@ -54,6 +54,7 @@ export default function HomeCompany() {
           servicesData.map((serviceData, index) => (
             <CtaXL
               key={index}
+              index={index}
               text={t(`services.${serviceData.name}.text`)}
               textHover={t(`services.${serviceData.name}.textHover`)}
               imageSrc={`/images/${serviceData.name}.svg`}

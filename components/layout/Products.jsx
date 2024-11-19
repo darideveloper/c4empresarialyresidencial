@@ -67,7 +67,7 @@ export default function Products() {
                   flex-col
                   items-start
                   justify-center
-                  w-full lg:w-1/3 
+                  w-full
                   group-hover:translate-y-2
                 `}
                 svgClassName={`

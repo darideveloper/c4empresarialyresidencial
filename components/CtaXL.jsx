@@ -6,6 +6,7 @@ import ArrowSvg from '@/components/ornaments/ArrowSvg'
  * Big cta who changes text when hovered
  * 
  * @param {object} props - Component props
+ * @param {number} props.index - Index of the cta
  * @param {string} props.text - Text to display
  * @param {string} props.textHover - Text to display when hovered
  * @param {string} props.imageSrc - Image source
@@ -13,7 +14,7 @@ import ArrowSvg from '@/components/ornaments/ArrowSvg'
  * @param {string} props.href - Link to redirect to when clicked
  * @returns 
  */
-export default function CtaXL({ text, textHover, imageSrc, imageAlt, href, className }) {
+export default function CtaXL({ index, text, textHover, imageSrc, imageAlt, href, className }) {
   return (
     <Link
       href={href}
@@ -29,6 +30,8 @@ export default function CtaXL({ text, textHover, imageSrc, imageAlt, href, class
         overflow-hidden
         duration-1000
       `}
+      data-aos="fade-up"
+      data-aos-delay={300 * index}
     >
       <div
         className={`

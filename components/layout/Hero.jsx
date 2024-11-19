@@ -74,7 +74,11 @@ export default function Hero() {
               ${fontTitle.className}
             `}
           >
-            <span>
+            <span
+              data-aos="fade-right"
+              data-aos-delay="1200"
+              className={`inline-block`}
+            >
               {t('title.beforeText')}
             </span>
             <br />
@@ -82,11 +86,18 @@ export default function Hero() {
               className={`
                 text-blue
                 text-3xl sm:text-4xl md:text-5xl lg:text-6xl
+                inline-block
               `}
+              data-aos="fade-down"
+              data-aos-delay="200"
             >
               {tMeta('company')}&nbsp;
             </span>
-            <span>
+            <span
+              data-aos="fade-right"
+              data-aos-delay="1200"
+              className={`inline-block`}
+            >
               - {t('title.afterText')}
             </span>
           </h1>
@@ -94,12 +105,16 @@ export default function Hero() {
           <Cta
             href="/cotizar"
             text={t('cta')}
+            dataAos="fade-up"
+            dataAosDelay="1800"
           />
 
           <p
             className={`
               mt-6
             `}
+            data-aos="fade-up"
+            data-aos-delay="2200"
           >
             <span>
               {t('text.beforeText')}&nbsp;
