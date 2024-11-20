@@ -9,6 +9,9 @@ import Cta from "@/components/Cta"
 // Ornaments
 import Bubble from "@/components/ornaments/Bubble"
 
+// Custom css
+import "@/css/hero.sass"
+
 
 /**
  * Hero section for homepage
@@ -65,6 +68,7 @@ export default function Hero() {
           className={`
             text
             text-center md:text-left
+            w-full md:w-1/2
           `}
         >
           <h1
@@ -134,17 +138,152 @@ export default function Hero() {
 
         </div>
 
-        <Image
-          src="/images/hero.svg"
-          width={800}
-          height={800}
-          alt={t('imgAlt')}
+        <div
           className={`
-            w-full md:w-1/2
+            hero-image
+            w-[300px] sm:w-[500px] md:w-[350px] lg:w-[500px] xl:w-[600px]
+            h-[300px] sm:h-[500px] md:h-[350px] lg:h-[500px] xl:h-[600px]
+            my-16
+            relative
+            mx-auto
           `}
-        />
-      </div>
+        >
+          <Image
+            src="/images/hero/background.webp"
+            width={800}
+            height={800}
+            alt={t('imgAlt')}
+            className={`
+              background
+              w-full
+              h-auto
+              absolute
+              top-0
+              left-0
+              z-0
+            `}
+          />
+          <Image
+            src="/images/hero/lines.webp"
+            width={800}
+            height={800}
+            alt={t('imgAlt')}
+            className={`
+              lines
+              absolute
+              w-8/12
+              left-[17%]
+              bottom-[29%]
+            `}
+          />
+          <Image
+            src="/images/hero/cloud.webp"
+            width={800}
+            height={800}
+            alt={t('imgAlt')}
+            className={`
+              cloud
+              absolute
+              w-7/12
+              left-[20%]
+              bottom-0
+            `}
+          />
+          <Image
+            src="/images/hero/guard.webp"
+            width={800}
+            height={800}
+            alt={t('imgAlt')}
+            className={`
+              guard
+              absolute
+              w-4/12
+              left-[38%]
+              bottom-0
+            `}
+          />
+          <Image
+            src="/images/hero/dialog.webp"
+            width={800}
+            height={800}
+            alt={t('imgAlt')}
+            className={`
+              dialog
+              absolute
+              w-1/12
+              right-[35%]
+              bottom-[39%]
+            `}
+          />
+          <Image
+            src="/images/hero/pc.webp"
+            width={800}
+            height={800}
+            alt={t('imgAlt')}
+            className={`
+              pc
+              absolute
+              w-2/12
+              top-[50%]
+              left-[0%]
+            `}
+          />
+          <Image
+            src="/images/hero/worker-1.webp"
+            width={800}
+            height={800}
+            alt={t('imgAlt')}
+            className={`
+              worker-1
+              absolute
+              w-[32%]
+              top-[15%]
+              left-[4%]
+            `}
+          />
+          <Image
+            src="/images/hero/phone.webp"
+            width={800}
+            height={800}
+            alt={t('imgAlt')}
+            className={`
+              phone
+              absolute
+              w-2/12
+              top-[12%]
+              left-[40%]
+            `}
+          />
+          <Image
+            src="/images/hero/worker-2.webp"
+            width={800}
+            height={800}
+            alt={t('imgAlt')}
+            className={`
+              worker-2
+              absolute
+              w-[32%]
+              top-[17%]
+              right-[5%]
+            `}
+          />
+          <Image
+            src="/images/hero/server.webp"
+            width={800}
+            height={800}
+            alt={t('imgAlt')}
+            className={`
+              server
+              absolute
+              w-2/12
+              bottom-[30%]
+              right-[0%]
+            `}
+          />
+          
 
-    </section >
+        </div>
+      </div>
+    </section>
   )
 }

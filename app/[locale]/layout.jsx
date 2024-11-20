@@ -12,7 +12,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 
 // Css
-import '@/app/globals.sass'
+import '@/css/globals.sass'
 import "aos/dist/aos.css"
 
 

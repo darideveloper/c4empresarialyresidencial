@@ -1,0 +1,61 @@
+// Hero custom styles and animations
+.hero-image
+    .background
+        animation: scale 2s alternate ease-in-out infinite
+
+    .lines
+        animation: opacity 1s alternate ease-in-out infinite 3s
+
+    .cloud
+        animation: scale 2s alternate ease-in-out infinite
+
+    .guard
+        animation: rotate 1s alternate ease-in-out infinite
+
+    .pc, .worker-1, .phone, .worker-2, .server
+        animation: spin 8s forwards ease-in-out infinite
+    
+    .pc
+        animation-delay: 3s
+
+    .worker-1
+        animation-delay: 4s
+
+    .phone
+        animation-delay: 5s
+
+    .worker-2
+        animation-delay: 6s
+
+    .server
+        animation-delay: 7s
+
+@keyframes scale
+    0%
+        transform: scale(1)
+    100%
+        transform: scale(1.1)
+
+@keyframes opacity
+    0%
+        opacity: 1
+    100%
+        opacity: 0.2
+
+@keyframes rotate
+    0%
+        transform: rotate(0)
+    50%
+        transform: rotate(3deg)
+    100%
+        transform: rotate(-3deg)
+
+@keyframes spin
+    0%
+        transform: rotate(0) scale(1)       
+    20%
+        transform: rotate(360deg) scale(1.2)
+    40%
+        transform: rotate(360deg) scale(1)
+    100%
+        transform: rotate(360deg) scale(1)
