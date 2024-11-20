@@ -20,15 +20,14 @@ export default function CtaXL({ index, text, textHover, imageSrc, imageAlt, href
       href={href}
       className={`
         rounded-xl
-        bg-blue hover:bg-greylight
         text-white
-        ${className}
         relative
         h-36
         w-full
         group
         overflow-hidden
         duration-1000
+        ${className}
       `}
       data-aos="fade-up"
       data-aos-delay={300 * index}
@@ -37,19 +36,19 @@ export default function CtaXL({ index, text, textHover, imageSrc, imageAlt, href
         className={`
           content
           flex
-          gap-6
+          gap-16
           flex-row
           items-center
           justify-center
           w-[150%]
-          mx-6
+          px-6
           absolute
           top-1/2
           transform
           -translate-y-1/2
           left-0 group-hover:-left-1/2
-          ml-6 group-hover:-ml-8
           duration-700
+          bg-blue group-hover:bg-greylight
         `}>
         <h3
           className={`
@@ -93,6 +92,7 @@ export default function CtaXL({ index, text, textHover, imageSrc, imageAlt, href
             justify-center
             flex-col
             gap-2
+            mr-4
           `}
         >
           <span
