@@ -19,8 +19,6 @@ export default function InfoCard({
   aosDelay = 0
 }) {
 
-  console.log({ aosDelay })
-
   return (
     <article
       className={`

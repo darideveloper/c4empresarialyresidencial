@@ -36,17 +36,17 @@ export default function CtaXL({ index, text, textHover, imageSrc, imageAlt, href
         className={`
           content
           flex
-          gap-16
+          gap-0 sm:gap-16
           flex-row
           items-center
           justify-center
-          w-[150%]
+          w-full sm:w-[150%]
           px-6
           absolute
           top-1/2
           transform
           -translate-y-1/2
-          left-0 group-hover:-left-1/2
+          left-0 sm:group-hover:-left-1/2
           duration-700
           bg-blue group-hover:bg-greylight
         `}>
@@ -87,12 +87,12 @@ export default function CtaXL({ index, text, textHover, imageSrc, imageAlt, href
             hover-text
             text-center
             w-1/2
-            flex
             items-center
             justify-center
             flex-col
             gap-2
             mr-4
+            hidden sm:flex
           `}
         >
           <span
