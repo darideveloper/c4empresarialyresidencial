@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 
 import Title from '@/components/Title'
@@ -12,83 +12,83 @@ import TabCard from '@/components/tabs/TabCard'
 /**
  * Tabs with storytelling for homepage
  */
-export default function TestimonialsHome() {
-  
-    const t = useTranslations('HomePage.TabsResidential')
-    const [activeTab, setActiveTab] = useState("house")
-    const [tabChanging, setTabChanging] = useState(false)
+export default function TabsResidential() {
 
-    // Change tab with fade
-    function changeTab(newTab) {
+  // Data
+  const tabsNames = [
+    "house",
+    "apartment",
+    "residential",
+    "hightValue",
+  ]
 
-      // Start fade out
-      setTabChanging(true)
+  // State
+  const t = useTranslations('HomePage.TabsResidential')
+  const [activeTab, setActiveTab] = useState("house")
+  const [tabChanging, setTabChanging] = useState(false)
 
-      // Change value after 0.5s
-      setTimeout(() => {
-        setActiveTab(newTab)
-      }, 500)
+  // Change tab with fade
+  function changeTab(newTab) {
 
-      // Start fade in
-      setTimeout(() => {
-        setTabChanging(false)
-      }, 600)
-    }
-  
-    const tabsNames = [
-      "house",
-      "apartment",
-      "residential",
-      "hightValue",
-    ]
-  
-    return (
-      <section
-        id="testimonials-home"
+    // Start fade out
+    setTabChanging(true)
+
+    // Change value after 0.5s
+    setTimeout(() => {
+      setActiveTab(newTab)
+    }, 500)
+
+    // Start fade in
+    setTimeout(() => {
+      setTabChanging(false)
+    }, 600)
+  }
+
+  return (
+    <section
+      id="tabs-company"
+      className={`
+        tabs-company
+        my-28
+        container
+        mx-auto
+      `}
+    >
+
+      <Title>
+        {t('title')}
+      </Title>
+
+      <div
         className={`
-          testimonials-home
-          mt-10
-          container
+          tabs
+          grid
+          grid-cols-1 sm:grid-cols-2 md:grid-cols-4
+          gap-4
+          max-w-5xl
           mx-auto
         `}
       >
-  
-        <Title>
-          {t('title')}
-        </Title>
+        {
+          tabsNames.map((tabName, index) => (
+            <TabButton
+              key={index}
+              name={tabName}
+              text={t(`tabs.${tabName}.tabName`)}
+              activeTab={activeTab}
+              setActive={changeTab}
+            />
+          ))
+        }
+      </div>
 
-        <div 
-          className={`
-            tabs
-            grid
-            grid-cols-1 sm:grid-cols-2 md:grid-cols-4
-            gap-4
-            max-w-5xl
-            mx-auto
-          `}
-        >
-          {
-            tabsNames.map((tabName, index) => (
-              <TabButton
-                key={index}
-                name={tabName}
-                text={t(`tabs.${tabName}.tabName`)}
-                activeTab={activeTab}
-                setActive={changeTab}
-              />
-            ))
-          }
-        </div>
-
-        <TabCard 
-          title={t(`tabs.${activeTab}.title`)}
-          text={t(`tabs.${activeTab}.text`)}
-          ctaText={t(`tabs.${activeTab}.ctaText`)}
-          tabChanging={tabChanging}
-        />
-  
-        
-  
-      </section>
-    )
+      <TabCard
+        title={t(`tabs.${activeTab}.title`)}
+        text={t(`tabs.${activeTab}.text`)}
+        ctaText={t(`tabs.${activeTab}.ctaText`)}
+        tabChanging={tabChanging}
+      />
+      
+    </section>
+  )
 }

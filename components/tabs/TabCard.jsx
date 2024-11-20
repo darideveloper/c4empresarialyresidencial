@@ -8,8 +8,9 @@ import Cta from '@/components/Cta'
  * @param {string} props.text - Text to display
  * @param {string} props.ctaText - CTA text
  * @param {function} props.tabChanging - Function to change tabs
+ * @param {string} props.className - Additional classes
  */
-export default function TabCard({ title, text, ctaText, tabChanging }) {
+export default function TabCard({ title, text, ctaText, tabChanging, className }) {
   return (
     <div
       className={`
@@ -24,6 +25,7 @@ export default function TabCard({ title, text, ctaText, tabChanging }) {
         ${tabChanging ? 'opacity-0' : 'opacity-100'}
         duration-500
         text-center sm:text-left
+        ${className}
       `}
     >
       <h3
