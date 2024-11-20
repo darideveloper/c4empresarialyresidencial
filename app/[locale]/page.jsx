@@ -3,7 +3,7 @@
 // Sections
 import Hero from '@/components/layout/Hero'
 import WhyUs from '@/components/layout/WhyUs'
-import HomeCompany from '@/components/layout/HomeCompany'
+import ResidentialCompany from '@/components/layout/ResidentialCompany'
 import Products from '@/components/layout/Products'
 import TabsResidential from '@/components/layout/TabsResidential'
 
@@ -25,7 +25,7 @@ export default function HomePage() {
     <>
       <Hero />
       <WhyUs />
-      <HomeCompany />
+      <ResidentialCompany />
       <Products />
       <TabsResidential />
     </>

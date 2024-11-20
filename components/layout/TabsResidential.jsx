@@ -9,6 +9,9 @@ import TabButton from '@/components/tabs/TabButton'
 import TabCard from '@/components/tabs/TabCard'
 
 
+/**
+ * Tabs with storytelling for homepage
+ */
 export default function TestimonialsHome() {
   
     const t = useTranslations('HomePage.TabsResidential')

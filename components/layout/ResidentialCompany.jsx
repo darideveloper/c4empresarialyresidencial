@@ -5,11 +5,11 @@ import CtaXL from '@/components/CtaXL'
 
 
 /**
- * Home Company section for homepage
+ * ResidentialCompany buttons for homepage
  */
 export default function HomeCompany() {
 
-  const t = useTranslations('HomePage.HomeCompany')
+  const t = useTranslations('HomePage.ResidentialCompany')
 
   const servicesData = [
     {

@@ -6,7 +6,7 @@ import DividerTriangle from "@/components/ornaments/DividerTriangle"
 
 
 /**
- * WhyUs section for homepage
+ * WhyUs section cards for homepage
  */
 export default function WhyUs() {
   const t = useTranslations('HomePage.WhyUs')

@@ -32,7 +32,7 @@
         }
       }
     },
-    "HomeCompany": {
+    "ResidentialCompany": {
       "title": "Elije tu servicio",
       "services": {
         "home": {

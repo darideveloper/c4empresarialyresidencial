@@ -1,5 +1,5 @@
 /**
- * Footer section of the layout
+ * Global Footer section of the layout
  */
 export default function Footer() {
   return (
