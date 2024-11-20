@@ -5,6 +5,7 @@ import Hero from '@/components/layout/Hero'
 import WhyUs from '@/components/layout/WhyUs'
 import HomeCompany from '@/components/layout/HomeCompany'
 import Products from '@/components/layout/Products'
+import TabsResidential from '@/components/layout/TabsResidential'
 
 // Libs
 import AOS from "aos"
@@ -26,6 +27,7 @@ export default function HomePage() {
       <WhyUs />
       <HomeCompany />
       <Products />
+      <TabsResidential />
     </>
   )
 }

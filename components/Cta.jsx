@@ -11,8 +11,9 @@ import ArrowSvg from '@/components/ornaments/ArrowSvg'
  * @param {string} props.text - Text to display
  * @param {string} props.dataAos - AOS animation
  * @param {string} props.dataAosDelay - AOS animation delay
+ * @param {string} props.className - Additional classes
  */
-export default function Cta({ href, text, dataAos, dataAosDelay }) {
+export default function Cta({ href, text, dataAos, dataAosDelay, className }) {
 
   return (
     <Link
@@ -27,12 +28,12 @@ export default function Cta({ href, text, dataAos, dataAosDelay }) {
         py-3 px-6
         mt-6
         hover:bg-blue-dark
-        text-2xl
         inline-block
         duration-300
         font-bold
         ${fontTitle.className}
         group
+        ${className}
       `}
       data-aos={dataAos}
       data-aos-delay={dataAosDelay}

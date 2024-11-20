@@ -111,6 +111,7 @@ export default function Hero() {
             text={t('cta')}
             dataAos="fade-up"
             dataAosDelay="1800"
+            className="text-2xl"
           />
 
           <p

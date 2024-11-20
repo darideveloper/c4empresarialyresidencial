@@ -130,6 +130,35 @@
           }
         }
       }
+    },
+    "TabsResidential": {
+      "title": "Encuentra la solución perfecta para tu hogar",
+      "tabs": {
+        "house": {
+          "tabName": "Casa unifamiliar",
+          "title": "Protección en el momento justo",
+          "text": "María, preocupada por movimientos extraños cerca de su casa y la seguridad de su familia, contactó con nuestra empresa. En 48 horas instalamos cámaras con visión nocturna y monitoreo remoto que una noche detectaron a un intruso. Gracias a la alerta, María llamó a las autoridades y ahora vive tranquila y protegida.",
+          "ctaText": "Solicitar una evaluación gratuita"
+        },
+        "apartment": {
+          "tabName": "Departamento",
+          "title": "Vigilancia personalizada en departamentos",
+          "text": "Carlos vivía en un departamento y notó que desaparecían paquetes de la entrada. Instalamos cámaras estratégicas en las áreas comunes y accesos. Una semana después, las cámaras identificaron al responsable, y con las evidencias, la administración tomó medidas. Ahora, todos los residentes disfrutan de mayor seguridad.",
+          "ctaText": "Solicitar una evaluación gratuita"
+        },
+        "residential": {
+          "tabName": "Privadas y residenciales",
+          "title": "Protección integral para residenciales",
+          "text": "En una privada, los vecinos reportaban robos en autos estacionados. Diseñamos un sistema de cámaras para las entradas, áreas comunes y cada casa interesada. Una noche, las cámaras captaron un intento de robo, y la alerta evitó el incidente. Desde entonces, la comunidad vive más tranquila.",
+          "ctaText": "Solicitar una evaluación gratuita"
+        },
+        "hightValue": {
+          "tabName": "Casas de alto valor",
+          "title": "Cuidado exclusivo para casas de lujo",
+          "text": "María, preocupada por movimientos extraños cerca de su casa y la seguridad de su familia, contactó con nuestra empresa. En 48 horas instalamos cámaras con visión nocturna y monitoreo remoto que una noche detectaron a un intruso. Gracias a la alerta, María llamó a las autoridades y ahora vive tranquila y protegida.",
+          "ctaText": "Solicitar una evaluación gratuita"
+        }
+      }
     }
   }
 }
