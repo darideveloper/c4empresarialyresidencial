@@ -1,10 +1,14 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
+
+
 // Libs
 import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules'
 
 // Components
 import Image from 'next/image'
+import InfoImage from '@/components/InfoImage'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Css
@@ -12,13 +16,25 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/autoplay'
 
-export default function SlideImages({ imagesPrefix, maxImages }) {
+/**
+ * Slider of images with info (title and text) using Swiper
+ * 
+ * @param {object} props
+ * @param {string} props.imagesPrefix - Prefix of the images src
+ * @param {string} props.category - Category name of the images
+ * @param {number} props.maxProducts - Max number of products to show
+ * @param {string} props.altPrefix - Prefix of the alt text of the images
+* @returns 
+ */
+export default function SlideImages({ imagesPrefix, category, maxProducts, altPrefix }) {
+
+  const tCategory = useTranslations(`HomePage.Products.categories.${category}`)
 
   return (
     <Swiper
       spaceBetween={50}
       slidesPerView={3}
-      modules={[ Navigation, Pagination, A11y, Autoplay ]}
+      modules={[Navigation, Pagination, A11y, Autoplay]}
       navigation
 
       // autoplay & loop
@@ -39,31 +55,22 @@ export default function SlideImages({ imagesPrefix, maxImages }) {
       }}
     >
       {
-        Array(maxImages).fill().map((_, index) => (
-          <SwiperSlide key={index}>
-            {console.log(`/images/${imagesPrefix}-${index + 1}.png`)}
+        Array.from({ length: maxProducts }, (_, index) => {
 
-            <div
-              className={`
-                img-wrapper
-                border-2
-                rounded-2xl
-                overflow-hidden
-                shadow-lg
-              `}
-            >
-              <Image
-                src={`/images/${imagesPrefix}-${index + 1}.png`}
-                alt={`Image ${index + 1}`}
-                width={300}
-                height={300}
-                className={`
-                    w-full
-                  `}
+          const productLandId = `products.${category}${index + 1}`
+
+          return (
+            <SwiperSlide key={index}>
+              <InfoImage
+                href={`/cotizar`}
+                imageSrc={`/images/${imagesPrefix}-${index + 1}.png`}
+                imageAlt={`${altPrefix} ${tCategory(productLandId + '.name')}`}
+                title={tCategory(productLandId + '.name')}
+                text={tCategory(productLandId + '.description')}
               />
-            </div>
-          </SwiperSlide>
-        ))
+            </SwiperSlide>
+          )
+        })
       }
     </Swiper>
   )
