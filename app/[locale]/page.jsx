@@ -1,12 +1,13 @@
 "use client"
 
 // Sections
-import Hero from '@/components/layout/Hero'
-import WhyUs from '@/components/layout/WhyUs'
-import ResidentialCompany from '@/components/layout/ResidentialCompany'
-import Products from '@/components/layout/Products'
-import TabsResidential from '@/components/layout/TabsResidential'
-import TabsCompany from '@/components/layout/TabsCompany'
+import Hero from '@/components/layouts/Hero'
+import WhyUs from '@/components/layouts/WhyUs'
+import ResidentialCompany from '@/components/layouts/ResidentialCompany'
+import Products from '@/components/layouts/Products'
+import TabsResidential from '@/components/layouts/TabsResidential'
+import TabsCompany from '@/components/layouts/TabsCompany'
+import Profits from '@/components/layouts/Profits'
 
 // Libs
 import AOS from "aos"
@@ -30,6 +31,7 @@ export default function HomePage() {
       <TabsCompany />
       <Products />
       <TabsResidential />
+      <Profits />
     </>
   )
 }

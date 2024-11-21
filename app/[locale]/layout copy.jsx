@@ -1,8 +1,8 @@
 import "@/app/globals.sass"
 import { fontBody } from "@/libs/fonts"
 
-import Header from "@/components/layout/Header"
-import Footer from "@/components/layout/Footer"
+import Header from "@/components/layouts/Header"
+import Footer from "@/components/layouts/Footer"
 
 export const metadata = {
   title: "Create Next App",

@@ -1,8 +1,7 @@
 import { useTranslations } from 'next-intl'
 
-import Title from '@/components/Title'
 import InfoCard from '@/components/InfoCard'
-import DividerTriangle from "@/components/ornaments/DividerTriangle"
+import CardsGrid from '@/components/layouts/templates/CardsGrid'
 
 
 /**
@@ -26,87 +25,40 @@ export default function WhyUs() {
     }
   ]
 
-  return (
-    <section
-      id="why-us"
+  for (const cardData of cardsData) {
+    cardData.title = t(`cards.${cardData.name}.title`)
+    cardData.description = t(`cards.${cardData.name}.description`)
+  }
+
+  // Create info cards components
+  const infoCards = cardsData.map((cardData, index) => (
+    <InfoCard
+      key={index + 1}
+      svgPath={cardData.svgPath}
+      title={t(`cards.${cardData.name}.title`)}
+      description={t(`cards.${cardData.name}.description`)}
       className={`
-        why-us
-        relative
-        bg-greylight
-        pt-28 md:pt-40 lg:pt-48 xl:pt-60
-        -mt-10 md:mt-10 xl:-mt-20
-        pb-0
+        border-white hover:border-grey
+        bg-transparent hover:bg-grey
         text-white
+        group
+        hover:scale-105
       `}
+      svgClassName={`
+        fill-current
+        mx-auto
+        w-20 h-20
+      `}
+      aosDelay={index * 300}
+    />
+  ))
+  
+
+  return (
+    <CardsGrid
+      title={t('title')}
     >
-
-      {/* Divider */}
-      <DividerTriangle
-        className={`
-          fill-white
-          absolute
-          top-0
-          -scale-x-100
-        `}
-      />
-
-      <div
-        className={`
-          container
-          mx-auto
-        `}
-      >
-
-        <Title>
-          {t('title')}
-        </Title>
-
-        <section
-          className={`
-            cards
-            grid
-            grid-cols-1 md:grid-cols-3
-            text-center
-            gap-12
-          `}
-        >
-          {
-            cardsData.map((cardData, index) => (
-              <InfoCard
-                key={index + 1}
-                svgPath={cardData.svgPath}
-                title={t(`cards.${cardData.name}.title`)}
-                description={t(`cards.${cardData.name}.description`)}
-                className={`
-                  border-white hover:border-blue
-                  bg-transparent hover:bg-blue
-                  text-white
-                  group
-                  hover:scale-105
-                `}
-                svgClassName={`
-                  fill-current
-                  mx-auto
-                  w-20 h-20
-                `}
-                aosDelay={index * 300}
-              />
-
-            ))
-          }
-        </section>
-      </div>
-
-      {/* Divider */}
-      <DividerTriangle
-        className={`
-          -scale-y-100
-          mt-20
-          fill-white
-        `}
-      />
-
-    </section>
-
+      {infoCards}
+    </CardsGrid>
   )
 }

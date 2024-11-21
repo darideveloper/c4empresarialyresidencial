@@ -212,6 +212,23 @@
           "ctaText": "Solicitar una evaluación gratuita"
         }
       }
+    },
+    "Profits": {
+      "title": "Beneficios del Monitoreo",
+      "cards": {
+        "prevention": {
+          "title": "Prevención de Delitos",
+          "description": "La presencia visible de cámaras disuade a los delincuentes, reduciendo el riesgo de robos o vandalismo."
+        },
+        "peace": {
+          "title": "Tranquilidad",
+          "description": "Saber que tu hogar o negocio está protegido te permite vivir y trabajar con tranquilidad."
+        },
+        "support": {
+          "title": "Soporte Personalizado",
+          "description": "Nuestro equipo está disponible para responder a tus preguntas y adaptar nuestros servicios a tus necesidades específicas."
+        }
+      }
     }
   }
 }
