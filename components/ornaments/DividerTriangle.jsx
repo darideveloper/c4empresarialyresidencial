@@ -13,6 +13,8 @@ export default function DividerTriangle({ className }) {
         overflow-hidden
         leading-none
         z-10
+        absolute
+        left-0
         ${className}
       `}
     >

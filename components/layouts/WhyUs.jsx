@@ -57,6 +57,9 @@ export default function WhyUs() {
   return (
     <CardsGrid
       title={t('title')}
+      className={`
+        bg-blue
+      `}
     >
       {infoCards}
     </CardsGrid>

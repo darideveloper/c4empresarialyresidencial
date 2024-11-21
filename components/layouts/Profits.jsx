@@ -57,6 +57,9 @@ export default function Profits() {
   return (
     <CardsGrid
       title={t('title')}
+      className={`
+        bg-grey
+      `}
     >
       {infoCards}
     </CardsGrid>

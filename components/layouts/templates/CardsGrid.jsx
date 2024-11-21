@@ -15,10 +15,8 @@ export default function CardsGrid({ title, className, children }) {
       className={`
         why-us
         relative
-        bg-blue
-        pt-28 md:pt-40 lg:pt-48 xl:pt-60
+        py-28 md:py-40 lg:py-48 xl:py-60
         -mt-10 md:mt-10 xl:-mt-20
-        pb-0
         text-white
         ${className}
       `}
@@ -28,7 +26,6 @@ export default function CardsGrid({ title, className, children }) {
       <DividerTriangle
         className={`
           fill-white
-          absolute
           top-0
           -scale-x-100
         `}
@@ -62,8 +59,8 @@ export default function CardsGrid({ title, className, children }) {
       <DividerTriangle
         className={`
           -scale-y-100
-          mt-20
           fill-white
+          bottom-[-1px]
         `}
       />
     </section>
