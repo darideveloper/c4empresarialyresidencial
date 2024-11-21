@@ -8,6 +8,7 @@ import Products from '@/components/layouts/Products'
 import TabsResidential from '@/components/layouts/TabsResidential'
 import TabsCompany from '@/components/layouts/TabsCompany'
 import Profits from '@/components/layouts/Profits'
+import Testimonials from '@/components/layouts/Testimonials'
 
 // Libs
 import AOS from "aos"
@@ -32,6 +33,7 @@ export default function HomePage() {
       <Products />
       <TabsResidential />
       <Profits />
+      <Testimonials />
     </>
   )
 }

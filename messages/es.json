@@ -229,6 +229,28 @@
           "description": "Nuestro equipo está disponible para responder a tus preguntas y adaptar nuestros servicios a tus necesidades específicas."
         }
       }
+    },
+    "Testimonials": {
+      "title": "Nuestros Clientes Satisfechos",
+      "imagesAlt": "Foto de cliente",
+      "cards": {
+        "juan": {
+          "name": "Juan Pérez",
+          "charge": "Cliente Satisfecho",
+          "description": {
+            "beforeText": "Desde que instalé las cámaras de",
+            "afterText": ", me siento mucho más seguro. El servicio de monitoreo es excepcional."
+          }
+        },
+        "maria": {
+          "name": "María López",
+          "charge": "Propietaria de Negocio",
+          "description": {
+            "beforeText": "La instalación fue rápida y profesional. Recomiendo",
+            "afterText": "a todos mis amigos y familiares."
+          }
+        }
+      }
     }
   }
 }

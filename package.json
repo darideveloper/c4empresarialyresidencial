@@ -15,7 +15,7 @@
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "sass": "^1.80.6",
-    "swiper": "^11.1.14"
+    "swiper": "^11.1.15"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
