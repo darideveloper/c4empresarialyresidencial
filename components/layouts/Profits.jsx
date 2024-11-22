@@ -39,7 +39,7 @@ export default function Profits() {
       description={t(`cards.${cardData.name}.description`)}
       className={`
         border-white hover:border-grey
-        bg-transparent hover:bg-grey
+        bg-transparent hover:bg-blue
         text-white
         group
         hover:scale-105

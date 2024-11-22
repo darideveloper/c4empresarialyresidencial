@@ -27,6 +27,7 @@ export default function InfoImage({ href, imageSrc, imageAlt, title, text, class
         w-full
         inline-block
         ${className}
+        debug
       `}
       href={href}
     >

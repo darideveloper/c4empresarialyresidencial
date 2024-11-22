@@ -56,6 +56,7 @@ export default function TabsCompany() {
         my-28
         container
         mx-auto
+        debug
       `}
     >
 
