@@ -136,7 +136,7 @@
     "ResidentialCompany": {
       "title": "Elije tu servicio",
       "services": {
-        "home": {
+        "residential": {
           "text": "Residencial",
           "textHover": "Protege tu hogar y a tu familia",
           "imgAlt": "Ilustración una casa"
@@ -336,7 +336,7 @@
         "afterText": "La Seguridad que tu Empresa Necesita"
       },
       "cta": "Cotización para tu Empresa",
-      "imgAlt": "Ilustración de persona gestionando la seguridad de su hogar",
+      "imgAlt": "Ilustración de personas en una empresa",
       "text": {
         "beforeText": "En",
         "afterText": "nos especializamos en ofrecer soluciones de seguridad a medida para negocios en Mérida, Yucatán. Con una amplia gama de cámaras de seguridad y un servicio de monitoreo profesional, estamos aquí para proteger lo que más valoras."
@@ -350,7 +350,7 @@
         "afterText": "La seguridad que tu hogar necesita"
       },
       "cta": "Cotización para tu Hogar",
-      "imgAlt": "Ilustración de persona gestionando la seguridad de su hogar",
+      "imgAlt": "Ilustración de persona analizando hogares",
       "text": {
         "beforeText": "En",
         "afterText": "nos especializamos en ofrecer soluciones de seguridad a medida para hogares en Mérida, Yucatán. Con una amplia gama de cámaras de seguridad y un servicio de monitoreo profesional, estamos aquí para proteger lo que más valoras."

@@ -47,7 +47,6 @@ export default function SlideImages({ imagesPrefix, category, maxProducts, altPr
     product.imageAlt = `${altPrefix} ${product.name}`
     products.push(product)
   }
-  console.log({ products })
 
   return (
     <Swiper

@@ -13,7 +13,7 @@ export default function HomeCompany() {
 
   const servicesData = [
     {
-      "name": "home",
+      "name": "residential",
       "link": "/residential"
     },
     {

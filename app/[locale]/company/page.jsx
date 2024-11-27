@@ -2,6 +2,7 @@
 
 // Sections
 import Hero from '@/components/layouts/Hero'
+import HeroImageCompany from '@/components/hero-images/HeroImageCompany'
 import WhyUs from '@/components/layouts/WhyUs'
 import Products from '@/components/layouts/Products'
 import TabsCompany from '@/components/layouts/TabsCompany'
@@ -25,7 +26,7 @@ export default function CompanyPage() {
 
   return (
     <>
-      <Hero langKey="CompanyPage"/>
+      <Hero langKey="CompanyPage" HeroImage={HeroImageCompany}/>
       <WhyUs />
       <TabsCompany />
       <Profits />
