@@ -19,6 +19,7 @@ export default function TabButton({ name, text, activeTab, setActive }) {
         duration-300
         ${activeTab === name ? 'bg-blue' : 'bg-white hover:bg-greylight'}
         ${activeTab === name ? 'text-white' : 'text-black hover:text-white'}
+        rounded-lg
       `}
       onClick={() => setActive(name)}
     >
