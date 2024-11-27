@@ -10,7 +10,7 @@
  * @param {number} props.aosDelay - Delay for AOS animation. Default is 0
  * @returns 
  */
-export default function InfoCard({
+export default function InfoCardSvg({
   svgPath,
   title,
   description,
