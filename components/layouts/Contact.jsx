@@ -175,6 +175,7 @@ export default function Contact() {
           items-center
           justify-end
           w-full
+          pb-10
         `}
       >
         <div

@@ -12,7 +12,7 @@ body
   background: var(--white)
   overflow-x: hidden
 
-.debug 
+.debug
   border: 1px solid red
 
 .container
@@ -42,3 +42,18 @@ body
 
     &:after
       font-size: 20px
+
+// Custom scroll bar
+
+::-webkit-scrollbar
+  width: 8px
+
+::-webkit-scrollbar-track
+  background: $white
+
+::-webkit-scrollbar-thumb
+  background: $blue
+  border-radius: 10px
+
+  &:hover
+    background: $grey-light

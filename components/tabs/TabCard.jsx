@@ -20,11 +20,11 @@ export default function TabCard({ title, text, ctaText, tabChanging, className }
         my-14
         flex
         flex-col
-        items-center sm:items-start
+        items-center md:items-start
         justify-center
         ${tabChanging ? 'opacity-0' : 'opacity-100'}
         duration-500
-        text-center sm:text-left
+        text-center md:text-left
         ${className}
       `}
     >

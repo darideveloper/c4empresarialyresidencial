@@ -16,19 +16,23 @@ export default function TabsCompany() {
 
   // Data
   const tabsNames = [
-    "house",
-    "apartment",
-    "residential",
-    "hightValue",
-    "house2",
-    "apartment2",
-    "residential2",
-    "hightValue2",
+    "restaurant",
+    "cash",
+    "retail",
+    "hotel",
+    "industry",
+    "offices",
+    "education",
+    "construction",
+    "transport",
+    "government",
+    "entertainment",
+    "finance",
   ]
 
   // State
   const t = useTranslations('HomePage.TabsCompany')
-  const [activeTab, setActiveTab] = useState("house")
+  const [activeTab, setActiveTab] = useState("restaurant")
   const [tabChanging, setTabChanging] = useState(false)
 
   // Change tab with fade
@@ -64,6 +68,26 @@ export default function TabsCompany() {
         {t('title')}
       </Title>
 
+      <p
+        className={`
+          text-center
+          max-w-6xl
+          mx-auto
+        `}
+      >
+        Las cámaras de seguridad en un comercio ofrecen múltiples beneficios que van más allá de la simple vigilancia.
+        <br />
+        A continuación, se detallan algunas de las funciones más relevantes que cumplen estos sistemas en el entorno comercial
+        <br />
+        <span
+          className={`
+            font-bold
+          `}
+        >
+          Los delincuentes o trabajadores deshonesto son menos propensos a actuar si saben que están siendo grabado, pero aun así se ha logrado evadirlos porque no hay supervisión
+        </span>
+      </p>
+
       <div
         className={`
           content
@@ -75,6 +99,7 @@ export default function TabsCompany() {
           mx-auto
           w-full
           gap-12
+          my-8
         `}
       >
 
@@ -86,6 +111,8 @@ export default function TabsCompany() {
             mx-auto
             w-full md:w-4/12
             gap-4
+            max-h-96
+            overflow-y-scroll
           `}
         >
           {

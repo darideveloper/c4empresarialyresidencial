@@ -163,53 +163,77 @@
     "TabsCompany": {
       "title": "Encuentra la solución perfecta para tu empresa",
       "tabs": {
-        "house": {
-          "tabName": "Casa unifamiliar",
-          "title": "Protección en el momento justo",
-          "text": "María, preocupada por movimientos extraños cerca de su casa y la seguridad de su familia, contactó con nuestra empresa. En 48 horas instalamos cámaras con visión nocturna y monitoreo remoto que una noche detectaron a un intruso. Gracias a la alerta, María llamó a las autoridades y ahora vive tranquila y protegida. María, preocupada por movimientos extraños cerca de su casa y la seguridad de su familia, contactó con nuestra empresa. En 48 horas instalamos cámaras con visión nocturna y monitoreo remoto que una noche detectaron a un intruso. Gracias a la alerta, María llamó a las autoridades y ahora vive tranquila y protegida.",
-          "ctaText": "Solicitar una evaluación gratuita"
+        "restaurant": {
+          "tabName": "Resturantes",
+          "title": "Supervisión de empelados con más antigüedad de cadenas restaurantes",
+          "text": "Estos templeados recurren a tener de llevarse mercancía con rutinas que no son visto a primera instante pero son descubiertos por recurrentes conductas que generan sospechas y nosotros tenemos la tarea de vigilar esas conductas hasta que se logre en infraganti la acción impúdica.",
+          "ctaText": "Solicitar cotización para mi restaurante"
         },
-        "apartment": {
-          "tabName": "Departamento",
-          "title": "Vigilancia personalizada en departamentos",
-          "text": "Carlos vivía en un departamento y notó que desaparecían paquetes de la entrada. Instalamos cámaras estratégicas en las áreas comunes y accesos. Una semana después, las cámaras identificaron al responsable, y con las evidencias, la administración tomó medidas. Ahora, todos los residentes disfrutan de mayor seguridad. María, preocupada por movimientos extraños cerca de su casa y la seguridad de su familia, contactó con nuestra empresa. En 48 horas instalamos cámaras con visión nocturna y monitoreo remoto que una noche detectaron a un intruso. Gracias a la alerta, María llamó a las autoridades y ahora vive tranquila y protegida.",
-          "ctaText": "Solicitar una evaluación gratuita"
+        "cash": {
+          "tabName": "Casas de empeño",
+          "title": "Supervisión de casa de empeños donde empleados y clientes comenten hurto",
+          "text": "Este delito se puede cometer por medio de cambios de precios por parte de los empleados y concediendo que son las misma clientes y los mismos vendedores que tiene esta práctica deshonesta. Nosotros tenemos la tarea de vigilar esas conductas hasta que se logre en infraganti la acción impúdica ",
+          "ctaText": "Solicitar cotización para mi casa de empeño"
         },
-        "residential": {
-          "tabName": "Privadas y residenciales",
-          "title": "Protección integral para residenciales",
-          "text": "En una privada, los vecinos reportaban robos en autos estacionados. Diseñamos un sistema de cámaras para las entradas, áreas comunes y cada casa interesada. Una noche, las cámaras captaron un intento de robo, y la alerta evitó el incidente. Desde entonces, la comunidad vive más tranquila. María, preocupada por movimientos extraños cerca de su casa y la seguridad de su familia, contactó con nuestra empresa. En 48 horas instalamos cámaras con visión nocturna y monitoreo remoto que una noche detectaron a un intruso. Gracias a la alerta, María llamó a las autoridades y ahora vive tranquila y protegida.",
-          "ctaText": "Solicitar una evaluación gratuita"
+        "retail": {
+          "tabName": "Comercios",
+          "title": "Supervisión de empleados y clientes en tiendas minoristas",
+          "text": "Las tiendas suelen ser vulnerables a hurtos tanto internos como externos. Nuestro equipo se enfoca en identificar empleados que puedan incurrir en acciones deshonestas, como mal manejo de inventarios, y en vigilar clientes con comportamientos sospechosos. Garantizamos la recopilación de evidencia en cada caso para proteger tus activos y mantener el flujo correcto de tus operaciones comerciales.",
+          "ctaText": "Solicitar cotización para mi comercio"
         },
-        "hightValue": {
-          "tabName": "Casas de alto valor",
-          "title": "Cuidado exclusivo para casas de lujo",
-          "text": "María, preocupada por movimientos extraños cerca de su casa y la seguridad de su familia, contactó con nuestra empresa. En 48 horas instalamos cámaras con visión nocturna y monitoreo remoto que una noche detectaron a un intruso. Gracias a la alerta, María llamó a las autoridades y ahora vive tranquila y protegida. María, preocupada por movimientos extraños cerca de su casa y la seguridad de su familia, contactó con nuestra empresa. En 48 horas instalamos cámaras con visión nocturna y monitoreo remoto que una noche detectaron a un intruso. Gracias a la alerta, María llamó a las autoridades y ahora vive tranquila y protegida.",
-          "ctaText": "Solicitar una evaluación gratuita"
+        "hotel": {
+          "tabName": "Hoteles",
+          "title": "Seguridad integral para el sector hospitalidad",
+          "text": "Brindamos vigilancia en áreas comunes, estacionamientos y zonas sensibles como almacenes o cajas registradoras. Estas áreas suelen ser blanco de acciones deshonestas que pueden comprometer la seguridad y la experiencia de tus clientes. Nuestro equipo implementa medidas para identificar patrones de riesgo y proteger tus instalaciones de manera constante.",
+          "ctaText": "Solicitar cotización para mi Hotel"
         },
-        "house2": {
-          "tabName": "Casa unifamiliar",
-          "title": "Protección en el momento justo",
-          "text": "María, preocupada por movimientos extraños cerca de su casa y la seguridad de su familia, contactó con nuestra empresa. En 48 horas instalamos cámaras con visión nocturna y monitoreo remoto que una noche detectaron a un intruso. Gracias a la alerta, María llamó a las autoridades y ahora vive tranquila y protegida. María, preocupada por movimientos extraños cerca de su casa y la seguridad de su familia, contactó con nuestra empresa. En 48 horas instalamos cámaras con visión nocturna y monitoreo remoto que una noche detectaron a un intruso. Gracias a la alerta, María llamó a las autoridades y ahora vive tranquila y protegida.",
-          "ctaText": "Solicitar una evaluación gratuita"
+        "industry": {
+          "tabName": "Industrias",
+          "title": "Monitoreo de áreas críticas en plantas y fábricas",
+          "text": "Protegemos tus instalaciones y maquinaria con cámaras de alta precisión, diseñadas para captar actividad sospechosa en tiempo real. Nuestro enfoque incluye la supervisión de áreas de acceso restringido, vigilancia de materiales sensibles y detección de comportamientos no autorizados que puedan comprometer la continuidad de tu producción.",
+          "ctaText": "Solicitar cotización para mi planta o fábrica"
         },
-        "apartment2": {
-          "tabName": "Departamento",
-          "title": "Vigilancia personalizada en departamentos",
-          "text": "Carlos vivía en un departamento y notó que desaparecían paquetes de la entrada. Instalamos cámaras estratégicas en las áreas comunes y accesos. Una semana después, las cámaras identificaron al responsable, y con las evidencias, la administración tomó medidas. Ahora, todos los residentes disfrutan de mayor seguridad. María, preocupada por movimientos extraños cerca de su casa y la seguridad de su familia, contactó con nuestra empresa. En 48 horas instalamos cámaras con visión nocturna y monitoreo remoto que una noche detectaron a un intruso. Gracias a la alerta, María llamó a las autoridades y ahora vive tranquila y protegida.",
-          "ctaText": "Solicitar una evaluación gratuita"
+        "offices": {
+          "tabName": "Oficinas",
+          "title": "Control de acceso y monitoreo en oficinas corporativas",
+          "text": "Implementamos sistemas de seguridad que garantizan la protección de tus empleados, visitantes y activos empresariales. Desde la vigilancia de servidores y archivos confidenciales hasta el control de accesos en áreas estratégicas, nuestro servicio asegura un entorno laboral seguro, identificando y previniendo posibles riesgos.",
+          "ctaText": "Solicitar cotización para mi oficina"
         },
-        "residential2": {
-          "tabName": "Privadas y residenciales",
-          "title": "Protección integral para residenciales",
-          "text": "En una privada, los vecinos reportaban robos en autos estacionados. Diseñamos un sistema de cámaras para las entradas, áreas comunes y cada casa interesada. Una noche, las cámaras captaron un intento de robo, y la alerta evitó el incidente. Desde entonces, la comunidad vive más tranquila. María, preocupada por movimientos extraños cerca de su casa y la seguridad de su familia, contactó con nuestra empresa. En 48 horas instalamos cámaras con visión nocturna y monitoreo remoto que una noche detectaron a un intruso. Gracias a la alerta, María llamó a las autoridades y ahora vive tranquila y protegida.",
-          "ctaText": "Solicitar una evaluación gratuita"
+        "education": {
+          "tabName": "Educación",
+          "title": "Protección para escuelas y universidades",
+          "text": "Aseguramos la vigilancia en instalaciones educativas, supervisando accesos, áreas comunes y espacios como laboratorios o zonas recreativas. Nuestro enfoque está en prevenir incidentes y garantizar un entorno seguro tanto para estudiantes como para el personal académico, adaptándonos a las necesidades específicas de cada institución.",
+          "ctaText": "Solicitar cotización para mi institución educativa"
         },
-        "hightValue2": {
-          "tabName": "Casas de alto valor",
-          "title": "Cuidado exclusivo para casas de lujo",
-          "text": "María, preocupada por movimientos extraños cerca de su casa y la seguridad de su familia, contactó con nuestra empresa. En 48 horas instalamos cámaras con visión nocturna y monitoreo remoto que una noche detectaron a un intruso. Gracias a la alerta, María llamó a las autoridades y ahora vive tranquila y protegida. María, preocupada por movimientos extraños cerca de su casa y la seguridad de su familia, contactó con nuestra empresa. En 48 horas instalamos cámaras con visión nocturna y monitoreo remoto que una noche detectaron a un intruso. Gracias a la alerta, María llamó a las autoridades y ahora vive tranquila y protegida.",
-          "ctaText": "Solicitar una evaluación gratuita"
+        "construction": {
+          "tabName": "Construcción",
+          "title": "Monitoreo en obras y sitios de construcción",
+          "text": "Instalamos cámaras especializadas para prevenir robos de materiales y maquinaria en sitios de construcción. Además, monitoreamos la actividad en tiempo real, detectando comportamientos inusuales o riesgos que puedan retrasar la ejecución de tu proyecto, asegurando así que todo continúe según lo planeado.",
+          "ctaText": "Solicitar cotización para mi proyecto de construcción"
+        },
+        "transport": {
+          "tabName": "Transporte y Logística",
+          "title": "Seguridad para estaciones y flotas de transporte",
+          "text": "Proporcionamos vigilancia estratégica en estaciones, terminales y vehículos en movimiento. Nuestro sistema incluye monitoreo en tiempo real para proteger tanto a pasajeros como a mercancías durante su traslado, previniendo actos de vandalismo, robos o cualquier incidente que comprometa la seguridad.",
+          "ctaText": "Solicitar cotización para mi negocio de transporte"
+        },
+        "government": {
+          "tabName": "Gubernamental",
+          "title": "Seguridad en oficinas e infraestructura gubernamental",
+          "text": "Garantizamos el monitoreo en edificios públicos y áreas críticas como plantas de servicios esenciales, estaciones de trabajo y espacios de alto tránsito. Nos enfocamos en identificar posibles amenazas y prevenir actos vandálicos, asegurando la continuidad y seguridad de las operaciones gubernamentales.",
+          "ctaText": "Solicitar cotización para mi entidad gubernamental"
+        },
+        "entertainment": {
+          "tabName": "Entretenimiento",
+          "title": "Vigilancia para cines, teatros y gimnasios",
+          "text": "Aseguramos la protección en espacios recreativos y culturales mediante sistemas de monitoreo diseñados para vigilar tanto áreas de clientes como personal. Nuestro enfoque incluye la supervisión en puntos sensibles como taquillas, almacenes y accesos restringidos, previniendo incidentes que puedan afectar la operación de tu negocio.",
+          "ctaText": "Solicitar cotización para mi negocio de entretenimiento"
+        },
+        "finance": {
+          "tabName": "Sector Financiero",
+          "title": "Seguridad para bancos y oficinas financieras",
+          "text": "Proveemos sistemas de vigilancia de alta precisión para proteger áreas sensibles como cajas fuertes, cajeros automáticos y archivos confidenciales. Además, monitoreamos en tiempo real para identificar cualquier actividad sospechosa que ponga en riesgo la seguridad de tus empleados, clientes o activos financieros.",
+          "ctaText": "Solicitar cotización para mi institución financiera"
         }
       }
     },
