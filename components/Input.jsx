@@ -55,7 +55,7 @@ export default function Input({
           px-6
           py-2
           hover:pl-10
-          text-white focus:text-black
+          text-black focus:text-blue
           placeholder-greylight
           duration-300
           border-b-4

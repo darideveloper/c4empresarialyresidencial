@@ -21,7 +21,15 @@ export default function Contact() {
     handleSubmit,
     formState: { errors },
   } = useForm()
-  const onSubmit = (data) => console.log(data)
+  
+  /**
+   * Handle form submit
+   * 
+   * @param {Object} data Form data
+   */
+  function onSubmit(data) {
+    console.log({data})
+  }
 
   // Socials
   const socials = [
