@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 /**
- * Card with svg icon, title and description
+ * Card with image, title and description
  * 
  * @param {object} props - Props object
  * @param {string} props.imageSrc - Path of the image

@@ -3,7 +3,6 @@ import { fontTitle } from "@/libs/fonts"
 import { useTranslations } from 'next-intl'
 
 // Components
-import HeroImageHome from "../hero-images/HeroImageHome"
 import Cta from "@/components/Cta"
 
 // Ornaments
@@ -14,10 +13,11 @@ import "@/css/svg-animations.sass"
 
 
 /**
- * Hero section for homepage
+ * Hero section
  * 
- * @param {String} langKey - The key to get the translations for this section
- * @param {Component} HeroImage - The hero image component
+ * @param {Object} props - The props
+ * @param {String} props.langKey - The key to get the translations for this section
+ * @param {Component} props.HeroImage - The hero image component
  */
 export default function Hero({ langKey, HeroImage }) {
 

@@ -10,7 +10,7 @@ import 'swiper/css/navigation'
 
 
 /**
- * Testimonials slider section for homepage
+ * Testimonials slider section
  */
 export default function Testimonials() {
   const t = useTranslations('HomePage.Testimonials')

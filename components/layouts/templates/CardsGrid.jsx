@@ -2,7 +2,7 @@ import Title from '@/components/Title'
 import DividerTriangle from "@/components/ornaments/DividerTriangle"
 
 /**
- * 3 cards layout
+ * 3 cards template layout
  * 
  * @param {object} props - Component props
  * @param {string} props.title - Title of the section

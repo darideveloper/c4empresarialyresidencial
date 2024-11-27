@@ -1,9 +1,10 @@
 import Image from 'next/image'
 
 /**
- * Hero image animated for homepage
+ * Hero image animated for Home page
  * 
- * @param {String} imageAlt - The alt text for the image
+ * @param {Object} props - The props of the component
+ * @param {String} props.imageAlt - The alt text for the image
  * @returns 
  */
 export default function HeroImageHome({ imageAlt }) {

@@ -10,7 +10,7 @@ import TabCard from '@/components/tabs/TabCard'
 
 
 /**
- * Tabs with storytelling for homepage
+ * Tabs with storytelling for residential data
  */
 export default function TabsResidential() {
 

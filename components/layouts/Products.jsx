@@ -6,9 +6,10 @@ import SlideImages from '@/components/SlideImages'
 
 
 /**
- * Products section for homepage
+ * Products section
  * 
- * @param {str} products - Category of products to show (all, residential, company)
+ * @param {Object} props - The props
+ * @param {String} props.products - Category of products to show (all, residential, company)
  */
 export default function Products({ productsFilter }) {
   const t = useTranslations('General.Products')
@@ -91,7 +92,7 @@ export default function Products({ productsFilter }) {
                   category={category.name}
                   maxProducts={category.maxProducts}
                   altPrefix={t(`altPrefix`)}
-                  productsFilter={productsFilter}
+                  filter={productsFilter}
                 />
               </div>
             </article>

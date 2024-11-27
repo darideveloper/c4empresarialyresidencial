@@ -1,7 +1,7 @@
 /**
- * Triangle divider component (ornament)
+ * Triangle divider (ornament)
  * 
- * @param {props} object - Component props
+ * @param {object} props - Props object
  * @param {string} props.className - Additional classes to add to the component
  */
 export default function DividerTriangle({ className }) {

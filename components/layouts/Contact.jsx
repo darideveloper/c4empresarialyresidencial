@@ -9,7 +9,7 @@ import Button from '@/components/Button'
 
 
 /**
- * Contact section for homepage
+ * Contact section (socials and form)
  */
 export default function Contact() {
 

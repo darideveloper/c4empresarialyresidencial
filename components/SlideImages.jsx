@@ -8,7 +8,7 @@ import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules'
 
 // Components
 import Image from 'next/image'
-import InfoImage from '@/components/InfoImage'
+import InfoImage from '@/components/InfoHoverImage'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Css
@@ -24,10 +24,10 @@ import 'swiper/css/autoplay'
  * @param {string} props.category - Category name of the images
  * @param {number} props.maxProducts - Max number of products to show
  * @param {string} props.altPrefix - Prefix of the alt text of the images
- * @param {string} props.productsFilter - Group of the products (all, residential, company)
+ * @param {string} props.filter - Group of elements to show
 * @returns 
  */
-export default function SlideImages({ imagesPrefix, category, maxProducts, altPrefix, productsFilter }) {
+export default function SlideImages({ imagesPrefix, category, maxProducts, altPrefix, filter }) {
 
   // Get main translations
   const tCategory = useTranslations(`General.Products.categories.${category}`)
@@ -38,7 +38,7 @@ export default function SlideImages({ imagesPrefix, category, maxProducts, altPr
     const productLangId = `products.${category}${productIndex + 1}`
     const product = {}
     const filterValue = tCategory(productLangId + '.filter') 
-    if (productsFilter !== 'all' && filterValue !== productsFilter) {
+    if (filter !== 'all' && filterValue !== filter) {
       continue
     }
     product.name = tCategory(productLangId + '.name')

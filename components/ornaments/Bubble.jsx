@@ -1,6 +1,6 @@
 
 /**
- * Bubble component (background decoration)
+ * Bubble (background decoration)
  * 
  * @param {object} props - Props object
  * @param {string} props.className - Additional classes

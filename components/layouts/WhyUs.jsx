@@ -5,7 +5,7 @@ import CardsGrid from '@/components/layouts/templates/CardsGrid'
 
 
 /**
- * WhyUs section cards for homepage
+ * WhyUs section cards
  */
 export default function WhyUs() {
   const t = useTranslations('HomePage.WhyUs')

@@ -4,7 +4,7 @@ import InfoCardImage from '@/components/InfoCardImage'
 import CardsGrid from '@/components/layouts/templates/CardsGrid'
 
 /**
- * Profits section cards for homepage
+ * Profits section cards
  */
 export default function Profits() {
   const t = useTranslations('HomePage.Profits')

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Link } from '@/i18n/routing'
 
 /**
- * Image with info (title and text)
+ * Image that shows info when hover (title and text)
  * 
  * @param {object} props
  * @param {string} props.href - Link to the image

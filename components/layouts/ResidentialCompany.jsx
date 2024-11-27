@@ -5,7 +5,7 @@ import CtaXL from '@/components/CtaXL'
 
 
 /**
- * ResidentialCompany buttons for homepage
+ * ResidentialCompany buttons
  */
 export default function HomeCompany() {
 

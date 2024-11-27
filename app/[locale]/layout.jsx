@@ -15,7 +15,14 @@ import Footer from '@/components/layouts/Footer'
 import '@/css/globals.sass'
 import "aos/dist/aos.css"
 
-
+/**
+ * Main layout (header, footer, and children)
+ * 
+ * @param {object} props - Props object
+ * @param {object} props.children - Children components
+ * @param {object} props.params - Parameters object
+ * @returns 
+ */
 export default async function LocaleLayout({ children, params }) {
 
   const { locale } = await params
