@@ -97,7 +97,6 @@ export default function Contact() {
           -left-6
           top-1/2
           translate-y-0 lg:-translate-y-1/2
-          debug
         `}
       >
         <Title
