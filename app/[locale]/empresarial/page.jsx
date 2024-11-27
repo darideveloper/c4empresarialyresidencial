@@ -3,9 +3,7 @@
 // Sections
 import Hero from '@/components/layouts/Hero'
 import WhyUs from '@/components/layouts/WhyUs'
-import ResidentialCompany from '@/components/layouts/ResidentialCompany'
 import Products from '@/components/layouts/Products'
-import TabsResidential from '@/components/layouts/TabsResidential'
 import TabsCompany from '@/components/layouts/TabsCompany'
 import Profits from '@/components/layouts/Profits'
 import Testimonials from '@/components/layouts/Testimonials'
@@ -15,7 +13,7 @@ import Testimonials from '@/components/layouts/Testimonials'
 import AOS from "aos"
 import { useEffect } from 'react'
 
-export default function HomePage() {
+export default function CompanyPage() {
 
   // Initialize AOS
   useEffect(() => {
@@ -27,13 +25,11 @@ export default function HomePage() {
 
   return (
     <>
-      <Hero langKey="HomePage"/>
+      <Hero langKey="CompanyPage"/>
       <WhyUs />
-      <ResidentialCompany />
       <TabsCompany />
-      <Products products="all"/>
-      <TabsResidential />
       <Profits />
+      <Products products="company"/>
       <Testimonials />
     </>
   )

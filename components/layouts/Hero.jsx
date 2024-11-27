@@ -15,11 +15,14 @@ import "@/css/svg-animations.sass"
 
 /**
  * Hero section for homepage
+ * 
+ * @param {String} langKey - The key to get the translations for this section
  */
-export default function Hero() {
+export default function Hero({ langKey }) {
 
-  const t = useTranslations('HomePage.Hero')
+  const t = useTranslations(`${langKey}.Hero`)
   const tMeta = useTranslations('Meta')
+  const isHomePage = langKey === 'HomePage'
 
   return (
     <section
@@ -59,7 +62,7 @@ export default function Hero() {
           container
           mx-auto
           flex
-          flex-col md:flex-row
+          flex-col ${isHomePage ? 'md:md:flex-row' : 'md:flex-row-reverse'}
           items-center
           justify-center
         `}

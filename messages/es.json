@@ -311,5 +311,33 @@
         "successMessage": "¡Gracias por contactarnos! Nos pondremos en contacto contigo lo antes posible."
       }
     }
+  },
+  "CompanyPage": {
+    "Hero": {
+      "title": {
+        "beforeText": "Bienvenido a",
+        "afterText": "La Seguridad que tu Empresa Necesita"
+      },
+      "cta": "Cotización para tu Empresa",
+      "imgAlt": "Ilustración de persona gestionando la seguridad de su hogar",
+      "text": {
+        "beforeText": "En",
+        "afterText": "nos especializamos en ofrecer soluciones de seguridad a medida para negocios en Mérida, Yucatán. Con una amplia gama de cámaras de seguridad y un servicio de monitoreo profesional, estamos aquí para proteger lo que más valoras."
+      }
+    }
+  },
+  "ResidentialPage": {
+    "Hero": {
+      "title": {
+        "beforeText": "Bienvenido a",
+        "afterText": "La seguridad que tu hogar necesita"
+      },
+      "cta": "Cotización para tu Hogar",
+      "imgAlt": "Ilustración de persona gestionando la seguridad de su hogar",
+      "text": {
+        "beforeText": "En",
+        "afterText": "nos especializamos en ofrecer soluciones de seguridad a medida para hogares en Mérida, Yucatán. Con una amplia gama de cámaras de seguridad y un servicio de monitoreo profesional, estamos aquí para proteger lo que más valoras."
+      }
+    }
   }
 }
