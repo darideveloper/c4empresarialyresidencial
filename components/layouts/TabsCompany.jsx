@@ -113,6 +113,8 @@ export default function TabsCompany() {
             gap-4
             max-h-96
             overflow-y-scroll
+            pr-2
+            pb-4
           `}
         >
           {
