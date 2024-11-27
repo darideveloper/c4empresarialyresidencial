@@ -29,7 +29,7 @@ export default function ResidentialPage() {
       <WhyUs />
       <TabsResidential />
       <Profits />
-      <Products products="residential"/>
+      <Products productsFilter="residential"/>
       <Testimonials />
     </>
   )

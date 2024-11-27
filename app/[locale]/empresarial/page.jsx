@@ -29,7 +29,7 @@ export default function CompanyPage() {
       <WhyUs />
       <TabsCompany />
       <Profits />
-      <Products products="company"/>
+      <Products productsFilter="company"/>
       <Testimonials />
     </>
   )

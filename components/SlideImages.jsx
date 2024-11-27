@@ -24,11 +24,30 @@ import 'swiper/css/autoplay'
  * @param {string} props.category - Category name of the images
  * @param {number} props.maxProducts - Max number of products to show
  * @param {string} props.altPrefix - Prefix of the alt text of the images
+ * @param {string} props.productsFilter - Group of the products (all, residential, company)
 * @returns 
  */
-export default function SlideImages({ imagesPrefix, category, maxProducts, altPrefix }) {
+export default function SlideImages({ imagesPrefix, category, maxProducts, altPrefix, productsFilter }) {
 
-  const tCategory = useTranslations(`HomePage.Products.categories.${category}`)
+  // Get main translations
+  const tCategory = useTranslations(`General.Products.categories.${category}`)
+
+  // Get products data and filter
+  const products = []
+  for (let productIndex = 0; productIndex < maxProducts; productIndex++) {
+    const productLangId = `products.${category}${productIndex + 1}`
+    const product = {}
+    const filterValue = tCategory(productLangId + '.filter') 
+    if (productsFilter !== 'all' && filterValue !== productsFilter) {
+      continue
+    }
+    product.name = tCategory(productLangId + '.name')
+    product.description = tCategory(productLangId + '.description')
+    product.imageSrc = `/images/${imagesPrefix}-${productIndex + 1}.png`
+    product.imageAlt = `${altPrefix} ${product.name}`
+    products.push(product)
+  }
+  console.log({ products })
 
   return (
     <Swiper
@@ -55,18 +74,16 @@ export default function SlideImages({ imagesPrefix, category, maxProducts, altPr
       }}
     >
       {
-        Array.from({ length: maxProducts }, (_, index) => {
-
-          const productLandId = `products.${category}${index + 1}`
+        products.map((product, index) => {
 
           return (
             <SwiperSlide key={index}>
               <InfoImage
                 href={`/cotizar`}
-                imageSrc={`/images/${imagesPrefix}-${index + 1}.png`}
-                imageAlt={`${altPrefix} ${tCategory(productLandId + '.name')}`}
-                title={tCategory(productLandId + '.name')}
-                text={tCategory(productLandId + '.description')}
+                imageSrc={product.imageSrc}
+                imageAlt={product.imageAlt}
+                title={product.name}
+                text={product.description}
               />
             </SwiperSlide>
           )

@@ -31,7 +31,7 @@ export default function HomePage() {
       <WhyUs />
       <ResidentialCompany />
       <TabsCompany />
-      <Products products="all"/>
+      <Products productsFilter="all"/>
       <TabsResidential />
       <Profits />
       <Testimonials />

@@ -2,6 +2,107 @@
   "Meta": {
     "company": "C4 Empresarial y Recidencial"
   },
+  "General": {
+    "Products": {
+      "title": "Protección Integral para Tu Tranquilidad",
+      "altPrefix": "Foto de producto",
+      "categories": {
+        "camera": {
+          "title": "Cámaras de Alta Definición",
+          "description": "Vigilancia discreta y efectiva para interior y exterior, adaptable a cualquier entorno.",
+          "products": {
+            "camera1": {
+              "name": "Cámara de Seguridad 1080p",
+              "description": "Cámara de seguridad de alta definición con visión nocturna y detección de movimiento.",
+              "filter": "residential"
+            },
+            "camera2": {
+              "name": "Cámara de Seguridad 4K",
+              "description": "Cámara de seguridad de ultra alta definición con visión nocturna y detección de movimiento.",
+              "filter": "company"
+            },
+            "camera3": {
+              "name": "Cámara de Seguridad 1080p",
+              "description": "Cámara de seguridad de alta definición con visión nocturna y detección de movimiento.",
+              "filter": "all"
+            },
+            "camera4": {
+              "name": "Cámara de Seguridad 4K",
+              "description": "Cámara de seguridad de ultra alta definición con visión nocturna y detección de movimiento.",
+              "filter": "residential"
+            },
+            "camera5": {
+              "name": "Cámara de Seguridad 4K",
+              "description": "Cámara de seguridad de ultra alta definición con visión nocturna y detección de movimiento.",
+              "filter": "company"
+            }
+          }
+        },
+        "security": {
+          "title": "Sistemas de Alerta Inteligente",
+          "description": "Alarmas avanzadas que detectan y notifican sobre actividades sospechosas en tiempo real.",
+          "products": {
+            "security1": {
+              "name": "Sistema de Alarma Residencial",
+              "description": "Sistema de alarma inalámbrico con sensores de movimiento y control remoto.",
+              "filter": "residential"
+            },
+            "security2": {
+              "name": "Sistema de Alarma Empresarial",
+              "description": "Sistema de alarma con monitoreo 24/7 y notificaciones en tiempo real.",
+              "filter": "company"
+            },
+            "security3": {
+              "name": "Sistema de Alarma Residencial",
+              "description": "Sistema de alarma inalámbrico con sensores de movimiento y control remoto.",
+              "filter": "all"
+            },
+            "security4": {
+              "name": "Sistema de Alarma Empresarial",
+              "description": "Sistema de alarma con monitoreo 24/7 y notificaciones en tiempo real.",
+              "filter": "residential"
+            },
+            "security5": {
+              "name": "Sistema de Alarma Empresarial",
+              "description": "Sistema de alarma con monitoreo 24/7 y notificaciones en tiempo real.",
+              "filter": "company"
+            }
+          }
+        },
+        "control": {
+          "title": "Control Total a Distancia",
+          "description": "Acceso remoto a tu sistema de seguridad desde cualquier dispositivo, en cualquier momento.",
+          "products": {
+            "control1": {
+              "name": "Control de Acceso Residencial",
+              "description": "Control de acceso con cerraduras inteligentes y notificaciones en tiempo real.",
+              "filter": "residential"
+            },
+            "control2": {
+              "name": "Control de Acceso Empresarial",
+              "description": "Control de acceso con tarjetas de proximidad y monitoreo en tiempo real.",
+              "filter": "company"
+            },
+            "control3": {
+              "name": "Control de Acceso Residencial",
+              "description": "Control de acceso con cerraduras inteligentes y notificaciones en tiempo real.",
+              "filter": "all"
+            },
+            "control4": {
+              "name": "Control de Acceso Empresarial",
+              "description": "Control de acceso con tarjetas de proximidad y monitoreo en tiempo real.",
+              "filter": "residential"
+            },
+            "control5": {
+              "name": "Control de Acceso Empresarial",
+              "description": "Control de acceso con tarjetas de proximidad y monitoreo en tiempo real.",
+              "filter": "company"
+            }
+          }
+        }
+      }
+    }
+  },
   "HomePage": {
     "Hero": {
       "title": {
@@ -44,90 +145,6 @@
           "text": "Empresarial",
           "textHover": "Incrementa la seguridad de tu negocio",
           "imgAlt": "Ilustración de un edificio de oficinas"
-        }
-      }
-    },
-    "Products": {
-      "title": "Protección Integral para Tu Tranquilidad",
-      "altPrefix": "Foto de producto",
-      "categories": {
-        "camera": {
-          "title": "Cámaras de Alta Definición",
-          "description": "Vigilancia discreta y efectiva para interior y exterior, adaptable a cualquier entorno.",
-          "products": {
-            "camera1": {
-              "name": "Cámara de Seguridad 1080p",
-              "description": "Cámara de seguridad de alta definición con visión nocturna y detección de movimiento."
-            },
-            "camera2": {
-              "name": "Cámara de Seguridad 4K",
-              "description": "Cámara de seguridad de ultra alta definición con visión nocturna y detección de movimiento."
-            },
-            "camera3": {
-              "name": "Cámara de Seguridad 1080p",
-              "description": "Cámara de seguridad de alta definición con visión nocturna y detección de movimiento."
-            },
-            "camera4": {
-              "name": "Cámara de Seguridad 4K",
-              "description": "Cámara de seguridad de ultra alta definición con visión nocturna y detección de movimiento."
-            },
-            "camera5": {
-              "name": "Cámara de Seguridad 4K",
-              "description": "Cámara de seguridad de ultra alta definición con visión nocturna y detección de movimiento."
-            }
-          }
-        },
-        "security": {
-          "title": "Sistemas de Alerta Inteligente",
-          "description": "Alarmas avanzadas que detectan y notifican sobre actividades sospechosas en tiempo real.",
-          "products": {
-            "security1": {
-              "name": "Sistema de Alarma Residencial",
-              "description": "Sistema de alarma inalámbrico con sensores de movimiento y control remoto."
-            },
-            "security2": {
-              "name": "Sistema de Alarma Empresarial",
-              "description": "Sistema de alarma con monitoreo 24/7 y notificaciones en tiempo real."
-            },
-            "security3": {
-              "name": "Sistema de Alarma Residencial",
-              "description": "Sistema de alarma inalámbrico con sensores de movimiento y control remoto."
-            },
-            "security4": {
-              "name": "Sistema de Alarma Empresarial",
-              "description": "Sistema de alarma con monitoreo 24/7 y notificaciones en tiempo real."
-            },
-            "security5": {
-              "name": "Sistema de Alarma Empresarial",
-              "description": "Sistema de alarma con monitoreo 24/7 y notificaciones en tiempo real."
-            }
-          }
-        },
-        "control": {
-          "title": "Control Total a Distancia",
-          "description": "Acceso remoto a tu sistema de seguridad desde cualquier dispositivo, en cualquier momento.",
-          "products": {
-            "control1": {
-              "name": "Control de Acceso Residencial",
-              "description": "Control de acceso con cerraduras inteligentes y notificaciones en tiempo real."
-            },
-            "control2": {
-              "name": "Control de Acceso Empresarial",
-              "description": "Control de acceso con tarjetas de proximidad y monitoreo en tiempo real."
-            },
-            "control3": {
-              "name": "Control de Acceso Residencial",
-              "description": "Control de acceso con cerraduras inteligentes y notificaciones en tiempo real."
-            },
-            "control4": {
-              "name": "Control de Acceso Empresarial",
-              "description": "Control de acceso con tarjetas de proximidad y monitoreo en tiempo real."
-            },
-            "control5": {
-              "name": "Control de Acceso Empresarial",
-              "description": "Control de acceso con tarjetas de proximidad y monitoreo en tiempo real."
-            }
-          }
         }
       }
     },
