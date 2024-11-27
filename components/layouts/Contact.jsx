@@ -262,7 +262,7 @@ export default function Contact() {
           form
           shadow-lg
           py-4
-          px-8
+          px-0 md:px-8
           flex
           items-center
           justify-end

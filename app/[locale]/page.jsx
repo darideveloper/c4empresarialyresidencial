@@ -36,7 +36,6 @@ export default function HomePage() {
       <TabsResidential />
       <Profits />
       <Testimonials />
-      <Contact />
     </>
   )
 }

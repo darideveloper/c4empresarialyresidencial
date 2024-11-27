@@ -40,9 +40,9 @@ export default async function LocaleLayout({ children, params }) {
       >
         <NextIntlClientProvider messages={messages}>
           <Header />
-            <main>
-              {children}
-            </main>
+          <main>
+            {children}
+          </main>
           <Footer />
         </NextIntlClientProvider>
       </body>
