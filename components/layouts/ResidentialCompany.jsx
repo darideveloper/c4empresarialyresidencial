@@ -18,7 +18,7 @@ export default function HomeCompany() {
     },
     {
       "name": "company",
-      "link": "/commercial"
+      "link": "/company"
     }
   ]
 
