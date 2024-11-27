@@ -40,7 +40,7 @@ export default function Testimonials() {
         modules={[Navigation, A11y, Autoplay]}
         navigation
         autoplay={{
-          delay: 4000,
+          delay: 8000,
           disableOnInteraction: false,
         }}
       >
@@ -49,7 +49,7 @@ export default function Testimonials() {
 
             let quote = ""
             quote = t(`cards.${name}.description.beforeText`)
-            quote += tMeta('company')
+            quote += " " + tMeta('company') + " "
             quote += t(`cards.${name}.description.afterText`)
 
             return (

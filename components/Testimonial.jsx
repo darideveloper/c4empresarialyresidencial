@@ -36,12 +36,15 @@ export default function Testimonial({ imageSrc, alt, quote, client, charge }) {
           rounded-full
           mb-6
         `}
+        data-aos="fade-up"
       />
       <p
         className={`
           quote
           max-w-lg
         `}
+        data-aos="fade-up"
+        data-aos-delay="500"
       >
         {quote}
       </p>
@@ -52,6 +55,8 @@ export default function Testimonial({ imageSrc, alt, quote, client, charge }) {
           mt-4
           font-bold
         `}
+        data-aos="fade-up"
+        data-aos-delay="1000"
       >
         {client}
       </h3>
@@ -61,6 +66,8 @@ export default function Testimonial({ imageSrc, alt, quote, client, charge }) {
           text-sm
           text-blue
         `}
+        data-aos="fade-up"
+        data-aos-delay="1500"
       >
         {charge}
       </p>

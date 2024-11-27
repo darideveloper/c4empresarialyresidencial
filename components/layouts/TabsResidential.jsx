@@ -68,6 +68,7 @@ export default function TabsResidential() {
           max-w-5xl
           mx-auto
         `}
+        data-aos="fade-down"
       >
         {
           tabsNames.map((tabName, index) => (
@@ -82,12 +83,21 @@ export default function TabsResidential() {
         }
       </div>
 
-      <TabCard
-        title={t(`tabs.${activeTab}.title`)}
-        text={t(`tabs.${activeTab}.text`)}
-        ctaText={t(`tabs.${activeTab}.ctaText`)}
-        tabChanging={tabChanging}
-      />
+      <div 
+        className={`
+          tabcard-wrapper
+          w-full
+        `}
+        data-aos="fade-up"
+        data-aos-delay="500"
+      >
+        <TabCard
+          title={t(`tabs.${activeTab}.title`)}
+          text={t(`tabs.${activeTab}.text`)}
+          ctaText={t(`tabs.${activeTab}.ctaText`)}
+          tabChanging={tabChanging}
+        />
+      </div>
       
     </section>
   )

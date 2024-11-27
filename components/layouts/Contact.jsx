@@ -136,6 +136,7 @@ export default function Contact() {
               items-center
               justify-center
             `}
+            data-aos="zoom-in"
           >
 
             <Image
@@ -290,6 +291,7 @@ export default function Contact() {
               inputsData.map((inputData, index) => (
                 <Input
                   key={index}
+                  index={index}
                   {...inputData}
                 />
               ))

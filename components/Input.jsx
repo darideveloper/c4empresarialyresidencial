@@ -12,6 +12,7 @@
  * @param {string} props.errorMessage - Error message for the input
  */
 export default function Input({
+  index = 0,
   label,
   name,
   type = 'text',
@@ -29,6 +30,8 @@ export default function Input({
         flex-col
         my-8
       `}
+      data-aos="fade-up"
+      data-aos-delay={index * 500}
     >
       <label 
         htmlFor={`input-${name}`}

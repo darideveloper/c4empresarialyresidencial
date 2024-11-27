@@ -75,14 +75,25 @@ export default function TabsCompany() {
           mx-auto
         `}
       >
-        Las cámaras de seguridad en un comercio ofrecen múltiples beneficios que van más allá de la simple vigilancia.
+        <span
+          data-aos="fade-up"
+        >
+          Las cámaras de seguridad en un comercio ofrecen múltiples beneficios que van más allá de la simple vigilancia.
+        </span>
         <br />
-        A continuación, se detallan algunas de las funciones más relevantes que cumplen estos sistemas en el entorno comercial
+        <span
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
+          A continuación, se detallan algunas de las funciones más relevantes que cumplen estos sistemas en el entorno comercial
+        </span>
         <br />
         <span
           className={`
             font-bold
           `}
+          data-aos="fade-up"
+          data-aos-delay="1000"
         >
           Los delincuentes o trabajadores deshonesto son menos propensos a actuar si saben que están siendo grabado, pero aun así se ha logrado evadirlos porque no hay supervisión
         </span>
@@ -100,6 +111,7 @@ export default function TabsCompany() {
           w-full
           gap-12
           my-8
+          overflow-hidden
         `}
       >
 
@@ -116,6 +128,8 @@ export default function TabsCompany() {
             pr-2
             pb-4
           `}
+          data-aos="fade-right"
+          data-aos-delay="1500"
         >
           {
             tabsNames.map((tabName, index) => (
@@ -130,15 +144,24 @@ export default function TabsCompany() {
           }
         </div>
 
-        <TabCard
-          title={t(`tabs.${activeTab}.title`)}
-          text={t(`tabs.${activeTab}.text`)}
-          ctaText={t(`tabs.${activeTab}.ctaText`)}
-          tabChanging={tabChanging}
+        <div 
           className={`
-            w-full md:w-8/12            
+            tabcard-wrapper
+            w-full md:w-8/12 
           `}
-        />
+          data-aos="fade-left"
+          data-aos-delay="2500"
+        >
+          <TabCard
+            title={t(`tabs.${activeTab}.title`)}
+            text={t(`tabs.${activeTab}.text`)}
+            ctaText={t(`tabs.${activeTab}.ctaText`)}
+            tabChanging={tabChanging}
+            className={`
+              w-full           
+            `}
+          />
+        </div>
       </div>
     </section>
   )
