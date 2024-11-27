@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form"
 import { useTranslations } from 'next-intl'
 
+import Image from 'next/image'
 import Title from '@/components/Title'
 import Link from 'next/link'
 import Input from '@/components/Input'
@@ -18,7 +19,6 @@ export default function Contact() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm()
   const onSubmit = (data) => console.log(data)
@@ -42,7 +42,7 @@ export default function Contact() {
     },
   ]
 
-  // Inputs data
+  // Generate inputs data
   const inputsData = [
     {
       "name": "name",
@@ -75,7 +75,7 @@ export default function Contact() {
       className={`
         contact
         flex
-        flex-col
+        flex-col-reverse lg:flex-col
         items-center
         justify-center
         container
@@ -88,15 +88,16 @@ export default function Contact() {
       <div
         className={`
           socials
-          w-5/12
+          w-full lg:w-5/12
           bg-blue
           py-4
           rounded-lg
           shadow-lg
-          absolute
+          static lg:absolute
           -left-6
           top-1/2
-          -translate-y-1/2
+          translate-y-0 lg:-translate-y-1/2
+          debug
         `}
       >
         <Title
@@ -105,22 +106,112 @@ export default function Contact() {
             text-xl
             w-full
             text-center
+            px-4
           `}
         >
           {t('socials.title')}
         </Title>
 
-        <div 
+        <div
           className={`
-            map-wrapper
+            img-wrapper
             w-full
-            h-72
-            bg-grey
+            h-auto
             mb-8
-            debug
+            bg-white
+            rounded-lg
+            flex
+            items-center
+            justify-center
           `}
         >
 
+          <div 
+            className={`
+              contact-image
+              relative
+              content
+              w-[300px] sm:w-[400px] md:w-[500px]
+              h-[300px] sm:h-[500px] md:h-[500px]
+              flex
+              items-center
+              justify-center
+            `}
+          >
+
+            <Image
+              src="/images/svg-parts/contact/bg.webp"
+              width={800}
+              height={800}
+              alt={t('socials.imgAlt')}
+              className={`
+                bg
+                w-full
+                h-auto
+                mx-auto
+              `}
+            />
+
+            <Image
+              src="/images/svg-parts/contact/worker.webp"
+              width={800}
+              height={800}
+              alt={t('socials.imgAlt')}
+              className={`
+                worker
+                absolute
+                bottom-0
+                right-[15%]
+                h-5/6
+                w-auto
+              `}
+            />
+
+            <Image
+              src="/images/svg-parts/contact/pc.webp"
+              width={800}
+              height={800}
+              alt={t('socials.imgAlt')}
+              className={`
+                pc
+                absolute
+                bottom-0
+                right-[35%]
+                h-2/3
+                w-auto
+              `}
+            />
+
+            <Image
+              src="/images/svg-parts/contact/dialog.webp"
+              width={800}
+              height={800}
+              alt={t('socials.imgAlt')}
+              className={`
+                dialog
+                absolute
+                top-[10%]
+                right-[8%]
+                h-1/6
+                w-auto              
+              `}
+            />
+
+            <Image
+              src="/images/svg-parts/contact/message.webp"
+              width={800}
+              height={800}
+              alt={t('socials.imgAlt')}
+              className={`
+                message
+                absolute
+                top-[10%]
+                right-[65%]
+                h-2/6
+                w-auto   
+              `}
+            />
+          </div>
         </div>
 
         <div
@@ -135,6 +226,7 @@ export default function Contact() {
             mx-auto
           `}
         >
+          {/* Render socials */}
           {socials.map((social, index) => (
             <Link
               key={index}
@@ -181,12 +273,12 @@ export default function Contact() {
         <div
           className={`
             content
-            w-7/12
+            w-full lg:w-7/12
           `}
         >
 
           <Title>{t('form.title')}</Title>
-          <form 
+          <form
             onSubmit={handleSubmit(onSubmit)}
             className={`
               w-10/12
@@ -194,6 +286,7 @@ export default function Contact() {
             `}
           >
 
+            {/* Render inputs */}
             {
               inputsData.map((inputData, index) => (
                 <Input
@@ -203,7 +296,7 @@ export default function Contact() {
               ))
             }
 
-            <Button 
+            <Button
               text={t('form.submit')}
               className={`
                 w-7/12

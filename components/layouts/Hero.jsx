@@ -10,7 +10,7 @@ import Cta from "@/components/Cta"
 import Bubble from "@/components/ornaments/Bubble"
 
 // Custom css
-import "@/css/hero.sass"
+import "@/css/svg-animations.sass"
 
 
 /**
@@ -150,7 +150,7 @@ export default function Hero() {
           `}
         >
           <Image
-            src="/images/hero/background.webp"
+            src="/images/svg-parts/hero/background.webp"
             width={800}
             height={800}
             alt={t('imgAlt')}
@@ -165,7 +165,7 @@ export default function Hero() {
             `}
           />
           <Image
-            src="/images/hero/lines.webp"
+            src="/images/svg-parts/hero/lines.webp"
             width={800}
             height={800}
             alt={t('imgAlt')}
@@ -178,7 +178,7 @@ export default function Hero() {
             `}
           />
           <Image
-            src="/images/hero/cloud.webp"
+            src="/images/svg-parts/hero/cloud.webp"
             width={800}
             height={800}
             alt={t('imgAlt')}
@@ -191,7 +191,7 @@ export default function Hero() {
             `}
           />
           <Image
-            src="/images/hero/guard.webp"
+            src="/images/svg-parts/hero/guard.webp"
             width={800}
             height={800}
             alt={t('imgAlt')}
@@ -204,7 +204,7 @@ export default function Hero() {
             `}
           />
           <Image
-            src="/images/hero/dialog.webp"
+            src="/images/svg-parts/hero/dialog.webp"
             width={800}
             height={800}
             alt={t('imgAlt')}
@@ -217,7 +217,7 @@ export default function Hero() {
             `}
           />
           <Image
-            src="/images/hero/pc.webp"
+            src="/images/svg-parts/hero/pc.webp"
             width={800}
             height={800}
             alt={t('imgAlt')}
@@ -230,7 +230,7 @@ export default function Hero() {
             `}
           />
           <Image
-            src="/images/hero/worker-1.webp"
+            src="/images/svg-parts/hero/worker-1.webp"
             width={800}
             height={800}
             alt={t('imgAlt')}
@@ -243,7 +243,7 @@ export default function Hero() {
             `}
           />
           <Image
-            src="/images/hero/phone.webp"
+            src="/images/svg-parts/hero/phone.webp"
             width={800}
             height={800}
             alt={t('imgAlt')}
@@ -256,7 +256,7 @@ export default function Hero() {
             `}
           />
           <Image
-            src="/images/hero/worker-2.webp"
+            src="/images/svg-parts/hero/worker-2.webp"
             width={800}
             height={800}
             alt={t('imgAlt')}
@@ -269,7 +269,7 @@ export default function Hero() {
             `}
           />
           <Image
-            src="/images/hero/server.webp"
+            src="/images/svg-parts/hero/server.webp"
             width={800}
             height={800}
             alt={t('imgAlt')}

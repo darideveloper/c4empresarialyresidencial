@@ -9,7 +9,7 @@
         "afterText": "Seguridad en Mérida, Yucatán"
       },
       "cta": "Solicitar Cotización",
-      "imgAlt": "Parte de ilustración de persona gestionando la seguridad de su hogar",
+      "imgAlt": "Ilustración de persona gestionando la seguridad de su hogar",
       "text": {
         "beforeText": "En",
         "afterText": "nos especializamos en ofrecer soluciones de seguridad a medida para hogares y negocios en Mérida, Yucatán. Con una amplia gama de cámaras de seguridad y un servicio de monitoreo profesional, estamos aquí para proteger lo que más valoras."
@@ -280,7 +280,8 @@
       "socials": {
         "title": "Síguenos en nuestras Redes Sociales",
         "iconsTitle": "Siguenos en",
-        "text": "Mantente al día con nuestras últimas ofertas y consejos de seguridad siguiendo nuestras redes sociales. ¡Estamos aquí para ayudarte!"
+        "text": "Mantente al día con nuestras últimas ofertas y consejos de seguridad siguiendo nuestras redes sociales. ¡Estamos aquí para ayudarte!",
+        "imgAlt": "Ilustración de persona atendiendo clientesr"
       },
       "form": {
         "title": "Contáctanos",
