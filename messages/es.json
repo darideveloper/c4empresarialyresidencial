@@ -101,6 +101,53 @@
           }
         }
       }
+    },
+    "Contact": {
+      "socials": {
+        "title": "Síguenos en nuestras Redes Sociales",
+        "iconsTitle": "Siguenos en",
+        "text": "Mantente al día con nuestras últimas ofertas y consejos de seguridad siguiendo nuestras redes sociales. ¡Estamos aquí para ayudarte!",
+        "imgAlt": "Ilustración de persona atendiendo clientesr"
+      },
+      "form": {
+        "title": "Contáctanos",
+        "inputs": {
+          "name": {
+            "label": "Nombre",
+            "placeholder": "Miguel Pérez",
+            "errorMessage": "Introduce tu nombre"
+          },
+          "email": {
+            "label": "Correo Electrónico",
+            "placeholder": "sample@email.com",
+            "errorMessage": "Introduce un correo electrónico válido"
+          },
+          "phone": {
+            "label": "Teléfono",
+            "placeholder": "52 999 123 4567",
+            "errorMessage": "Introduce un número de teléfono válido"
+          },
+          "address": {
+            "label": "Dirección",
+            "placeholder": "Calle 60 #123, Colonia Centro",
+            "errorMessage": "Introduce tu dirección"
+          }
+        },
+        "submit": "Enviar",
+        "successMessage": "¡Gracias por contactarnos! Nos pondremos en contacto contigo lo antes posible."
+      },
+      "messages": {
+        "error": {
+          "title": "Formulario no disponible",
+          "text": "El formulario de contacto no está disponible en este momento. Por favor, inténtalo de nuevo más tarde.",
+          "confirmButtonText": "Entendido"
+        },
+        "success": {
+          "title": "¡Gracias por contactarnos!",
+          "text": "Nos pondremos en contacto contigo lo antes posible.",
+          "confirmButtonText": "Entendido"
+        }
+      }
     }
   },
   "HomePage": {
@@ -291,41 +338,6 @@
             "afterText": "a todos mis amigos y familiares."
           }
         }
-      }
-    },
-    "Contact": {
-      "socials": {
-        "title": "Síguenos en nuestras Redes Sociales",
-        "iconsTitle": "Siguenos en",
-        "text": "Mantente al día con nuestras últimas ofertas y consejos de seguridad siguiendo nuestras redes sociales. ¡Estamos aquí para ayudarte!",
-        "imgAlt": "Ilustración de persona atendiendo clientesr"
-      },
-      "form": {
-        "title": "Contáctanos",
-        "inputs": {
-          "name": {
-            "label": "Nombre",
-            "placeholder": "Miguel Pérez",
-            "errorMessage": "Introduce tu nombre"
-          },
-          "email": {
-            "label": "Correo Electrónico",
-            "placeholder": "sample@email.com",
-            "errorMessage": "Introduce un correo electrónico válido"
-          },
-          "phone": {
-            "label": "Teléfono",
-            "placeholder": "52 999 123 4567",
-            "errorMessage": "Introduce un número de teléfono válido"
-          },
-          "address": {
-            "label": "Dirección",
-            "placeholder": "Calle 60 #123, Colonia Centro",
-            "errorMessage": "Introduce tu dirección"
-          }
-        },
-        "submit": "Enviar",
-        "successMessage": "¡Gracias por contactarnos! Nos pondremos en contacto contigo lo antes posible."
       }
     }
   },

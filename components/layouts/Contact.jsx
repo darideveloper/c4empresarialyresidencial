@@ -1,3 +1,5 @@
+'use client'
+
 import { useForm } from "react-hook-form"
 import { useTranslations } from 'next-intl'
 
@@ -7,13 +9,49 @@ import Link from 'next/link'
 import Input from '@/components/Input'
 import Button from '@/components/Button'
 
+import Swal from 'sweetalert2'
+
 
 /**
  * Contact section (socials and form)
  */
 export default function Contact() {
 
-  const t = useTranslations('HomePage.Contact')
+  const t = useTranslations('General.Contact')
+
+  /**
+   * Handle form submit
+   * 
+   * @param {Object} data Form data
+   */
+  async function onSubmit(data) {
+
+    // Send data to server side endpoint
+    const response = await fetch('/api/dashboard/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+
+    if (response.ok) {
+      Swal.fire({
+        title: t('messages.success.title'),
+        text: t('messages.success.text'),
+        icon: 'success',
+        confirmButtonText: t('messages.success.confirmButtonText'),
+      })
+    } else {
+      console.error({ response })
+      Swal.fire({
+        title: t('messages.error.title'),
+        text: t('messages.error.text'),
+        icon: 'error',
+        confirmButtonText: t('messages.error.confirmButtonText'),
+      })
+    }
+  }
 
   // Form state
   const {
@@ -21,15 +59,6 @@ export default function Contact() {
     handleSubmit,
     formState: { errors },
   } = useForm()
-  
-  /**
-   * Handle form submit
-   * 
-   * @param {Object} data Form data
-   */
-  function onSubmit(data) {
-    console.log({data})
-  }
 
   // Socials
   const socials = [
@@ -133,7 +162,7 @@ export default function Contact() {
           `}
         >
 
-          <div 
+          <div
             className={`
               contact-image
               relative
