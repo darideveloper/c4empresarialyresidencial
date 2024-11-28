@@ -41,7 +41,7 @@ export async function middleware(request) {
     } catch (error) {
       console.error('Login failed:', error.message)
       return new NextResponse(
-        JSON.stringify({ error: 'Authentication error' }),
+        JSON.stringify({ error: 'Authentication error', details: error }),
         { status: 500, headers: { 'Content-Type': 'application/json' } }
       )
     }

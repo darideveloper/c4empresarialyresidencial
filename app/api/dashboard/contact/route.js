@@ -3,6 +3,7 @@
 export async function POST(request) {
   const token = request.headers.get('Authorization')
   const endpoint = `${process.env.DASHBOARD_HOST}/api/contact/`
+  console.debug({ token, endpoint })
 
   // Get post json data
   const body = await request.json()
