@@ -111,13 +111,19 @@ export default function Hero({ langKey, HeroImage }) {
             </span>
           </h1>
 
-          <Cta
-            href="/cotizar"
-            text={t('cta')}
-            dataAos="fade-up"
-            dataAosDelay="1800"
-            className="text-2xl"
-          />
+          <div
+            className={`
+              cta-wrapper
+            `}
+            data-aos="fade-up"
+            data-aos-delay="1800"
+          >
+            <Cta
+              href="/cotizar"
+              text={t('cta')}
+              className="text-2xl"
+            />
+          </div>
 
           <p
             className={`
