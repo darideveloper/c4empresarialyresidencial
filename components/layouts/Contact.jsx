@@ -121,6 +121,7 @@ export default function Contact() {
         max-w-7xl
         my-32
       `}
+      id="contact"
     >
       <div
         className={`

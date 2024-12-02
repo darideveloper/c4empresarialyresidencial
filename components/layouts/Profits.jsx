@@ -58,6 +58,7 @@ export default function Profits() {
       className={`
         bg-grey
       `}
+      id="profits"
     >
       {infoCards}
     </CardsGrid>

@@ -1,6 +1,6 @@
 import { fontTitle } from '@/libs/fonts'
 
-import ArrowSvg from '@/components/ui/ornaments/ArrowSvg'
+import ArrowSvg from '@/components/icons/ArrowSvg'
 
 /**
  * Cta component with intl routing

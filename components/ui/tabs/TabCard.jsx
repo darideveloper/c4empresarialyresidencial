@@ -40,7 +40,7 @@ export default function TabCard({ title, text, ctaText, tabChanging, className }
         {text}
       </p>
       <Cta
-        href="/cotizar"
+        href="/quote"
         text={ctaText}
         className={`
           text-md

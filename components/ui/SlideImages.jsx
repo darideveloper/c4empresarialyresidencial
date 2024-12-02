@@ -78,7 +78,7 @@ export default function SlideImages({ imagesPrefix, category, maxProducts, altPr
           return (
             <SwiperSlide key={index}>
               <InfoImage
-                href={`/cotizar`}
+                href={`/quote`}
                 imageSrc={product.imageSrc}
                 imageAlt={product.imageAlt}
                 title={product.name}

@@ -148,6 +148,16 @@
           "confirmButtonText": "Entendido"
         }
       }
+    },
+    "Header": {
+      "nav": {
+        "home": "Inicio",
+        "company": "Empresarial",
+        "residential": "Residencial",
+        "profits": "Beneficios",
+        "contact": "Coctáctanos"
+      },
+      "cta": "Cotiza tu monitoreo"
     }
   },
   "HomePage": {

@@ -6,12 +6,14 @@ import DividerTriangle from "@/components/ui/ornaments/DividerTriangle"
  * 
  * @param {object} props - Component props
  * @param {string} props.title - Title of the section
+ * @param {string} props.className - Additional classes
  * @param {React.ReactNode} props.children - InfoCards components to display
+ * @param {string} props.id - Id of the section
  */
-export default function CardsGrid({ title, className, children }) {
+export default function CardsGrid({ title, className, children, id="cards-grid" }) {
   return (
     <section
-      id="why-us"
+      id={id}
       className={`
         why-us
         relative

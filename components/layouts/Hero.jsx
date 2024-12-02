@@ -119,7 +119,7 @@ export default function Hero({ langKey, HeroImage }) {
             data-aos-delay="1800"
           >
             <Cta
-              href="/cotizar"
+              href="/quote"
               text={t('cta')}
               className="text-2xl"
             />

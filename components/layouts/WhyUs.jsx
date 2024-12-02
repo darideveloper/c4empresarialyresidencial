@@ -58,6 +58,7 @@ export default function WhyUs() {
       className={`
         bg-blue
       `}
+      id="why-us"
     >
       {infoCards}
     </CardsGrid>
