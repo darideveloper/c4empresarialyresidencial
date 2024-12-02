@@ -8,7 +8,7 @@ import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules'
 
 // Components
 import Image from 'next/image'
-import InfoImage from '@/components/InfoHoverImage'
+import InfoImage from '@/components/ui/InfoHoverImage'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Css

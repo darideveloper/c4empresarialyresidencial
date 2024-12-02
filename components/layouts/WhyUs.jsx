@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl'
 
-import InfoCardImage from '@/components/InfoCardImage'
+import InfoCardImage from '@/components/ui/InfoCardImage'
 import CardsGrid from '@/components/layouts/templates/CardsGrid'
 
 

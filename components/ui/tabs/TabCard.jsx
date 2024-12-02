@@ -1,4 +1,4 @@
-import Cta from '@/components/Cta'
+import Cta from '@/components/ui/Cta'
 
 /**
  * Info card for tabs component

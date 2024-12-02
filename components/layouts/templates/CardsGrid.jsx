@@ -1,5 +1,5 @@
-import Title from '@/components/Title'
-import DividerTriangle from "@/components/ornaments/DividerTriangle"
+import Title from '@/components/ui/Title'
+import DividerTriangle from "@/components/ui/ornaments/DividerTriangle"
 
 /**
  * 3 cards template layout

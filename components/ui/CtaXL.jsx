@@ -1,6 +1,6 @@
 import { Link } from '@/i18n/routing'
 import Image from 'next/image'
-import ArrowSvg from '@/components/ornaments/ArrowSvg'
+import ArrowSvg from '@/components/ui/ornaments/ArrowSvg'
 
 /**
  * Big cta who changes text when hovered

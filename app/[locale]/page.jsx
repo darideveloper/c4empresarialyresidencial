@@ -2,7 +2,7 @@
 
 // Sections
 import Hero from '@/components/layouts/Hero'
-import HeroImageHome from '@/components/hero-images/HeroImageHome'
+import HeroImageHome from '@/components/ui/hero-images/HeroImageHome'
 import WhyUs from '@/components/layouts/WhyUs'
 import ResidentialCompany from '@/components/layouts/ResidentialCompany'
 import Products from '@/components/layouts/Products'

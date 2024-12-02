@@ -1,8 +1,8 @@
 import { useTranslations } from 'next-intl'
 
-import Title from '@/components/Title'
-import InfoCard from '@/components/InfoCardSvg'
-import SlideImages from '@/components/SlideImages'
+import Title from '@/components/ui/Title'
+import InfoCard from '@/components/ui/InfoCardSvg'
+import SlideImages from '@/components/ui/SlideImages'
 
 
 /**

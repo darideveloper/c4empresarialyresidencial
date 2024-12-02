@@ -4,9 +4,9 @@ import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 
 
-import Title from '@/components/Title'
-import TabButton from '@/components/tabs/TabButton'
-import TabCard from '@/components/tabs/TabCard'
+import Title from '@/components/ui/Title'
+import TabButton from '@/components/ui/tabs/TabButton'
+import TabCard from '@/components/ui/tabs/TabCard'
 
 
 /**

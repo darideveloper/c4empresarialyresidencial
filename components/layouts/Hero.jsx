@@ -3,10 +3,10 @@ import { fontTitle } from "@/libs/fonts"
 import { useTranslations } from 'next-intl'
 
 // Components
-import Cta from "@/components/Cta"
+import Cta from "@/components/ui/Cta"
 
 // Ornaments
-import Bubble from "@/components/ornaments/Bubble"
+import Bubble from "@/components/ui/ornaments/Bubble"
 
 // Custom css
 import "@/css/svg-animations.sass"

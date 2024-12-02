@@ -2,8 +2,8 @@ import { useTranslations } from 'next-intl'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, A11y, Autoplay } from 'swiper/modules'
-import Title from '@/components/Title'
-import Testimonial from '@/components/Testimonial'
+import Title from '@/components/ui/Title'
+import Testimonial from '@/components/ui/Testimonial'
 
 import 'swiper/css'
 import 'swiper/css/navigation'

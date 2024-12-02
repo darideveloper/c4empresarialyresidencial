@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl'
 
-import Title from '@/components/Title'
-import CtaXL from '@/components/CtaXL'
+import Title from '@/components/ui/Title'
+import CtaXL from '@/components/ui/CtaXL'
 
 
 /**

@@ -4,10 +4,10 @@ import { useForm } from "react-hook-form"
 import { useTranslations } from 'next-intl'
 
 import Image from 'next/image'
-import Title from '@/components/Title'
+import Title from '@/components/ui/Title'
 import Link from 'next/link'
-import Input from '@/components/Input'
-import Button from '@/components/Button'
+import Input from '@/components/ui/Input'
+import Button from '@/components/ui/Button'
 
 import Swal from 'sweetalert2'
 
