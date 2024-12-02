@@ -78,9 +78,7 @@ export default function Header() {
               w-16
               rounded-full
               hover:scale-105
-              hover:shadow-xl
-              border-blue hover:border-white
-              border-2
+              hover:opacity-60
               duration-300
               my-2
             `}
