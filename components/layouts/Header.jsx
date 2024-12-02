@@ -4,8 +4,8 @@ import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { usePathname } from 'next/navigation'
 
-import { LuMenu, LuX } from "react-icons/lu";
-import { Link } from '@/i18n/routing'
+import { LuMenu, LuX } from "react-icons/lu"
+import { TransitionLink } from '@/components/utils/TransitionLink'
 import Image from 'next/image'
 
 
@@ -50,7 +50,7 @@ export default function Header() {
     top-0
     left-0
     duration-300
-  ` 
+  `
 
   return (
     <header
@@ -68,7 +68,7 @@ export default function Header() {
           justify-between
         `}
       >
-        <Link href="/">
+        <TransitionLink href="/">
           <Image
             src="/images/logo.webp"
             alt={'Logo ' + tMeta('company')}
@@ -83,8 +83,8 @@ export default function Header() {
               my-2
             `}
           />
-        </Link>
-     
+        </TransitionLink>
+
         <nav>
           <ul
             className={`
@@ -114,7 +114,7 @@ export default function Header() {
                     px-2
                   `}
                 >
-                  <Link
+                  <TransitionLink
                     href={link.url}
                     className={`
                       text-white
@@ -129,9 +129,13 @@ export default function Header() {
                       inline-block
                     `}
                     disable={`${activeLink}`}
+                    onClick={(e) => {
+                      if (activeLink) e.preventDefault()
+                      setMenuOpen(false)
+                    }}
                   >
                     {t(`nav.${link.name}`)}
-                  </Link>
+                  </TransitionLink>
                 </li>
               )
             })}
