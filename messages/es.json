@@ -354,28 +354,28 @@
   "CompanyPage": {
     "Hero": {
       "title": {
-        "beforeText": "Bienvenido a",
-        "afterText": "La Seguridad que tu Empresa Necesita"
+        "beforeText": "Welcome to",
+        "afterText": "The Security Your Business Needs"
       },
-      "cta": "Cotización para tu Empresa",
-      "imgAlt": "Ilustración de personas en una empresa",
+      "cta": "Get a Quote for Your Business",
+      "imgAlt": "Illustration of people in a business environment",
       "text": {
-        "beforeText": "En",
-        "afterText": "nos especializamos en ofrecer soluciones de seguridad a medida para negocios en Mérida, Yucatán. Con una amplia gama de cámaras de seguridad y un servicio de monitoreo profesional, estamos aquí para proteger lo que más valoras."
+        "beforeText": "At",
+        "afterText": "we specialize in providing tailored security solutions for businesses in Mérida, Yucatán. With a wide range of security cameras and professional monitoring services, we are here to protect what matters most to you."
       }
     }
   },
   "ResidentialPage": {
     "Hero": {
       "title": {
-        "beforeText": "Bienvenido a",
-        "afterText": "La seguridad que tu hogar necesita"
+        "beforeText": "Welcome to",
+        "afterText": "The Security Your Home Needs"
       },
-      "cta": "Cotización para tu Hogar",
-      "imgAlt": "Ilustración de persona analizando hogares",
+      "cta": "Get a Quote for Your Home",
+      "imgAlt": "Illustration of a person analyzing homes",
       "text": {
-        "beforeText": "En",
-        "afterText": "nos especializamos en ofrecer soluciones de seguridad a medida para hogares en Mérida, Yucatán. Con una amplia gama de cámaras de seguridad y un servicio de monitoreo profesional, estamos aquí para proteger lo que más valoras."
+        "beforeText": "At",
+        "afterText": "we specialize in providing tailored security solutions for homes in Mérida, Yucatán. With a wide range of security cameras and professional monitoring services, we are here to protect what matters most to you."
       }
     }
   }

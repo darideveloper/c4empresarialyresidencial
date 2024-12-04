@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import { LuMenu, LuX } from "react-icons/lu"
 import { TransitionLink } from '@/components/utils/TransitionLink'
 import Image from 'next/image'
-
+import LangSelector from '@/components/ui/LangSelector'
 
 /**
  * Global Header section of the layout
@@ -21,7 +21,6 @@ export default function Header() {
   // Header state
   const [menuOpen, setMenuOpen] = useState(false)
   const currentPage = usePathname()
-  console.log({ currentPage })
 
   // Header data
   const links = [
@@ -85,85 +84,104 @@ export default function Header() {
           />
         </TransitionLink>
 
-        <nav>
-          <ul
-            className={`
-              flex
-              flex-col md:flex-row
-              justify-center
-              gap-4
-              fixed md:relative
-              bg-grey md:bg-blue
-              shadow-lg md:shadow-none
-              shadow-black
-              ${menuOpen ? 'left-0' : '-left-72'} md:left-0
-              top-0
-              h-screen md:h-auto
-              z-20
-              duration-700
-            `}
-          >
-            {links.map((link, index) => {
-
-              let activeLink = currentPage.endsWith(link.url)
-
-              return (
-                <li
-                  key={index}
-                  className={`
-                    px-2
-                  `}
-                >
-                  <TransitionLink
-                    href={link.url}
-                    className={`
-                      text-white
-                      ${activeLink && 'font-bold'}
-                      ${activeLink && 'opacity-30'}
-                      ${activeLink && 'cursor-default'}
-                      border-b-0 md:border-b-2
-                      md:border-blue ${!activeLink && 'hover:border-white'}
-                      duration-300
-                      px-16 md:px-2
-                      py-4 md:py-1
-                      inline-block
-                    `}
-                    disable={`${activeLink}`}
-                    onClick={(e) => {
-                      if (activeLink) e.preventDefault()
-                      setMenuOpen(false)
-                    }}
-                  >
-                    {t(`nav.${link.name}`)}
-                  </TransitionLink>
-                </li>
-              )
-            })}
-          </ul>
-        </nav>
-
-        <button
+        <div
           className={`
-            w-8
-            h-8
-            md:hidden
-            relative
+            nav-wrapper
+            flex
+            items-center
+            justify-between
           `}
-          onClick={() => setMenuOpen(!menuOpen)}
         >
-          <LuMenu
+          {/* Nav */}
+          <nav>
+            <ul
+              className={`
+                flex
+                flex-col lg:flex-row
+                justify-center
+                gap-4
+                fixed lg:relative
+                bg-grey lg:bg-blue
+                shadow-lg lg:shadow-none
+                shadow-black
+                ${menuOpen ? 'left-0' : '-left-72'} lg:left-0
+                top-0
+                h-screen lg:h-auto
+                z-20
+                duration-700
+              `}
+            >
+              {links.map((link, index) => {
+
+                let activeLink = currentPage.endsWith(link.url)
+
+                return (
+                  <li
+                    key={index}
+                    className={`
+                      px-2
+                    `}
+                  >
+                    <TransitionLink
+                      href={link.url}
+                      className={`
+                        text-white
+                        ${activeLink && 'font-bold'}
+                        ${activeLink && 'opacity-30'}
+                        ${activeLink && 'cursor-default'}
+                        border-b-0 lg:border-b-2
+                        lg:border-blue ${!activeLink && 'hover:border-white'}
+                        duration-300
+                        px-16 lg:px-2
+                        py-4 lg:py-1
+                        inline-block
+                      `}
+                      disable={`${activeLink}`}
+                      onClick={(e) => {
+                        if (activeLink) e.preventDefault()
+                        setMenuOpen(false)
+                      }}
+                    >
+                      {t(`nav.${link.name}`)}
+                    </TransitionLink>
+                  </li>
+                )
+              })}
+            </ul>
+          </nav>
+
+          {/* Lang */}
+          <LangSelector
             className={`
-              ${menuOpen ? 'opacity-0' : 'opacity-100'}
-              ${menuIconStyles}
+              mx-4
             `}
           />
-          <LuX
+
+          {/* Menu button */}
+          <button
             className={`
-              ${!menuOpen ? 'opacity-0' : 'opacity-100'}
-              ${menuIconStyles}
+              w-8
+              h-8
+              lg:hidden
+              relative
             `}
-          />
-        </button>
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <LuMenu
+              className={`
+                ${menuOpen ? 'opacity-0' : 'opacity-100'}
+                ${menuIconStyles}
+              `}
+            />
+            <LuX
+              className={`
+                ${!menuOpen ? 'opacity-0' : 'opacity-100'}
+                ${menuIconStyles}
+              `}
+            />
+          </button>
+        </div>
+
 
       </div>
 

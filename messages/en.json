@@ -2,6 +2,164 @@
   "Meta": {
     "company": "C4 Empresarial y Recidencial"
   },
+  "General": {
+    "Products": {
+      "title": "Comprehensive Protection for Your Peace of Mind",
+      "altPrefix": "Product Photo",
+      "categories": {
+        "camera": {
+          "title": "High-Definition Cameras",
+          "description": "Discreet and effective surveillance for indoor and outdoor use, adaptable to any environment.",
+          "products": {
+            "camera1": {
+              "name": "1080p Security Camera",
+              "description": "High-definition security camera with night vision and motion detection.",
+              "filter": "residential"
+            },
+            "camera2": {
+              "name": "4K Security Camera",
+              "description": "Ultra high-definition security camera with night vision and motion detection.",
+              "filter": "company"
+            },
+            "camera3": {
+              "name": "1080p Security Camera",
+              "description": "High-definition security camera with night vision and motion detection.",
+              "filter": "all"
+            },
+            "camera4": {
+              "name": "4K Security Camera",
+              "description": "Ultra high-definition security camera with night vision and motion detection.",
+              "filter": "residential"
+            },
+            "camera5": {
+              "name": "4K Security Camera",
+              "description": "Ultra high-definition security camera with night vision and motion detection.",
+              "filter": "company"
+            }
+          }
+        },
+        "security": {
+          "title": "Smart Alert Systems",
+          "description": "Advanced alarms that detect and notify suspicious activities in real-time.",
+          "products": {
+            "security1": {
+              "name": "Residential Alarm System",
+              "description": "Wireless alarm system with motion sensors and remote control.",
+              "filter": "residential"
+            },
+            "security2": {
+              "name": "Business Alarm System",
+              "description": "Alarm system with 24/7 monitoring and real-time notifications.",
+              "filter": "company"
+            },
+            "security3": {
+              "name": "Residential Alarm System",
+              "description": "Wireless alarm system with motion sensors and remote control.",
+              "filter": "all"
+            },
+            "security4": {
+              "name": "Business Alarm System",
+              "description": "Alarm system with 24/7 monitoring and real-time notifications.",
+              "filter": "residential"
+            },
+            "security5": {
+              "name": "Business Alarm System",
+              "description": "Alarm system with 24/7 monitoring and real-time notifications.",
+              "filter": "company"
+            }
+          }
+        },
+        "control": {
+          "title": "Total Remote Control",
+          "description": "Remote access to your security system from any device, anytime.",
+          "products": {
+            "control1": {
+              "name": "Residential Access Control",
+              "description": "Access control with smart locks and real-time notifications.",
+              "filter": "residential"
+            },
+            "control2": {
+              "name": "Business Access Control",
+              "description": "Access control with proximity cards and real-time monitoring.",
+              "filter": "company"
+            },
+            "control3": {
+              "name": "Residential Access Control",
+              "description": "Access control with smart locks and real-time notifications.",
+              "filter": "all"
+            },
+            "control4": {
+              "name": "Business Access Control",
+              "description": "Access control with proximity cards and real-time monitoring.",
+              "filter": "residential"
+            },
+            "control5": {
+              "name": "Business Access Control",
+              "description": "Access control with proximity cards and real-time monitoring.",
+              "filter": "company"
+            }
+          }
+        }
+      }
+    },
+    "Contact": {
+      "socials": {
+        "title": "Follow Us on Social Media",
+        "iconsTitle": "Follow us on",
+        "text": "Stay updated with our latest offers and security tips by following us on social media. We're here to help!",
+        "imgAlt": "Illustration of person assisting customers"
+      },
+      "form": {
+        "title": "Contact Us",
+        "inputs": {
+          "name": {
+            "label": "Name",
+            "placeholder": "Miguel Pérez",
+            "errorMessage": "Please enter your name"
+          },
+          "email": {
+            "label": "Email",
+            "placeholder": "sample@email.com",
+            "errorMessage": "Please enter a valid email address"
+          },
+          "phone": {
+            "label": "Phone",
+            "placeholder": "52 999 123 4567",
+            "errorMessage": "Please enter a valid phone number"
+          },
+          "address": {
+            "label": "Address",
+            "placeholder": "123 Main Street, Downtown",
+            "errorMessage": "Please enter your address"
+          }
+        },
+        "submit": "Submit",
+        "successMessage": "Thank you for contacting us! We will get back to you as soon as possible."
+      },
+      "messages": {
+        "error": {
+          "title": "Form Unavailable",
+          "text": "The contact form is not available at the moment. Please try again later.",
+          "confirmButtonText": "Understood"
+        },
+        "success": {
+          "title": "Thank You for Contacting Us!",
+          "text": "We will get in touch with you as soon as possible.",
+          "confirmButtonText": "Understood"
+        }
+      }
+    },
+    "Header": {
+      "nav": {
+        "home": "Home",
+        "company": "Business",
+        "residential": "Residential",
+        "profits": "Benefits",
+        "contact": "Contact Us"
+      },
+      "cta": "Get a Monitoring Quote"
+    }
+  },
   "HomePage": {
     "Hero": {
       "title": {
@@ -12,56 +170,212 @@
       "imgAlt": "Illustration of a person managing home security",
       "text": {
         "beforeText": "At",
-        "afterText": "we specialize in providing tailored security solutions for homes and businesses in Mérida, Yucatán. With a wide range of security cameras and professional monitoring service, we are here to protect what you value most."
+        "afterText": "we specialize in offering tailored security solutions for homes and businesses in Mérida, Yucatán. With a wide range of security cameras and professional monitoring services, we're here to protect what you value most."
       }
     },
     "WhyUs": {
       "title": "Why Choose Us?",
       "cards": {
-        "1": {
+        "tech": {
           "title": "Advanced Technology",
-          "description": "Our cameras are equipped with the latest video surveillance technology, ensuring sharp and clear images, even in low light conditions."
+          "description": "Our cameras are equipped with the latest in video surveillance technology, ensuring clear and sharp images even in low-light conditions."
         },
-        "2": {
+        "monitoring": {
           "title": "24/7 Monitoring",
-          "description": "We offer continuous monitoring service, ensuring that your property is protected at all times. Our team is ready to respond to any situation."
+          "description": "We offer continuous monitoring services, ensuring your property is protected at all times. Our team is ready to respond to any incident."
         },
-        "3": {
+        "installation": {
           "title": "Professional Installation",
-          "description": "We have highly trained technicians who perform quick and efficient installations, ensuring each camera is positioned to maximize its effectiveness."
+          "description": "Our highly trained technicians ensure fast and efficient installation, positioning each camera to maximize its effectiveness."
         }
       }
     },
-    "HomeCompany": {
+    "ResidentialCompany": {
       "title": "Choose Your Service",
       "services": {
-        "home": {
+        "residential": {
           "text": "Residential",
           "textHover": "Protect your home and family",
           "imgAlt": "Illustration of a house"
         },
         "company": {
           "text": "Business",
-          "textHover": "Increase the security of your business",
+          "textHover": "Enhance your business security",
           "imgAlt": "Illustration of an office building"
         }
       }
     },
-    "Products": {
-      "title": "Comprehensive Protection for Your Peace of Mind",
-      "products": {
-        "camera": {
-          "title": "High-Definition Cameras",
-          "description": "Discreet and effective surveillance for indoor and outdoor settings, adaptable to any environment."
+    "TabsResidential": {
+      "title": "Find the Perfect Solution for Your Home",
+      "tabs": {
+        "house": {
+          "tabName": "Single-Family Home",
+          "title": "Protection at the Right Time",
+          "text": "Maria, worried about strange movements near her house and her family's safety, contacted our company. Within 48 hours, we installed cameras with night vision and remote monitoring. One night, the cameras detected an intruder. Thanks to the alert, Maria called the authorities, and now she lives peacefully and securely.",
+          "ctaText": "Request a Free Evaluation"
         },
-        "security": {
-          "title": "Smart Alert Systems",
-          "description": "Advanced alarms that detect and notify you of suspicious activities in real-time."
+        "apartment": {
+          "tabName": "Apartment",
+          "title": "Personalized Surveillance for Apartments",
+          "text": "Carlos lived in an apartment and noticed packages disappearing from the entrance. We strategically installed cameras in common areas and access points. A week later, the cameras identified the culprit, and with the evidence, management took action. Now, all residents enjoy greater security.",
+          "ctaText": "Request a Free Evaluation"
         },
-        "control": {
-          "title": "Total Remote Control",
-          "description": "Remote access to your security system from any device, anytime."
+        "residential": {
+          "tabName": "Private and Residential Communities",
+          "title": "Comprehensive Protection for Residential Areas",
+          "text": "In a private community, neighbors reported car thefts. We designed a camera system for entrances, common areas, and interested homes. One night, the cameras caught a theft attempt, and the alert prevented the incident. Since then, the community has felt safer.",
+          "ctaText": "Request a Free Evaluation"
+        },
+        "hightValue": {
+          "tabName": "High-Value Homes",
+          "title": "Exclusive Care for Luxury Homes",
+          "text": "Maria, worried about strange movements near her house and her family's safety, contacted our company. Within 48 hours, we installed cameras with night vision and remote monitoring. One night, the cameras detected an intruder. Thanks to the alert, Maria called the authorities, and now she lives peacefully and securely.",
+          "ctaText": "Request a Free Evaluation"
         }
+      }
+    },
+    "TabsCompany": {
+      "title": "Find the Perfect Solution for Your Business",
+      "tabs": {
+        "restaurant": {
+          "tabName": "Restaurants",
+          "title": "Monitoring of Long-Time Employees in Restaurant Chains",
+          "text": "These employees tend to take goods through unnoticed routines initially but are discovered through repeated suspicious behaviors. Our task is to monitor these behaviors until the misconduct is caught red-handed.",
+          "ctaText": "Request a Quote for My Restaurant"
+        },
+        "cash": {
+          "tabName": "Pawnshops",
+          "title": "Monitoring in Pawnshops Where Employees and Clients Commit Theft",
+          "text": "This crime can occur through price changes by employees and involves both dishonest customers and sellers. Our task is to monitor these behaviors until the misconduct is caught red-handed.",
+          "ctaText": "Request a Quote for My Pawnshop"
+        },
+        "retail": {
+          "tabName": "Retail",
+          "title": "Monitoring Employees and Customers in Retail Stores",
+          "text": "Retail stores are often vulnerable to internal and external theft. Our team focuses on identifying employees engaging in dishonest actions, such as inventory mismanagement, and monitoring customers with suspicious behavior. We ensure evidence is gathered in each case to protect your assets and maintain the proper flow of your operations.",
+          "ctaText": "Request a Quote for My Retail Store"
+        },
+        "hotel": {
+          "tabName": "Hotels",
+          "title": "Comprehensive Security for the Hospitality Sector",
+          "text": "We provide surveillance in common areas, parking lots, and sensitive zones such as storage rooms or cash registers. These areas are often targeted for dishonest actions that can compromise the safety and experience of your guests. Our team implements measures to identify risk patterns and protect your facilities continuously.",
+          "ctaText": "Request a Quote for My Hotel"
+        },
+        "industry": {
+          "tabName": "Industries",
+          "title": "Monitoring Critical Areas in Plants and Factories",
+          "text": "We safeguard your facilities and machinery with high-precision cameras designed to capture suspicious activity in real time. Our approach includes supervising restricted access areas, monitoring sensitive materials, and detecting unauthorized behavior that could compromise your production continuity.",
+          "ctaText": "Request a Quote for My Plant or Factory"
+        },
+        "offices": {
+          "tabName": "Offices",
+          "title": "Access Control and Monitoring in Corporate Offices",
+          "text": "We implement security systems that ensure the protection of your employees, visitors, and business assets. From monitoring servers and confidential files to controlling access in strategic areas, our service provides a safe work environment by identifying and preventing potential risks.",
+          "ctaText": "Request a Quote for My Office"
+        },
+        "education": {
+          "tabName": "Education",
+          "title": "Protection for Schools and Universities",
+          "text": "We ensure surveillance in educational facilities by supervising access points, common areas, and spaces such as laboratories or recreational zones. Our focus is on preventing incidents and guaranteeing a safe environment for both students and academic staff, adapting to each institution's specific needs.",
+          "ctaText": "Request a Quote for My Educational Institution"
+        },
+        "construction": {
+          "tabName": "Construction",
+          "title": "Monitoring Construction Sites and Projects",
+          "text": "We install specialized cameras to prevent theft of materials and machinery at construction sites. Additionally, we monitor real-time activity to detect unusual behaviors or risks that might delay your project's progress, ensuring everything stays on track.",
+          "ctaText": "Request a Quote for My Construction Project"
+        },
+        "transport": {
+          "tabName": "Transport and Logistics",
+          "title": "Security for Stations and Transport Fleets",
+          "text": "We provide strategic surveillance in stations, terminals, and moving vehicles. Our system includes real-time monitoring to protect both passengers and goods during transit, preventing vandalism, theft, or any incident that compromises safety.",
+          "ctaText": "Request a Quote for My Transportation Business"
+        },
+        "government": {
+          "tabName": "Government",
+          "title": "Security in Government Offices and Infrastructure",
+          "text": "We ensure monitoring in public buildings and critical areas such as essential service plants, workstations, and high-traffic spaces. Our focus is on identifying potential threats and preventing vandalism, ensuring the continuity and safety of governmental operations.",
+          "ctaText": "Request a Quote for My Government Entity"
+        },
+        "entertainment": {
+          "tabName": "Entertainment",
+          "title": "Surveillance for Cinemas, Theaters, and Gyms",
+          "text": "We ensure protection in recreational and cultural spaces through monitoring systems designed to oversee both customer and staff areas. Our approach includes supervising sensitive points such as ticket offices, storage rooms, and restricted accesses to prevent incidents that could affect your business operations.",
+          "ctaText": "Request a Quote for My Entertainment Business"
+        },
+        "finance": {
+          "tabName": "Financial Sector",
+          "title": "Security for Banks and Financial Offices",
+          "text": "We provide high-precision surveillance systems to protect sensitive areas like safes, ATMs, and confidential files. Additionally, we monitor in real time to identify any suspicious activity that could jeopardize the safety of your employees, clients, or financial assets.",
+          "ctaText": "Request a Quote for My Financial Institution"
+        }
+      }
+    },
+    "Profits": {
+      "title": "Benefits of Monitoring",
+      "cards": {
+        "prevention": {
+          "title": "Crime Prevention",
+          "description": "The visible presence of cameras deters criminals, reducing the risk of theft or vandalism."
+        },
+        "peace": {
+          "title": "Peace of Mind",
+          "description": "Knowing your home or business is protected allows you to live and work with peace of mind."
+        },
+        "support": {
+          "title": "Personalized Support",
+          "description": "Our team is available to answer your questions and adapt our services to your specific needs."
+        }
+      }
+    },
+    "Testimonials": {
+      "title": "Our Satisfied Clients",
+      "imagesAlt": "Photo of a client",
+      "cards": {
+        "juan": {
+          "name": "Juan Pérez",
+          "charge": "Satisfied Client",
+          "description": {
+            "beforeText": "Since I installed cameras from",
+            "afterText": ", I feel much safer. The monitoring service is exceptional."
+          }
+        },
+        "maria": {
+          "name": "María López",
+          "charge": "Business Owner",
+          "description": {
+            "beforeText": "The installation was quick and professional. I recommend",
+            "afterText": "to all my friends and family."
+          }
+        }
+      }
+    }
+  },
+  "CompanyPage": {
+    "Hero": {
+      "title": {
+        "beforeText": "Welcome to",
+        "afterText": "The Security Your Business Needs"
+      },
+      "cta": "Get a Quote for Your Business",
+      "imgAlt": "Illustration of people in a business environment",
+      "text": {
+        "beforeText": "At",
+        "afterText": "we specialize in providing tailored security solutions for businesses in Mérida, Yucatán. With a wide range of security cameras and professional monitoring services, we are here to protect what matters most to you."
+      }
+    }
+  },
+  "ResidentialPage": {
+    "Hero": {
+      "title": {
+        "beforeText": "Welcome to",
+        "afterText": "The Security Your Home Needs"
+      },
+      "cta": "Get a Quote for Your Home",
+      "imgAlt": "Illustration of a person analyzing homes",
+      "text": {
+        "beforeText": "At",
+        "afterText": "we specialize in providing tailored security solutions for homes in Mérida, Yucatán. With a wide range of security cameras and professional monitoring services, we are here to protect what matters most to you."
       }
     }
   }

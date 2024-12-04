@@ -45,6 +45,7 @@ export async function middleware(request) {
         { status: 500, headers: { 'Content-Type': 'application/json' } }
       )
     }
+    
   }
 
   // Add internationalization middleware for other routes
