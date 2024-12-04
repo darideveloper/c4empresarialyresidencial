@@ -14,11 +14,14 @@ body
   color: var(--grey)
   background: var(--white)
   overflow-x: hidden
+  padding-top: 0px
+  opacity: 1
+
+main
   transition-property: all
   transition-timing-function: ease-in-out
   transition-duration: 0.4s
-  padding-top: 0px
-  opacity: 1
+
 
 .debug
   border: 1px solid red
@@ -77,6 +80,8 @@ body
     opacity: 0.7 !important
 
 .page-transition
-  opacity: 0.1
-  filter: blur(10px)
-  padding-top: 20px
+  // opacity: 0.1
+  // filter: blur(10px)
+  // padding-top: 20px
+  transform: translateX(-100%)
+  filter: blur(15px)

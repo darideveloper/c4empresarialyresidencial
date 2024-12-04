@@ -3,7 +3,8 @@
 import { Link } from '@/i18n/routing'
 import { useRouter } from '@/i18n/routing'
 
-export const TransitionLink = ({ href, onClick, disable, ...props }) => {
+
+export function TransitionLink ({ href, onClick, disable, ...props }) {
 
   const router = useRouter()
 
@@ -19,7 +20,7 @@ export const TransitionLink = ({ href, onClick, disable, ...props }) => {
     e.preventDefault()
     const transitionClass = 'page-transition'
     const transitionDuration = 400
-    const body = document.querySelector('body')
+    const body = document.querySelector('main')
     body.classList.add(transitionClass)
     await sleep(transitionDuration)
 

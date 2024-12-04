@@ -155,9 +155,9 @@
         "company": "Empresarial",
         "residential": "Residencial",
         "profits": "Beneficios",
-        "contact": "Coctáctanos"
-      },
-      "cta": "Cotiza tu monitoreo"
+        "contact": "Coctáctanos",
+        "quote": "Cotizar"
+      }
     }
   },
   "HomePage": {

@@ -155,9 +155,9 @@
         "company": "Business",
         "residential": "Residential",
         "profits": "Benefits",
-        "contact": "Contact Us"
-      },
-      "cta": "Get a Monitoring Quote"
+        "contact": "Contact Us",
+        "quote": "Request a Quote"
+      }
     }
   },
   "HomePage": {

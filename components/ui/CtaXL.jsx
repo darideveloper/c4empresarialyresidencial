@@ -1,4 +1,4 @@
-import { Link } from '@/i18n/routing'
+import { TransitionLink } from '@/components/utils/TransitionLink'
 import Image from 'next/image'
 import ArrowSvg from '@/components/icons/ArrowSvg'
 
@@ -16,7 +16,7 @@ import ArrowSvg from '@/components/icons/ArrowSvg'
  */
 export default function CtaXL({ index, text, textHover, imageSrc, imageAlt, href, className }) {
   return (
-    <Link
+    <TransitionLink
       href={href}
       className={`
         rounded-xl
@@ -112,6 +112,6 @@ export default function CtaXL({ index, text, textHover, imageSrc, imageAlt, href
           />
         </p>
       </div>
-    </Link>
+    </TransitionLink>
   )
 }

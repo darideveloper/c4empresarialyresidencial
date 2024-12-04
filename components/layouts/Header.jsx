@@ -9,6 +9,7 @@ import { TransitionLink } from '@/components/utils/TransitionLink'
 import Image from 'next/image'
 import LangSelector from '@/components/ui/LangSelector'
 
+
 /**
  * Global Header section of the layout
  */
@@ -38,7 +39,11 @@ export default function Header() {
     },
     {
       "name": "contact",
-      "url": "/#contact"
+      "url": "#contact"
+    },
+    {
+      "name": "quote",
+      "url": "/quote"
     }
   ]
   const menuIconStyles = `
