@@ -1,5 +1,3 @@
-"use client"
-
 // Sections
 import Hero from '@/components/layouts/Hero'
 import HeroImageHome from '@/components/ui/anim-images/HeroImageHome'
@@ -12,20 +10,7 @@ import Profits from '@/components/layouts/Profits'
 import Testimonials from '@/components/layouts/Testimonials'
 
 
-// Libs
-import AOS from "aos"
-import { useEffect } from 'react'
-
 export default function HomePage() {
-
-  // Initialize AOS
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      delay: window.innerWidth < 768 ? 0 : 100,
-    })
-  }, [])
-
   return (
     <>
       <Hero langKey="HomePage" HeroImage={HeroImageHome} />
