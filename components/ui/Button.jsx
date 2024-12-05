@@ -11,19 +11,23 @@ import ArrowSvg from '@/components/icons/ArrowSvg'
  * @param {string} props.text - Text to display (action button)
  * @param {string} props.text - Text to display
  * @param {string} props.className - Additional classes
+ * @param {boolean} props.showArrow - Show arrow icon
+ * @param {boolean} props.disabled - Disable button
+ * 
  */
-export default function Button({ href = "", onClick = null, text, className }) {
+export default function Button({ href = "", onClick = null, text, className, showArrow = true, disabled = false }) {
 
   const styles = `
     cta
     border-2
-    bg-blue hover:bg-transparent
-    text-white hover:text-blue
+    bg-blue ${!disabled && 'hover:bg-transparent'}
+    text-white ${!disabled && 'hover:text-blue'}
+    ${disabled && 'cursor-regular'}
+    ${disabled && 'opacity-50'}
     border-blue
     rounded-xl
     py-3 px-6
     mt-6
-    hover:bg-blue-dark
     inline-block
     duration-300
     font-bold
@@ -33,7 +37,7 @@ export default function Button({ href = "", onClick = null, text, className }) {
   `
 
   const content = (
-    <div 
+    <div
       className={`
         content
         flex 
@@ -46,14 +50,14 @@ export default function Button({ href = "", onClick = null, text, className }) {
         {text}
       </span>
 
-      <ArrowSvg 
+      <ArrowSvg
         className={`
           fill-white
           group-hover:fill-blue
           group-hover:scale-125
           group-hover:ml-2
           duration-500
-          hidden sm:block
+          ${showArrow ? "hidden sm:block" : "hidden"}
         `}
       />
     </div>
@@ -61,19 +65,20 @@ export default function Button({ href = "", onClick = null, text, className }) {
 
   return (
     (
-      href !== ""
-      ? <TransitionLink
+      href == "" || disabled
+        ? <button
+          className={styles}
+          onClick={onClick}
+          disabled={disabled}
+        >
+          {content}
+        </button>
+        : <TransitionLink
           href={href}
           className={styles}
         >
           {content}
         </TransitionLink>
-      : <button
-          className={styles}
-          onClick={onClick}
-        >
-          {content}
-        </button>
     )
   )
 

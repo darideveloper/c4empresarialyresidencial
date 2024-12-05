@@ -11,9 +11,9 @@ import Button from "@/components/ui/Button"
 
 // Form screens
 import Steps from '@/components/layouts/Steps'
-import ContactInfo from '@/components/layouts/QuoteFormScreens/ContactInfo'
-import SelectService from '@/components/layouts/QuoteFormScreens/SelectService'
-import ServiceInfo from '@/components/layouts/QuoteFormScreens/ServiceInfo'
+import ContactInfo from '@/components/layouts/quote-form/ContactInfo'
+import SelectService from '@/components/layouts/quote-form/SelectService'
+import ServiceInfo from '@/components/layouts/quote-form/ServiceInfo'
 
 
 export default function QuoteForm() {
@@ -43,6 +43,7 @@ export default function QuoteForm() {
     }
   ])
   const currentStepData = stepsData[currentStep]
+  const isLastStep = currentStep === stepsData.length - 1
 
   // Monitor data
   useEffect(() => {
@@ -66,6 +67,37 @@ export default function QuoteForm() {
       {
         currentStepData.screen
       }
+
+      <div 
+        className={`
+          buttons
+          w-full
+          flex
+          justify-center
+          items-center
+          gap-4
+        `}
+      >
+        <Button 
+          text={t('buttons.back')}
+          className="bg-gray text-white"
+          onClick={() => setCurrentStep(currentStep - 1)}
+          showArrow={false}
+          disabled={currentStep === 0}
+        />
+        <Button 
+          text={isLastStep ? t('buttons.submit') : t('buttons.next')}
+          className="bg-blue text-white"
+          onClick={() => {
+            if (isLastStep) {
+              console.log('Submit form')
+            } else {
+              setCurrentStep(currentStep + 1)
+            }
+          }}
+          showArrow={false}
+        />
+      </div>
     </div>
   )
 }

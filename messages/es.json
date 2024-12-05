@@ -400,6 +400,11 @@
         "contactInfo": {
           "title": "Contacto"
         }
+      },
+      "buttons": {
+        "next": "Siguiente",
+        "back": "Atrás",
+        "submit": "Enviar"
       }
     }
   }
