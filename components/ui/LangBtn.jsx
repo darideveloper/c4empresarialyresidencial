@@ -8,7 +8,7 @@ import { fontTitle } from '@/libs/fonts'
  * @param {function} props.onClick - Click handler
  * @param {string} props.children - Child elements
  */
-export default function Btn({ className, onClick, children, active }) {
+export default function LangBtn({ className, onClick, children, active }) {
 
   return (
     <button

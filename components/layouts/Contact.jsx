@@ -337,9 +337,6 @@ export default function Contact() {
 
             <Button
               text={t('form.submit')}
-              className={`
-                w-7/12
-              `}
             />
           </form>
         </div>

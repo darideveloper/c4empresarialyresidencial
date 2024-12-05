@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl'
 import { useState, useEffect } from 'react'
 
 // Components
-import Cta from '@/components/ui/Cta'
+import Button from "@/components/ui/Button"
 
 // Form screens
 import Steps from '@/components/layouts/Steps'
@@ -42,6 +42,7 @@ export default function QuoteForm() {
       "isDone": false
     }
   ])
+  const currentStepData = stepsData[currentStep]
 
   // Monitor data
   useEffect(() => {
@@ -54,11 +55,17 @@ export default function QuoteForm() {
         steps-form
       `}
     >
+      {/* Steps selector */}
       <Steps
         stepsData={stepsData}
         currentStep={currentStep}
         setStep={setCurrentStep}
       />
+
+      {/* Render current screen */}
+      {
+        currentStepData.screen
+      }
     </div>
   )
 }

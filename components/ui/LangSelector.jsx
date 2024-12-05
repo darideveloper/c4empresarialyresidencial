@@ -3,7 +3,7 @@
 import { useRouter } from '@/i18n/routing'
 import { usePathname } from 'next/navigation'
 
-import Btn from '@/components/ui/Btn'
+import LangBtn from '@/components/ui/LangBtn'
 
 
 /**
@@ -36,7 +36,7 @@ export default function LangSelector({ className }) {
       `}>
       {
         langs.map(lang => (
-          <Btn
+          <LangBtn
             key={lang}
             className={`
             `}
@@ -45,7 +45,7 @@ export default function LangSelector({ className }) {
             onClick={() => router.replace(`/${currentPageNoLang}`, { locale: lang })}
           >
             {lang.toUpperCase()}
-          </Btn>
+          </LangBtn>
         ))
       }
 

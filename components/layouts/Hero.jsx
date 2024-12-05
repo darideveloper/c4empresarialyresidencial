@@ -3,7 +3,7 @@ import { fontTitle } from "@/libs/fonts"
 import { useTranslations } from 'next-intl'
 
 // Components
-import Cta from "@/components/ui/Cta"
+import Button from "@/components/ui/Button"
 
 // Ornaments
 import Bubble from "@/components/ui/ornaments/Bubble"
@@ -118,7 +118,7 @@ export default function Hero({ langKey, HeroImage }) {
             data-aos="fade-up"
             data-aos-delay="1800"
           >
-            <Cta
+            <Button
               href="/quote"
               text={t('cta')}
               className="text-2xl"

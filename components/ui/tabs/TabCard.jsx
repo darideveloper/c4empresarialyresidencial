@@ -1,4 +1,4 @@
-import Cta from '@/components/ui/Cta'
+import Button from "@/components/ui/Button"
 
 /**
  * Info card for tabs component
@@ -39,7 +39,7 @@ export default function TabCard({ title, text, ctaText, tabChanging, className }
       <p>
         {text}
       </p>
-      <Cta
+      <Button
         href="/quote"
         text={ctaText}
         className={`
