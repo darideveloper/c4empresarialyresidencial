@@ -1,6 +1,14 @@
 {
   "Meta": {
-    "company": "C4 Empresarial y Recidencial"
+    "title": "C4 Empresarial and Residential",
+    "description": {
+      "home": "We offer customized security solutions for homes and businesses in Mérida, Yucatán, with high-definition cameras and professional monitoring.",
+      "company": "Protect your business with our customized security solutions in Mérida, Yucatán, with high-definition cameras and professional monitoring.",
+      "residential": "Protect your home with our customized security solutions in Mérida, Yucatán, with high-definition cameras and professional monitoring.",
+      "quote": "Request a quote for your home or business in Mérida, Yucatán, with high-definition cameras and professional monitoring."
+    },
+    "keywords": "security, security cameras, monitoring, Mérida, Yucatán, protection, high-definition cameras, alarms, access control",
+    "author": "C4 Empresarial and Residential"
   },
   "General": {
     "Products": {

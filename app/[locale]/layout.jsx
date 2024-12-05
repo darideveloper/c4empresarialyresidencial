@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
+import { getTranslations } from 'next-intl/server'
 
 // Fonts
 import { fontBody } from '@/libs/fonts'
@@ -26,9 +27,8 @@ import "aos/dist/aos.css"
  */
 export default async function LocaleLayout({ children, params }) {
 
-  const { locale } = await params
-
   // Ensure that the incoming `locale` is valid
+  const { locale } = await params
   if (!routing.locales.includes(locale)) {
     notFound()
   }
@@ -46,7 +46,7 @@ export default async function LocaleLayout({ children, params }) {
           text-grey
         `}
       >
-        <AOSInit/>
+        <AOSInit />
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main>
@@ -57,4 +57,17 @@ export default async function LocaleLayout({ children, params }) {
       </body>
     </html>
   )
+}
+
+export async function generateMetadata({ params }) {
+
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'Meta' })
+
+  return {
+    title: t('title'),
+    description: t('description.home'),
+    keywords: t('keywords'),
+    author: t('author'),
+  }
 }

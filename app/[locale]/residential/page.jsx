@@ -1,3 +1,6 @@
+// libs
+import { getTranslations } from 'next-intl/server'
+
 // Components
 import HeroImageResidential from '@/components/ui/anim-images/HeroImageResidential'
 
@@ -21,4 +24,14 @@ export default function ResidentialPage() {
       <Testimonials />
     </>
   )
+}
+
+export async function generateMetadata({ params }) {
+
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'Meta' })
+
+  return {
+    description: t('description.residential'),
+  }
 }

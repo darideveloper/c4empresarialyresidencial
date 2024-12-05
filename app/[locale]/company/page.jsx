@@ -1,3 +1,6 @@
+// libs
+import { getTranslations } from 'next-intl/server'
+
 // Components
 import HeroImageCompany from '@/components/ui/anim-images/HeroImageCompany'
 
@@ -21,4 +24,14 @@ export default function CompanyPage() {
       <Testimonials />
     </>
   )
+}
+
+export async function generateMetadata({ params }) {
+
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'Meta' })
+
+  return {
+    description: t('description.company'),
+  }
 }

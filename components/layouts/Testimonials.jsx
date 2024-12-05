@@ -51,7 +51,7 @@ export default function Testimonials() {
 
             let quote = ""
             quote = t(`cards.${name}.description.beforeText`)
-            quote += " " + tMeta('company') + " "
+            quote += " " + tMeta('title') + " "
             quote += t(`cards.${name}.description.afterText`)
 
             return (

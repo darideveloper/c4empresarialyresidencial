@@ -75,7 +75,7 @@ export default function Header() {
         <TransitionLink href="/">
           <Image
             src="/images/logo.webp"
-            alt={'Logo ' + tMeta('company')}
+            alt={'Logo ' + tMeta('title')}
             width={150}
             height={150}
             className={`

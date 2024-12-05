@@ -100,7 +100,7 @@ export default function Hero({ langKey, HeroImage }) {
               data-aos="fade-down"
               data-aos-delay="200"
             >
-              {tMeta('company')}&nbsp;
+              {tMeta('title')}&nbsp;
             </span>
             <span
               data-aos="fade-right"
@@ -141,7 +141,7 @@ export default function Hero({ langKey, HeroImage }) {
               font-bold
             `}
             >
-              {tMeta('company')}&nbsp;
+              {tMeta('title')}&nbsp;
             </span>
             <span>
               {t('text.afterText')}

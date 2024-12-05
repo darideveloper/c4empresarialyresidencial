@@ -56,8 +56,6 @@ export default async function middleware(request) {
   // Check for the `lang` cookie
   const langCookie = request.cookies.get('NEXT_LOCALE')?.value
 
-  console.log ({ hasLocale, langCookie })
-
   // If there's no locale in the URL and no `lang` cookie, redirect to the default locale
   if (!hasLocale && !langCookie) {
     console.debug('Locale missing and no lang cookie found, redirecting to default...')

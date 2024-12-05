@@ -25,7 +25,7 @@ export default function Footer() {
             p-3
           `}
         >
-          {tMeta('company')}&nbsp; © 2024 - All rights reserved
+          {tMeta('title')}&nbsp; © 2024 - All rights reserved
           Powered by&nbsp;
           <Link 
             href="mailto:darideveloper@gmail.com"
