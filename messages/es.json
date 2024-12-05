@@ -386,5 +386,21 @@
         "afterText": "we specialize in providing tailored security solutions for homes in Mérida, Yucatán. With a wide range of security cameras and professional monitoring services, we are here to protect what matters most to you."
       }
     }
+  },
+  "QuotePage": {
+    "form": {
+      "title": "Cotiza tu servicio de monitoreo",
+      "screens": {
+        "selectService": {
+          "title": "Selecciona tu servicio"
+        },
+        "serviceInfo": {
+          "title": "Tu empresa o residencia"
+        },
+        "contactInfo": {
+          "title": "Contacto"
+        }
+      }
+    }
   }
 }

@@ -1,10 +1,13 @@
 // libs
 import { getTranslations } from 'next-intl/server'
 
+// Sections
+import QuoteForm from '@/components/layouts/QuoteForm'
+
 export default function QuotePage() {
   return (
     <>
-      <p>quote page</p>
+      <QuoteForm />
     </>
   )
 }
