@@ -1,6 +1,6 @@
 import { fontTitle } from '@/libs/fonts'
 
-import { Link } from '@/i18n/routing'
+import { TransitionLink } from '@/components/utils/TransitionLink'
 import ArrowSvg from '@/components/icons/ArrowSvg'
 
 /**
@@ -14,7 +14,7 @@ import ArrowSvg from '@/components/icons/ArrowSvg'
 export default function Cta({ href, text, className }) {
 
   return (
-    <Link
+    <TransitionLink
       href={href}
       className={`
         cta
@@ -60,7 +60,7 @@ export default function Cta({ href, text, className }) {
         />
       </div>
 
-    </Link>
+    </TransitionLink>
 
   )
 
