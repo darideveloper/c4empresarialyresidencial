@@ -95,13 +95,13 @@ export default function QuoteForm() {
           container
           mx-auto
           px-2
-          debug
+          my-8
         `}
       >
         <Title>
           {currentStepTitle}
         </Title>
-        {/* Render current screen */}
+        {/* Render current screen or subscreen */}
         {
           currentStepData.screen || currentStepData.subscreens.map((subscreen, index) => (
             subscreen.state === selectedService && subscreen.screen

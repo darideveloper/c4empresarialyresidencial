@@ -11,107 +11,133 @@ import ArrowSvg from '@/components/icons/ArrowSvg'
  * @param {string} props.textHover - Text to display when hovered
  * @param {string} props.imageSrc - Image source
  * @param {string} props.imageAlt - Image alt text
- * @param {string} props.href - Link to redirect to when clicked
+ * @param {string} props.href - Link to redirect to when clicked (for TransitionLink)
+ * @param {function} props.onClick - Function to execute when clicked (for button)
+ * @param {string} props.className - Additional classes
  * @returns 
  */
-export default function CtaXL({ index, text, textHover, imageSrc, imageAlt, href, className }) {
-  return (
-    <TransitionLink
-      href={href}
+export default function CtaXL({
+  index,
+  text,
+  textHover,
+  imageSrc,
+  imageAlt,
+  href = "",
+  onClick = null,
+  className
+}) {
+
+  const content = (
+    <div
       className={`
-        rounded-xl
-        text-white
-        relative
-        h-36
-        w-full
-        group
-        overflow-hidden
-        duration-1000
-        ${className}
+        content
+        flex
+        gap-0 sm:gap-16
+        flex-row
+        items-center
+        justify-center
+        w-full sm:w-[150%]
+        px-6
+        absolute
+        top-1/2
+        transform
+        -translate-y-1/2
+        left-0 sm:group-hover:-left-1/2
+        duration-700
+        bg-blue group-hover:bg-greylight
       `}
-      data-aos="fade-up"
-      data-aos-delay={300 * index}
     >
+      <h3
+        className={`
+          text
+          text-xl md:text-3xl
+          font-bold
+          w-1/2
+          text-center
+        `}
+      >
+        {text}
+      </h3>
       <div
         className={`
-          content
+          img-wrapper
+          w-1/3
           flex
-          gap-0 sm:gap-16
-          flex-row
+          justify-center
+          items-center
+        `}
+      >
+        <Image
+          src={imageSrc}
+          alt={imageAlt}
+          width={100}
+          height={100}
+          className={`
+            px-4
+            h-40
+            w-40
+          `}
+        />
+      </div>
+      <p
+        className={`
+          hover-text
+          text-center
+          w-1/2
           items-center
           justify-center
-          w-full sm:w-[150%]
-          px-6
-          absolute
-          top-1/2
-          transform
-          -translate-y-1/2
-          left-0 sm:group-hover:-left-1/2
-          duration-700
-          bg-blue group-hover:bg-greylight
-        `}>
-        <h3
+          flex-col
+          gap-2
+          mr-4
+          hidden sm:flex
+        `}
+      >
+        <span
           className={`
-            text
-            text-xl md:text-3xl
-            font-bold
-            w-1/2
-            text-center
           `}
         >
-          {text}
-        </h3>
-        <div
+          {textHover}
+        </span>
+        <ArrowSvg
           className={`
-            img-wrapper
-            w-1/3
-            flex
-            justify-center
-            items-center
+            fill-white
+            hover:opacity-60
+            duration-300
+            w-8
+            h-8
           `}
-        >
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            width={100}
-            height={100}
-            className={`
-              px-4
-              h-40
-              w-40
-            `}
-          />
-        </div>
-        <p
-          className={`
-            hover-text
-            text-center
-            w-1/2
-            items-center
-            justify-center
-            flex-col
-            gap-2
-            mr-4
-            hidden sm:flex
-          `}
-        >
-          <span
-            className={`
-            `}
-          >
-            {textHover}
-          </span>
-          <ArrowSvg
-            className={`
-              fill-white
-              hover:opacity-60
-              duration-300
-              w-8
-              h-8
-            `}
-          />
-        </p>
-      </div>
-    </TransitionLink>
+        />
+      </p>
+    </div>
+  )
+
+  const styles = `
+    rounded-xl
+    text-white
+    relative
+    h-36
+    w-full
+    group
+    overflow-hidden
+    duration-1000
+    ${className}
+  `
+
+  return (
+    href == ""
+      ? <button
+        className={styles}
+        onClick={onClick}
+      >
+        {content}
+      </button>
+      : <TransitionLink
+        href={href}
+        className={styles}
+        data-aos="fade-up"
+        data-aos-delay={300 * index}
+      >
+        {content}
+      </TransitionLink>
   )
 }
