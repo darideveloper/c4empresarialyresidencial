@@ -69,5 +69,6 @@ export async function generateMetadata({ params }) {
     description: t('description.home'),
     keywords: t('keywords'),
     author: t('author'),
+    icons: "/favicon.ico",
   }
 }

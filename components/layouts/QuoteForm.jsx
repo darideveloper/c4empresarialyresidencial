@@ -8,41 +8,67 @@ import { useState, useEffect } from 'react'
 
 // Components
 import Button from "@/components/ui/Button"
+import Title from "@/components/ui/Title"
 
 // Form screens
 import Steps from '@/components/layouts/Steps'
 import ContactInfo from '@/components/layouts/quote-form/ContactInfo'
 import SelectService from '@/components/layouts/quote-form/SelectService'
-import ServiceInfo from '@/components/layouts/quote-form/ServiceInfo'
+import CompanyInfo from '@/components/layouts/quote-form/CompanyInfo'
+import ResidentialInfo from '@/components/layouts/quote-form/ResidentialInfo'
 
 
 export default function QuoteForm() {
 
+  // Temp state data
+  const [selectedService, setSelectedService] = useState("company")
+
   const t = useTranslations('QuotePage.form')
 
   // Form state
-  const [currentStep, setCurrentStep] = useState(1)
+  const [currentStep, setCurrentStep] = useState(0)
   const [stepsData, setStepsData] = useState([
     {
       "key": "selectService",
-      "title": t('screens.selectService.title'),
       "screen": <SelectService />,
-      "isDone": false
+      "isDone": false,
+      "subscreens": [],
+      "subscreensState": null,
     },
     {
       "key": "serviceInfo",
-      "title": t('screens.serviceInfo.title'),
-      "screen": <ServiceInfo />,
-      "isDone": false
+      "screen": null,
+      "isDone": false,
+      "subscreens": [
+        {
+          "key": "company",
+          "screen": <CompanyInfo />,
+        },
+        {
+          "key": "residential",
+          "screen": <ResidentialInfo />,
+        }
+      ],
+      "subscreensState": selectedService,
     },
-    { 
+    {
       "key": "contactInfo",
-      "title": t('screens.contactInfo.title'),
       "screen": <ContactInfo />,
-      "isDone": false
+      "isDone": false,
+      "subscreens": [],
+      "subscreensState": null,
     }
   ])
+
+  // Calculate current screen data
   const currentStepData = stepsData[currentStep]
+  let currentStepTitle = ""
+  if (currentStepData.screen) {
+    currentStepTitle = t(`screens.${currentStepData.key}.title`)
+  } else {
+    const subScreenState = currentStepData.subscreensState
+    currentStepTitle = t(`screens.${currentStepData.key}.${subScreenState}.title`)
+  }
   const isLastStep = currentStep === stepsData.length - 1
 
   // Monitor data
@@ -51,7 +77,7 @@ export default function QuoteForm() {
   }, [currentStep])
 
   return (
-    <div 
+    <div
       className={`
         steps-form
       `}
@@ -63,12 +89,27 @@ export default function QuoteForm() {
         setStep={setCurrentStep}
       />
 
-      {/* Render current screen */}
-      {
-        currentStepData.screen
-      }
+      <div
+        className={`
+          screen-wrapper
+          container
+          mx-auto
+          px-2
+          debug
+        `}
+      >
+        <Title>
+          {currentStepTitle}
+        </Title>
+        {/* Render current screen */}
+        {
+          currentStepData.screen || currentStepData.subscreens.map((subscreen, index) => (
+            subscreen.state === selectedService && subscreen.screen
+          ))
+        }
+      </div>
 
-      <div 
+      <div
         className={`
           buttons
           w-full
@@ -78,14 +119,14 @@ export default function QuoteForm() {
           gap-4
         `}
       >
-        <Button 
+        <Button
           text={t('buttons.back')}
           className="bg-gray text-white"
           onClick={() => setCurrentStep(currentStep - 1)}
           showArrow={false}
           disabled={currentStep === 0}
         />
-        <Button 
+        <Button
           text={isLastStep ? t('buttons.submit') : t('buttons.next')}
           className="bg-blue text-white"
           onClick={() => {
