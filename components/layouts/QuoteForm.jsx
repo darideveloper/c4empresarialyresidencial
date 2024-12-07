@@ -17,11 +17,29 @@ import SelectService from '@/components/layouts/quote-form/SelectService'
 import CompanyInfo from '@/components/layouts/quote-form/CompanyInfo'
 import ResidentialInfo from '@/components/layouts/quote-form/ResidentialInfo'
 
+// zustand
+import { useQuoteFormStore } from '@/providers/quoteform-store-provider'
+
 
 export default function QuoteForm() {
 
-  // Temp state data
-  const [selectedService, setSelectedService] = useState("company")
+  // Zustand data
+  const { 
+    // Data
+    selectedService,
+
+    // Hooks
+    setSelectedService
+  } = useQuoteFormStore((state) => state)
+  
+  useEffect(() => {
+    // Debug zustand data
+    console.log({ selectedService })
+  }, [selectedService])
+
+  useEffect(() => {
+    console.log({ selectedService })
+  }, [])
 
   const t = useTranslations('QuotePage.form')
 
@@ -71,11 +89,7 @@ export default function QuoteForm() {
   }
   const isLastStep = currentStep === stepsData.length - 1
 
-  // Monitor data
-  useEffect(() => {
-    console.log({ currentStep })
-  }, [currentStep])
-
+  
   return (
     <div
       className={`

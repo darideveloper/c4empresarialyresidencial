@@ -1,10 +1,15 @@
 "use client"
 
+// Libs and hooks
 import { useTranslations } from 'next-intl'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-
+// Components
 import CtaXL from "@/components/ui/CtaXL"
+
+// zustand
+import { useQuoteFormStore } from '@/providers/quoteform-store-provider'
+
 
 /**
  * SelectService screen for QuoteForm
@@ -24,6 +29,11 @@ export default function SelectService({ }) {
       "active": false,
     },
   ])
+
+  // Zustand data
+  const { selectedService, setSelectedService } = useQuoteFormStore(
+    (state) => state,
+  )
 
   return (
     <div
@@ -49,7 +59,7 @@ export default function SelectService({ }) {
             textHover={t(`options.${optionData.name}.textHover`)}
             imageSrc={`/images/${optionData.name}.svg`}
             imageAlt={t(`options.${optionData.name}.imgAlt`)}
-            onClick={() => console.log('clicked')}
+            onClick={() => { setSelectedService(optionData.name) }}
           />
         ))
       }

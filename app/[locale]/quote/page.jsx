@@ -4,10 +4,15 @@ import { getTranslations } from 'next-intl/server'
 // Sections
 import QuoteForm from '@/components/layouts/QuoteForm'
 
+// zustand
+import { QuoteFormStoreProvider } from '@/providers/quoteform-store-provider'
+
 export default function QuotePage() {
   return (
     <>
-      <QuoteForm />
+      <QuoteFormStoreProvider>
+        <QuoteForm />
+      </QuoteFormStoreProvider>
     </>
   )
 }
