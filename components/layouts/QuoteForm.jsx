@@ -124,12 +124,27 @@ export default function QuoteForm() {
   }, [selectedService, companySector])
 
   // Move to specific step / screen
-  function handleGoStep(steepNumber) {
+  async function handleGoStep(steepNumber) {
+
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms))
+    }
+
+    // Start transition
+    const screenWrapper = document.querySelector('.screen-wrapper')
+    screenWrapper.classList.add('transition-form')
+    await sleep(500)
+
     // Go to specific step
     setCurrentStep(steepNumber)
 
     // Scroll to top
-    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)
+    await sleep(100)
+    window.scrollTo(0, 0)
+    
+    // End transition
+    await sleep(500)
+    screenWrapper.classList.remove('transition-form')
 
   }
 
