@@ -31,40 +31,32 @@ export default function QuoteForm() {
     // Hooks
     setSelectedService
   } = useQuoteFormStore((state) => state)
-  
-  useEffect(() => {
-    // Debug zustand data
-    console.log({ selectedService })
-  }, [selectedService])
-
-  useEffect(() => {
-    console.log({ selectedService })
-  }, [])
 
   const t = useTranslations('QuotePage.form')
 
   // Form state
   const [currentStep, setCurrentStep] = useState(0)
-  const [stepsData, setStepsData] = useState([
+  const stepsData = [
     {
       "key": "selectService",
       "screen": <SelectService />,
-      "isDone": false,
       "subscreens": [],
       "subscreensState": null,
+      "requiredFields": [selectedService],
     },
     {
       "key": "serviceInfo",
       "screen": null,
-      "isDone": false,
       "subscreens": [
         {
           "key": "company",
           "screen": <CompanyInfo />,
+          "requiredFields": [],
         },
         {
           "key": "residential",
           "screen": <ResidentialInfo />,
+          "requiredFields": [],
         }
       ],
       "subscreensState": selectedService,
@@ -72,11 +64,12 @@ export default function QuoteForm() {
     {
       "key": "contactInfo",
       "screen": <ContactInfo />,
-      "isDone": false,
       "subscreens": [],
       "subscreensState": null,
+      "requiredFields": [],
     }
-  ])
+  ]
+  const [screenReady, setScreenReady] = useState(false)
 
   // Calculate current screen data
   const currentStepData = stepsData[currentStep]
@@ -88,6 +81,16 @@ export default function QuoteForm() {
     currentStepTitle = t(`screens.${currentStepData.key}.${subScreenState}.title`)
   }
   const isLastStep = currentStep === stepsData.length - 1
+  
+  // Validate required fields to enable next button
+  const requiredFields = currentStepData.requiredFields
+  useEffect(() => {
+    // Validate all required fields are not null
+    const notNull = requiredFields.every(field => field !== null)
+    if (notNull) {
+      setScreenReady(true)
+    }
+  }, requiredFields)
 
   
   return (
@@ -145,12 +148,14 @@ export default function QuoteForm() {
           className="bg-blue text-white"
           onClick={() => {
             if (isLastStep) {
+              // TODO: Submit form
               console.log('Submit form')
             } else {
               setCurrentStep(currentStep + 1)
             }
           }}
           showArrow={false}
+          disabled={!screenReady}
         />
       </div>
     </div>

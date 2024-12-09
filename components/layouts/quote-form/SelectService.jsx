@@ -19,16 +19,7 @@ export default function SelectService({ }) {
 
   const t = useTranslations('QuotePage.form.screens.selectService')
 
-  const [optionsData, setOptionsData] = useState([
-    {
-      "name": "company",
-      "active": false,
-    },
-    {
-      "name": "residential",
-      "active": false,
-    },
-  ])
+  const options = ["company", "residential"]
 
   // Zustand data
   const { selectedService, setSelectedService } = useQuoteFormStore(
@@ -43,7 +34,7 @@ export default function SelectService({ }) {
         flex-col
         items-center
         justify-center
-        gap-4 md:gap-12
+        gap-8 md:gap-12
         w-full
         max-w-xl
         mx-auto
@@ -51,16 +42,16 @@ export default function SelectService({ }) {
     >
 
       {
-        optionsData.map((optionData, index) => (
+        options.map((option, index) => (
           <CtaXL
             key={index}
             index={index}
-            text={t(`options.${optionData.name}.text`)}
-            textHover={t(`options.${optionData.name}.textHover`)}
-            imageSrc={`/images/${optionData.name}.svg`}
-            imageAlt={t(`options.${optionData.name}.imgAlt`)}
-            onClick={() => { setSelectedService(optionData.name) }}
-            active={selectedService === optionData.name}
+            text={t(`options.${option}.text`)}
+            textHover={t(`options.${option}.textHover`)}
+            imageSrc={`/images/${option}.svg`}
+            imageAlt={t(`options.${option}.imgAlt`)}
+            onClick={() => { setSelectedService(option) }}
+            active={selectedService === option}
           />
         ))
       }

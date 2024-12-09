@@ -29,8 +29,6 @@ export default function CtaXL({
   className
 }) {
 
-  console.log({ active })
-
   const content = (
     <div
       className={`

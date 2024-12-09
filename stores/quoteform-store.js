@@ -2,7 +2,7 @@
 import { createStore } from 'zustand/vanilla'
 
 export const defaultInitState = {
-  selectedService: "",
+  selectedService: null,
 }
 
 export const createQuoteFormStore = (initState = defaultInitState) => {
