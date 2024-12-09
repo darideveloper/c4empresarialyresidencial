@@ -393,32 +393,39 @@
       "screens": {
         "selectService": {
           "title": "Selecciona tu servicio",
-          "description": "Elige el tipo de servicio que requieres",
+          "description": "Elige el tipo de servicio a cotizar",
           "options": {
             "company": {
               "text": "Empresarial",
-              "textHover": "Monitoreo para tu negocio",
+              "textHover": "Cotiza seguridad para tu negocio",
               "imgAlt": "Ilustración de un edificio de oficinas"
             },
             "residential": {
               "text": "Residencial",
-              "textHover": "Monitoreo para tu hogar",
+              "textHover": "Cotiza seguridad para tu residencia",
               "imgAlt": "Ilustración de una casa"
             }
           }
         },
-        "serviceInfo": {
-          "company": {
-            "title": "Información de la Empresa",
-            "description": "Proporciona los datos de tu empresa"
-          },
-          "residential": {
-            "title": "Información Residencial",
-            "description": "Proporciona los datos de tu residencia"
-          }
-        },
         "contactInfo": {
-          "title": "Contacto"
+          "title": "Contacto",
+          "description": "Proporciona tus datos de contacto"
+        },
+        "companySector": {
+          "title": "Información Empresarial",
+          "description": "Elige el sector de tu empresa entre las opciones disponibles"
+        },
+        "companyEmployees": {
+          "title": "Tamaño de la Empresa",
+          "description": "Selecciona el rango de empleados de tu empresa"
+        },
+        "companyFeature": {
+          "title": "Características que te interesa del servicio",
+          "description": "Selecciona las características que te interesan en tu servicio de monitoreo"
+        },
+        "residential": {
+          "title": "Información Residencial",
+          "description": "Proporciona los datos de tu residencia"
         }
       },
       "buttons": {

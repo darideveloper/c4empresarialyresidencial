@@ -4,12 +4,12 @@ import StepBtn from '@/components/ui/StepBtn'
  * Steps component for multi-step forms
  * 
  * @param {object} props - Props object
- * @param {array} props.stepsData - Array of steps data
+ * @param {array} props.screensData - Array of steps data
  * @param {number} props.currentStep - Current step index
  * @param {function} props.setStep - Function to handle click event
  * @returns 
  */
-export default function Steps({ stepsData, currentStep, setStep }) {
+export default function Steps({ screensData, currentStep, setStep }) {
   return (
     <div
       className={`
@@ -21,7 +21,7 @@ export default function Steps({ stepsData, currentStep, setStep }) {
       `}
     >
       {
-        stepsData.map((step, index) => {
+        screensData.map((step, index) => {
           return (
             <StepBtn
               key={index}

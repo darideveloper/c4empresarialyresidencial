@@ -124,7 +124,7 @@ export default function CtaXL({
     duration-1000
     ${className}
     ${active && "shadow-lg shadow-blue"}
-    ${active && "scale-110"}
+    ${active && "scale-105"}
   `
 
   return (

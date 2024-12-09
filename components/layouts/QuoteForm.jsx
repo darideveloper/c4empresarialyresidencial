@@ -14,8 +14,11 @@ import Title from "@/components/ui/Title"
 import Steps from '@/components/layouts/Steps'
 import ContactInfo from '@/components/layouts/quote-form/ContactInfo'
 import SelectService from '@/components/layouts/quote-form/SelectService'
-import CompanyInfo from '@/components/layouts/quote-form/CompanyInfo'
 import ResidentialInfo from '@/components/layouts/quote-form/ResidentialInfo'
+import CompanySector from '@/components/layouts/quote-form/CompanySector'
+import CompanyEmployees from '@/components/layouts/quote-form/CompanyEmployees'
+import CompanyFeature from '@/components/layouts/quote-form/CompanyFeature'
+
 
 // zustand
 import { useQuoteFormStore } from '@/providers/quoteform-store-provider'
@@ -27,70 +30,91 @@ export default function QuoteForm() {
   const { 
     // Data
     selectedService,
+    companyStep,
 
     // Hooks
     setSelectedService
   } = useQuoteFormStore((state) => state)
 
+  const formSates = {
+    selectedService,
+    companyStep
+  }
+
+  // Translations
   const t = useTranslations('QuotePage.form')
+
+  // Screens data
+  const startScreen = {
+    "key": "selectService",
+    "screen": <SelectService />,
+    "requiredFields": ["selectedService"],
+  }
+  const endScreen = {
+    "key": "contactInfo",
+    "screen": <ContactInfo />,
+    "requiredFields": ["selectedService"],
+  }
+  const companyScreens = [
+    {
+      "key": "companySector",
+      "screen": <CompanySector />,
+      "requiredFields": ["selectedService"],
+    },
+    {
+      "key": "companyEmployees",
+      "screen": <CompanyEmployees />,
+      "requiredFields": ["selectedService"],
+    },
+    {
+      "key": "companyFeature",
+      "screen": <CompanyFeature />,
+      "requiredFields": ["selectedService"],
+    }
+  ]
+  const residentialScreens = [
+    {
+      "key": "residential",
+      "screen": <ResidentialInfo />,
+      "requiredFields": ["selectedService"],
+    }
+  ]
 
   // Form state
   const [currentStep, setCurrentStep] = useState(0)
-  const stepsData = [
-    {
-      "key": "selectService",
-      "screen": <SelectService />,
-      "subscreens": [],
-      "subscreensState": null,
-      "requiredFields": [selectedService],
-    },
-    {
-      "key": "serviceInfo",
-      "screen": null,
-      "subscreens": [
-        {
-          "key": "company",
-          "screen": <CompanyInfo />,
-          "requiredFields": [],
-        },
-        {
-          "key": "residential",
-          "screen": <ResidentialInfo />,
-          "requiredFields": [],
-        }
-      ],
-      "subscreensState": selectedService,
-    },
-    {
-      "key": "contactInfo",
-      "screen": <ContactInfo />,
-      "subscreens": [],
-      "subscreensState": null,
-      "requiredFields": [],
-    }
-  ]
+  const [screensData, setScreensData] = useState([startScreen, endScreen])   
   const [screenReady, setScreenReady] = useState(false)
+  const [currentScreenData, setCurrentScreenData] = useState(screensData[currentStep])
 
   // Calculate current screen data
-  const currentStepData = stepsData[currentStep]
-  let currentStepTitle = ""
-  if (currentStepData.screen) {
-    currentStepTitle = t(`screens.${currentStepData.key}.title`)
-  } else {
-    const subScreenState = currentStepData.subscreensState
-    currentStepTitle = t(`screens.${currentStepData.key}.${subScreenState}.title`)
-  }
-  const isLastStep = currentStep === stepsData.length - 1
+  let screenTitle = t(`screens.${currentScreenData.key}.title`)
+  const isLastStep = currentStep === screensData.length - 1
   
   // Validate required fields to enable next button
-  const requiredFields = currentStepData.requiredFields
   useEffect(() => {
     // Validate all required fields are not null
+    let requiredFieldsNames = currentScreenData.requiredFields
+    let requiredFields = requiredFieldsNames.map(field => formSates[field])
     const notNull = requiredFields.every(field => field !== null)
     if (notNull) {
       setScreenReady(true)
     }
-  }, requiredFields)
+  }, [selectedService])
+
+  // Update current screen data
+  useEffect(() => {
+    setCurrentScreenData(screensData[currentStep])
+  }, [currentStep])
+
+  // Update screens flow 
+  useEffect(() => {
+    // Validate all required fields are not null
+    if (selectedService === 'company') {
+      setScreensData([startScreen, ...companyScreens, endScreen])
+    } else if (selectedService === 'residential') {
+      setScreensData([startScreen, ...residentialScreens, endScreen])
+    }
+  }, [selectedService])
 
   
   return (
@@ -101,7 +125,7 @@ export default function QuoteForm() {
     >
       {/* Steps selector */}
       <Steps
-        stepsData={stepsData}
+        screensData={screensData}
         currentStep={currentStep}
         setStep={setCurrentStep}
       />
@@ -115,14 +139,28 @@ export default function QuoteForm() {
           my-8
         `}
       >
-        <Title>
-          {currentStepTitle}
+        <Title
+          className={`
+            max-w-2xl
+            mx-auto
+            mb-6
+          `}
+        >
+          {screenTitle}
         </Title>
+        <p
+          className={`
+            text-center
+            max-w-2xl
+            mx-auto
+            mb-12
+          `}
+        >
+          {t(`screens.${currentScreenData.key}.description`)}
+        </p>
         {/* Render current screen or subscreen */}
         {
-          currentStepData.screen || currentStepData.subscreens.map((subscreen, index) => (
-            subscreen.state === selectedService && subscreen.screen
-          ))
+          currentScreenData.screen
         }
       </div>
 
