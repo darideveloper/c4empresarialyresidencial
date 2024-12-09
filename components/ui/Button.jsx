@@ -15,15 +15,25 @@ import ArrowSvg from '@/components/icons/ArrowSvg'
  * @param {boolean} props.disabled - Disable button
  * 
  */
-export default function Button({ href = "", onClick = null, text, className, showArrow = true, disabled = false }) {
+export default function Button({ 
+  href = "",
+  onClick = null,
+  text,
+  className,
+  showArrow = true,
+  disabled = false,
+  active = false
+}) {
 
   const styles = `
     cta
     border-2
-    bg-blue ${!disabled && 'hover:bg-transparent'}
-    text-white ${!disabled && 'hover:text-blue'}
+    ${!disabled && 'hover:bg-transparent'}
+    ${!disabled && 'hover:text-blue'}
     ${disabled && 'cursor-regular'}
     ${disabled && 'opacity-50'}
+    ${active ? 'bg-transparent' : 'bg-blue'}
+    ${active ? 'text-blue' : 'text-white'}
     border-blue
     rounded-xl
     py-3 px-6

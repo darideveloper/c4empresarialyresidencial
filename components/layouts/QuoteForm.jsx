@@ -31,6 +31,7 @@ export default function QuoteForm() {
     // Data
     selectedService,
     companySector,
+    companyEmployees,
 
     // Hooks
     setSelectedService
@@ -39,6 +40,7 @@ export default function QuoteForm() {
   const formSates = {
     selectedService,
     companySector,
+    companyEmployees,
   }
 
   // Translations
@@ -64,19 +66,19 @@ export default function QuoteForm() {
     {
       "key": "companyEmployees",
       "screen": <CompanyEmployees />,
-      "requiredFields": ["selectedService"],
+      "requiredFields": ["companyEmployees"],
     },
     {
       "key": "companyFeature",
       "screen": <CompanyFeature />,
-      "requiredFields": ["selectedService"],
+      "requiredFields": [],
     }
   ]
   const residentialScreens = [
     {
       "key": "residential",
       "screen": <ResidentialInfo />,
-      "requiredFields": ["selectedService"],
+      "requiredFields": [],
     }
   ]
 
@@ -106,6 +108,7 @@ export default function QuoteForm() {
     currentScreenData,
     selectedService,
     companySector,
+    companyEmployees,
   ])
 
   // Update current screen data
@@ -121,7 +124,7 @@ export default function QuoteForm() {
     } else if (selectedService === 'residential') {
       setScreensData([startScreen, ...residentialScreens, endScreen])
     }
-  }, [selectedService, companySector])
+  }, [selectedService])
 
   // Move to specific step / screen
   async function handleGoStep(steepNumber) {

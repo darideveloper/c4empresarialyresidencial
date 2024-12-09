@@ -23,7 +23,7 @@ export default function ImageBtn({ onClick = null, text, className, imageSrc, im
         w-72
         group
         duration-300
-        ${active ? 'scale-105' : 'hover:scale-105'}
+        ${active ? 'scale-110' : 'hover:scale-110'}
         ${active ? 'shadow-lg' : 'shadow-md'}
         shadow-greylight
         overflow-hidden
