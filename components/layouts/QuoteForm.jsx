@@ -123,6 +123,16 @@ export default function QuoteForm() {
     }
   }, [selectedService, companySector])
 
+  // Move to specific step / screen
+  function handleGoStep(steepNumber) {
+    // Go to specific step
+    setCurrentStep(steepNumber)
+
+    // Scroll to top
+    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)
+
+  }
+
   
   return (
     <div
@@ -184,7 +194,7 @@ export default function QuoteForm() {
         <Button
           text={t('buttons.back')}
           className="bg-gray text-white"
-          onClick={() => setCurrentStep(currentStep - 1)}
+          onClick={() => {handleGoStep(currentStep - 1)}}
           showArrow={false}
           disabled={currentStep === 0}
         />
@@ -196,7 +206,8 @@ export default function QuoteForm() {
               // TODO: Submit form
               console.log('Submit form')
             } else {
-              setCurrentStep(currentStep + 1)
+              // Move to next step
+              handleGoStep(currentStep + 1)
             }
           }}
           showArrow={false}
