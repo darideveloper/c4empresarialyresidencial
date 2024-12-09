@@ -13,6 +13,7 @@ import ArrowSvg from '@/components/icons/ArrowSvg'
  * @param {string} props.imageAlt - Image alt text
  * @param {string} props.href - Link to redirect to when clicked (for TransitionLink)
  * @param {function} props.onClick - Function to execute when clicked (for button)
+ * @param {boolean} props.active - If the cta is active
  * @param {string} props.className - Additional classes
  * @returns 
  */
@@ -24,8 +25,11 @@ export default function CtaXL({
   imageAlt,
   href = "",
   onClick = null,
+  active = false,
   className
 }) {
+
+  console.log({ active })
 
   const content = (
     <div
@@ -42,9 +46,9 @@ export default function CtaXL({
         top-1/2
         transform
         -translate-y-1/2
-        left-0 sm:group-hover:-left-1/2
+        left-0 sm:group-hover:-left-1/2 ${active && "sm:-left-1/2"}
         duration-700
-        bg-blue group-hover:bg-greylight
+        bg-blue group-hover:bg-greylight ${active && "bg-greylight"}
       `}
     >
       <h3
@@ -101,7 +105,7 @@ export default function CtaXL({
         <ArrowSvg
           className={`
             fill-white
-            hover:opacity-60
+            ${href && "hover:opacity-60"}
             duration-300
             w-8
             h-8
@@ -121,6 +125,8 @@ export default function CtaXL({
     overflow-hidden
     duration-1000
     ${className}
+    ${active && "shadow-lg shadow-blue"}
+    ${active && "scale-110"}
   `
 
   return (

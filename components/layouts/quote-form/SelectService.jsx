@@ -60,6 +60,7 @@ export default function SelectService({ }) {
             imageSrc={`/images/${optionData.name}.svg`}
             imageAlt={t(`options.${optionData.name}.imgAlt`)}
             onClick={() => { setSelectedService(optionData.name) }}
+            active={selectedService === optionData.name}
           />
         ))
       }
