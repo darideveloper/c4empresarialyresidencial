@@ -2,7 +2,6 @@
 
 // Libs and hooks
 import { useTranslations } from 'next-intl'
-import { useState, useEffect } from 'react'
 
 // Components
 import CtaXL from "@/components/ui/CtaXL"

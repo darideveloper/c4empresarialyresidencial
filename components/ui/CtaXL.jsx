@@ -123,7 +123,7 @@ export default function CtaXL({
     overflow-hidden
     duration-1000
     ${className}
-    ${active && "shadow-lg shadow-blue"}
+    ${active && "shadow-md shadow-grey"}
     ${active && "scale-105"}
   `
 

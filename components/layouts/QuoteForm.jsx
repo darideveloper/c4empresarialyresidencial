@@ -30,7 +30,7 @@ export default function QuoteForm() {
   const { 
     // Data
     selectedService,
-    companyStep,
+    companySector,
 
     // Hooks
     setSelectedService
@@ -38,7 +38,7 @@ export default function QuoteForm() {
 
   const formSates = {
     selectedService,
-    companyStep
+    companySector,
   }
 
   // Translations
@@ -59,7 +59,7 @@ export default function QuoteForm() {
     {
       "key": "companySector",
       "screen": <CompanySector />,
-      "requiredFields": ["selectedService"],
+      "requiredFields": ["companySector"],
     },
     {
       "key": "companyEmployees",
@@ -96,10 +96,17 @@ export default function QuoteForm() {
     let requiredFieldsNames = currentScreenData.requiredFields
     let requiredFields = requiredFieldsNames.map(field => formSates[field])
     const notNull = requiredFields.every(field => field !== null)
+    console.log({requiredFieldsNames, requiredFields, notNull})
     if (notNull) {
       setScreenReady(true)
+    } else {
+      setScreenReady(false)
     }
-  }, [selectedService])
+  }, [
+    currentScreenData,
+    selectedService,
+    companySector,
+  ])
 
   // Update current screen data
   useEffect(() => {
@@ -114,7 +121,7 @@ export default function QuoteForm() {
     } else if (selectedService === 'residential') {
       setScreensData([startScreen, ...residentialScreens, endScreen])
     }
-  }, [selectedService])
+  }, [selectedService, companySector])
 
   
   return (

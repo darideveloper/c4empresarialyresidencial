@@ -413,7 +413,32 @@
         },
         "companySector": {
           "title": "Información Empresarial",
-          "description": "Elige el sector de tu empresa entre las opciones disponibles"
+          "description": "Elige el sector de tu empresa entre las opciones disponibles",
+          "sectors": {
+            "agriculture": "Agricultura",
+            "real-estate-and-rentals": "Bienes raíces y alquileres",
+            "hunting": "Caza",
+            "retail-and-wholesale-trade": "Comercio al por menor y al por mayor",
+            "construction": "Construcción",
+            "education": "Educación",
+            "entertainment": "Entretenimiento",
+            "livestock": "Ganadería",
+            "lodging": "Hospedaje",
+            "manufacturing-industry": "Industria manufacturera",
+            "media": "Medios de comunicación",
+            "research-and-development": "Investigación y desarrollo",
+            "mining": "Minería",
+            "fishing": "Pesca",
+            "healthcare": "Salud",
+            "professional-and-cultural-services": "Servicios culturales y profesionales",
+            "financial-and-insurance-services": "Servicios financieros y de seguros",
+            "business-support": "Servicios de apoyo a los negocios",
+            "forestry": "Silvicultura",
+            "information-technology": "Tecnologías de la información",
+            "transportation-and-storage": "Transporte y almacenamiento",
+            "other": "Otro"
+          },
+          "imagesAlt": "Imagén de sector empresarial"
         },
         "companyEmployees": {
           "title": "Tamaño de la Empresa",
