@@ -17,7 +17,7 @@ import SelectService from '@/components/layouts/quote-form/SelectService'
 import ResidentialInfo from '@/components/layouts/quote-form/ResidentialInfo'
 import CompanySector from '@/components/layouts/quote-form/CompanySector'
 import CompanyEmployees from '@/components/layouts/quote-form/CompanyEmployees'
-import CompanyFeature from '@/components/layouts/quote-form/CompanyFeature'
+import CompanyFeatures from '@/components/layouts/quote-form/CompanyFeatures'
 
 
 // zustand
@@ -28,19 +28,17 @@ export default function QuoteForm() {
 
   // Zustand data
   const { 
-    // Data
     selectedService,
     companySector,
     companyEmployees,
-
-    // Hooks
-    setSelectedService
+    companyFeatures,
   } = useQuoteFormStore((state) => state)
 
   const formSates = {
     selectedService,
     companySector,
     companyEmployees,
+    companyFeatures,
   }
 
   // Translations
@@ -69,9 +67,9 @@ export default function QuoteForm() {
       "requiredFields": ["companyEmployees"],
     },
     {
-      "key": "companyFeature",
-      "screen": <CompanyFeature />,
-      "requiredFields": [],
+      "key": "companyFeatures",
+      "screen": <CompanyFeatures />,
+      "requiredFields": ["companyFeatures"],
     }
   ]
   const residentialScreens = [
@@ -97,18 +95,28 @@ export default function QuoteForm() {
     // Validate all required fields are not null
     let requiredFieldsNames = currentScreenData.requiredFields
     let requiredFields = requiredFieldsNames.map(field => formSates[field])
-    const notNull = requiredFields.every(field => field !== null)
-    console.log({requiredFieldsNames, requiredFields, notNull})
-    if (notNull) {
+    const validFields = requiredFields.every((field) => {
+      if (field === null) {
+        return false
+      } else if (Array.isArray(field) && field.length === 0) {
+        return false
+      } else {
+        return true
+      }
+    })
+
+    if (validFields) {
       setScreenReady(true)
     } else {
       setScreenReady(false)
     }
+    
   }, [
     currentScreenData,
     selectedService,
     companySector,
     companyEmployees,
+    companyFeatures,
   ])
 
   // Update current screen data

@@ -44,7 +44,7 @@ export default function CompanySector() {
   return (
     <div 
       className={`
-        buttons-wrapper
+        sectors-wrapper
         flex
         flex-wrap
         justify-center

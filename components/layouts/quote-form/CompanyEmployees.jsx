@@ -21,7 +21,7 @@ export default function CompanyEmployees() {
   return (
     <div
       className={`
-        employees-options
+        employees-wrapper
         flex
         flex-col
         justify-center

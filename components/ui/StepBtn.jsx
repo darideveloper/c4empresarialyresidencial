@@ -33,7 +33,8 @@ export default function StepBtn({ number, isCompleted, isActive, onClick }) {
         <span
           className={`
             line
-            w-16
+            w-[10vw]
+            max-w-[60px]
             h-1
             inline-block
             

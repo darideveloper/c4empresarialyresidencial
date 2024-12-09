@@ -444,9 +444,43 @@
           "title": "Tamaño de la Empresa",
           "description": "Selecciona el rango de empleados de tu empresa"
         },
-        "companyFeature": {
+        "companyFeatures": {
           "title": "Características que te interesa del servicio",
-          "description": "Selecciona las características que te interesan en tu servicio de monitoreo"
+          "description": "Selecciona las características que te interesan en tu servicio de monitoreo",
+          "features": {
+            "monitoring": {
+              "title": "Monitoreo en tiempo real",
+              "description": "Supervisión 24/7 con detección de actividad sospechosa."
+            },
+            "notification": {
+              "title": "Notificaciones y alertas",
+              "description": "Avisos automáticos por SMS o correo ante incidentes."
+            },
+            "storage": {
+              "title": "Grabaciones",
+              "description": "Grabaciones en la nube con acceso remoto y respaldo seguro."
+            },
+            "reporting": {
+              "title": "Reportes personalizados",
+              "description": "Informes de eventos y estadísticas de actividad."
+            },
+            "emergency": {
+              "title": "Respuesta a emergencias",
+              "description": "Contacto con autoridades y protocolos de acción."
+            },
+            "tech": {
+              "title": "Tecnología avanzada",
+              "description": "IA para detección inteligente y cámaras HD/4K."
+            },
+            "support": {
+              "title": "Servicio al cliente",
+              "description": "Soporte 24/7, capacitación y mantenimiento preventivo."
+            },
+            "plans": {
+              "title": "Planes personalizados",
+              "description": "Opciones flexibles según las necesidades del cliente."
+            }
+          }
         },
         "residential": {
           "title": "Información Residencial",
