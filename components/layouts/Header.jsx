@@ -79,8 +79,7 @@ export default function Header() {
             width={150}
             height={150}
             className={`
-              w-26
-              rounded-full
+              w-12
               hover:scale-105
               hover:opacity-60
               duration-300
