@@ -63,7 +63,7 @@ export default function CompanySector() {
             imageAlt={t(`imagesAlt`)  + " " + t(`sectors.${sector}`)}
             text={t(`sectors.${sector}`)}
             selected={false}
-            onClick={() => { setCompanySector(t(`sectors.${sector}`)) }}
+            onClick={() => { setCompanySector(sector) }}
             active={companySector === sector}
           />
         ))
