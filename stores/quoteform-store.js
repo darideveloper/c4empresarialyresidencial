@@ -6,6 +6,7 @@ export const defaultInitState = {
   companySector: null,
   companyEmployees: null,
   features: [],
+  residentialType: null,
 }
 
 export const createQuoteFormStore = (initState = defaultInitState) => {
@@ -20,6 +21,7 @@ export const createQuoteFormStore = (initState = defaultInitState) => {
     removeFeature: (feature) => set((state) => ({
       features: state.features.filter((f) => f !== feature),
     })),
+    setResidentialType: (residentialType) => set({ residentialType }),
     getFormData: () => {
       const state = get()
       return {
@@ -27,6 +29,7 @@ export const createQuoteFormStore = (initState = defaultInitState) => {
         companySector: state.companySector,
         companyEmployees: state.companyEmployees,
         features: state.features,
+        residentialType: state.residentialType,
       }
     },
   }))

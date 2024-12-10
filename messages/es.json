@@ -482,9 +482,18 @@
             }
           }
         },
-        "residential": {
+        "residentialType": {
           "title": "Información Residencial",
-          "description": "Proporciona los datos de tu residencia"
+          "description": "Selecciona el tipo de vivienda que deseas proteger",
+          "types": {
+            "apartment": "Departamento",
+            "cottage": "Cabaña",
+            "townhouse": "Casa adosada",
+            "single-family": "Casa unifamiliar",
+            "condo": "Condominio",
+            "duplex": "Dúplex",
+            "other": "Otro"
+          }
         }
       },
       "buttons": {

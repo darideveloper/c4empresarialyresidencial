@@ -14,7 +14,7 @@ import Title from "@/components/ui/Title"
 import Steps from '@/components/layouts/Steps'
 import ContactInfo from '@/components/layouts/quote-form/ContactInfo'
 import SelectService from '@/components/layouts/quote-form/SelectService'
-import ResidentialInfo from '@/components/layouts/quote-form/ResidentialInfo'
+import ResidentialType from '@/components/layouts/quote-form/ResidentialType'
 import CompanySector from '@/components/layouts/quote-form/CompanySector'
 import CompanyEmployees from '@/components/layouts/quote-form/CompanyEmployees'
 import Features from '@/components/layouts/quote-form/Features'
@@ -36,6 +36,7 @@ export default function QuoteForm() {
     companySector,
     companyEmployees,
     features,
+    residentialType,
 
     // actions
     getFormData,
@@ -47,6 +48,7 @@ export default function QuoteForm() {
     companySector,
     companyEmployees,
     features,
+    residentialType,
   }
   
   // Hanlders
@@ -98,9 +100,9 @@ export default function QuoteForm() {
   ]
   const residentialScreens = [
     {
-      "key": "residential",
-      "screen": <ResidentialInfo />,
-      "requiredFields": [],
+      "key": "residentialType",
+      "screen": <ResidentialType />,
+      "requiredFields": ["residentialType"],
     }
   ]
 
@@ -143,6 +145,7 @@ export default function QuoteForm() {
     companySector,
     companyEmployees,
     features,
+    residentialType,
   ])
 
   // Update current screen data
