@@ -17,7 +17,7 @@ import SelectService from '@/components/layouts/quote-form/SelectService'
 import ResidentialInfo from '@/components/layouts/quote-form/ResidentialInfo'
 import CompanySector from '@/components/layouts/quote-form/CompanySector'
 import CompanyEmployees from '@/components/layouts/quote-form/CompanyEmployees'
-import CompanyFeatures from '@/components/layouts/quote-form/CompanyFeatures'
+import Features from '@/components/layouts/quote-form/Features'
 
 
 // zustand
@@ -31,30 +31,39 @@ export default function QuoteForm() {
     selectedService,
     companySector,
     companyEmployees,
-    companyFeatures,
+    features,
   } = useQuoteFormStore((state) => state)
 
   const formSates = {
     selectedService,
     companySector,
     companyEmployees,
-    companyFeatures,
+    features,
   }
 
   // Translations
   const t = useTranslations('QuotePage.form')
 
   // Screens data
-  const startScreen = {
+  const startScreens = [
+    {
     "key": "selectService",
     "screen": <SelectService />,
     "requiredFields": ["selectedService"],
-  }
-  const endScreen = {
-    "key": "contactInfo",
-    "screen": <ContactInfo />,
-    "requiredFields": ["selectedService"],
-  }
+    }
+  ]
+  const endScreens = [
+    {
+      "key": "features",
+      "screen": <Features />,
+      "requiredFields": ["features"],
+    },
+    {
+      "key": "contactInfo",
+      "screen": <ContactInfo />,
+      "requiredFields": ["selectedService"],
+    },
+  ]
   const companyScreens = [
     {
       "key": "companySector",
@@ -66,11 +75,6 @@ export default function QuoteForm() {
       "screen": <CompanyEmployees />,
       "requiredFields": ["companyEmployees"],
     },
-    {
-      "key": "companyFeatures",
-      "screen": <CompanyFeatures />,
-      "requiredFields": ["companyFeatures"],
-    }
   ]
   const residentialScreens = [
     {
@@ -82,7 +86,7 @@ export default function QuoteForm() {
 
   // Form state
   const [currentStep, setCurrentStep] = useState(0)
-  const [screensData, setScreensData] = useState([startScreen, endScreen])   
+  const [screensData, setScreensData] = useState([...startScreens, ...endScreens])   
   const [screenReady, setScreenReady] = useState(false)
   const [currentScreenData, setCurrentScreenData] = useState(screensData[currentStep])
 
@@ -116,7 +120,7 @@ export default function QuoteForm() {
     selectedService,
     companySector,
     companyEmployees,
-    companyFeatures,
+    features,
   ])
 
   // Update current screen data
@@ -128,9 +132,9 @@ export default function QuoteForm() {
   useEffect(() => {
     // Validate all required fields are not null
     if (selectedService === 'company') {
-      setScreensData([startScreen, ...companyScreens, endScreen])
+      setScreensData([...startScreens, ...companyScreens, ...endScreens])
     } else if (selectedService === 'residential') {
-      setScreensData([startScreen, ...residentialScreens, endScreen])
+      setScreensData([...startScreens, ...residentialScreens, ...endScreens])
     }
   }, [selectedService])
 
