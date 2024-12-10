@@ -31,7 +31,7 @@ export default function ContactInfo({ onSubmit }) {
   return (
     <div 
       className={`
-        form-wrapper
+        screens-form-wrapper
         w-full
         max-w-2xl
         mx-auto

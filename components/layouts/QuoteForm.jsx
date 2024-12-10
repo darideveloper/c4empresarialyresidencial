@@ -26,23 +26,43 @@ import { useQuoteFormStore } from '@/providers/quoteform-store-provider'
 
 export default function QuoteForm() {
 
+  // Translations
+  const t = useTranslations('QuotePage.form')
+
   // Zustand data
   const { 
+    // states
     selectedService,
     companySector,
     companyEmployees,
     features,
-  } = useQuoteFormStore((state) => state)
 
+    // actions
+    getFormData,
+  } = useQuoteFormStore((state) => state)
+  
+  // Object with all form states
   const formSates = {
     selectedService,
     companySector,
     companyEmployees,
     features,
   }
+  
+  // Hanlders
+  // Submit function to handle react form
+  function onSubmit(data) {
 
-  // Translations
-  const t = useTranslations('QuotePage.form')
+    
+    // Add states to data
+    let fullData = {
+      ...data,
+      ...getFormData(),
+    }
+
+    console.log(fullData)
+  }
+  
 
   // Screens data
   const startScreens = [
@@ -60,7 +80,7 @@ export default function QuoteForm() {
     },
     {
       "key": "contactInfo",
-      "screen": <ContactInfo />,
+      "screen": <ContactInfo onSubmit={onSubmit}/>,
       "requiredFields": ["selectedService"],
     },
   ]
@@ -114,6 +134,8 @@ export default function QuoteForm() {
     } else {
       setScreenReady(false)
     }
+
+    console.log({features})
     
   }, [
     currentScreenData,
@@ -130,7 +152,7 @@ export default function QuoteForm() {
 
   // Update screens flow 
   useEffect(() => {
-    // Validate all required fields are not null
+    // Set dynamic screens flow
     if (selectedService === 'company') {
       setScreensData([...startScreens, ...companyScreens, ...endScreens])
     } else if (selectedService === 'residential') {
@@ -233,8 +255,9 @@ export default function QuoteForm() {
           className="bg-blue text-white"
           onClick={() => {
             if (isLastStep) {
-              // TODO: Submit form
-              console.log('Submit form')
+              // Submit react form to activate validation
+              const form = document.querySelector('.screens-form-wrapper form')
+              form.requestSubmit()
             } else {
               // Move to next step
               handleGoStep(currentStep + 1)
