@@ -42,6 +42,7 @@ export default function QuoteForm() {
     getFormData,
   } = useQuoteFormStore((state) => state)
   
+  // Data
   // Object with all form states
   const formSates = {
     selectedService,
@@ -50,21 +51,6 @@ export default function QuoteForm() {
     features,
     residentialType,
   }
-  
-  // Hanlders
-  // Submit function to handle react form
-  function onSubmit(data) {
-
-    
-    // Add states to data
-    let fullData = {
-      ...data,
-      ...getFormData(),
-    }
-
-    console.log(fullData)
-  }
-  
 
   // Screens data
   const startScreens = [
@@ -116,6 +102,46 @@ export default function QuoteForm() {
   let screenTitle = t(`screens.${currentScreenData.key}.title`)
   const isLastStep = currentStep === screensData.length - 1
   
+  // Funtion hanlders
+  // Submit function to handle react form
+  function onSubmit(data) {
+
+    
+    // Add states to data
+    let fullData = {
+      ...data,
+      ...getFormData(),
+    }
+
+    console.log(fullData)
+  }
+
+  // Move to specific step / screen with transition
+  async function handleGoStep(steepNumber) {
+
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms))
+    }
+
+    // Start transition
+    const screenWrapper = document.querySelector('.screen-wrapper')
+    screenWrapper.classList.add('transition-form')
+    await sleep(500)
+
+    // Go to specific step
+    setCurrentStep(steepNumber)
+
+    // Scroll to top
+    await sleep(100)
+    window.scrollTo(0, 0)
+    
+    // End transition
+    await sleep(500)
+    screenWrapper.classList.remove('transition-form')
+
+  }
+  
+  // Event handlers
   // Validate required fields to enable next button
   useEffect(() => {
     // Validate all required fields are not null
@@ -162,32 +188,6 @@ export default function QuoteForm() {
       setScreensData([...startScreens, ...residentialScreens, ...endScreens])
     }
   }, [selectedService])
-
-  // Move to specific step / screen
-  async function handleGoStep(steepNumber) {
-
-    function sleep(ms) {
-      return new Promise(resolve => setTimeout(resolve, ms))
-    }
-
-    // Start transition
-    const screenWrapper = document.querySelector('.screen-wrapper')
-    screenWrapper.classList.add('transition-form')
-    await sleep(500)
-
-    // Go to specific step
-    setCurrentStep(steepNumber)
-
-    // Scroll to top
-    await sleep(100)
-    window.scrollTo(0, 0)
-    
-    // End transition
-    await sleep(500)
-    screenWrapper.classList.remove('transition-form')
-
-  }
-
   
   return (
     <div
@@ -199,7 +199,7 @@ export default function QuoteForm() {
       <Steps
         screensData={screensData}
         currentStep={currentStep}
-        setStep={setCurrentStep}
+        setStep={handleGoStep}
       />
 
       <div
