@@ -7,6 +7,10 @@ import ImageBtn from "@/components/ui/ImageBtn"
 // zustand
 import { useQuoteFormStore } from '@/providers/quoteform-store-provider'
 
+
+/**
+ * Company Sector screen for QuoteForm
+ */
 export default function CompanySector() {
 
   const t = useTranslations('QuotePage.form.screens.companySector')

@@ -1,13 +1,11 @@
 'use client'
 
-import { useForm } from "react-hook-form"
 import { useTranslations } from 'next-intl'
 
 import Image from 'next/image'
 import Title from '@/components/ui/Title'
 import Link from 'next/link'
-import Input from '@/components/ui/Input'
-import Button from '@/components/ui/Button'
+import Form from '@/components/layouts/templates/Form'
 
 import Swal from 'sweetalert2'
 
@@ -53,13 +51,6 @@ export default function Contact() {
     }
   }
 
-  // Form state
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm()
-
   // Socials
   const socials = [
     {
@@ -84,28 +75,25 @@ export default function Contact() {
     {
       "name": "name",
       "type": "text",
+      "required": true,
     },
     {
       "name": "email",
       "type": "email",
+      "required": true,
     },
     {
       "name": "phone",
       "type": "tel",
+      "required": true,
     },
     {
       "name": "address",
       "type": "text",
+      "required": true,
     }
   ]
-  for (const inputData of inputsData) {
-    inputData.register = register
-    inputData.errors = errors
-    inputData.required = true
-    inputData.label = t(`form.inputs.${inputData.name}.label`)
-    inputData.placeholder = t(`form.inputs.${inputData.name}.placeholder`)
-    inputData.errorMessage = t(`form.inputs.${inputData.name}.errorMessage`)
-  }
+ 
 
   return (
     <div
@@ -316,29 +304,11 @@ export default function Contact() {
         >
 
           <Title>{t('form.title')}</Title>
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className={`
-              w-10/12
-              mx-auto
-            `}
-          >
-
-            {/* Render inputs */}
-            {
-              inputsData.map((inputData, index) => (
-                <Input
-                  key={index}
-                  index={index}
-                  {...inputData}
-                />
-              ))
-            }
-
-            <Button
-              text={t('form.submit')}
-            />
-          </form>
+          <Form 
+            inputsData={inputsData}
+            onSubmit={onSubmit}
+            submitText={t('form.submit')}
+          />
         </div>
       </div>
     </div>

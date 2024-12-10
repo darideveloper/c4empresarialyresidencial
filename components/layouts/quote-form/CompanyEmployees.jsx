@@ -3,6 +3,9 @@ import Button from "@/components/ui/Button"
 // zustand
 import { useQuoteFormStore } from '@/providers/quoteform-store-provider'
 
+/**
+ * Company employees screen for QuoteForm
+ */
 export default function CompanyEmployees() {
 
   // Zustand data

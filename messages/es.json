@@ -444,7 +444,7 @@
           "title": "Tamaño de la Empresa",
           "description": "Selecciona el rango de empleados de tu empresa"
         },
-        "companyFeatures": {
+        "features": {
           "title": "Características que te interesa del servicio",
           "description": "Selecciona las características que te interesan en tu servicio de monitoreo",
           "features": {
