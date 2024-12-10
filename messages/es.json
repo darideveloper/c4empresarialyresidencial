@@ -376,14 +376,14 @@
   "ResidentialPage": {
     "Hero": {
       "title": {
-        "beforeText": "Welcome to",
-        "afterText": "The Security Your Home Needs"
+        "beforeText": "Bienvenido a",
+        "afterText": "La seguridad que tu hogar necesita"
       },
-      "cta": "Get a Quote for Your Home",
-      "imgAlt": "Illustration of a person analyzing homes",
+      "cta": "Obtén una cotización para tu hogar",
+      "imgAlt": "Ilustración de una persona analizando hogares",
       "text": {
-        "beforeText": "At",
-        "afterText": "we specialize in providing tailored security solutions for homes in Mérida, Yucatán. With a wide range of security cameras and professional monitoring services, we are here to protect what matters most to you."
+        "beforeText": "En",
+        "afterText": "nos especializamos en ofrecer soluciones de seguridad personalizadas para hogares en Mérida, Yucatán. Con una amplia gama de cámaras de seguridad y servicios profesionales de monitoreo, estamos aquí para proteger lo que más importa para ti."
       }
     }
   },
