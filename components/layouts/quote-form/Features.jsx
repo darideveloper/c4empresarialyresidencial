@@ -68,9 +68,9 @@ export default function Features() {
               `}
               onClick={() => {
                 if (isActive) {
-                  removeFeature(feature)
+                  removeFeature(t(`features.${feature}.title`))
                 } else {
-                  addFeature(feature)
+                  addFeature(t(`features.${feature}.title`))
                 }
               }}
             >
