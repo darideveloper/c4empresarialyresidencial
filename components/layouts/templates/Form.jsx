@@ -10,6 +10,42 @@ import Swal from 'sweetalert2'
 
 
 /**
+   * Submit data to dashboard api and show a success/error message
+   * 
+   * @param {Object} data Form data
+   * @param {string} endpoint Endpoint to send data to
+   * @param {Object} t Translations object
+   */
+export async function sendDataApi(data, endpoint, tContact) {
+
+  // Send data to server side endpoint
+  const response = await fetch(`/api/dashboard/${endpoint}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+
+  if (response.ok) {
+    Swal.fire({
+      title: tContact('messages.success.title'),
+      text: tContact('messages.success.text'),
+      icon: 'success',
+      confirmButtonText: tContact('messages.success.confirmButtonText'),
+    })
+  } else {
+    console.error({ response })
+    Swal.fire({
+      title: tContact('messages.error.title'),
+      text: tContact('messages.error.text'),
+      icon: 'error',
+      confirmButtonText: tContact('messages.error.confirmButtonText'),
+    })
+  }
+}
+
+/**
  * Base form with dynamic inputs
  * @param {Object} props 
  * @param {Array} props.inputsData - Array of objects with input data

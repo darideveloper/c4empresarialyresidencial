@@ -1,14 +1,16 @@
 'use client'
 
+// Libs
 import { useTranslations } from 'next-intl'
 
+// Components
 import Image from 'next/image'
 import Title from '@/components/ui/Title'
 import Link from 'next/link'
 import Form from '@/components/layouts/templates/Form'
 
-import Swal from 'sweetalert2'
-
+// Methods
+import { sendDataApi } from '@/components/layouts/templates/Form'
 
 /**
  * Contact section (socials and form)
@@ -16,40 +18,6 @@ import Swal from 'sweetalert2'
 export default function Contact() {
 
   const t = useTranslations('General.Contact')
-
-  /**
-   * Handle form submit
-   * 
-   * @param {Object} data Form data
-   */
-  async function onSubmit(data) {
-
-    // Send data to server side endpoint
-    const response = await fetch('/api/dashboard/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-
-    if (response.ok) {
-      Swal.fire({
-        title: t('messages.success.title'),
-        text: t('messages.success.text'),
-        icon: 'success',
-        confirmButtonText: t('messages.success.confirmButtonText'),
-      })
-    } else {
-      console.error({ response })
-      Swal.fire({
-        title: t('messages.error.title'),
-        text: t('messages.error.text'),
-        icon: 'error',
-        confirmButtonText: t('messages.error.confirmButtonText'),
-      })
-    }
-  }
 
   // Socials
   const socials = [
@@ -306,7 +274,7 @@ export default function Contact() {
           <Title>{t('form.title')}</Title>
           <Form 
             inputsData={inputsData}
-            onSubmit={onSubmit}
+            onSubmit={(data) => sendDataApi(data, 'contact', t)}
             submitText={t('form.submit')}
           />
         </div>

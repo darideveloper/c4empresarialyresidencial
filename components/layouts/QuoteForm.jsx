@@ -19,6 +19,8 @@ import CompanySector from '@/components/layouts/quote-form/CompanySector'
 import CompanyEmployees from '@/components/layouts/quote-form/CompanyEmployees'
 import Features from '@/components/layouts/quote-form/Features'
 
+// Methods
+import { sendDataApi } from '@/components/layouts/templates/Form'
 
 // zustand
 import { useQuoteFormStore } from '@/providers/quoteform-store-provider'
@@ -28,6 +30,7 @@ export default function QuoteForm() {
 
   // Translations
   const t = useTranslations('QuotePage.form')
+  const tContact = useTranslations('General.Contact')
 
   // Zustand data
   const { 
@@ -106,14 +109,28 @@ export default function QuoteForm() {
   // Submit function to handle react form
   function onSubmit(data) {
 
+    // Set default value to empty fields
+    const defaultValues = {
+      companySector: "n/a",
+      companyEmployees: "n/a",
+      residentialType: "n/a",
+    }
+    const formData = getFormData()
+    for (const key in defaultValues) {
+      if (formData[key] === "") {
+        formData[key] = defaultValues[key]
+      }
+    }
+    console.log({formData, defaultValues})
+
     
     // Add states to data
     let fullData = {
       ...data,
-      ...getFormData(),
+      ...formData,
     }
 
-    console.log(fullData)
+    sendDataApi(fullData, 'quote', tContact)
   }
 
   // Move to specific step / screen with transition
@@ -148,7 +165,7 @@ export default function QuoteForm() {
     let requiredFieldsNames = currentScreenData.requiredFields
     let requiredFields = requiredFieldsNames.map(field => formSates[field])
     const validFields = requiredFields.every((field) => {
-      if (field === null) {
+      if (field === "") {
         return false
       } else if (Array.isArray(field) && field.length === 0) {
         return false
@@ -162,9 +179,7 @@ export default function QuoteForm() {
     } else {
       setScreenReady(false)
     }
-
-    console.log({features})
-    
+        
   }, [
     currentScreenData,
     selectedService,
