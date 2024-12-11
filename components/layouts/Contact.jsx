@@ -101,7 +101,7 @@ export default function Contact() {
             text-xl
             w-full
             text-center
-            px-4
+            px-8
           `}
         >
           {t('socials.title')}
