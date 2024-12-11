@@ -36,7 +36,8 @@ export default function Button({
     ${active ? 'text-blue' : 'text-white'}
     border-blue
     rounded-xl
-    py-3 px-6
+    py-3
+    px-6
     mt-6
     inline-block
     duration-300

@@ -270,7 +270,7 @@ export default function QuoteForm() {
         />
         <Button
           text={isLastStep ? t('buttons.submit') : t('buttons.next')}
-          className="bg-blue text-white"
+          className="bg-blue text-white !px-16"
           onClick={() => {
             if (isLastStep) {
               // Submit react form to activate validation
