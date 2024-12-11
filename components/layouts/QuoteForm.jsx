@@ -107,7 +107,7 @@ export default function QuoteForm() {
   
   // Funtion hanlders
   // Submit function to handle react form
-  function onSubmit(data) {
+  async function onSubmit(data) {
 
     // Set default value to empty fields
     const defaultValues = {
@@ -130,7 +130,7 @@ export default function QuoteForm() {
       ...formData,
     }
 
-    sendDataApi(fullData, 'quote', tAlerts)
+    await sendDataApi(fullData, 'quote', tAlerts)
   }
 
   // Move to specific step / screen with transition

@@ -1,12 +1,14 @@
 'use client'
 
+// Libs
+import { useState, useEffect } from "react"
 import { useForm } from "react-hook-form"
-import { useTranslations } from 'next-intl'
+import Swal from 'sweetalert2'
 
+// Components
 import Input from '@/components/ui/Input'
 import Button from '@/components/ui/Button'
 
-import Swal from 'sweetalert2'
 
 
 /**
@@ -58,10 +60,17 @@ export async function sendDataApi(data, endpoint, tAlerts) {
  */
 export default function Form({ inputsData, onSubmit, submitText = "", tInputs }) {
 
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    console.log({ loading })
+  }, [loading])
+
   // Form state
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm()
 
@@ -77,10 +86,18 @@ export default function Form({ inputsData, onSubmit, submitText = "", tInputs })
 
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(async (data) => {
+        // Submit data and reset form
+        setLoading(true)
+        await onSubmit(data)
+        reset()
+        setLoading(false)
+      })}
       className={`
         w-10/12
         mx-auto
+        duration-300
+        ${loading ? 'opacity-30': 'opacity-100'}
       `}
     >
 

@@ -42,7 +42,7 @@ export default function ContactInfo({ onSubmit }) {
   ]
 
   return (
-    <div 
+    <div
       className={`
         screens-form-wrapper
         w-full
@@ -50,9 +50,11 @@ export default function ContactInfo({ onSubmit }) {
         mx-auto
       `}
     >
-      <Form 
+      <Form
         inputsData={inputsData}
-        onSubmit={onSubmit}
+        onSubmit={async (data) => {
+          await onSubmit(data)
+        }}
         tInputs={tInputs}
       />
 

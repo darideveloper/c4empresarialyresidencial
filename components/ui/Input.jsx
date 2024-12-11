@@ -57,6 +57,7 @@ export default function Input({
           hover:pl-10
           text-black focus:text-blue
           placeholder-greylight
+          placeholder-opacity-50
           duration-300
           border-b-4
           border-grey focus:border-blue
