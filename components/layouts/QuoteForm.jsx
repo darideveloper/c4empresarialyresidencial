@@ -30,7 +30,7 @@ export default function QuoteForm() {
 
   // Translations
   const t = useTranslations('QuotePage.form')
-  const tContact = useTranslations('General.Contact')
+  const tAlerts = useTranslations('QuotePage.form.screens.contact.messages')
 
   // Zustand data
   const { 
@@ -130,7 +130,7 @@ export default function QuoteForm() {
       ...formData,
     }
 
-    sendDataApi(fullData, 'quote', tContact)
+    sendDataApi(fullData, 'quote', tAlerts)
   }
 
   // Move to specific step / screen with transition

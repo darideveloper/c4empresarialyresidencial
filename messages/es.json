@@ -141,8 +141,7 @@
             "errorMessage": "Introduce tu dirección"
           }
         },
-        "submit": "Enviar",
-        "successMessage": "¡Gracias por contactarnos! Nos pondremos en contacto contigo lo antes posible."
+        "submit": "Enviar"
       },
       "messages": {
         "error": {
@@ -493,6 +492,66 @@
             "condo": "Condominio",
             "duplex": "Dúplex",
             "other": "Otro"
+          }
+        },
+        "contact": {
+          "inputs": {
+            "company": {
+              "name": {
+                "label": "Nombre de la Empresa",
+                "placeholder": "Mi Empresa S.A. de C.V.",
+                "errorMessage": "Introduce el nombre de tu empresa"
+              },
+              "email": {
+                "label": "Correo Electrónico empresarial",
+                "placeholder": "sample@miempresa.com",
+                "errorMessage": "Introduce un correo empresarial válido"
+              },
+              "phone": {
+                "label": "Teléfono de la Empresa",
+                "placeholder": "52 999 123 4567",
+                "errorMessage": "Introduce un número de teléfono válido"
+              },
+              "address": {
+                "label": "Dirección de la Empresa",
+                "placeholder": "Calle 60 #123, Colonia Centro",
+                "errorMessage": "Introduce la dirección de tu empresa"
+              }
+            },
+            "residential": {
+              "name": {
+                "label": "Nombre",
+                "placeholder": "Miguel Pérez",
+                "errorMessage": "Introduce tu nombre"
+              },
+              "email": {
+                "label": "Correo Electrónico",
+                "placeholder": "sample@email.com",
+                "errorMessage": "Introduce un correo electrónico válido"
+              },
+              "phone": {
+                "label": "Teléfono",
+                "placeholder": "52 999 123 4567",
+                "errorMessage": "Introduce un número de teléfono válido"
+              },
+              "address": {
+                "label": "Dirección",
+                "placeholder": "Calle 60 #123, Colonia Centro",
+                "errorMessage": "Introduce tu dirección"
+              }
+            }
+          },
+          "messages": {
+            "error": {
+              "title": "Formulario no disponible",
+              "text": "El formulario de cotización no está disponible en este momento. Por favor, inténtalo de nuevo más tarde.",
+              "confirmButtonText": "Entendido"
+            },
+            "success": {
+              "title": "¡Gracias por enviar tus datos!",
+              "text": "Te contactaremos lo antes posible para brindarte más información.",
+              "confirmButtonText": "Entendido"
+            }
           }
         }
       },

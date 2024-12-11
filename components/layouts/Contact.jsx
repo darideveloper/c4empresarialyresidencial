@@ -18,6 +18,8 @@ import { sendDataApi } from '@/components/layouts/templates/Form'
 export default function Contact() {
 
   const t = useTranslations('General.Contact')
+  const tAlerts = useTranslations('General.Contact.messages')
+  const tInputs = useTranslations('General.Contact.form.inputs')
 
   // Socials
   const socials = [
@@ -274,8 +276,9 @@ export default function Contact() {
           <Title>{t('form.title')}</Title>
           <Form 
             inputsData={inputsData}
-            onSubmit={(data) => sendDataApi(data, 'contact', t)}
+            onSubmit={(data) => sendDataApi(data, 'contact', tAlerts)}
             submitText={t('form.submit')}
+            tInputs={tInputs}
           />
         </div>
       </div>

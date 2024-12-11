@@ -14,9 +14,9 @@ import Swal from 'sweetalert2'
    * 
    * @param {Object} data Form data
    * @param {string} endpoint Endpoint to send data to
-   * @param {Object} t Translations object
+   * @param {Object} tAlerts Translations object with alerts data
    */
-export async function sendDataApi(data, endpoint, tContact) {
+export async function sendDataApi(data, endpoint, tAlerts) {
 
   // Send data to server side endpoint
   const response = await fetch(`/api/dashboard/${endpoint}`, {
@@ -29,18 +29,18 @@ export async function sendDataApi(data, endpoint, tContact) {
 
   if (response.ok) {
     Swal.fire({
-      title: tContact('messages.success.title'),
-      text: tContact('messages.success.text'),
+      title: tAlerts('success.title'),
+      text: tAlerts('success.text'),
       icon: 'success',
-      confirmButtonText: tContact('messages.success.confirmButtonText'),
+      confirmButtonText: tAlerts('success.confirmButtonText'),
     })
   } else {
     console.error({ response })
     Swal.fire({
-      title: tContact('messages.error.title'),
-      text: tContact('messages.error.text'),
+      title: tAlerts('error.title'),
+      text: tAlerts('error.text'),
       icon: 'error',
-      confirmButtonText: tContact('messages.error.confirmButtonText'),
+      confirmButtonText: tAlerts('error.confirmButtonText'),
     })
   }
 }
@@ -54,10 +54,9 @@ export async function sendDataApi(data, endpoint, tContact) {
  * @param {boolean} props.inputsData.required - If the input is required
  * @param {string} props.onSubmit - Function to handle form submit
  * @param {string} props.submitText - Text for the submit button. If empty, the button won't render
+ * @param {Object} props.t - Translations object with inputs data
  */
-export default function Form({ inputsData, onSubmit, submitText = "" }) {
-
-  const t = useTranslations('General.Contact')
+export default function Form({ inputsData, onSubmit, submitText = "", tInputs }) {
 
   // Form state
   const {
@@ -71,9 +70,9 @@ export default function Form({ inputsData, onSubmit, submitText = "" }) {
   for (const inputData of inputsData) {
     inputData.register = register
     inputData.errors = errors
-    inputData.label = t(`form.inputs.${inputData.name}.label`)
-    inputData.placeholder = t(`form.inputs.${inputData.name}.placeholder`)
-    inputData.errorMessage = t(`form.inputs.${inputData.name}.errorMessage`)
+    inputData.label = tInputs(`${inputData.name}.label`)
+    inputData.placeholder = tInputs(`${inputData.name}.placeholder`)
+    inputData.errorMessage = tInputs(`${inputData.name}.errorMessage`)
   }
 
   return (
@@ -99,7 +98,7 @@ export default function Form({ inputsData, onSubmit, submitText = "" }) {
       {
         submitText &&
         <Button
-          text={t('form.submit')}
+          text={submitText}
         />
       }
     </form>
