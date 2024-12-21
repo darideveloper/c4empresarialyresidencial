@@ -233,7 +233,6 @@ export default function Contact() {
                 duration-300
                 hover:opacity-75
                 hover:-translate-y-1
-                debug
               `}
             >
               <svg
