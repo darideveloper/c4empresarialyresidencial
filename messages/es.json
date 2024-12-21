@@ -15,33 +15,53 @@
       "title": "Protección Integral para Tu Tranquilidad",
       "altPrefix": "Foto de producto",
       "categories": {
-        "camera": {
-          "title": "Cámaras de Alta Definición",
-          "description": "Vigilancia discreta y efectiva para interior y exterior, adaptable a cualquier entorno.",
+        "detection": {
+          "title": "Camaras y sensores de detección",
+          "description": "Cámaras de alta definición y sensores de movimiento para detectar cualquier actividad sospechosa en tu hogar o negocio.",
           "products": {
-            "camera1": {
-              "name": "Cámara de Seguridad 1080p",
-              "description": "Cámara de seguridad de alta definición con visión nocturna y detección de movimiento.",
-              "filter": "residential"
-            },
-            "camera2": {
-              "name": "Cámara de Seguridad 4K",
-              "description": "Cámara de seguridad de ultra alta definición con visión nocturna y detección de movimiento.",
+            "detection1": {
+              "name": "DAHUA SD22204DB-GNY",
+              "description": "Cámara PTZ con zoom de 4x, detección facial y protección antivandálica IK10, ideal para monitoreo exterior con baja iluminación gracias a la tecnología Starlight.",
               "filter": "company"
             },
-            "camera3": {
-              "name": "Cámara de Seguridad 1080p",
-              "description": "Cámara de seguridad de alta definición con visión nocturna y detección de movimiento.",
+            "detection2": {
+              "name": "DAHUA SD49825GB-HNR",
+              "description": "Cámara PTZ con zoom de 25x, detección de rostros y protección perimetral, ideal para monitoreo de alta precisión en exteriores, incluso en condiciones de baja luminosidad gracias a la tecnología Starlight.",
               "filter": "all"
             },
-            "camera4": {
-              "name": "Cámara de Seguridad 4K",
-              "description": "Cámara de seguridad de ultra alta definición con visión nocturna y detección de movimiento.",
+            "detection3": {
+              "name": "DAHUA DH-SD8A3440GA-HNV",
+              "description": "Cámara PTZ con zoom de 40x, visión nocturna IR hasta 500 m, detección de rostros y protección perimetral, ideal para monitoreo de alta precisión en exteriores con condiciones extremas.",
+              "filter": "company"
+            },
+            "detection4": {
+              "name": "TP-LINK TAPO C425",
+              "description": "Cámara WiFi inalámbrica con batería de hasta 300 días. Visión nocturna en color, detección inteligente con IA y campo de visión de 150°. Resistente al agua (IP66), compatible con Alexa y Google Home. Almacenamiento local o en la nube con TAPO CARE.",
               "filter": "residential"
             },
-            "camera5": {
-              "name": "Cámara de Seguridad 4K",
-              "description": "Cámara de seguridad de ultra alta definición con visión nocturna y detección de movimiento.",
+            "detection5": {
+              "name": "TP-LINK TAPO D130",
+              "description": "Videoportero cableado de 5 MP con visión nocturna a color, detección inteligente por IA, y audio bidireccional. Resistente al agua (IP65) y compatible con Alexa y Google Home. Almacenamiento local o en la nube (Tapo Care), y campo de visión de 180°.",
+              "filter": "residential"
+            },
+            "detection6": {
+              "name": "TP-LINK - Tapo T100",
+              "description": "Detecta movimiento a hasta 7 metros y con un ángulo de 120°. Funciona con otros dispositivos Tapo, activando alarmas o luces automáticamente. Sensibilidad ajustable con 3 niveles, batería CR2450 para 2 años de uso, e instalación fácil con adhesivo 3M o imán. Compatible solo con Tapo Hub.",
+              "filter": "residential"
+            },
+            "detection7": {
+              "name": "TP-Link Tapo C720",
+              "description": "Cámara exterior con reflectores de 2800 lúmenes, visión 2K QHD y detección inteligente con IA. Resistente al clima (IP65), compatible con Alexa y Google Home. Almacenamiento local o en la nube (Tapo Care). Zonas de actividad y alarmas personalizables.",
+              "filter": "all"
+            },
+            "detection8": {
+              "name": "DAHUA DHI-TPC-SD5441-B35Z45-BM-S24",
+              "description": "Cámara IP híbrida con lente térmica y visible de 4MP, 45x zoom óptico, IR hasta 100m, y funciones IA como detección de barcos, humo, intrusiones y más. Resistente al agua (IP66) y con fusión de imágenes térmicas y visibles. Perfecta para vigilancia en condiciones de poca luz o oscuridad.",
+              "filter": "company"
+            },
+            "detection9": {
+              "name": "DAHUA SD6AL445GB-HNV",
+              "description": "Cámara IP PTZ 4MP con 45x zoom y luz láser de hasta 550m. Tecnología Starlight, Auto Tracking 3.0 y detección inteligente de movimiento. Resistente al agua y polvo (IP67). Ideal para seguridad en exteriores.",
               "filter": "company"
             }
           }

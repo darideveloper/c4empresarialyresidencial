@@ -7,8 +7,7 @@ import { useTranslations } from 'next-intl'
 import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules'
 
 // Components
-import Image from 'next/image'
-import InfoImage from '@/components/ui/InfoHoverImage'
+import InfoHoverImage from '@/components/ui/InfoHoverImage'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Css
@@ -64,9 +63,13 @@ export default function SlideImages({ imagesPrefix, category, maxProducts, altPr
       breakpoints={{
         320: {
           slidesPerView: 2,
-          spaceBetween: 10
+          spaceBetween: 20
         },
         1024: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        1200: {
           slidesPerView: 3,
           spaceBetween: 20
         },
@@ -77,7 +80,7 @@ export default function SlideImages({ imagesPrefix, category, maxProducts, altPr
 
           return (
             <SwiperSlide key={index}>
-              <InfoImage
+              <InfoHoverImage
                 href={`/quote`}
                 imageSrc={product.imageSrc}
                 imageAlt={product.imageAlt}

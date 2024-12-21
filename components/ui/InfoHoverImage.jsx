@@ -13,7 +13,7 @@ import { Link } from '@/i18n/routing'
  * @param {string} props.className - Extra classes
  * @returns 
  */
-export default function InfoImage({ href, imageSrc, imageAlt, title, text, className }) {
+export default function InfoHoverImage({ href, imageSrc, imageAlt, title, text, className }) {
   return (
     <Link
       className={`
@@ -88,8 +88,8 @@ export default function InfoImage({ href, imageSrc, imageAlt, title, text, class
       <Image
         src={imageSrc}
         alt={imageAlt}
-        width={300}
-        height={300}
+        width={400}
+        height={400}
         className={`
           w-full
         `}
