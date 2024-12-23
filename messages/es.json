@@ -652,6 +652,13 @@
               "confirmButtonText": "Entendido"
             }
           }
+        },
+        "companyDetails": {
+          "title": "Detalles de la Empresa",
+          "description": "Proporciona información sobre tu empresa",
+          "branches": {
+            "question": "¿Cuántas sucursales tiene tu empresa?"
+          }
         }
       },
       "buttons": {

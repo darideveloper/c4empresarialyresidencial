@@ -18,6 +18,7 @@ import ResidentialType from '@/components/layouts/quote-form/ResidentialType'
 import CompanySector from '@/components/layouts/quote-form/CompanySector'
 import CompanyEmployees from '@/components/layouts/quote-form/CompanyEmployees'
 import Features from '@/components/layouts/quote-form/Features'
+import CompanyDetails from '@/components/layouts/quote-form/CompanyDetails'
 
 // Methods
 import { sendDataApi } from '@/components/layouts/templates/Form'
@@ -57,6 +58,11 @@ export default function QuoteForm() {
 
   // Screens data
   const startScreens = [
+    {
+      "key": "companyDetails",
+      "screen": <CompanyDetails />,
+      "requiredFields": ["selectedService"],
+    },
     {
     "key": "selectService",
     "screen": <SelectService />,

@@ -7,6 +7,7 @@ export const defaultInitState = {
   companyEmployees: "",
   features: [],
   residentialType: "",
+  branches: 1,
 }
 
 export const createQuoteFormStore = (initState = defaultInitState) => {
@@ -32,5 +33,6 @@ export const createQuoteFormStore = (initState = defaultInitState) => {
         residentialType: state.residentialType,
       }
     },
+    setBranches: (branches) => set({ branches }),
   }))
 }
