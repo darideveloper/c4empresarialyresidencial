@@ -117,33 +117,53 @@
             }
           }
         },
-        "control": {
-          "title": "Control Total a Distancia",
-          "description": "Acceso remoto a tu sistema de seguridad desde cualquier dispositivo, en cualquier momento.",
+        "dvr": {
+          "title": "NVRs y DVRs",
+          "description": "Gama de NVRs de alta resolución (hasta 4K) con características avanzadas como reconocimiento facial, protección perimetral y compresión inteligente. Ideales para instalaciones residenciales y comerciales, ofrecen almacenamiento flexible y monitoreo remoto.",
           "products": {
-            "control1": {
-              "name": "Control de Acceso Residencial",
-              "description": "Control de acceso con cerraduras inteligentes y notificaciones en tiempo real.",
+            "dvr1": {
+              "name": "Bundle BuenFin1 NVR+2BulletIP",
+              "description": "NVR de 4 canales y dos cámaras de 2MP con visión nocturna de hasta 30 metros, ideales para pequeñas instalaciones. Son resistentes al agua y al polvo, perfectas para interiores y exteriores, con fácil instalación y monitoreo remoto.",
               "filter": "residential"
             },
-            "control2": {
-              "name": "Control de Acceso Empresarial",
-              "description": "Control de acceso con tarjetas de proximidad y monitoreo en tiempo real.",
+            "dvr2": {
+              "name": "AHUA DHI-NVR5864-16P-EI",
+              "description": "Este NVR soporta hasta 64 cámaras IP 4K, con 16 puertos PoE para instalación simplificada. Incluye IA avanzada, como reconocimiento facial y protección perimetral, ideal para grandes instalaciones de seguridad.",
               "filter": "company"
             },
-            "control3": {
-              "name": "Control de Acceso Residencial",
-              "description": "Control de acceso con cerraduras inteligentes y notificaciones en tiempo real.",
+            "dvr3": {
+              "name": "DAHUA NVR616-64-4KS2",
+              "description": "Grabador de red de 64 canales con soporte 4K, compresión H.265/H.264 y grabación de 384 Mbps. Incluye función DEWARP para cámaras fisheye y dos salidas HDMI, ideal para sistemas de videovigilancia grandes.",
+              "filter": "company"
+            },
+            "dvr4": {
+              "name": "DAHUA NVR4232-4KS2/L",
+              "description": "Grabador de 32 canales 4K, con compresión H.265, SMD Plus y reconocimiento facial. Compatible con cámaras ONVIF y discos de hasta 10 TB. Ideal para videovigilancia avanzada.",
               "filter": "all"
             },
-            "control4": {
-              "name": "Control de Acceso Empresarial",
-              "description": "Control de acceso con tarjetas de proximidad y monitoreo en tiempo real.",
+            "dvr5": {
+              "name": "DAHUA DHI-NVR5216-8P-I/L",
+              "description": "Grabador de 32 canales 4K, con compresión H.265, SMD Plus y reconocimiento facial. Compatible con cámaras ONVIF y discos de hasta 10 TB. Ideal para videovigilancia avanzada.",
+              "filter": "company"
+            },
+            "dvr6": {
+              "name": "DAHUA NVR4216-4KS2/L",
+              "description": "NVR de 8MP y 16 canales con resolución 4K, compresión Smart H.265+, detección inteligente de movimiento SMD Plus, salidas HDMI y VGA, y soporte para discos duros de hasta 10 TB. Ideal para videovigilancia avanzada con análisis en tiempo real.",
               "filter": "residential"
             },
-            "control5": {
-              "name": "Control de Acceso Empresarial",
-              "description": "Control de acceso con tarjetas de proximidad y monitoreo en tiempo real.",
+            "dvr7": {
+              "name": "DAHUA NVR1104HS-P-S3/H",
+              "description": "NVR de 4 canales IP con soporte para cámaras ONVIF y RTSP, compresión Smart H.265+ y H.264, con 4 puertos PoE, salida HDMI y VGA (resolución 1080P), y capacidad de almacenamiento de hasta 8TB. Ideal para videovigilancia de bajo consumo energético y fácil instalación.",
+              "filter": "residential"
+            },
+            "dvr8": {
+              "name": "VIVOTEK NR9782-v2",
+              "description": "NVR de 128 canales con 16 bahías, grabación a 512 Mbps, y soporte para H.265/H.264. Incluye VAST 2, Smart Search II, y gestión de ciberseguridad, ideal para grandes instalaciones.",
+              "filter": "company"
+            },
+            "dvr9": {
+              "name": "DAHUA NVR5216-16P-EI",
+              "description": "NVR IP de 16 canales, con PoE, grabación en H.265+/H.265, ancho de banda de 384 Mbps. Incluye IA como reconocimiento facial y protección perimetral, compatible con cámaras y sistemas VMS. Soporta hasta 2 discos de 20 TB y hasta 16 canales a 1080p o 4 MP.",
               "filter": "company"
             }
           }
