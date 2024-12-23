@@ -66,34 +66,54 @@
             }
           }
         },
-        "security": {
-          "title": "Sistemas de Alerta Inteligente",
-          "description": "Alarmas avanzadas que detectan y notifican sobre actividades sospechosas en tiempo real.",
+        "ip": {
+          "title": "Camaras IP",
+          "description": "Cámaras de alta resolución, visión nocturna, detección facial y análisis inteligente, ideales para entornos comerciales, residenciales y móviles. Resistentes, con almacenamiento local y tecnologías avanzadas para una vigilancia eficiente y confiable.",
           "products": {
-            "security1": {
-              "name": "Sistema de Alarma Residencial",
-              "description": "Sistema de alarma inalámbrico con sensores de movimiento y control remoto.",
-              "filter": "residential"
-            },
-            "security2": {
-              "name": "Sistema de Alarma Empresarial",
-              "description": "Sistema de alarma con monitoreo 24/7 y notificaciones en tiempo real.",
-              "filter": "company"
-            },
-            "security3": {
-              "name": "Sistema de Alarma Residencial",
-              "description": "Sistema de alarma inalámbrico con sensores de movimiento y control remoto.",
+            "ip1": {
+              "name": "DAHUA DH-IPC-HDW5449TM-SE-LED-0280B",
+              "description": "Cámara de 4MP con Full Color, visión nocturna, lente de 2.8 mm y campo de visión de 135°. Incorpora H.265, WizMind, AcuPick, detección facial, conteo de personas, micrófono, alcance de 30 m e IP67. Incluye ranura Micro SD, tecnología ePoE y SMD 3.0 para detección precisa.",
               "filter": "all"
             },
-            "security4": {
-              "name": "Sistema de Alarma Empresarial",
-              "description": "Sistema de alarma con monitoreo 24/7 y notificaciones en tiempo real.",
+            "ip2": {
+              "name": "DAHUA DH-SDT4E425-8P-GB-APV1",
+              "description": "Cámara PTZ IP de 8MP + 4MP con zoom óptico 25X y visión nocturna de hasta 100 m. Integra Autotracking 3.0, protección perimetral, SMD 4.0 y disuasión activa con luces y alarmas. Cuenta con WDR, certificación IP66 y es ideal para entornos exigentes.",
+              "filter": "company"
+            },
+            "ip3": {
+              "name": "DAHUA IPC-HFW5241E-Z12E",
+              "description": "Cámara IP Bullet de 2MP con inteligencia artificial, incluyendo detección facial y conteo de personas. Su lente motorizado de 5-60 mm y visión nocturna de hasta 150 m la hacen perfecta para monitoreo perimetral en cualquier condición. Resistente a climas extremos (IP67/IK10) y compatible con sistemas de alarma y audio, ofrece un monitoreo inteligente y confiable.",
+              "filter": "company"
+            },
+            "ip4": {
+              "name": "DAHUA IPC-MW1230DN-HM12",
+              "description": "Cámara IP móvil de 2MP diseñada para vehículos, con lente de 2.8mm y visión nocturna IR de hasta 30 m. Resistente a vibraciones, golpes y condiciones extremas (IP6K9K), ideal para monitoreo en trenes, autobuses y otros vehículos, con soporte para limpieza a alta presión.",
               "filter": "residential"
             },
-            "security5": {
-              "name": "Sistema de Alarma Empresarial",
-              "description": "Sistema de alarma con monitoreo 24/7 y notificaciones en tiempo real.",
+            "ip5": {
+              "name": "DAHUA IPC-HDBW5241FN-M-DAE-SA-0210B",
+              "description": "Cámara IP Domo de 2MP con lente de 2.1mm y 110° de apertura, ideal para conteo de personas en vehículos. Cuenta con WDR de 120 dB, IR de 30 metros y protección antivandálica IK10 e IP67. Compatible con codificación H.264+/H.265+ y funciona en entornos móviles como trenes o autobuses. Ofrece detección de rostros y conteo de personas.",
+              "filter": "all"
+            },
+            "ip6": {
+              "name": "DAHUA IPC-HDBW5241FN-M-DAE-SA-0280B",
+              "description": "2 MP está diseñada para entornos móviles como trenes y autobuses. Incluye detección de rostro, conteo de personas, y protección IP67, IK10. Su lente de 2.8 mm ofrece visión amplia y nocturna hasta 30 m. Soporta almacenamiento en microSD y es compatible con plataformas como DMSS y CMS.",
+              "filter": "all"
+            },
+            "ip7": {
+              "name": "DAHUA DH-IPC-HDW8441X-3D-0280B",
+              "description": "Esta cámara IP es ideal para el conteo de personas y gestión de aforo. Ofrece 3 MP de resolución, lente de 2.8 mm, compresión H.265, y protección IP67 e IK10. Soporta PoE y almacenamiento local en tarjeta microSD de hasta 256 GB, perfecta para monitoreo de espacios comerciales y eventos.",
               "filter": "company"
+            },
+            "ip8": {
+              "name": "DAHUA DH-IPC-HFW5442E-ZE",
+              "description": "Cámara IP Bullet de 4 MP con lente motorizado y visión infrarroja de hasta 60 metros. Admite PoE y almacenamiento local en MicroSD de hasta 256 GB. Resistente con IP67 e IK10, ideal para exteriores. Incluye tecnologías avanzadas como detección de rostros y conteo de personas.",
+              "filter": "all"
+            },
+            "ip9": {
+              "name": "DAHUA DH-DAE-CPC5241FPN-0280B",
+              "description": "Cámara IP domo de 2 MP con lente de 2.8mm y visión nocturna de 20 metros. Ideal para conteo de personas en vehículos, con WDR de 120dB y protección antivandálica IK10. Resistente a condiciones adversas con clasificación IP67. Compatible con NVR móviles.",
+              "filter": "residential"
             }
           }
         },
@@ -382,13 +402,13 @@
     "Hero": {
       "title": {
         "beforeText": "Welcome to",
-        "afterText": "The Security Your Business Needs"
+        "afterText": "The ip Your Business Needs"
       },
       "cta": "Get a Quote for Your Business",
       "imgAlt": "Illustration of people in a business environment",
       "text": {
         "beforeText": "At",
-        "afterText": "we specialize in providing tailored security solutions for businesses in Mérida, Yucatán. With a wide range of security cameras and professional monitoring services, we are here to protect what matters most to you."
+        "afterText": "we specialize in providing tailored ip solutions for businesses in Mérida, Yucatán. With a wide range of ip cameras and professional monitoring services, we are here to protect what matters most to you."
       }
     }
   },

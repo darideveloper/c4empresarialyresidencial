@@ -23,9 +23,9 @@ export default function Products({ productsFilter }) {
       "maxProducts": 9
     },
     {
-      "name": "security",
-      "svg": "M12 0c-3.371 2.866-5.484 3-9 3v11.535c0 4.603 3.203 5.804 9 9.465 5.797-3.661 9-4.862 9-9.465v-11.535c-3.516 0-5.629-.134-9-3zm-.548 15l-3.452-3.362 1.237-1.239 2.215 2.123 4.382-4.475 1.238 1.238-5.62 5.715z",
-      "maxProducts": 5
+      "name": "ip",
+      "svg": "M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 17l-1.894-2.008c.485-.514 1.154-.832 1.894-.832s1.408.318 1.894.832l-1.894 2.008zm2.768-2.935c-.709-.751-1.688-1.215-2.768-1.215s-2.059.465-2.768 1.216l-1.164-1.236c1.006-1.067 2.396-1.727 3.932-1.727s2.926.66 3.932 1.727l-1.164 1.235zm2.038-2.163c-1.23-1.304-2.929-2.11-4.806-2.11s-3.576.807-4.806 2.111l-1.194-1.267c1.535-1.629 3.656-2.636 6-2.636s4.465 1.007 6 2.636l-1.194 1.266z",
+      "maxProducts": 9
     },
     {
       "name": "control",
@@ -53,7 +53,7 @@ export default function Products({ productsFilter }) {
               key={index}
               className={`
                 flex
-                flex-col ${category.name == "security" ? 'lg:flex-row-reverse' : 'lg:flex-row'}
+                flex-col ${category.name == "ip" ? 'lg:flex-row-reverse' : 'lg:flex-row'}
                 align-center
                 justify-center
                 my-20
