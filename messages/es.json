@@ -460,14 +460,14 @@
   "CompanyPage": {
     "Hero": {
       "title": {
-        "beforeText": "Welcome to",
-        "afterText": "The ip Your Business Needs"
+        "beforeText": "Bienvenido a",
+        "afterText": "La seguridad que tu negocio necesita"
       },
-      "cta": "Get a Quote for Your Business",
-      "imgAlt": "Illustration of people in a business environment",
+      "cta": "Obtén una cotización para tu empresa",
+      "imgAlt": "Ilustración de un edificio de oficinas",
       "text": {
-        "beforeText": "At",
-        "afterText": "we specialize in providing tailored ip solutions for businesses in Mérida, Yucatán. With a wide range of ip cameras and professional monitoring services, we are here to protect what matters most to you."
+        "beforeText": "En",
+        "afterText": "nos especializamos en ofrecer soluciones de seguridad personalizadas para empresas en Mérida, Yucatán. Con una amplia gama de cámaras de seguridad y servicios profesionales de monitoreo, estamos aquí para proteger tu negocio y a tus empleados."
       }
     }
   },
