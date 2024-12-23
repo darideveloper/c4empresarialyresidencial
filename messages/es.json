@@ -658,6 +658,13 @@
           "description": "Proporciona información sobre tu empresa",
           "branches": {
             "question": "¿Cuántas sucursales tiene tu empresa?"
+          },
+          "wifi": {
+            "question": "¿Cuenta con red WiFi en tus instalaciones?",
+            "options": {
+              "yes": "Sí",
+              "no": "No"
+            }
           }
         }
       },

@@ -41,6 +41,8 @@ export default function QuoteForm() {
     companyEmployees,
     features,
     residentialType,
+    branches,
+    hasWifi,
 
     // actions
     getFormData,
@@ -54,6 +56,8 @@ export default function QuoteForm() {
     companyEmployees,
     features,
     residentialType,
+    branches,
+    hasWifi
   }
 
   // Screens data
@@ -61,7 +65,7 @@ export default function QuoteForm() {
     {
       "key": "companyDetails",
       "screen": <CompanyDetails />,
-      "requiredFields": ["selectedService"],
+      "requiredFields": ["branches", "hasWifi"],
     },
     {
     "key": "selectService",
@@ -185,6 +189,8 @@ export default function QuoteForm() {
     } else {
       setScreenReady(false)
     }
+
+    console.log({requiredFields, validFields})
         
   }, [
     currentScreenData,
@@ -193,6 +199,8 @@ export default function QuoteForm() {
     companyEmployees,
     features,
     residentialType,
+    branches,
+    hasWifi,
   ])
 
   // Update current screen data

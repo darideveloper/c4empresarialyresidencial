@@ -8,6 +8,7 @@ export const defaultInitState = {
   features: [],
   residentialType: "",
   branches: 1,
+  hasWifi: true,
 }
 
 export const createQuoteFormStore = (initState = defaultInitState) => {
@@ -34,5 +35,6 @@ export const createQuoteFormStore = (initState = defaultInitState) => {
       }
     },
     setBranches: (branches) => set({ branches }),
+    setHasWifi: (hasWifi) => set({ hasWifi }),
   }))
 }
