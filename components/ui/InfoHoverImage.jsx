@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Link } from '@/i18n/routing'
+import { TransitionLink } from '@/components/utils/TransitionLink'
 
 /**
  * Image that shows info when hover (title and text)
@@ -15,7 +15,7 @@ import { Link } from '@/i18n/routing'
  */
 export default function InfoHoverImage({ href, imageSrc, imageAlt, title, text, className }) {
   return (
-    <Link
+    <TransitionLink
       className={`
         img-wrapper
         border-2
@@ -94,6 +94,6 @@ export default function InfoHoverImage({ href, imageSrc, imageAlt, title, text, 
           w-full
         `}
       />
-    </Link>
+    </TransitionLink>
   )
 }
