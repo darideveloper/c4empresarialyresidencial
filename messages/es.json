@@ -665,6 +665,16 @@
               "yes": "Sí",
               "no": "No"
             }
+          },
+          "user": {
+            "question": "¿Quién utilizará el sistema de monitoreo?",
+            "options": {
+              "owner": "Dueño de la empresa",
+              "manager": "Gerentes",
+              "employee": "Empleados",
+              "family": "Familiares y personal de confianza",
+              "other": "Otro"
+            }
           }
         }
       },

@@ -9,6 +9,7 @@ export const defaultInitState = {
   residentialType: "",
   branches: 1,
   hasWifi: true,
+  users: [],
 }
 
 export const createQuoteFormStore = (initState = defaultInitState) => {
@@ -36,5 +37,11 @@ export const createQuoteFormStore = (initState = defaultInitState) => {
     },
     setBranches: (branches) => set({ branches }),
     setHasWifi: (hasWifi) => set({ hasWifi }),
+    addUser: (user) => set((state) => ({
+      users: [...state.users, user],
+    })),
+    removeUser: (user) => set((state) => ({
+      users: state.users.filter((u) => u !== user),
+    })),
   }))
 }

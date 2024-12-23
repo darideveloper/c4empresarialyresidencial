@@ -16,16 +16,20 @@ export default function CompanyDetails() {
     // States
     branches,
     hasWifi,
+    users,
     
     // Actions
     setBranches,
     setHasWifi,
+    addUser,
+    removeUser,
   } = useQuoteFormStore(
     (state) => state,
   )
 
   const t = useTranslations('QuotePage.form.screens.companyDetails')
 
+  // Data
   const wifiOptions = [
     {
       value: true,
@@ -35,6 +39,14 @@ export default function CompanyDetails() {
       value: false,
       label: t('wifi.options.no')
     }
+  ]
+
+  const usersOptions = [
+    "owner",
+    "manager",
+    "employee",
+    "family",
+    "other"
   ]
 
   return (
@@ -103,6 +115,57 @@ export default function CompanyDetails() {
           }
         </div>
       </div>
+
+      {/* User */}
+      <div
+        className={`
+          user
+          max-w-3xl
+          mx-auto
+        `}
+        data-aos="fade-up"
+        data-aos-delay="1200"
+      >
+        <Subtitle
+          className={`
+            mt-16
+          `}
+        >
+          {t('user.question')}  
+        </Subtitle>
+        <div
+          className={`
+            wifi-options
+            flex
+            flex-wrap
+            justify-center
+            items-center
+            mb-20
+          `}
+        >
+          {
+            usersOptions.map((option, index) => (
+              <Button
+                key={index}
+                onClick={() => {
+                  if (users.includes(option)) {
+                    removeUser(option)
+                  } else {
+                    addUser(option)
+                  }
+                }}
+                className={`
+                  m-2
+                `}
+                text={t(`user.options.${option}`)}
+                showArrow={false}
+                active={users.includes(option)}
+              />
+            ))
+          }
+        </div>
+      </div>
+
     </div>
   )
 }

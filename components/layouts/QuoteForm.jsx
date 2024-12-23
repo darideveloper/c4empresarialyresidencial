@@ -43,6 +43,7 @@ export default function QuoteForm() {
     residentialType,
     branches,
     hasWifi,
+    users,
 
     // actions
     getFormData,
@@ -57,7 +58,8 @@ export default function QuoteForm() {
     features,
     residentialType,
     branches,
-    hasWifi
+    hasWifi,
+    users
   }
 
   // Screens data
@@ -65,7 +67,7 @@ export default function QuoteForm() {
     {
       "key": "companyDetails",
       "screen": <CompanyDetails />,
-      "requiredFields": ["branches", "hasWifi"],
+      "requiredFields": ["branches", "hasWifi", "users"],
     },
     {
     "key": "selectService",
@@ -201,6 +203,7 @@ export default function QuoteForm() {
     residentialType,
     branches,
     hasWifi,
+    users,
   ])
 
   // Update current screen data
