@@ -4,6 +4,16 @@ import { Link } from '@/i18n/routing'
 import { useRouter } from '@/i18n/routing'
 
 
+/**
+ * Link with transition effect
+ * 
+ * @param {props} props - Link props
+ * @param {string} props.href - Link URL
+ * @param {function} props.onClick - Function to call on click
+ * @param {string} props.disable - Disable
+ * @param {object} props.props - Other
+ * @returns 
+ */
 export function TransitionLink ({ href, onClick, disable, ...props }) {
 
   const router = useRouter()
@@ -25,11 +35,21 @@ export function TransitionLink ({ href, onClick, disable, ...props }) {
     await sleep(transitionDuration)
 
     // Change page
+    const old_url = window.location.pathname
     router.push(href)
 
     // End animation
-    await sleep(transitionDuration)
-    body.classList.remove(transitionClass)
+    const urlValidationInterval = setInterval(async () => {
+      const newUrl = window.location.pathname;
+      if (old_url != newUrl) {
+        console.log({ old_url, newUrl });
+        await sleep(transitionDuration);
+        body.classList.remove(transitionClass);
+        
+        // Clear the interval when the condition is met
+        clearInterval(urlValidationInterval);
+      }
+    }, 100);
   }
 
   return (
