@@ -21,7 +21,7 @@ export default function ResidentialPage() {
       <TabsResidential />
       <Profits />
       <Products productsFilter="residential"/>
-      <Testimonials />
+      <Testimonials testimonialsFilter="residential"/>
     </>
   )
 }

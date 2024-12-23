@@ -4,13 +4,11 @@ import Image from 'next/image'
  * Testimonial card
  * 
  * @param {object} props - Testimonial data
- * @param {string} props.imageSrc - Image source in folder /images/testimonials
- * @param {string} props.alt - Image alt
  * @param {string} props.quote - Client quote
  * @param {string} props.client - Client name
  * @returns 
  */
-export default function Testimonial({ imageSrc, alt, quote, client, charge }) {
+export default function Testimonial({ quote, client, charge }) {
   return (
     <article 
       className={`
@@ -27,17 +25,6 @@ export default function Testimonial({ imageSrc, alt, quote, client, charge }) {
         px-12
       `}
     >
-      <Image
-        src={`/images/testimonials/${imageSrc}`}
-        alt={alt}
-        width={80}
-        height={80}
-        className={`
-          rounded-full
-          mb-6
-        `}
-        data-aos="fade-up"
-      />
       <p
         className={`
           quote

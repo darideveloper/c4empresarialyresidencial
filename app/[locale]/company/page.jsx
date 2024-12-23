@@ -21,7 +21,7 @@ export default function CompanyPage() {
       <TabsCompany />
       <Profits />
       <Products productsFilter="company"/>
-      <Testimonials />
+      <Testimonials testimonialsFilter="company"/>
     </>
   )
 }

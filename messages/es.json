@@ -397,22 +397,61 @@
     },
     "Testimonials": {
       "title": "Nuestros Clientes Satisfechos",
-      "imagesAlt": "Foto de cliente",
       "cards": {
-        "juan": {
-          "name": "Juan Pérez",
-          "charge": "Cliente Satisfecho",
+        "carlos": {
+          "name": "Carlos Sánchez",
+          "charge": "Dueño de vivienda",
           "description": {
             "beforeText": "Desde que instalé las cámaras de",
-            "afterText": ", me siento mucho más seguro. El servicio de monitoreo es excepcional."
+            "afterText": "me siento mucho más tranquilo sabiendo que mi casa está protegida. La instalación fue rápida y el monitoreo 24/7 me da la seguridad que necesitaba."
           }
         },
-        "maria": {
-          "name": "María López",
-          "charge": "Propietaria de Negocio",
+        "laura": {
+          "name": "Laura González",
+          "charge": "Arrendataria",
           "description": {
-            "beforeText": "La instalación fue rápida y profesional. Recomiendo",
-            "afterText": "a todos mis amigos y familiares."
+            "beforeText": "Me sorprendió la calidad de las cámaras de",
+            "afterText": "y lo fácil que es monitorear todo. Sin duda, invertir en seguridad fue la mejor decisión para mi hogar."
+          }
+        },
+        "jose": {
+          "name": "José Martínez",
+          "charge": "Dueño de departamento",
+          "description": {
+            "beforeText": "Recibí un servicio excepcional de",
+            "afterText": "Las cámaras tienen una imagen clara, incluso de noche, y el sistema de notificaciones me alertó a tiempo de un intento de robo. Me siento mucho más seguro ahora."
+          }
+        },
+        "ana": {
+          "name": "Ana Pérez",
+          "charge": "Dueña de vivienda",
+          "description": {
+            "beforeText": "",
+            "afterText": "nos brindó un servicio muy profesional. El servicio de monitoreo 24 horas nos da tranquilidad y la calidad de las cámaras es excelente. ¡Recomendado!"
+          }
+        },
+        "gerardo": {
+          "name": "Gerardo López",
+          "charge": "Dueño de Restaurante",
+          "description": {
+            "beforeText": "Instalar cámaras de seguridad en mi restaurante fue una excelente decisión. El monitoreo continuo me permite mantener un control sobre las operaciones, y me ha ayudado a mejorar la seguridad de mi personal y clientes. Definitivamente seguiré trabajando con ",
+            "afterText": ""
+          }
+        },
+        "carolina": {
+          "name": "Carolina Mendoza",
+          "charge": "Gerente de Oficina",
+          "description": {
+            "beforeText": "",
+            "afterText": "instaló un sistema de videovigilancia para nuestra oficina y ha sido increíble. La calidad de las cámaras es excelente, y el soporte es siempre rápido y profesional."
+          }
+        },
+        "ricardo": {
+          "name": "Ricardo Álvarez",
+          "charge": "Propietario de Tienda",
+          "description": {
+            "beforeText": "Gracias al servicio de monitoreo de",
+            "afterText": "he podido reducir el robo interno y mejorar la seguridad en mi tienda. Además, el sistema de monitoreo remoto nos permite tener control total de la seguridad, incluso cuando no estamos en el lugar."
           }
         }
       }

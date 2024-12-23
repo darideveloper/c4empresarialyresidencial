@@ -13,15 +13,49 @@ import 'swiper/css/navigation'
 
 /**
  * Testimonials slider section
+ * 
+ * @param {object} props - Component props
+ * @param {string} props.testimonialsFilter - Testimonials to render (all, residential, company)
  */
-export default function Testimonials() {
+export default function Testimonials({ testimonialsFilter = "all" }) {
   const t = useTranslations('HomePage.Testimonials')
   const tMeta = useTranslations('Meta')
 
-  const testimonialNames = [
-    "juan",
-    "maria",
+  let testimonialsData = [
+    {
+      "name": "carlos",
+      "type": "residential"
+    },
+    {
+      "name": "gerardo",
+      "type": "company"
+    },
+    {
+      "name": "laura",
+      "type": "residential"
+    },
+    {
+      "name": "carolina",
+      "type": "company"
+    },
+    {
+      "name": "jose",
+      "type": "residential"
+    },
+    {
+      "name": "ricardo",
+      "type": "company"
+    },
+    {
+      "name": "ana",
+      "type": "residential"
+    },
   ]
+
+  // Filter testimonials
+  if (testimonialsFilter !== "all") {
+    testimonialsData = testimonialsData.filter(testimonial => testimonial.type === testimonialsFilter)
+  }
 
   return (
     <section
@@ -47,23 +81,21 @@ export default function Testimonials() {
         }}
       >
         {
-          testimonialNames.map((name, index) => {
+          testimonialsData.map((testimonialData, index) => {
 
             let quote = ""
-            quote = t(`cards.${name}.description.beforeText`)
+            quote = t(`cards.${testimonialData.name}.description.beforeText`)
             quote += " " + tMeta('title') + " "
-            quote += t(`cards.${name}.description.afterText`)
+            quote += t(`cards.${testimonialData.name}.description.afterText`)
 
             return (
               <SwiperSlide
                 key={index}
               >
                 <Testimonial
-                  imageSrc={`${name}.webp`}
-                  alt={t(`imagesAlt`)}
                   quote={quote}
-                  client={t(`cards.${name}.name`)}
-                  charge={t(`cards.${name}.charge`)}
+                  client={t(`cards.${testimonialData.name}.name`)}
+                  charge={t(`cards.${testimonialData.name}.charge`)}
                 />
               </SwiperSlide>
             )
