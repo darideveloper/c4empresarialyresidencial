@@ -10,6 +10,8 @@ export const defaultInitState = {
   branches: 1,
   hasWifi: true,
   users: [],
+  rooms: 1,
+  monitoring: []
 }
 
 export const createQuoteFormStore = (initState = defaultInitState) => {
@@ -42,6 +44,13 @@ export const createQuoteFormStore = (initState = defaultInitState) => {
     })),
     removeUser: (user) => set((state) => ({
       users: state.users.filter((u) => u !== user),
+    })),
+    setRooms: (rooms) => set({ rooms }),
+    addMonitoring: (monitoring) => set((state) => ({
+      monitoring: [...state.monitoring, monitoring],
+    })),
+    removeMonitoring: (monitoring) => set((state) => ({
+      monitoring: state.monitoring.filter((m) => m !== monitoring),
     })),
   }))
 }

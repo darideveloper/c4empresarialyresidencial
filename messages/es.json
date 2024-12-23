@@ -676,6 +676,31 @@
               "other": "Otro"
             }
           }
+        },
+        "residentialDetails": {
+          "title": "Detalles de la Residencia",
+          "description": "Proporciona información sobre tu residencia",
+          "rooms": {
+            "question": "¿Cuántas habitaciones tiene tu residencia?"
+          },
+          "wifi": {
+            "question": "¿Cuenta con red WiFi en tu hogar?",
+            "options": {
+              "yes": "Sí",
+              "no": "No"
+            }
+          },
+          "monitoring": {
+            "question": "¿Que deseas monitorear?",
+            "options": {
+              "employees": "Empleados de servicio",
+              "children": "Niños",
+              "perimeter": "Perímetro de la propiedad",
+              "pets": "Mascotas",
+              "assets": "Activos y objetos de valor",
+              "other": "Otro"
+            }
+          }
         }
       },
       "buttons": {

@@ -19,6 +19,7 @@ import CompanySector from '@/components/layouts/quote-form/CompanySector'
 import CompanyEmployees from '@/components/layouts/quote-form/CompanyEmployees'
 import Features from '@/components/layouts/quote-form/Features'
 import CompanyDetails from '@/components/layouts/quote-form/CompanyDetails'
+import ResidentialDetails from '@/components/layouts/quote-form/ResidentialDetails'
 
 // Methods
 import { sendDataApi } from '@/components/layouts/templates/Form'
@@ -44,6 +45,8 @@ export default function QuoteForm() {
     branches,
     hasWifi,
     users,
+    rooms,
+    monitoring,
 
     // actions
     getFormData,
@@ -59,11 +62,18 @@ export default function QuoteForm() {
     residentialType,
     branches,
     hasWifi,
-    users
+    rooms,
+    users,
+    monitoring
   }
 
   // Screens data
   const startScreens = [
+    {
+      "key": "residentialDetails",
+      "screen": <ResidentialDetails />,
+      "requiredFields": ["rooms", "hasWifi", "monitoring"],
+    },
     {
       "key": "companyDetails",
       "screen": <CompanyDetails />,
@@ -204,6 +214,8 @@ export default function QuoteForm() {
     branches,
     hasWifi,
     users,
+    rooms,
+    monitoring
   ])
 
   // Update current screen data
