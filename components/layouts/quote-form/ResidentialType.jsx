@@ -23,6 +23,7 @@ export default function ResidentialType() {
     "apartment",
     "cottage",
     "townhouse",
+    "port",
     "single-family",
     "condo",
     "duplex",
