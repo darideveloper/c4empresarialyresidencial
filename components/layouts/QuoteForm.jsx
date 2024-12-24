@@ -70,19 +70,9 @@ export default function QuoteForm() {
   // Screens data
   const startScreens = [
     {
-      "key": "residentialDetails",
-      "screen": <ResidentialDetails />,
-      "requiredFields": ["rooms", "hasWifi", "monitoring"],
-    },
-    {
-      "key": "companyDetails",
-      "screen": <CompanyDetails />,
-      "requiredFields": ["branches", "hasWifi", "users"],
-    },
-    {
-    "key": "selectService",
-    "screen": <SelectService />,
-    "requiredFields": ["selectedService"],
+      "key": "selectService",
+      "screen": <SelectService />,
+      "requiredFields": ["selectedService"],
     }
   ]
   const endScreens = [
@@ -108,13 +98,23 @@ export default function QuoteForm() {
       "screen": <CompanyEmployees />,
       "requiredFields": ["companyEmployees"],
     },
+    {
+      "key": "companyDetails",
+      "screen": <CompanyDetails />,
+      "requiredFields": ["branches", "hasWifi", "users"],
+    },
   ]
   const residentialScreens = [
     {
       "key": "residentialType",
       "screen": <ResidentialType />,
       "requiredFields": ["residentialType"],
-    }
+    },
+    {
+      "key": "residentialDetails",
+      "screen": <ResidentialDetails />,
+      "requiredFields": ["rooms", "hasWifi", "monitoring"],
+    },
   ]
 
   // Form state
