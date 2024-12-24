@@ -14,7 +14,7 @@ import { useRouter } from '@/i18n/routing'
  * @param {object} props.props - Other
  * @returns 
  */
-export function TransitionLink ({ href, onClick, disable, ...props }) {
+export function TransitionLink({ href, onClick, disable, ...props }) {
 
   const router = useRouter()
 
@@ -35,21 +35,21 @@ export function TransitionLink ({ href, onClick, disable, ...props }) {
     await sleep(transitionDuration)
 
     // Change page
-    const old_url = window.location.pathname
+    const old_url = window.location.href
     router.push(href)
 
     // End animation
     const urlValidationInterval = setInterval(async () => {
-      const newUrl = window.location.pathname;
+      const newUrl = window.location.href
       if (old_url != newUrl) {
-        console.log({ old_url, newUrl });
-        await sleep(transitionDuration);
-        body.classList.remove(transitionClass);
-        
+        console.log({ old_url, newUrl })
+        await sleep(transitionDuration)
+        body.classList.remove(transitionClass)
+
         // Clear the interval when the condition is met
-        clearInterval(urlValidationInterval);
+        clearInterval(urlValidationInterval)
       }
-    }, 100);
+    }, 100)
   }
 
   return (
