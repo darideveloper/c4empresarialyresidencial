@@ -285,9 +285,10 @@ export default function QuoteForm() {
           buttons
           w-full
           flex
+          flex-col sm:flex-row
           justify-center
           items-center
-          gap-4
+          gap-0 sm:gap-4
         `}
       >
         <Button
@@ -299,7 +300,12 @@ export default function QuoteForm() {
         />
         <Button
           text={isLastStep ? t('buttons.submit') : t('buttons.next')}
-          className="bg-blue text-white !px-16"
+          className={`
+            bg-blue 
+            text-white
+            !px-16
+            !mt-3 sm:!mt-6
+          `}
           onClick={() => {
             if (isLastStep) {
               // Submit react form to activate validation
