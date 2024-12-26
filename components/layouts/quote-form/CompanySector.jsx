@@ -59,7 +59,7 @@ export default function CompanySector() {
         businessSectors.map((sector, index) => (
           <ImageBtn
             key={index}
-            imageSrc={`/images/form/company/sectors/${sector}.webp`}
+            imageSrc={`/images/form/company/sectors/${sector}.png`}
             imageAlt={t(`imagesAlt`)  + " " + t(`sectors.${sector}`)}
             text={t(`sectors.${sector}`)}
             selected={false}
