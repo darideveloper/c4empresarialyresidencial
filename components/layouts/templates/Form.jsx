@@ -62,9 +62,9 @@ export default function Form({ inputsData, onSubmit, submitText = "", tInputs })
 
   const [loading, setLoading] = useState(false)
 
-  useEffect(() => {
-    console.log({ loading })
-  }, [loading])
+  // useEffect(() => {
+  //   console.log({ loading })
+  // }, [loading])
 
   // Form state
   const {

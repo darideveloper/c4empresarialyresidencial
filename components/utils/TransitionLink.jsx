@@ -42,7 +42,6 @@ export function TransitionLink({ href, onClick, disable, ...props }) {
     const urlValidationInterval = setInterval(async () => {
       const newUrl = window.location.href
       if (old_url != newUrl) {
-        console.log({ old_url, newUrl })
         await sleep(transitionDuration)
         body.classList.remove(transitionClass)
 

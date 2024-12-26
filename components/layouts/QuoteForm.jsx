@@ -200,10 +200,7 @@ export default function QuoteForm() {
       setScreenReady(true)
     } else {
       setScreenReady(false)
-    }
-
-    console.log({requiredFields, validFields})
-        
+    }        
   }, [
     currentScreenData,
     selectedService,

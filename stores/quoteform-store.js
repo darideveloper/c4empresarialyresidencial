@@ -35,6 +35,11 @@ export const createQuoteFormStore = (initState = defaultInitState) => {
         companyEmployees: state.companyEmployees,
         features: state.features,
         residentialType: state.residentialType,
+        branches: state.branches,
+        users: state.users,
+        hasWifi: state.hasWifi,
+        rooms: state.rooms,
+        targets: state.monitoring,
       }
     },
     setBranches: (branches) => set({ branches }),
