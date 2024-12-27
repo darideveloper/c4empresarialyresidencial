@@ -34,10 +34,6 @@ export default function Header() {
       "url": "/residential"
     },
     {
-      "name": "profits",
-      "url": "/#profits"
-    },
-    {
       "name": "contact",
       "url": "#contact"
     },

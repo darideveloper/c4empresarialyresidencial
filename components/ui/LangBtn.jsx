@@ -19,7 +19,7 @@ export default function LangBtn({ className, onClick, children, active }) {
         text-blue
         border-blue
         hover:opacity-70
-        ${active && 'opacity-70'}
+        ${active && 'opacity-50'}
         rounded-xl
         py-2 px-5
         hover:bg-blue-dark
