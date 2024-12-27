@@ -143,7 +143,6 @@ export default function QuoteForm() {
         formData[key] = defaultValues[key]
       }
     }
-    console.log({formData, defaultValues})
 
     
     // Add states to data

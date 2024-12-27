@@ -37,7 +37,6 @@ export default function SlideImages({ imagesPrefix, category, maxProducts, altPr
     const productLangId = `products.${category}${productIndex + 1}`
     const product = {}
     const filterValue = tCategory(productLangId + '.filter') 
-    console.log({category, filterValue, filter})
     if (filterValue !== 'all' && filterValue !== filter) {
       continue
     }
