@@ -3,6 +3,7 @@
 import { getSortedPostsData } from '@/libs/posts'
 import { fontTitle } from '@/libs/fonts'
 import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 
 // Components
 import Image from 'next/image'
@@ -160,4 +161,14 @@ export default function BlogPage() {
       </ul>
     </section>
   )
+}
+
+export async function generateMetadata({ params }) {
+
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'Meta' })
+
+  return {
+    description: t('description.blog'),
+  }
 }

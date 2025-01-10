@@ -3,6 +3,7 @@ title: 'La Importancia de Contar con una Buena Cámara de Seguridad para tu Nego
 date: '2025-01-08'
 lang: 'es'
 description: 'Descubre por qué una buena cámara de seguridad es esencial para proteger tu negocio y cómo elegir la mejor opción para tus necesidades.'
+keywords: 'cámaras de seguridad, seguridad empresarial, protección de activos, prevención de pérdidas, productividad, experiencia del cliente, normas de seguridad, tecnología de vigilancia'
 ---
 
 En un mundo donde la seguridad es cada vez más importante, proteger tu negocio debería ser una prioridad. Contar con un sistema de cámaras de seguridad de calidad no solo protege tus activos, sino que también genera confianza en tus empleados y clientes.  

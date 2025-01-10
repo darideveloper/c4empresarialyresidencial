@@ -386,5 +386,17 @@
         "afterText": "we specialize in providing tailored security solutions for homes in Mérida, Yucatán. With a wide range of security cameras and professional monitoring services, we are here to protect what matters most to you."
       }
     }
+  },
+  "Blog": {
+    "Hero": {
+      "title": "C4 Blog",
+      "text": "Discover the latest news and tips on security on our blog. Stay informed about trends and updates in video surveillance and the protection of homes and businesses."
+    },
+    "Posts": {
+      "by": "by",
+      "flagAlt": "Language flag",
+      "bannerAlt": "Post image",
+      "authorPre": "Team of"
+    }
   }
 }

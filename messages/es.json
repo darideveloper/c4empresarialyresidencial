@@ -5,7 +5,8 @@
       "home": "Ofrecemos soluciones de seguridad personalizadas para hogares y negocios en Mérida, Yucatán, con cámaras de alta definición y monitoreo profesional.",
       "company": "Protege tu empresa con nuestras soluciones de seguridad personalizadas en Mérida, Yucatán, con cámaras de alta definición y monitoreo profesional.",
       "residential": "Protege tu hogar con nuestras soluciones de seguridad personalizadas en Mérida, Yucatán, con cámaras de alta definición y monitoreo profesional.",
-      "quote": "Solicita una cotización para tu hogar o empresa en Mérida, Yucatán, con cámaras de alta definición y monitoreo profesional."
+      "quote": "Solicita una cotización para tu hogar o empresa en Mérida, Yucatán, con cámaras de alta definición y monitoreo profesional.",
+      "blog": "Descubre los últimos consejos y novedades sobre seguridad en Mérida, Yucatán, con cámaras de alta definición y monitoreo profesional."
     },
     "keywords": "seguridad, cámaras de seguridad, monitoreo, Mérida, Yucatán, protección, cámaras de alta definición, alarmas, control de acceso",
     "author": "C4 Empresarial and Residential"
@@ -739,7 +740,8 @@
     "Posts": {
       "by": "por",
       "flagAlt": "Bandera de idioma",
-      "bannerAlt": "Imagen de post"
+      "bannerAlt": "Imagen de post",
+      "authorPre": "Equipo de"
     }
   }
 }

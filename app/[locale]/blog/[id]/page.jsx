@@ -1,6 +1,6 @@
 // Libs
 import { getAllPostIds, getPostData } from '@/libs/posts'
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 
 // Components
 import Title from '@/components/ui/Title'
@@ -48,6 +48,7 @@ export default async function UserProfile({ params }) {
           max-w-5xl
           mx-auto
         `}
+        lang={postData.lang}
       >
 
         <Title 
@@ -83,4 +84,24 @@ export default async function UserProfile({ params }) {
       </div>
     </section>
   )
+}
+
+export async function generateMetadata({ params }) {
+
+  // Get post data
+  const { id } = await params
+  const postData = await getPostData(id)
+  const t = await getTranslations({ locale: postData.lang, namespace: 'Blog' })
+  const tMeta = await getTranslations({ locale: postData.lang, namespace: 'Meta' })
+
+  return {
+    description: postData.description,
+    locale: postData.lang,
+    keywords: postData.keywords,
+    authors: [
+      {
+        "name": t('Posts.authorPre') + " " + tMeta('title'),
+      }
+    ]
+  }
 }

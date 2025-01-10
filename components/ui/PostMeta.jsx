@@ -9,10 +9,12 @@ import { useTranslations } from 'next-intl'
  * @param {string} props.author - Post author
  * @returns 
  */
-export default function PostMeta({ date, lang='', author='C4 Team' }) {
+export default function PostMeta({ date, lang='', author='' }) {
 
   // Translations
   const t = useTranslations('Blog.Posts')
+  const tMeta = useTranslations('Meta')
+  if (!author) author = tMeta('title')
 
   return (
     <p
