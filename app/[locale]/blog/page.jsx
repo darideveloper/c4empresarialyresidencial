@@ -6,37 +6,38 @@ import { fontTitle } from '@/libs/fonts'
 // Components
 import Image from 'next/image'
 import Link from 'next/link'
-import Subtitle from '@/components/ui/Subtitle'
+import Title from '@/components/ui/Title'
 import ArrowSvg from '@/components/icons/ArrowSvg'
+import PostMeta from '@/components/ui/PostMeta'
 
 export default function BlogPage() {
 
   const allPostsData = getSortedPostsData()
 
   return (
-    <section 
+    <section
       className={`
         container
         mx-auto
       `}
     >
-      <div 
+      <div
         className={`
           title
           text-center
           my-8
         `}
       >
-        <h1 
+        <Title
           className={`
             ${fontTitle.className}
-            text-4xl
             font-bold
             mb-2
           `}
+          isH1={true}
         >
           C4 Blog
-        </h1>
+        </Title>
         <p
           className={`
           `}
@@ -45,7 +46,7 @@ export default function BlogPage() {
         </p>
       </div>
 
-      <ul 
+      <ul
         className={`
           grid
           gap-6
@@ -55,19 +56,20 @@ export default function BlogPage() {
       >
         {allPostsData.map(({ id, date, title, lang, description }) => (
           <li className={``} key={id}>
-            <Link
-              href={`/blog/${id}`}
-              className={`
+            <article>
+              <Link
+                href={`./blog/${id}`}
+                className={`
                 group
                 relative
               `}
-            >
-              {/* Post lang flag */}
-              <Image 
-                src={`/images/flags/${lang}.webp`}
-                width={30}
-                height={30}
-                className={`
+              >
+                {/* Post lang flag */}
+                <Image
+                  src={`/images/flags/${lang}.webp`}
+                  width={30}
+                  height={30}
+                  className={`
                   absolute
                   top-2
                   right-2
@@ -75,12 +77,12 @@ export default function BlogPage() {
                   z-10
                   opacity-50
                 `}
-                alt={`Flag of ${lang}`}
-              />
+                  alt={`Flag of ${lang}`}
+                />
 
-              {/* Post image */}
-              <div 
-                className={`
+                {/* Post image */}
+                <div
+                  className={`
                   img-wrapper
                   w-full
                   h-64 sm:h-56
@@ -88,22 +90,22 @@ export default function BlogPage() {
                   rounded-lg
                   relative
                 `}
-              >
-                <Image 
-                  src={`/images/posts/banners/${id}.webp`}
-                  alt={title}
-                  width={400}
-                  height={300}
-                  className={`
+                >
+                  <Image
+                    src={`/images/posts/banners/${id}.webp`}
+                    alt={title}
+                    width={400}
+                    height={300}
+                    className={`
                     w-full
                     duration-300
                     opacity-75
                     group-hover:opacity-100
                     group-hover:scale-110
                   `}
-                />
-                <ArrowSvg
-                  className={`
+                  />
+                  <ArrowSvg
+                    className={`
                     absolute
                     top-1/2
                     left-1/2
@@ -119,39 +121,33 @@ export default function BlogPage() {
                     group-hover:opacity-40
                     group-hover:scale-125
                   `}
-                />
-              </div>
+                  />
+                </div>
 
-              {/* Post description */}
-              <p
-                className={`
-                  date
-                  opacity-50
-                  my-0
-                  mt-2
-                `}
-              >
-                {date}
-              </p>
-              <Subtitle
-                className={`
+                {/* Post meta */}
+                <PostMeta date={date} />
+
+                {/* POst title and description */}
+                <Title
+                  className={`
                   !text-left
                   !mb-0
                   duration-300
                   group-hover:text-blue
                 `}
-              >
-                {title}
-              </Subtitle>
-              <p
-                className={`
+                >
+                  {title}
+                </Title>
+                <p
+                  className={`
                   description
                   text-sm
                 `}
-              >
-                {description}
-              </p>
-            </Link>
+                >
+                  {description}
+                </p>
+              </Link>
+            </article>
           </li>
         ))}
       </ul>
