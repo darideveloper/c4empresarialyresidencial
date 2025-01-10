@@ -730,5 +730,16 @@
         "submit": "Enviar"
       }
     }
+  },
+  "Blog": {
+    "Hero": {
+      "title": "C4 Blog",
+      "text": "Descubre las últimas noticias y consejos sobre seguridad en nuestro blog. Mantente informado sobre las tendencias y novedades en videovigilancia y protección de hogares y negocios."
+    },
+    "Posts": {
+      "by": "por",
+      "flagAlt": "Bandera de idioma",
+      "bannerAlt": "Imagen de post"
+    }
   }
 }

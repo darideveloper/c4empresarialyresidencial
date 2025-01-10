@@ -1,5 +1,6 @@
 // Libs
 import { getAllPostIds, getPostData } from '@/libs/posts'
+import { useTranslations } from 'next-intl'
 
 // Components
 import Title from '@/components/ui/Title'
@@ -16,9 +17,10 @@ export async function generateStaticParams() {
 }
 
 export default async function UserProfile({ params }) {
+
+  // Get post data
   const { id } = await params
   const postData = await getPostData(id)
-  console.log(postData)
 
   return (
     <section

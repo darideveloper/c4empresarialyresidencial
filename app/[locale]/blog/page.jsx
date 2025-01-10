@@ -2,6 +2,7 @@
 // Libs
 import { getSortedPostsData } from '@/libs/posts'
 import { fontTitle } from '@/libs/fonts'
+import { useTranslations } from 'next-intl'
 
 // Components
 import Image from 'next/image'
@@ -13,6 +14,9 @@ import PostMeta from '@/components/ui/PostMeta'
 export default function BlogPage() {
 
   const allPostsData = getSortedPostsData()
+
+  // Get translations
+  const t = useTranslations(`Blog`)
 
   return (
     <section
@@ -36,13 +40,16 @@ export default function BlogPage() {
           `}
           isH1={true}
         >
-          C4 Blog
+          {t('Hero.title')}
         </Title>
         <p
           className={`
+            max-w-3xl
+            mx-auto
+            w-full
           `}
         >
-          Welcome to the C4 Blog! Here you'll find all of our latest news and updates.
+          {t('Hero.text')}
         </p>
       </div>
 
@@ -77,7 +84,7 @@ export default function BlogPage() {
                   z-10
                   opacity-50
                 `}
-                  alt={`Flag of ${lang}`}
+                  alt={t('Posts.flagAlt')}
                 />
 
                 {/* Post image */}
@@ -93,16 +100,16 @@ export default function BlogPage() {
                 >
                   <Image
                     src={`/images/posts/banners/${id}.webp`}
-                    alt={title}
+                    alt={t('Posts.bannerAlt') + " " + title}
                     width={400}
                     height={300}
-                    className={`
-                    w-full
-                    duration-300
-                    opacity-75
-                    group-hover:opacity-100
-                    group-hover:scale-110
-                  `}
+                      className={`
+                      w-full
+                      duration-300
+                      opacity-75
+                      group-hover:opacity-100
+                      group-hover:scale-110
+                    `}
                   />
                   <ArrowSvg
                     className={`
