@@ -38,6 +38,10 @@ export default function Header() {
       "url": "#contact"
     },
     {
+      "name": "blog",
+      "url": "/blog"
+    },
+    {
       "name": "quote",
       "url": "/quote"
     }
