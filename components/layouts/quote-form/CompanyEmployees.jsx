@@ -14,11 +14,11 @@ export default function CompanyEmployees() {
   )
 
   const employeesOptions = [
-    "1 - 19",
+    "1 - 5",
+    "6 - 9",
+    "10 - 19",
     "20 - 49",
-    "50 - 499",
-    "500 - 4,999",
-    "5,000+"
+    "+50"
   ]
 
   return (
