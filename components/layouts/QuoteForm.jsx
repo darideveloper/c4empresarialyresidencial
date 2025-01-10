@@ -47,6 +47,7 @@ export default function QuoteForm() {
     users,
     rooms,
     monitoring,
+    hasCameras,
 
     // actions
     getFormData,
@@ -64,7 +65,8 @@ export default function QuoteForm() {
     hasWifi,
     rooms,
     users,
-    monitoring
+    monitoring,
+    hasCameras,
   }
 
   // Screens data
@@ -101,7 +103,7 @@ export default function QuoteForm() {
     {
       "key": "companyDetails",
       "screen": <CompanyDetails />,
-      "requiredFields": ["branches", "hasWifi", "users"],
+      "requiredFields": ["branches", "hasWifi", "users", "hasCameras"],
     },
   ]
   const residentialScreens = [
@@ -113,7 +115,7 @@ export default function QuoteForm() {
     {
       "key": "residentialDetails",
       "screen": <ResidentialDetails />,
-      "requiredFields": ["rooms", "hasWifi", "monitoring"],
+      "requiredFields": ["rooms", "hasWifi", "monitoring", "hasCameras"],
     },
   ]
 
@@ -211,7 +213,8 @@ export default function QuoteForm() {
     hasWifi,
     users,
     rooms,
-    monitoring
+    monitoring,
+    hasCameras,
   ])
 
   // Update current screen data

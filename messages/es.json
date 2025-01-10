@@ -682,6 +682,13 @@
               "family": "Familiares y personal de confianza",
               "other": "Otro"
             }
+          },
+          "alreadyCameras": {
+            "question": "¿Cuentas con cámaras de seguridad instaladas?",
+            "options": {
+              "yes": "Sí, solo quiero monitoreo",
+              "no": "No, quiero instalación también"
+            }
           }
         },
         "residentialDetails": {
@@ -706,6 +713,13 @@
               "pets": "Mascotas",
               "assets": "Activos y objetos de valor",
               "other": "Otro"
+            }
+          },
+          "alreadyCameras": {
+            "question": "¿Cuentas con cámaras de seguridad instaladas?",
+            "options": {
+              "yes": "Sí, solo quiero monitoreo",
+              "no": "No, quiero instalación también"
             }
           }
         }

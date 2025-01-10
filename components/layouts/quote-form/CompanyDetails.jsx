@@ -17,12 +17,14 @@ export default function CompanyDetails() {
     branches,
     hasWifi,
     users,
+    hasCameras,
     
     // Actions
     setBranches,
     setHasWifi,
     addUser,
     removeUser,
+    setHasCameras,
   } = useQuoteFormStore(
     (state) => state,
   )
@@ -38,6 +40,17 @@ export default function CompanyDetails() {
     {
       value: false,
       label: t('wifi.options.no')
+    }
+  ]
+  
+  const alreadyCamerasOptions = [
+    {
+      value: true,
+      label: t('alreadyCameras.options.yes')
+    },
+    {
+      value: false,
+      label: t('alreadyCameras.options.no')
     }
   ]
 
@@ -116,6 +129,47 @@ export default function CompanyDetails() {
         </div>
       </div>
 
+      {/* Already have cameras */}
+      <div
+        className={`
+          wifi
+        `}
+        data-aos="fade-up"
+        data-aos-delay="1200"
+      >
+        <Subtitle
+          className={`
+            mt-16
+          `}
+        >
+          {t('alreadyCameras.question')}  
+        </Subtitle>
+        <div
+          className={`
+            wifi-options
+            flex
+            flex-wrap
+            justify-center
+            items-center
+          `}
+        >
+          {
+            alreadyCamerasOptions.map((option, index) => (
+              <Button
+                key={index}
+                onClick={() => setHasCameras(option.value)}
+                className={`
+                  m-2
+                `}
+                text={option.label}
+                showArrow={false}
+                active={hasCameras === option.value}
+              />
+            ))
+          }
+        </div>
+      </div>
+
       {/* User */}
       <div
         className={`
@@ -124,7 +178,6 @@ export default function CompanyDetails() {
           mx-auto
         `}
         data-aos="fade-up"
-        data-aos-delay="1200"
       >
         <Subtitle
           className={`

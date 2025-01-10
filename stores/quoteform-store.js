@@ -11,7 +11,8 @@ export const defaultInitState = {
   hasWifi: true,
   users: [],
   rooms: 1,
-  monitoring: []
+  monitoring: [],
+  hasCameras: true,
 }
 
 export const createQuoteFormStore = (initState = defaultInitState) => {
@@ -40,6 +41,7 @@ export const createQuoteFormStore = (initState = defaultInitState) => {
         hasWifi: state.hasWifi,
         rooms: state.rooms,
         targets: state.monitoring,
+        hasCameras: state.hasCameras,
       }
     },
     setBranches: (branches) => set({ branches }),
@@ -57,5 +59,6 @@ export const createQuoteFormStore = (initState = defaultInitState) => {
     removeMonitoring: (monitoring) => set((state) => ({
       monitoring: state.monitoring.filter((m) => m !== monitoring),
     })),
+    setHasCameras: (hasCameras) => set({ hasCameras }),
   }))
 }
