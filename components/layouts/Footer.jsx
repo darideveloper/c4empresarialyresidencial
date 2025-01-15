@@ -28,7 +28,7 @@ export default function Footer() {
           {tMeta('title')}&nbsp; © 2024 - All rights reserved
           Powered by&nbsp;
           <Link 
-            href="mailto:darideveloper@gmail.com"
+            href="https://api.whatsapp.com/send?phone=5214493402622"
             target="_blank"
             className={`
               font-bold
