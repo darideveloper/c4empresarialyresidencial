@@ -37,7 +37,6 @@ export default function SlideImages({ imagesPrefix, category, maxProducts, altPr
     const productLangId = `products.${category}${productIndex + 1}`
     const product = {}
     const filterValue = tCategory(productLangId + '.filter') 
-    console.log({filterValue, filter})
     if ((filterValue !== 'all' && filterValue !== filter) && filter !== 'all') {
       continue
     }
@@ -47,7 +46,6 @@ export default function SlideImages({ imagesPrefix, category, maxProducts, altPr
     product.imageAlt = `${altPrefix} ${product.name}`
     products.push(product)
   }
-  console.log({products})
 
   return (
     <Swiper

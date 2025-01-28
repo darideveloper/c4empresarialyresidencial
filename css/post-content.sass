@@ -1,3 +1,8 @@
+$white: theme('colors.white')
+$grey: theme('colors.grey')
+$grey-light: theme('colors.greylight')
+$blue: theme('colors.blue')
+    
 .post-content
     margin: 20px auto
 
@@ -5,7 +10,7 @@
         margin: 10px 0
 
     h2, h3, h4, h5, h6
-        margin: 20px 0 10px 0
+        margin: 30px 0 20px 0
         font-weight: bold
 
     h4
@@ -18,13 +23,36 @@
         font-size: 1.6em
 
     ul, ol
-        margin: 10px 40px
+        margin: 10px 20px
 
         li
             margin: 5px 0
     
-    ul li
+    ul:not(.list-none) li
         list-style-type: disc
     
-    ol li
+    ol:not(.list-none) li
         list-style-type: decimal
+
+    a
+        color: $blue
+        text-decoration: none
+
+        &:hover
+            text-decoration: underline
+
+    table
+        width: 100%
+        max-width: 800px
+        margin: 20px auto
+        overflow: scroll
+        display: block
+
+        td, th
+            border: 1px solid $grey
+            padding: 15px
+        
+        th
+            background-color: $grey
+            color: $white
+            text-align: center

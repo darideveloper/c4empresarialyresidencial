@@ -30,7 +30,7 @@ export default function LangSelector({ className }) {
     "en",
   ]
   const currentPage = usePathname()
-  const currentlang = currentPage.split('/')[1]
+  const currentLang = currentPage.split('/')[1]
   const currentPageNoLang = currentPage.split('/').slice(2).join('/')
 
   return (
@@ -47,7 +47,7 @@ export default function LangSelector({ className }) {
           <LangBtn
             key={lang}
             icon={false}
-            active={currentlang === lang}
+            active={currentLang === lang}
             onClick={() => router.replace(`/${currentPageNoLang}`, { locale: lang })}
             className={`
               capitalize
