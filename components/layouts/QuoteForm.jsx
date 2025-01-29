@@ -22,7 +22,7 @@ import CompanyDetails from '@/components/layouts/quote-form/CompanyDetails'
 import ResidentialDetails from '@/components/layouts/quote-form/ResidentialDetails'
 
 // Methods
-import { sendDataApi } from '@/components/layouts/templates/Form'
+import { sendDataApi } from '@/libs/form'
 
 // zustand
 import { useQuoteFormStore } from '@/providers/quoteform-store-provider'

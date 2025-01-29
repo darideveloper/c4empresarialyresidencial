@@ -10,7 +10,7 @@ import Link from 'next/link'
 import Form from '@/components/layouts/templates/Form'
 
 // Methods
-import { sendDataApi } from '@/components/layouts/templates/Form'
+import { sendDataApi } from '@/libs/form'
 
 /**
  * Contact section (socials and form)
