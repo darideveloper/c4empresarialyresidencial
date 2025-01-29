@@ -32,6 +32,7 @@ export default function CompanyEmployees() {
         w-full
         max-w-sm
         mx-auto
+        gap-5
       `}
     >
       {
@@ -43,6 +44,7 @@ export default function CompanyEmployees() {
             showArrow={false}
             className={`
               w-full
+              !my-0
             `}
             active={companyEmployees === employees}
           />

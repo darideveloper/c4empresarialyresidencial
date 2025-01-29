@@ -7,8 +7,8 @@ import { useTranslations } from 'next-intl'
 import { useState, useEffect } from 'react'
 
 // Components
-import Button from "@/components/ui/Button"
 import Title from "@/components/ui/Title"
+import NextBackButtons from "@/components/layouts/NextBackButtons"
 
 // Form screens
 import Steps from '@/components/layouts/Steps'
@@ -35,7 +35,7 @@ export default function QuoteForm() {
   const tAlerts = useTranslations('QuotePage.form.screens.contact.messages')
 
   // Zustand data
-  const { 
+  const {
     // states
     selectedService,
     companySector,
@@ -52,7 +52,7 @@ export default function QuoteForm() {
     // actions
     getFormData,
   } = useQuoteFormStore((state) => state)
-  
+
   // Data
   // Object with all form states
   const formSates = {
@@ -85,7 +85,7 @@ export default function QuoteForm() {
     },
     {
       "key": "contactInfo",
-      "screen": <ContactInfo onSubmit={onSubmit}/>,
+      "screen": <ContactInfo onSubmit={onSubmit} />,
       "requiredFields": ["selectedService"],
     },
   ]
@@ -121,14 +121,15 @@ export default function QuoteForm() {
 
   // Form state
   const [currentStep, setCurrentStep] = useState(0)
-  const [screensData, setScreensData] = useState([...startScreens, ...endScreens])   
+  const [screensData, setScreensData] = useState([...startScreens, ...endScreens])
   const [screenReady, setScreenReady] = useState(false)
   const [currentScreenData, setCurrentScreenData] = useState(screensData[currentStep])
 
   // Calculate current screen data
   let screenTitle = t(`screens.${currentScreenData.key}.title`)
   const isLastStep = currentStep === screensData.length - 1
-  
+  const nextText = isLastStep ? t('buttons.submit') : t('buttons.next')
+
   // Funtion hanlders
   // Submit function to handle react form
   async function onSubmit(data) {
@@ -146,7 +147,7 @@ export default function QuoteForm() {
       }
     }
 
-    
+
     // Add states to data
     let fullData = {
       ...data,
@@ -174,13 +175,29 @@ export default function QuoteForm() {
     // Scroll to top
     await sleep(100)
     window.scrollTo(0, 0)
-    
+
     // End transition
     await sleep(500)
     screenWrapper.classList.remove('transition-form')
-
   }
-  
+
+  // Move to previous step
+  function handleGoBack() {
+    handleGoStep(currentStep - 1)
+  }
+
+  // Move to next step
+  function handleGoNext() {
+    if (isLastStep) {
+      // Submit react form to activate validation
+      const form = document.querySelector('.screens-form-wrapper form')
+      form.requestSubmit()
+    } else {
+      // Move to next step
+      handleGoStep(currentStep + 1)
+    }
+  }
+
   // Event handlers
   // Validate required fields to enable next button
   useEffect(() => {
@@ -201,7 +218,7 @@ export default function QuoteForm() {
       setScreenReady(true)
     } else {
       setScreenReady(false)
-    }        
+    }
   }, [
     currentScreenData,
     selectedService,
@@ -231,13 +248,15 @@ export default function QuoteForm() {
       setScreensData([...startScreens, ...residentialScreens, ...endScreens])
     }
   }, [selectedService])
-  
+
   return (
     <div
       className={`
         steps-form
       `}
     >
+
+
       {/* Steps selector */}
       <Steps
         screensData={screensData}
@@ -251,7 +270,7 @@ export default function QuoteForm() {
           container
           mx-auto
           px-2
-          my-8
+          mt-8
         `}
       >
         <Title
@@ -268,57 +287,34 @@ export default function QuoteForm() {
             text-center
             max-w-2xl
             mx-auto
-            mb-12
           `}
         >
           {t(`screens.${currentScreenData.key}.description`)}
         </p>
+
+        {/* Buttons */}
+        <NextBackButtons
+          backDisabled={currentStep === 0}
+          handleGoBack={handleGoBack}
+          nextDisabled={!screenReady}
+          handleGoNext={handleGoNext}
+          nextText={nextText}
+        />
+
         {/* Render current screen or subscreen */}
         {
           currentScreenData.screen
         }
       </div>
 
-      <div
-        className={`
-          buttons
-          w-full
-          flex
-          flex-col sm:flex-row
-          justify-center
-          items-center
-          gap-0 sm:gap-4
-        `}
-      >
-        <Button
-          text={t('buttons.back')}
-          className="bg-gray text-white"
-          onClick={() => {handleGoStep(currentStep - 1)}}
-          showArrow={false}
-          disabled={currentStep === 0}
-        />
-        <Button
-          text={isLastStep ? t('buttons.submit') : t('buttons.next')}
-          className={`
-            bg-blue 
-            text-white
-            !px-16
-            !mt-3 sm:!mt-6
-          `}
-          onClick={() => {
-            if (isLastStep) {
-              // Submit react form to activate validation
-              const form = document.querySelector('.screens-form-wrapper form')
-              form.requestSubmit()
-            } else {
-              // Move to next step
-              handleGoStep(currentStep + 1)
-            }
-          }}
-          showArrow={false}
-          disabled={!screenReady}
-        />
-      </div>
+      {/* Buttons */}
+      <NextBackButtons
+        backDisabled={currentStep === 0}
+        handleGoBack={handleGoBack}
+        nextDisabled={!screenReady}
+        handleGoNext={handleGoNext}
+        nextText={nextText}
+      />
     </div>
   )
 }

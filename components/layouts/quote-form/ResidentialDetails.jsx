@@ -147,7 +147,7 @@ export default function ResidentialDetails() {
         </Subtitle>
         <div
           className={`
-            wifi-options
+            cameras-options
             flex
             flex-wrap
             justify-center
@@ -190,12 +190,11 @@ export default function ResidentialDetails() {
         </Subtitle>
         <div
           className={`
-            wifi-options
+            monitoring-options
             flex
             flex-wrap
             justify-center
             items-center
-            mb-20
           `}
         >
           {
