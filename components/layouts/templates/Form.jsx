@@ -1,9 +1,11 @@
 'use client'
 
 // Libs
-import { useState, useEffect } from "react"
-import { useForm } from "react-hook-form"
 import Swal from 'sweetalert2'
+import { useState } from "react"
+import { useForm } from "react-hook-form"
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
 
 // Components
 import Input from '@/components/ui/Input'
@@ -58,13 +60,27 @@ export async function sendDataApi(data, endpoint, tAlerts) {
  * @param {string} props.submitText - Text for the submit button. If empty, the button won't render
  * @param {Object} props.t - Translations object with inputs data
  */
-export default function Form({ inputsData, onSubmit, submitText = "", tInputs }) {
+export default function Form({ inputsData, onSubmit, submitText = "", tInputs, showPrivacy = true }) {
 
+  // Translations
+  const tPrivacy = useTranslations('General.Contact.form.inputs.privacy')
+  const privacyLink = (
+    <p>
+      {tPrivacy('label.pre')} &nbsp;
+      <Link 
+        href="/privacy"
+        className={`
+          text-blue
+        `}
+        target="_blank"
+      >
+        {tPrivacy('label.link')}
+      </Link>
+    </p>
+  )
+  
+  // States
   const [loading, setLoading] = useState(false)
-
-  // useEffect(() => {
-  //   console.log({ loading })
-  // }, [loading])
 
   // Form state
   const {
@@ -110,6 +126,21 @@ export default function Form({ inputsData, onSubmit, submitText = "", tInputs })
             {...inputData}
           />
         ))
+      }
+
+      {
+        showPrivacy &&
+        <Input
+          type="checkbox"
+          name="privacy"
+          label={privacyLink}
+          required={true}
+          register={register}
+          errors={errors}
+          errorMessage={tPrivacy('errorMessage')}
+          data-aos="fade-up"
+          data-aos-delay={2500}
+        />
       }
 
       {

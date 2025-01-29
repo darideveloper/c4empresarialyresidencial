@@ -16,7 +16,7 @@ export default function Footer() {
   const links = [
     {
       "name": "privacy",
-      "link": "/privacy-notice"
+      "link": "/privacy"
     }
   ]
 

@@ -2,7 +2,8 @@
  * Input component
  * 
  * @param {object} props
- * @param {string} props.label - Label for the input
+ * @param {number} props.index - Index of the input
+ * @param {React.ReactNode} props.label - Label for the input
  * @param {string} props.name - Name of the input
  * @param {string} props.type - Type of the input. Default is 'text'
  * @param {object} props.register - Register object from the useForm hook
@@ -27,7 +28,7 @@ export default function Input({
       className={`
         input-wrapper
         flex
-        flex-col
+        ${type == 'checkbox' ? 'flex-row-reverse items-center' : 'flex-col'}
         my-8
       `}
       data-aos="fade-up"
@@ -37,7 +38,9 @@ export default function Input({
         htmlFor={`input-${name}`}
         className={`
           text-xl
-          mb-2
+          ${type == 'checkbox' ? 'mb-0' : 'mb-2'}
+          block
+          w-full
         `}
       >
         {label}
@@ -52,7 +55,6 @@ export default function Input({
           outline-none focus:outline-none
           bg-white
           rounded-md
-          px-6
           py-2
           hover:pl-10
           text-black focus:text-blue
@@ -61,6 +63,8 @@ export default function Input({
           duration-300
           border-b-4
           border-grey focus:border-blue
+          ${type == 'checkbox' ? 'w-5 h-5' : 'w-full'}
+          ${type == 'checkbox' && 'mx-4'}
         `}
       />
       {errors[name]?.type === "required" && (

@@ -177,7 +177,7 @@
         "title": "Síguenos en nuestras Redes Sociales",
         "iconsTitle": "Siguenos en",
         "text": "Mantente al día con nuestras últimas ofertas y consejos de seguridad siguiendo nuestras redes sociales. ¡Estamos aquí para ayudarte!",
-        "imgAlt": "Ilustración de persona atendiendo clientesr"
+        "imgAlt": "Ilustración de persona atendiendo clientes"
       },
       "form": {
         "title": "Contáctanos",
@@ -201,6 +201,13 @@
             "label": "Dirección",
             "placeholder": "Calle 60 #123, Colonia Centro",
             "errorMessage": "Introduce tu dirección"
+          },
+          "privacy": {
+            "label": {
+              "pre": "Leí y acepto el",
+              "link": "aviso de privacidad"
+            },
+            "errorMessage": "Debes aceptar el aviso de privacidad"
           }
         },
         "submit": "Enviar"
