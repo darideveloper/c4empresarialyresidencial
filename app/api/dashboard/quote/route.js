@@ -1,5 +1,3 @@
-// app/api/protected-data/route.js
-
 export async function POST(request) {
   const token = request.headers.get('Authorization')
   const endpoint = `${process.env.DASHBOARD_HOST}/api/quote/`
@@ -8,7 +6,7 @@ export async function POST(request) {
   // Get post json data
   const body = await request.json()
 
-  // Use the token in your API call
+  // Use the token in api call
   const apiResponse = await fetch(endpoint, {
     method: 'POST',
     headers: {

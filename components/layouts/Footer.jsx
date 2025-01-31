@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 
+import { TransitionLink } from '@/components/utils/TransitionLink'
 import Link from 'next/link'
 import Contact from '@/components/layouts/Contact'
 
@@ -36,7 +37,7 @@ export default function Footer() {
         `}
       >
         {links.map((link, i) => (
-          <Link
+          <TransitionLink
             key={i}
             href={link.link}
             className={`
@@ -48,7 +49,7 @@ export default function Footer() {
             target="_blank"
           >
             {t(link.name)}
-          </Link>
+          </TransitionLink>
         ))}
       </div>
 
