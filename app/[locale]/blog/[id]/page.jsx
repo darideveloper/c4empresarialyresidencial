@@ -16,7 +16,7 @@ export async function generateStaticParams() {
   return getAllPostIds()
 }
 
-export default async function UserProfile({ params }) {
+export default async function BlogPost({ params }) {
 
   // Get post data
   const { id } = await params
