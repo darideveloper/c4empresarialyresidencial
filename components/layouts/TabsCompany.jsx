@@ -77,24 +77,14 @@ export default function TabsCompany() {
         <span
           data-aos="fade-up"
         >
-          Las cámaras de seguridad en un comercio ofrecen múltiples beneficios que van más allá de la simple vigilancia.
+          {t('text1')}
         </span>
         <br />
         <span
           data-aos="fade-up"
           data-aos-delay="500"
         >
-          A continuación, se detallan algunas de las funciones más relevantes que cumplen estos sistemas en el entorno comercial
-        </span>
-        <br />
-        <span
-          className={`
-            font-bold
-          `}
-          data-aos="fade-up"
-          data-aos-delay="1000"
-        >
-          Los delincuentes o trabajadores deshonesto son menos propensos a actuar si saben que están siendo grabado, pero aun así se ha logrado evadirlos porque no hay supervisión
+          {t('text2')}
         </span>
       </p>
 

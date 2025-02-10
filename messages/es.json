@@ -1,6 +1,6 @@
 {
   "Meta": {
-    "title": "C4 Empresarial y Recidencial",
+    "title": "C4 Empresarial y Residencial",
     "description": {
       "home": "Ofrecemos soluciones de seguridad personalizadas para hogares y negocios en Mérida, Yucatán, con cámaras de alta definición y monitoreo profesional.",
       "company": "Protege tu empresa con nuestras soluciones de seguridad personalizadas en Mérida, Yucatán, con cámaras de alta definición y monitoreo profesional.",
@@ -18,7 +18,7 @@
       "altPrefix": "Foto de producto",
       "categories": {
         "detection": {
-          "title": "Camaras y sensores de detección",
+          "title": "Alarmas, cámaras de seguridad y sensores de movimiento",
           "description": "Cámaras de alta definición y sensores de movimiento para detectar cualquier actividad sospechosa en tu hogar o negocio.",
           "products": {
             "detection1": {
@@ -254,22 +254,23 @@
       "imgAlt": "Ilustración de persona gestionando la seguridad de su hogar",
       "text": {
         "beforeText": "En",
-        "afterText": "nos especializamos en ofrecer soluciones de seguridad a medida para hogares y negocios en Mérida, Yucatán. Con una amplia gama de cámaras de seguridad y un servicio de monitoreo profesional, estamos aquí para proteger lo que más valoras."
-      }
+        "afterText": "nos especializamos en ofrecer soluciones de seguridad a la medida para hogares y negocios en Mérida, Yucatán. Con una amplia gama de cámaras de seguridad y un servicio de monitoreo profesional, estamos aquí para proteger lo que más valoras."
+      },
+      "text2": ""
     },
     "WhyUs": {
       "title": "¿Por qué elegirnos?",
       "cards": {
         "tech": {
           "title": "Tecnología Avanzada",
-          "description": "Nuestras cámaras están equipadas con la última tecnología en videovigilancia, garantizando imágenes nítidas y claras, incluso en condiciones de poca luz."
+          "description": "Nuestras cámaras de seguridad en Mérida están equipadas con la última tecnología en videovigilancia, garantizando imágenes nítidas y claras, incluso en condiciones de poca luz."
         },
         "monitoring": {
           "title": "Monitoreo 24/7",
           "description": "Ofrecemos un servicio de monitoreo continuo, asegurando que tu propiedad esté protegida en todo momento. Nuestro equipo está listo para responder a cualquier eventualidad."
         },
         "installation": {
-          "title": "Instalación Profesional",
+          "title": "Instalación Profesional del sistema de seguridad",
           "description": "Contamos con técnicos altamente capacitados que realizan la instalación de manera rápida y eficiente, asegurando que cada cámara esté posicionada para maximizar su efectividad."
         }
       }
@@ -300,55 +301,57 @@
         },
         "apartment": {
           "tabName": "Departamento",
-          "title": "Vigilancia personalizada en departamentos",
-          "text": "Carlos vivía en un departamento y notó que desaparecían paquetes de la entrada. Instalamos cámaras estratégicas en las áreas comunes y accesos. Una semana después, las cámaras identificaron al responsable, y con las evidencias, la administración tomó medidas. Ahora, todos los residentes disfrutan de mayor seguridad.",
+          "title": "Monitoreo personalizado para departamentos",
+          "text": "Carlos vivía en un departamento y notó que desaparecían paquetes de la entrada. Instalamos cámaras estratégicas en las áreas comunes y accesos. Una semana después, el sistema de seguridad identificó al responsable, y con las evidencias, la administración tomó medidas. Ahora, todos los residentes disfrutan de mayor seguridad.",
           "ctaText": "Solicitar una evaluación gratuita"
         },
         "residential": {
           "tabName": "Privadas y residenciales",
           "title": "Protección integral para residenciales",
-          "text": "En una privada, los vecinos reportaban robos en autos estacionados. Diseñamos un sistema de cámaras para las entradas, áreas comunes y cada casa interesada. Una noche, las cámaras captaron un intento de robo, y la alerta evitó el incidente. Desde entonces, la comunidad vive más tranquila.",
+          "text": "En una privada, los vecinos reportaban robos de autos estacionados. Diseñamos un sistema de alarmas y cámaras de seguridad para las entradas, áreas comunes y cada casa interesada. Una noche, las cámaras captaron un intento de robo y la alerta evitó el incidente. Desde entonces, la comunidad vive más tranquila.",
           "ctaText": "Solicitar una evaluación gratuita"
         },
         "hightValue": {
           "tabName": "Casas de alto valor",
           "title": "Cuidado exclusivo para casas de lujo",
-          "text": "María, preocupada por movimientos extraños cerca de su casa y la seguridad de su familia, contactó con nuestra empresa. En 48 horas instalamos cámaras con visión nocturna y monitoreo remoto que una noche detectaron a un intruso. Gracias a la alerta, María llamó a las autoridades y ahora vive tranquila y protegida.",
+          "text": "Mariana vivía en una casa con objetos de alto valor, pero sabía que necesitaba mayor protección para su hogar. Por ello, decidió contactarnos para instalar equipos de seguridad en su casa de Mérida. Desde la instalación de las cámaras y el sistema de monitoreo, ha ganado tranquilidad al saber que su propiedad está vigilada en todo momento. Ahora se siente más segura, confiando en que tomó la mejor decisión para proteger su patrimonio.",
           "ctaText": "Solicitar una evaluación gratuita"
         }
       }
     },
     "TabsCompany": {
       "title": "Encuentra la solución perfecta para tu empresa",
+      "text1": "Las cámaras de seguridad en un comercio ofrecen múltiples beneficios que van más allá de la simple vigilancia. A continuación, se detallan algunas de las funciones más relevantes que cumple el sistema de seguridad en el entorno comercial.",
+      "text2": "Los delincuentes o trabajadores deshonestos son menos propensos a actuar si saben que están siendo grabados, pues han logrado evadir la supervisión humana.",
       "tabs": {
         "restaurant": {
           "tabName": "Resturantes",
-          "title": "Supervisión de empelados con más antigüedad de cadenas restaurantes",
-          "text": "Estos templeados recurren a tener de llevarse mercancía con rutinas que no son visto a primera instante pero son descubiertos por recurrentes conductas que generan sospechas y nosotros tenemos la tarea de vigilar esas conductas hasta que se logre en infraganti la acción impúdica.",
+          "title": "Supervisión de empleados en cadenas de restaurantes",
+          "text": "Estos empleados recurren a llevarse mercancía y no son vistos al primer instante, pero son descubiertos por incidentes frecuentes que generan sospechas. Nosotros tenemos la tarea de vigilar esas conductas hasta que se logre captar el momento del hurto.",
           "ctaText": "Solicitar cotización para mi restaurante"
         },
         "cash": {
           "tabName": "Casas de empeño",
-          "title": "Supervisión de casa de empeños donde empleados y clientes comenten hurto",
-          "text": "Este delito se puede cometer por medio de cambios de precios por parte de los empleados y concediendo que son las misma clientes y los mismos vendedores que tiene esta práctica deshonesta. Nosotros tenemos la tarea de vigilar esas conductas hasta que se logre en infraganti la acción impúdica ",
+          "title": "Sistemas de seguridad en casa de empeños contra hurto",
+          "text": "Este delito se puede cometer por medio de cambios de precios por parte de los empleados e involucra tanto a clientes como a vendedores en esta práctica deshonesta. Nuestra tarea es monitorear estos comportamientos hasta que la mala conducta sea atrapada infraganti.",
           "ctaText": "Solicitar cotización para mi casa de empeño"
         },
         "retail": {
           "tabName": "Comercios",
-          "title": "Supervisión de empleados y clientes en tiendas minoristas",
-          "text": "Las tiendas suelen ser vulnerables a hurtos tanto internos como externos. Nuestro equipo se enfoca en identificar empleados que puedan incurrir en acciones deshonestas, como mal manejo de inventarios, y en vigilar clientes con comportamientos sospechosos. Garantizamos la recopilación de evidencia en cada caso para proteger tus activos y mantener el flujo correcto de tus operaciones comerciales.",
+          "title": "Monitoreo de clientes y empleados en tiendas minoristas",
+          "text": "Las tiendas suelen ser vulnerables a hurtos tanto internos como externos. Nuestro equipo se enfoca en identificar empleados que puedan incurrir en prácticas poco éticas, como mal manejo de inventarios y en vigilar clientes con comportamientos sospechosos. Garantizamos la recopilación de evidencia en cada caso para proteger tus activos y mantener el flujo correcto de tus operaciones comerciales.",
           "ctaText": "Solicitar cotización para mi comercio"
         },
         "hotel": {
           "tabName": "Hoteles",
-          "title": "Seguridad integral para el sector hospitalidad",
-          "text": "Brindamos vigilancia en áreas comunes, estacionamientos y zonas sensibles como almacenes o cajas registradoras. Estas áreas suelen ser blanco de acciones deshonestas que pueden comprometer la seguridad y la experiencia de tus clientes. Nuestro equipo implementa medidas para identificar patrones de riesgo y proteger tus instalaciones de manera constante.",
+          "title": "Seguridad integral para el sector hospitalario",
+          "text": "Brindamos vigilancia en áreas comunes, estacionamientos y zonas sensibles como almacenes o cajas registradoras. Estas áreas suelen ser blanco de acciones malintencionadas que pueden comprometer la seguridad y la experiencia de tus clientes. Nuestro equipo implementa medidas como el CCTV (Circuito Cerrado de TV), así como alarmas y cámaras de seguridad para identificar patrones de riesgo y proteger tus instalaciones en Mérida de manera constante.",
           "ctaText": "Solicitar cotización para mi Hotel"
         },
         "industry": {
           "tabName": "Industrias",
           "title": "Monitoreo de áreas críticas en plantas y fábricas",
-          "text": "Protegemos tus instalaciones y maquinaria con cámaras de alta precisión, diseñadas para captar actividad sospechosa en tiempo real. Nuestro enfoque incluye la supervisión de áreas de acceso restringido, vigilancia de materiales sensibles y detección de comportamientos no autorizados que puedan comprometer la continuidad de tu producción.",
+          "text": "Protegemos tus instalaciones y maquinaria de Yucatán con cámaras de alta precisión, diseñadas para captar actividad sospechosa en tiempo real. Nuestro enfoque incluye la supervisión de áreas de acceso restringido, vigilancia de materiales sensibles y detección de comportamientos no autorizados que puedan comprometer la continuidad de tu producción.",
           "ctaText": "Solicitar cotización para mi planta o fábrica"
         },
         "offices": {
@@ -400,15 +403,15 @@
       "cards": {
         "prevention": {
           "title": "Prevención de Delitos",
-          "description": "La presencia visible de cámaras disuade a los delincuentes, reduciendo el riesgo de robos o vandalismo."
+          "description": "La presencia visible de cámaras en Yucatán desanima a los delincuentes, reduciendo el riesgo de robos o vandalismo."
         },
         "peace": {
           "title": "Tranquilidad",
-          "description": "Saber que tu hogar o negocio está protegido te permite vivir y trabajar con tranquilidad."
+          "description": "La presencia de CCTV (Circuito cerrado de TV) te permitirá saber que tu hogar o negocio en Mérida están protegidos y te permitirá vivir y trabajar con tranquilidad."
         },
         "support": {
           "title": "Soporte Personalizado",
-          "description": "Nuestro equipo está disponible para responder a tus preguntas y adaptar nuestros servicios a tus necesidades específicas."
+          "description": "Nuestro equipo está disponible para responder tus preguntas y adaptar nuestros servicios a tus necesidades específicas."
         }
       }
     },
@@ -484,8 +487,9 @@
       "imgAlt": "Ilustración de un edificio de oficinas",
       "text": {
         "beforeText": "En",
-        "afterText": "nos especializamos en ofrecer soluciones de seguridad personalizadas para empresas en Mérida, Yucatán. Con una amplia gama de cámaras de seguridad y servicios profesionales de monitoreo, estamos aquí para proteger tu negocio y a tus empleados."
-      }
+        "afterText": "nos especializamos en ofrecer equipos de seguridad personalizados para empresas en Mérida, Yucatán. Con una amplia gama de cámaras de seguridad y servicios profesionales de monitoreo, estamos aquí para proteger tu negocio y a tus empleados."
+      },
+      "text2": ""
     }
   },
   "ResidentialPage": {
@@ -498,8 +502,9 @@
       "imgAlt": "Ilustración de una persona analizando hogares",
       "text": {
         "beforeText": "En",
-        "afterText": "nos especializamos en ofrecer soluciones de seguridad personalizadas para hogares en Mérida, Yucatán. Con una amplia gama de cámaras de seguridad y servicios profesionales de monitoreo, estamos aquí para proteger lo que más importa para ti."
-      }
+        "afterText": "nos especializamos en ofrecer soluciones de seguridad personalizadas para hogares en Mérida, Yucatán. Con una amplia gama de cámaras de seguridad, CCTV (Circuito cerrado de TV) y servicios profesionales de monitoreo, estamos aquí para proteger lo más importante para ti."
+      },
+      "text2": "Encuentra la solución perfecta para tu hogar."
     }
   },
   "QuotePage": {

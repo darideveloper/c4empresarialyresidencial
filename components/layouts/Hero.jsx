@@ -25,7 +25,7 @@ export default function Hero({ langKey, HeroImage }) {
   const t = useTranslations(`${langKey}.Hero`)
   const tMeta = useTranslations('Meta')
   const isHomePage = langKey === 'HomePage'
-  
+
   return (
     <section
       id="hero"
@@ -146,6 +146,16 @@ export default function Hero({ langKey, HeroImage }) {
             <span>
               {t('text.afterText')}
             </span>
+
+            <br />
+            <span
+              className={`
+                font-bold
+              `}
+            >
+              {t('text2')}
+            </span>
+
           </p>
 
         </div>

@@ -1,9 +1,10 @@
 'use client'
 
+// Libs
 import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 
-
+// Components
 import Title from '@/components/ui/Title'
 import TabButton from '@/components/ui/tabs/TabButton'
 import TabCard from '@/components/ui/tabs/TabCard'

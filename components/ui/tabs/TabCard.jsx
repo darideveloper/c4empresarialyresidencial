@@ -1,3 +1,8 @@
+// Libs
+import remarkGfm from 'remark-gfm'
+
+// Components
+import ReactMarkdown from 'react-markdown'
 import Button from "@/components/ui/Button"
 
 /**
@@ -36,9 +41,7 @@ export default function TabCard({ title, text, ctaText, tabChanging, className }
       >
         {title}
       </h3>
-      <p>
-        {text}
-      </p>
+      <ReactMarkdown children={text} remarkPlugins={[remarkGfm]} />
       <Button
         href="/quote"
         text={ctaText}
