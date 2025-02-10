@@ -75,6 +75,7 @@ export default function QuoteForm() {
       "key": "selectService",
       "screen": <SelectService />,
       "requiredFields": ["selectedService"],
+      "show_btns_top": true,
     }
   ]
   const endScreens = [
@@ -82,11 +83,13 @@ export default function QuoteForm() {
       "key": "features",
       "screen": <Features />,
       "requiredFields": ["features"],
+      "show_btns_top": true,
     },
     {
       "key": "contactInfo",
       "screen": <ContactInfo onSubmit={onSubmit} />,
       "requiredFields": ["selectedService"],
+      "show_btns_top": false,
     },
   ]
   const companyScreens = [
@@ -94,16 +97,19 @@ export default function QuoteForm() {
       "key": "companySector",
       "screen": <CompanySector />,
       "requiredFields": ["companySector"],
+      "show_btns_top": true,
     },
     {
       "key": "companyEmployees",
       "screen": <CompanyEmployees />,
       "requiredFields": ["companyEmployees"],
+      "show_btns_top": false,
     },
     {
       "key": "companyDetails",
       "screen": <CompanyDetails />,
       "requiredFields": ["branches", "hasWifi", "users", "hasCameras"],
+      "show_btns_top": false,
     },
   ]
   const residentialScreens = [
@@ -111,11 +117,13 @@ export default function QuoteForm() {
       "key": "residentialType",
       "screen": <ResidentialType />,
       "requiredFields": ["residentialType"],
+      "show_btns_top": false,
     },
     {
       "key": "residentialDetails",
       "screen": <ResidentialDetails />,
       "requiredFields": ["rooms", "hasWifi", "monitoring", "hasCameras"],
+      "show_btns_top": false,
     },
   ]
 
@@ -292,14 +300,24 @@ export default function QuoteForm() {
           {t(`screens.${currentScreenData.key}.description`)}
         </p>
 
-        {/* Buttons */}
-        <NextBackButtons
-          backDisabled={currentStep === 0}
-          handleGoBack={handleGoBack}
-          nextDisabled={!screenReady}
-          handleGoNext={handleGoNext}
-          nextText={nextText}
-        />
+        {/* Top Buttons */}
+        {
+          currentScreenData.show_btns_top ?
+          <NextBackButtons
+            backDisabled={currentStep === 0}
+            handleGoBack={handleGoBack}
+            nextDisabled={!screenReady}
+            handleGoNext={handleGoNext}
+            nextText={nextText}
+          />
+          :
+          <div 
+            className={`
+              separator
+              mt-12
+            `}
+          />
+        }
 
         {/* Render current screen or subscreen */}
         {
