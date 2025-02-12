@@ -54,16 +54,11 @@ export function getSortedPostsData() {
  * @returns {string} fileNames.params.slug - Post ID
  */
 export function getAllPostSlugs() {
-  const fileNames = fs.readdirSync(postsDirectory)
-
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        slug: fileName.replace(/\.md$/, ''),
-      },
-    }
-  })
+  return fs.readdirSync(postsDirectory).map((fileName) => ({
+    slug: fileName.replace(/\.md$/, ''),
+  }))
 }
+
 
 /**
  * Return single post data

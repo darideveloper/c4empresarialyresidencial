@@ -10,16 +10,12 @@ import PostMeta from '@/components/ui/PostMeta'
 // Css
 import '@/css/post-content.sass'
 
-export async function generateStaticParams() {
-  return getAllPostSlugs()
-}
-
-
 export default async function PostPage({ params }) {
 
   // Get post data
-  const slug = await params.slug
+  const { slug } = await params
   const postData = await getPostData(slug)
+
 
   return (
     <section
