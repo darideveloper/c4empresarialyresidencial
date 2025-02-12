@@ -50,6 +50,7 @@ export async function generateMetadata({ params }) {
   const t = await getTranslations({ locale, namespace: 'Meta' })
 
   return {
-    description: t('description.privacy-notice'),
+    description: t('privacy-notice.description'),
+    title: t('privacy-notice.title'),
   }
 }

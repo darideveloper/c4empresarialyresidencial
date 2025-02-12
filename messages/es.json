@@ -1,13 +1,28 @@
 {
   "Meta": {
     "title": "C4 Empresarial y Residencial",
-    "description": {
-      "home": "Ofrecemos soluciones de seguridad personalizadas para hogares y negocios en Mérida, Yucatán, con cámaras de alta definición y monitoreo profesional.",
-      "company": "Protege tu empresa con nuestras soluciones de seguridad personalizadas en Mérida, Yucatán, con cámaras de alta definición y monitoreo profesional.",
-      "residential": "Protege tu hogar con nuestras soluciones de seguridad personalizadas en Mérida, Yucatán, con cámaras de alta definición y monitoreo profesional.",
-      "quote": "Solicita una cotización para tu hogar o empresa en Mérida, Yucatán, con cámaras de alta definición y monitoreo profesional.",
-      "blog": "Descubre los últimos consejos y novedades sobre seguridad en Mérida, Yucatán, con cámaras de alta definición y monitoreo profesional.",
-      "privacy-notice": "Conoce nuestra política de privacidad y cómo protegemos tus datos en C4 Empresarial y Residencial."
+    "home": {
+      "description": "Protege tu hogar o empresa en Mérida, Yucatán, con cámaras de alta definición y monitoreo profesional."
+    },
+    "company": {
+      "title": "Empresas",
+      "description": "Protege tu empresa en Mérida, Yucatán, con cámaras de alta definición y monitoreo profesional."
+    },
+    "residential": {
+      "title": "Residencial",
+      "description": "Protege tu hogar en Mérida, Yucatán, con cámaras de alta definición y monitoreo profesional."
+    },
+    "quote": {
+      "title": "Cotización",
+      "description": "Solicita una cotización para tu hogar o empresa en Mérida, Yucatán, con cámaras de alta definición y monitoreo profesional."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Descubre los últimos consejos y novedades sobre seguridad en Mérida, Yucatán, con cámaras de alta definición y monitoreo profesional."
+    },
+    "privacy-notice": {
+      "title": "Aviso de Privacidad",
+      "description": "Conoce nuestra política de privacidad y cómo protegemos tus datos en C4 Empresarial y Residencial."
     },
     "keywords": "seguridad, cámaras de seguridad, monitoreo, Mérida, Yucatán, protección, cámaras de alta definición, alarmas, control de acceso",
     "author": "C4 Empresarial and Residential"

@@ -169,6 +169,7 @@ export async function generateMetadata({ params }) {
   const t = await getTranslations({ locale, namespace: 'Meta' })
 
   return {
-    description: t('description.blog'),
+    title: t('blog.title'),
+    description: t('blog.description'),
   }
 }
