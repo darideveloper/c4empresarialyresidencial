@@ -94,6 +94,9 @@ export async function generateMetadata({ params }) {
     keywords: postData.keywords,
     authors: [
       { "name": postData.author }
-    ]
+    ],
+    alternates: {
+        canonical: `/es/blog/${slug}`,
+    }
   }
 }
