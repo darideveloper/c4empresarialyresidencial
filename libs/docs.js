@@ -5,7 +5,7 @@ import { remark } from 'remark'
 import html from 'remark-html'
 import gfm from 'remark-gfm'
 
-const docsDirectory = path.join(process.cwd(), 'docs-pages')
+const docsDirectory = path.join(process.cwd(), 'content', 'docs-pages')
 
 
 export async function getDocData(locale, name) {
