@@ -45,6 +45,7 @@ export default function Hero({ langKey, HeroImage }) {
           -mt-32
           -ml-32
           md:scale-150
+          hidden lg:block
         `}
       />
 
