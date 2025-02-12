@@ -10,7 +10,7 @@ const postsDirectory = path.join(process.cwd(), 'posts')
  * Get all post data
  * 
  * @returns {Array} allPostsData - Array of post data
- * @returns {string} allPostsData.id - Post ID
+ * @returns {string} allPostsData.slug - Post ID
  * @returns {string} allPostsData.date - Post date
  * @returns {string} allPostsData.title - Post title
  * @returns {string} allPostsData.lang - Post language
@@ -21,8 +21,8 @@ export function getSortedPostsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.map((fileName) => {
-    // Remove ".md" from file name to get id
-    const id = fileName.replace(/\.md$/, '')
+    // Remove ".md" from file name to get slug
+    const slug = fileName.replace(/\.md$/, '')
 
     // Read markdown file as string
     const fullPath = path.join(postsDirectory, fileName)
@@ -31,9 +31,9 @@ export function getSortedPostsData() {
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents)
 
-    // Combine the data with the id
+    // Combine the data with the slug
     return {
-      id,
+      slug,
       ...matterResult.data,
     }
   })
@@ -48,31 +48,18 @@ export function getSortedPostsData() {
 }
 
 /**
- * Return the ids of all posts
+ * Return the slugs of all posts
  * @returns {Array} fileNames - Array of post IDs
  * @returns {object} fileNames.params - Post ID
- * @returns {string} fileNames.params.id - Post ID
+ * @returns {string} fileNames.params.slug - Post ID
  */
-export function getAllPostIds() {
+export function getAllPostSlugs() {
   const fileNames = fs.readdirSync(postsDirectory)
 
-  // Returns an array that looks like this:
-  // [
-  //   {
-  //     params: {
-  //       id: 'ssg-ssr'
-  //     }
-  //   },
-  //   {
-  //     params: {
-  //       id: 'pre-rendering'
-  //     }
-  //   }
-  // ]
   return fileNames.map((fileName) => {
     return {
       params: {
-        id: fileName.replace(/\.md$/, ''),
+        slug: fileName.replace(/\.md$/, ''),
       },
     }
   })
@@ -81,17 +68,17 @@ export function getAllPostIds() {
 /**
  * Return single post data
  * 
- * @param {string} id - Post ID
+ * @param {string} slug - Post ID
  * @returns {object} postData - Post data
- * @returns {string} postData.id - Post ID
+ * @returns {string} postData.slug - Post ID
  * @returns {string} postData.date - Post date
  * @returns {string} postData.title - Post title
  * @returns {string} postData.lang - Post language
  * @returns {string} postData.description - Post description
  * @returns {string} postData.content - Post content
  */
-export async function getPostData(id) {
-  const fullPath = path.join(postsDirectory, `${id}.md`)
+export async function getPostData(slug) {
+  const fullPath = path.join(postsDirectory, `${slug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   // Use gray-matter to parse the post metadata section
@@ -102,9 +89,9 @@ export async function getPostData(id) {
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 
-  // Combine the data with the id
+  // Combine the data with the slug
   return {
-    id,
+    slug,
     contentHtml,
     ...matterResult.data,
   }

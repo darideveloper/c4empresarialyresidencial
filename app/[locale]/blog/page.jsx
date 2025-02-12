@@ -62,11 +62,11 @@ export default function BlogPage() {
           mt-8
         `}
       >
-        {allPostsData.map(({ id, date, title, lang, description }) => (
-          <li className={``} key={id}>
+        {allPostsData.map(({ slug, date, title, lang, description }) => (
+          <li className={``} key={slug}>
             <article>
               <Link
-                href={`./blog/${id}`}
+                href={`./blog/${slug}`}
                 className={`
                 group
                 relative
@@ -100,7 +100,7 @@ export default function BlogPage() {
                 `}
                 >
                   <Image
-                    src={`/images/posts/banners/${id}.webp`}
+                    src={`/images/posts/banners/${slug}.webp`}
                     alt={t('Posts.bannerAlt') + " " + title}
                     width={400}
                     height={300}

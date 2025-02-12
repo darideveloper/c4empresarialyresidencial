@@ -1,5 +1,5 @@
 // Libs
-import { getAllPostIds, getPostData } from '@/libs/posts'
+import { getAllPostSlugs, getPostData } from '@/libs/posts'
 import { getTranslations } from 'next-intl/server'
 
 // Components
@@ -10,17 +10,16 @@ import PostMeta from '@/components/ui/PostMeta'
 // Css
 import '@/css/post-content.sass'
 
-
 export async function generateStaticParams() {
-  // Return an array of params for static generation
-  return getAllPostIds()
+  return getAllPostSlugs()
 }
 
-export default async function UserProfile({ params }) {
+
+export default async function PostPage({ params }) {
 
   // Get post data
-  const { id } = await params
-  const postData = await getPostData(id)
+  const slug = await params.slug
+  const postData = await getPostData(slug)
 
   return (
     <section
@@ -31,8 +30,8 @@ export default async function UserProfile({ params }) {
       `}
     >
       {/* Post banner */}
-      <Image 
-        src={`/images/posts/banners/${postData.id}.webp`}
+      <Image
+        src={`/images/posts/banners/${postData.slug}.webp`}
         alt="Banner"
         width={1500}
         height={1500}
@@ -51,7 +50,7 @@ export default async function UserProfile({ params }) {
         lang={postData.lang}
       >
 
-        <Title 
+        <Title
           isH1={true}
           className={`
             !text-left
@@ -75,7 +74,7 @@ export default async function UserProfile({ params }) {
         >
           {postData.description}
         </p>
-        <div 
+        <div
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
           className={`
             post-content
@@ -86,22 +85,22 @@ export default async function UserProfile({ params }) {
   )
 }
 
-export async function generateMetadata({ params }) {
+// export async function generateMetadata({ params }) {
 
-  // Get post data
-  const { id } = await params
-  const postData = await getPostData(id)
-  const t = await getTranslations({ locale: postData.lang, namespace: 'Blog' })
-  const tMeta = await getTranslations({ locale: postData.lang, namespace: 'Meta' })
+//   // Get post data
+//   const { id } = await params
+//   const postData = await getPostData(id)
+//   const t = await getTranslations({ locale: postData.lang, namespace: 'Blog' })
+//   const tMeta = await getTranslations({ locale: postData.lang, namespace: 'Meta' })
 
-  return {
-    description: postData.description,
-    locale: postData.lang,
-    keywords: postData.keywords,
-    authors: [
-      {
-        "name": t('Posts.authorPre') + " " + tMeta('title'),
-      }
-    ]
-  }
-}
+//   return {
+//     description: postData.description,
+//     locale: postData.lang,
+//     keywords: postData.keywords,
+//     authors: [
+//       {
+//         "name": t('Posts.authorPre') + " " + tMeta('title'),
+//       }
+//     ]
+//   }
+// }
