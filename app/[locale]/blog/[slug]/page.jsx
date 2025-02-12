@@ -81,22 +81,19 @@ export default async function PostPage({ params }) {
   )
 }
 
-// export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }) {
 
-//   // Get post data
-//   const { id } = await params
-//   const postData = await getPostData(id)
-//   const t = await getTranslations({ locale: postData.lang, namespace: 'Blog' })
-//   const tMeta = await getTranslations({ locale: postData.lang, namespace: 'Meta' })
+  // Get post data
+  const { slug } = await params
+  const postData = await getPostData(slug)
 
-//   return {
-//     description: postData.description,
-//     locale: postData.lang,
-//     keywords: postData.keywords,
-//     authors: [
-//       {
-//         "name": t('Posts.authorPre') + " " + tMeta('title'),
-//       }
-//     ]
-//   }
-// }
+  return {
+    title: postData.title,
+    description: postData.description,
+    locale: postData.lang,
+    keywords: postData.keywords,
+    authors: [
+      { "name": postData.author }
+    ]
+  }
+}

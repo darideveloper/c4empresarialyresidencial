@@ -4,6 +4,7 @@ date: '2025-01-18'
 lang: 'en'
 description: 'Discover the benefits of security camera monitoring services for businesses and individuals, and how C4 Empresarial y Residencial can help protect what matters.'
 keywords: 'security camera monitoring, security solutions, advanced technology, real-time monitoring, remote access, technical support, preventive maintenance'
+author: 'C4 Empresarial y Residencial'
 ---
 
 At **C4 Empresarial y Residencial**, we specialize in providing advanced security solutions for businesses and individuals in Mérida, Yucatán. We understand that security is a top priority, which is why we offer **high-quality security camera monitoring services** to protect what matters most to you.

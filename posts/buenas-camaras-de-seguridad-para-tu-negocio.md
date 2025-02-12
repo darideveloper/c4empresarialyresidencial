@@ -4,6 +4,7 @@ date: '2025-01-08'
 lang: 'es'
 description: 'Descubre por qué una buena cámara de seguridad es esencial para proteger tu negocio y cómo elegir la mejor opción para tus necesidades.'
 keywords: 'cámaras de seguridad, seguridad empresarial, protección de activos, prevención de pérdidas, productividad, experiencia del cliente, normas de seguridad, tecnología de vigilancia'
+author: 'C4 Empresarial y Residencial'
 ---
 
 Descubre por qué un buen sistema de seguridad es esencial para proteger tu negocio y cómo elegir la mejor opción adaptada a tus necesidades.
