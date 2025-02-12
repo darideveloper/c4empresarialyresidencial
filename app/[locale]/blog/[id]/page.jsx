@@ -1,5 +1,6 @@
 // Libs
 import { getAllPostIds, getPostData } from '@/libs/posts'
+import { getTranslations } from 'next-intl/server'
 
 // Components
 import Title from '@/components/ui/Title'
@@ -12,17 +13,14 @@ import '@/css/post-content.sass'
 
 export async function generateStaticParams() {
   // Return an array of params for static generation
-  console.log("getAllPostIds", getAllPostIds())
   return getAllPostIds()
 }
 
-export default async function BlogPost({ params }) {
+export default async function UserProfile({ params }) {
 
   // Get post data
   const { id } = await params
   const postData = await getPostData(id)
-
-  console.log({postData, id})
 
   return (
     <section
@@ -93,11 +91,17 @@ export async function generateMetadata({ params }) {
   // Get post data
   const { id } = await params
   const postData = await getPostData(id)
+  const t = await getTranslations({ locale: postData.lang, namespace: 'Blog' })
+  const tMeta = await getTranslations({ locale: postData.lang, namespace: 'Meta' })
 
   return {
     description: postData.description,
     locale: postData.lang,
     keywords: postData.keywords,
-    author: postData.author,
+    authors: [
+      {
+        "name": t('Posts.authorPre') + " " + tMeta('title'),
+      }
+    ]
   }
 }
