@@ -64,7 +64,15 @@ export async function generateMetadata({ params }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'Meta' })
 
+  const image = {
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/og-images/home.jpg`,
+    width: 700,
+    height: 700,
+    alt: t('title'),
+  }
+
   return {
+    // Basic metadata
     title: {
       default: t('title'),
       template: `%s | ${t('title')}`,
@@ -75,5 +83,31 @@ export async function generateMetadata({ params }) {
       { "name": t('title') }
     ],
     icons: "/favicon.ico",
+
+    // Open Graph metadata
+    openGraph: {
+      title: {
+        default: t('title'),
+        template: `%s | ${t('title')}`,
+      },
+      description: t('home.description'),
+      url: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}`,
+      siteName: t('title'),
+      images: [image],
+      locale,
+      type: "website",
+    },
+
+    // Twitter metadata
+    twitter: {
+      card: "summary_large_image",
+      title: {
+        default: t('title'),
+        template: `%s | ${t('title')}`,
+      },
+      description: t('home.description'),
+      images: [image],
+      creator: "@DeveloperDari",
+    },
   }
 }

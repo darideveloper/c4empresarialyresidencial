@@ -141,6 +141,13 @@ export async function generateMetadata({ params }) {
     }
   }
 
+  const image = {
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/posts/banners/${slug}.webp`,
+    width: 1200,
+    height: 720,
+    alt: postData.title,
+  }
+
   return {
     title: postData.title,
     description: postData.description,
@@ -151,6 +158,26 @@ export async function generateMetadata({ params }) {
     ],
     alternates: {
       canonical: `/es/blog/${slug}`,
-    }
+    },
+    
+    // Open Graph metadata
+    openGraph: {
+      title: postData.title,
+      description: postData.description,
+      url: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/blog/${slug}`,
+      siteName: t('title'),
+      images: [image],
+      locale,
+      type: "website",
+    },
+
+    // Twitter metadata
+    twitter: {
+      card: "summary_large_image",
+      title: postData.title,
+      description: postData.description,
+      images: [image],
+      creator: "@DeveloperDari",
+    },
   }
 }
