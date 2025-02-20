@@ -21,6 +21,35 @@ export default async function PostPage({ params }) {
     notFound()
   }
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    'headline': postData.title,
+    'description': postData.description,
+    'datePublished': postData.date,
+    'author': {
+      '@type': 'Person',
+      'name': postData.author,
+    },
+    'keywords': postData.keywords,
+    'publisher': {
+      '@type': 'Organization',
+      'name': postData.author,
+      'logo': {
+        '@type': 'ImageObject',
+        'url': `${process.env.NEXT_PUBLIC_SITE_URL}/images/logo.webp`,
+      },
+    },
+    'mainEntityOfPage': {
+      '@type': 'WebPage',
+      '@id': `${process.env.NEXT_PUBLIC_SITE_URL}/es/blog/${slug}`,
+    },
+    'image': {
+      '@type': 'ImageObject',
+      'url': `${process.env.NEXT_PUBLIC_SITE_URL}/images/posts/banners/${slug}.webp`,
+    },
+  }
+
 
   return (
     <section
@@ -30,6 +59,12 @@ export default async function PostPage({ params }) {
         max-w-6xl
       `}
     >
+      {/* Render json ld */}
+      <script 
+        type="application/ld+json" 
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Post banner */}
       <Image
         src={`/images/posts/banners/${postData.slug}.webp`}
@@ -115,7 +150,7 @@ export async function generateMetadata({ params }) {
       { "name": postData.author }
     ],
     alternates: {
-        canonical: `/es/blog/${slug}`,
+      canonical: `/es/blog/${slug}`,
     }
   }
 }

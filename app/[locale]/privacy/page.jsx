@@ -1,5 +1,4 @@
 // Libs
-import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import { getDocData } from '@/libs/docs'
 
@@ -17,6 +16,7 @@ export default async function PrivacyNotice({ params }) {
   const { locale } = await params
   const docData = await getDocData(locale, 'privacy-notice')
 
+
   return (
     <section
       className={`
@@ -25,6 +25,7 @@ export default async function PrivacyNotice({ params }) {
         mx-auto
       `}
     >
+
       <Title
         isH1={true}
         className={`

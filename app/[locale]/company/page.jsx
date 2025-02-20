@@ -1,5 +1,6 @@
 // libs
 import { getTranslations } from 'next-intl/server'
+import { useTranslations } from 'next-intl'
 
 // Components
 import HeroImageCompany from '@/components/ui/anim-images/HeroImageCompany'
@@ -12,16 +13,41 @@ import TabsCompany from '@/components/layouts/TabsCompany'
 import Profits from '@/components/layouts/Profits'
 import Testimonials from '@/components/layouts/Testimonials'
 
+// Current page slug
+const page = "company"
+
 
 export default function CompanyPage() {
+
+  const tMeta = useTranslations('Meta')
+
+  // Metadata
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": tMeta(`${page}.title`),
+    "url": `${process.env.NEXT_PUBLIC_SITE_URL}/es/${page}`,
+    "description": tMeta(`${page}.description`),
+    "publisher": {
+      "@type": "Organization",
+      "name": tMeta('author'),
+    }
+  }
+
   return (
     <>
-      <Hero langKey="CompanyPage" HeroImage={HeroImageCompany}/>
+      {/* Render json ld */}
+      <script 
+        type="application/ld+json" 
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      <Hero langKey="CompanyPage" HeroImage={HeroImageCompany} />
       <WhyUs />
       <TabsCompany />
       <Profits />
-      <Products productsFilter="company"/>
-      <Testimonials testimonialsFilter="company"/>
+      <Products productsFilter="company" />
+      <Testimonials testimonialsFilter="company" />
     </>
   )
 }

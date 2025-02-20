@@ -12,12 +12,45 @@ import Title from '@/components/ui/Title'
 import ArrowSvg from '@/components/icons/ArrowSvg'
 import PostMeta from '@/components/ui/PostMeta'
 
+// Current page slug
+const page = "blog"
+
+
 export default function BlogPage() {
 
   const allPostsData = getSortedPostsData()
 
   // Get translations
   const t = useTranslations(`Blog`)
+  const tMeta = useTranslations('Meta')
+
+  // Metadata
+  // Auto generate post for breadcrumbs
+  const breadcrumbList = []
+  for (const postData of allPostsData) {
+    breadcrumbList.push({
+      "@type": "ListItem",
+      "position": breadcrumbList.length + 1,
+      "name": postData.title,
+      "item": `${process.env.NEXT_PUBLIC_SITE_URL}/es/blog/${postData.slug}`
+    })
+  }
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": tMeta(`${page}.title`),
+    "url": `${process.env.NEXT_PUBLIC_SITE_URL}/es/${page}`,
+    "description": tMeta(`${page}.description`),
+    "publisher": {
+      "@type": "Organization",
+      "name": tMeta('author'),
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [...breadcrumbList]
+    },
+  }
 
   return (
     <section
@@ -26,6 +59,12 @@ export default function BlogPage() {
         mx-auto
       `}
     >
+      {/* Render json ld */}
+      <script 
+        type="application/ld+json" 
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div
         className={`
           title
