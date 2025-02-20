@@ -1,5 +1,6 @@
 // Libs
-import { getAllPostSlugs, getPostData } from '@/libs/posts'
+import { getPostData } from '@/libs/posts'
+import { notFound } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
 
 // Components
@@ -15,6 +16,10 @@ export default async function PostPage({ params }) {
   // Get post data
   const { slug } = await params
   const postData = await getPostData(slug)
+
+  if (!postData) {
+    notFound()
+  }
 
 
   return (
@@ -83,9 +88,23 @@ export default async function PostPage({ params }) {
 
 export async function generateMetadata({ params }) {
 
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'Meta' })
+
   // Get post data
   const { slug } = await params
-  const postData = await getPostData(slug)
+  let postData = await getPostData(slug)
+
+  // Default post data
+  if (!postData) {
+    postData = {
+      title: 'Post',
+      description: 'Post',
+      lang: 'es',
+      keywords: 'Post',
+      author: t('title'),
+    }
+  }
 
   return {
     title: postData.title,
