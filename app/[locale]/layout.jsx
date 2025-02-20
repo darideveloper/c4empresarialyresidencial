@@ -12,6 +12,7 @@ import { fontBody } from '@/libs/fonts'
 import Header from '@/components/layouts/Header'
 import Footer from '@/components/layouts/Footer'
 import AOSInit from '@/components/utils/AOSInit'
+import Script from 'next/script'
 
 // Css
 import '@/css/globals.sass'
@@ -47,6 +48,26 @@ export default async function LocaleLayout({ children, params }) {
         `}
       >
         <AOSInit />
+
+        {/* Google Tag Manager Script */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-9BB24K722L"
+        />
+        <Script
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-9BB24K722L');
+            console.log('Google Tag Manager is loaded');
+          `,
+          }}
+        />
+
+
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main>
