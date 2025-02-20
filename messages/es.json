@@ -720,7 +720,8 @@
             "question": "¿Cuentas con cámaras de seguridad instaladas?",
             "options": {
               "yes": "Sí, solo quiero monitoreo",
-              "no": "No, quiero instalación también"
+              "no": "No, quiero instalación también",
+              "maintenance": "Solo quiero mantenimiento"
             }
           }
         },

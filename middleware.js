@@ -31,6 +31,7 @@ export default async function middleware(request) {
 
       const data = await authResponse.json()
       const token = data.data.token
+      console.log({ data, token})
 
       const responseWithCookie = NextResponse.next()
       responseWithCookie.cookies.set('Authorization', `Token ${token}`, { httpOnly: true })

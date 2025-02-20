@@ -12,7 +12,7 @@ export const defaultInitState = {
   users: [],
   rooms: 1,
   monitoring: [],
-  hasCameras: true,
+  hasCameras: "",
 }
 
 export const createQuoteFormStore = (initState = defaultInitState) => {

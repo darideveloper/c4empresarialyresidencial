@@ -45,12 +45,16 @@ export default function CompanyDetails() {
   
   const alreadyCamerasOptions = [
     {
-      value: true,
+      value: "yes",
       label: t('alreadyCameras.options.yes')
     },
     {
-      value: false,
+      value: "no",
       label: t('alreadyCameras.options.no')
+    },
+    {
+      value: "maintenance",
+      label: t('alreadyCameras.options.maintenance')
     }
   ]
 
