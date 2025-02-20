@@ -1,109 +1,186 @@
 {
   "Meta": {
-    "title": "C4 Empresarial and Residential",
-    "description": {
-      "home": "We offer customized security solutions for homes and businesses in Mérida, Yucatán, with high-definition cameras and professional monitoring.",
-      "company": "Protect your business with our customized security solutions in Mérida, Yucatán, with high-definition cameras and professional monitoring.",
-      "residential": "Protect your home with our customized security solutions in Mérida, Yucatán, with high-definition cameras and professional monitoring.",
-      "quote": "Request a quote for your home or business in Mérida, Yucatán, with high-definition cameras and professional monitoring."
+    "title": "C4 Business and Residential",
+    "home": {
+      "description": "Protect your home or business in Mérida, Yucatán, with high-definition cameras and professional monitoring."
+    },
+    "company": {
+      "title": "Businesses",
+      "description": "Protect your business in Mérida, Yucatán, with high-definition cameras and professional monitoring."
+    },
+    "residential": {
+      "title": "Residential",
+      "description": "Protect your home in Mérida, Yucatán, with high-definition cameras and professional monitoring."
+    },
+    "quote": {
+      "title": "Quote",
+      "description": "Request a quote for your home or business in Mérida, Yucatán, with high-definition cameras and professional monitoring."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Discover the latest tips and updates on security in Mérida, Yucatán, with high-definition cameras and professional monitoring."
+    },
+    "privacy": {
+      "title": "Privacy Notice",
+      "description": "Learn about our privacy policy and how we protect your data at C4 Business and Residential."
     },
     "keywords": "security, security cameras, monitoring, Mérida, Yucatán, protection, high-definition cameras, alarms, access control",
-    "author": "C4 Empresarial and Residential"
+    "author": "C4 Business and Residential"
   },
   "General": {
     "Products": {
       "title": "Comprehensive Protection for Your Peace of Mind",
-      "altPrefix": "Product Photo",
+      "altPrefix": "Product photo",
       "categories": {
-        "camera": {
-          "title": "High-Definition Cameras",
-          "description": "Discreet and effective surveillance for indoor and outdoor use, adaptable to any environment.",
+        "detection": {
+          "title": "Alarms, security cameras, and motion sensors",
+          "description": "High-definition cameras and motion sensors to detect any suspicious activity in your home or business.",
           "products": {
-            "camera1": {
-              "name": "1080p Security Camera",
-              "description": "High-definition security camera with night vision and motion detection.",
-              "filter": "residential"
-            },
-            "camera2": {
-              "name": "4K Security Camera",
-              "description": "Ultra high-definition security camera with night vision and motion detection.",
+            "detection1": {
+              "name": "DAHUA SD22204DB-GNY",
+              "description": "PTZ camera with 4x zoom, facial detection, and IK10 vandal-proof protection, ideal for outdoor monitoring with low lighting thanks to Starlight technology.",
               "filter": "company"
             },
-            "camera3": {
-              "name": "1080p Security Camera",
-              "description": "High-definition security camera with night vision and motion detection.",
+            "detection2": {
+              "name": "DAHUA SD49825GB-HNR",
+              "description": "PTZ camera with 25x zoom, facial detection, and perimeter protection, ideal for high-precision outdoor monitoring, even in low-light conditions thanks to Starlight technology.",
               "filter": "all"
             },
-            "camera4": {
-              "name": "4K Security Camera",
-              "description": "Ultra high-definition security camera with night vision and motion detection.",
+            "detection3": {
+              "name": "DAHUA DH-SD8A3440GA-HNV",
+              "description": "PTZ camera with 40x zoom, IR night vision up to 500m, facial detection, and perimeter protection, ideal for high-precision outdoor monitoring in extreme conditions.",
+              "filter": "company"
+            },
+            "detection4": {
+              "name": "TP-LINK TAPO C425",
+              "description": "Wireless WiFi camera with up to 300 days of battery life. Color night vision, intelligent detection with AI, and a 150° field of view. Weatherproof (IP66), compatible with Alexa and Google Home. Local or cloud storage with TAPO CARE.",
               "filter": "residential"
             },
-            "camera5": {
-              "name": "4K Security Camera",
-              "description": "Ultra high-definition security camera with night vision and motion detection.",
+            "detection5": {
+              "name": "TP-LINK TAPO D130",
+              "description": "5MP wired video doorphone with color night vision, intelligent AI detection, and two-way audio. Weatherproof (IP65) and compatible with Alexa and Google Home. Local or cloud storage (Tapo Care), and 180° field of view.",
+              "filter": "residential"
+            },
+            "detection6": {
+              "name": "TP-LINK - Tapo T100",
+              "description": "Detects motion up to 7 meters with a 120° angle. Works with other Tapo devices, triggering alarms or lights automatically. Adjustable sensitivity with 3 levels, CR2450 battery for 2 years of use, and easy installation with 3M adhesive or magnet. Compatible only with Tapo Hub.",
+              "filter": "residential"
+            },
+            "detection7": {
+              "name": "TP-Link Tapo C720",
+              "description": "Outdoor camera with 2800-lumen spotlights, 2K QHD vision, and intelligent AI detection. Weatherproof (IP65), compatible with Alexa and Google Home. Local or cloud storage (Tapo Care). Customizable activity zones and alarms.",
+              "filter": "all"
+            },
+            "detection8": {
+              "name": "DAHUA DHI-TPC-SD5441-B35Z45-BM-S24",
+              "description": "Hybrid IP camera with thermal and visible 4MP lens, 45x optical zoom, IR up to 100m, and AI functions like boat, smoke, and intrusion detection. Weatherproof (IP66) and thermal-visible image fusion. Perfect for surveillance in low light or darkness.",
+              "filter": "company"
+            },
+            "detection9": {
+              "name": "DAHUA SD6AL445GB-HNV",
+              "description": "4MP IP PTZ camera with 45x zoom and laser light up to 550m. Starlight technology, Auto Tracking 3.0, and intelligent motion detection. Weatherproof and dustproof (IP67). Ideal for outdoor security.",
               "filter": "company"
             }
           }
         },
-        "security": {
-          "title": "Smart Alert Systems",
-          "description": "Advanced alarms that detect and notify suspicious activities in real-time.",
+        "ip": {
+          "title": "IP Cameras",
+          "description": "High-resolution cameras, night vision, facial detection, and intelligent analysis, ideal for commercial, residential, and mobile environments. Durable, with local storage and advanced technologies for efficient and reliable surveillance.",
           "products": {
-            "security1": {
-              "name": "Residential Alarm System",
-              "description": "Wireless alarm system with motion sensors and remote control.",
-              "filter": "residential"
-            },
-            "security2": {
-              "name": "Business Alarm System",
-              "description": "Alarm system with 24/7 monitoring and real-time notifications.",
-              "filter": "company"
-            },
-            "security3": {
-              "name": "Residential Alarm System",
-              "description": "Wireless alarm system with motion sensors and remote control.",
+            "ip1": {
+              "name": "DAHUA DH-IPC-HDW5449TM-SE-LED-0280B",
+              "description": "4MP Full Color camera, night vision, 2.8 mm lens, and 135° field of view. Features H.265, WizMind, AcuPick, facial detection, people counting, microphone, 30m range, and IP67. Includes Micro SD slot, ePoE technology, and SMD 3.0 for precise detection.",
               "filter": "all"
             },
-            "security4": {
-              "name": "Business Alarm System",
-              "description": "Alarm system with 24/7 monitoring and real-time notifications.",
+            "ip2": {
+              "name": "DAHUA DH-SDT4E425-8P-GB-APV1",
+              "description": "8MP + 4MP PTZ IP camera with 25X optical zoom and night vision up to 100m. Features Autotracking 3.0, perimeter protection, SMD 4.0, and active deterrence with lights and alarms. Equipped with WDR, IP66 certification, ideal for demanding environments.",
+              "filter": "company"
+            },
+            "ip3": {
+              "name": "DAHUA IPC-HFW5241E-Z12E",
+              "description": "2MP Bullet IP camera with AI, including facial detection and people counting. Its 5-60mm motorized lens and night vision up to 150m make it perfect for perimeter monitoring in any condition. Weatherproof (IP67/IK10) and compatible with alarm and audio systems, providing intelligent and reliable monitoring.",
+              "filter": "company"
+            },
+            "ip4": {
+              "name": "DAHUA IPC-MW1230DN-HM12",
+              "description": "2MP mobile IP camera designed for vehicles, with 2.8mm lens and IR night vision up to 30m. Vibration, shock, and extreme condition resistant (IP6K9K), ideal for monitoring trains, buses, and other vehicles, with support for high-pressure cleaning.",
               "filter": "residential"
             },
-            "security5": {
-              "name": "Business Alarm System",
-              "description": "Alarm system with 24/7 monitoring and real-time notifications.",
+            "ip5": {
+              "name": "DAHUA IPC-HDBW5241FN-M-DAE-SA-0210B",
+              "description": "2MP Dome IP camera with 2.1mm lens and 110° field of view, ideal for people counting in vehicles. Features 120dB WDR, 30m IR, IK10 and IP67 vandal-proof protection. Supports H.264+/H.265+ encoding and works in mobile environments like trains or buses. Includes facial detection and people counting.",
+              "filter": "all"
+            },
+            "ip6": {
+              "name": "DAHUA IPC-HDBW5241FN-M-DAE-SA-0280B",
+              "description": "2MP camera designed for mobile environments like trains and buses. Includes facial detection, people counting, and IP67, IK10 protection. Its 2.8mm lens offers wide vision and night vision up to 30m. Supports microSD storage and is compatible with platforms like DMSS and CMS.",
+              "filter": "all"
+            },
+            "ip7": {
+              "name": "DAHUA DH-IPC-HDW8441X-3D-0280B",
+              "description": "This IP camera is ideal for people counting and crowd management. Offers 3MP resolution, 2.8mm lens, H.265 compression, and IP67 and IK10 protection. Supports PoE and local storage on microSD card up to 256GB, perfect for monitoring commercial spaces and events.",
               "filter": "company"
+            },
+            "ip8": {
+              "name": "DAHUA DH-IPC-HFW5442E-ZE",
+              "description": "4MP Bullet IP camera with motorized lens and infrared vision up to 60 meters. Supports PoE and local microSD storage up to 256GB. Durable with IP67 and IK10, ideal for outdoor use. Includes advanced technologies like facial detection and people counting.",
+              "filter": "all"
+            },
+            "ip9": {
+              "name": "DAHUA DH-DAE-CPC5241FPN-0280B",
+              "description": "2MP Dome IP camera with 2.8mm lens and 20m night vision. Ideal for people counting in vehicles, with 120dB WDR and IK10 vandal-proof protection. Resistant to harsh conditions with IP67 rating. Compatible with mobile NVRs.",
+              "filter": "residential"
             }
           }
         },
-        "control": {
-          "title": "Total Remote Control",
-          "description": "Remote access to your security system from any device, anytime.",
+        "dvr": {
+          "title": "NVRs and DVRs",
+          "description": "Range of high-resolution NVRs (up to 4K) with advanced features such as facial recognition, perimeter protection, and intelligent compression. Ideal for residential and commercial installations, offering flexible storage and remote monitoring.",
           "products": {
-            "control1": {
-              "name": "Residential Access Control",
-              "description": "Access control with smart locks and real-time notifications.",
+            "dvr1": {
+              "name": "Bundle BuenFin1 NVR+2BulletIP",
+              "description": "4-channel NVR with two 2MP cameras, night vision up to 30 meters, ideal for small installations. Waterproof and dustproof, perfect for both indoor and outdoor use, with easy installation and remote monitoring.",
               "filter": "residential"
             },
-            "control2": {
-              "name": "Business Access Control",
-              "description": "Access control with proximity cards and real-time monitoring.",
+            "dvr2": {
+              "name": "AHUA DHI-NVR5864-16P-EI",
+              "description": "This NVR supports up to 64 4K IP cameras, with 16 PoE ports for simplified installation. Includes advanced AI features such as facial recognition and perimeter protection, ideal for large security installations.",
               "filter": "company"
             },
-            "control3": {
-              "name": "Residential Access Control",
-              "description": "Access control with smart locks and real-time notifications.",
+            "dvr3": {
+              "name": "DAHUA NVR616-64-4KS2",
+              "description": "64-channel network recorder with 4K support, H.265/H.264 compression, and 384 Mbps recording. Includes DEWARP function for fisheye cameras and two HDMI outputs, ideal for large video surveillance systems.",
+              "filter": "company"
+            },
+            "dvr4": {
+              "name": "DAHUA NVR4232-4KS2/L",
+              "description": "32-channel 4K recorder, with H.265 compression, SMD Plus, and facial recognition. Compatible with ONVIF cameras and disks up to 10 TB. Ideal for advanced video surveillance.",
               "filter": "all"
             },
-            "control4": {
-              "name": "Business Access Control",
-              "description": "Access control with proximity cards and real-time monitoring.",
+            "dvr5": {
+              "name": "DAHUA DHI-NVR5216-8P-I/L",
+              "description": "32-channel 4K recorder, with H.265 compression, SMD Plus, and facial recognition. Compatible with ONVIF cameras and disks up to 10 TB. Ideal for advanced video surveillance.",
+              "filter": "company"
+            },
+            "dvr6": {
+              "name": "DAHUA NVR4216-4KS2/L",
+              "description": "8MP 16-channel NVR with 4K resolution, Smart H.265+ compression, SMD Plus intelligent motion detection, HDMI and VGA outputs, and support for up to 10 TB hard drives. Ideal for advanced video surveillance with real-time analysis.",
               "filter": "residential"
             },
-            "control5": {
-              "name": "Business Access Control",
-              "description": "Access control with proximity cards and real-time monitoring.",
+            "dvr7": {
+              "name": "DAHUA NVR1104HS-P-S3/H",
+              "description": "4-channel IP NVR with support for ONVIF and RTSP cameras, Smart H.265+ and H.264 compression, 4 PoE ports, HDMI and VGA output (1080P resolution), and up to 8TB storage. Ideal for low-power video surveillance and easy installation.",
+              "filter": "residential"
+            },
+            "dvr8": {
+              "name": "VIVOTEK NR9782-v2",
+              "description": "128-channel NVR with 16 bays, 512 Mbps recording, and support for H.265/H.264. Includes VAST 2, Smart Search II, and cybersecurity management, ideal for large installations.",
+              "filter": "company"
+            },
+            "dvr9": {
+              "name": "DAHUA NVR5216-16P-EI",
+              "description": "16-channel IP NVR with PoE, H.265+/H.265 recording, 384 Mbps bandwidth. Includes AI features like facial recognition and perimeter protection, compatible with cameras and VMS systems. Supports up to 2 disks of 20 TB and up to 16 channels at 1080p or 4 MP.",
               "filter": "company"
             }
           }
@@ -112,10 +189,10 @@
     },
     "Contact": {
       "socials": {
-        "title": "Follow Us on Social Media",
+        "title": "Follow Us on Our Social Media",
         "iconsTitle": "Follow us on",
-        "text": "Stay updated with our latest offers and security tips by following us on social media. We're here to help!",
-        "imgAlt": "Illustration of person assisting customers"
+        "text": "Stay up to date with our latest offers and security tips by following our social media. We're here to help!",
+        "imgAlt": "Illustration of a person assisting clients"
       },
       "form": {
         "title": "Contact Us",
@@ -123,35 +200,41 @@
           "name": {
             "label": "Name",
             "placeholder": "Miguel Pérez",
-            "errorMessage": "Please enter your name"
+            "errorMessage": "Enter your name"
           },
           "email": {
-            "label": "Email",
+            "label": "Email Address",
             "placeholder": "sample@email.com",
-            "errorMessage": "Please enter a valid email address"
+            "errorMessage": "Enter a valid email address"
           },
           "phone": {
             "label": "Phone",
             "placeholder": "52 999 123 4567",
-            "errorMessage": "Please enter a valid phone number"
+            "errorMessage": "Enter a valid phone number"
           },
           "address": {
             "label": "Address",
-            "placeholder": "123 Main Street, Downtown",
-            "errorMessage": "Please enter your address"
+            "placeholder": "Calle 60 #123, Colonia Centro",
+            "errorMessage": "Enter your address"
+          },
+          "privacy": {
+            "label": {
+              "pre": "I have read and agree to the",
+              "link": "privacy notice"
+            },
+            "errorMessage": "You must accept the privacy notice"
           }
         },
-        "submit": "Submit",
-        "successMessage": "Thank you for contacting us! We will get back to you as soon as possible."
+        "submit": "Send"
       },
       "messages": {
         "error": {
-          "title": "Form Unavailable",
+          "title": "Form Not Available",
           "text": "The contact form is not available at the moment. Please try again later.",
           "confirmButtonText": "Understood"
         },
         "success": {
-          "title": "Thank You for Contacting Us!",
+          "title": "Thank you for contacting us!",
           "text": "We will get in touch with you as soon as possible.",
           "confirmButtonText": "Understood"
         }
@@ -164,8 +247,16 @@
         "residential": "Residential",
         "profits": "Benefits",
         "contact": "Contact Us",
-        "quote": "Request a Quote"
+        "quote": "Get a Quote",
+        "blog": "Blog"
       }
+    },
+    "Langs": {
+      "es": "Spanish",
+      "en": "English"
+    },
+    "Footer": {
+      "privacy": "Privacy Notice"
     }
   },
   "HomePage": {
@@ -175,26 +266,27 @@
         "afterText": "Security in Mérida, Yucatán"
       },
       "cta": "Request a Quote",
-      "imgAlt": "Illustration of a person managing home security",
+      "imgAlt": "Illustration of a person managing their home security",
       "text": {
         "beforeText": "At",
-        "afterText": "we specialize in offering tailored security solutions for homes and businesses in Mérida, Yucatán. With a wide range of security cameras and professional monitoring services, we're here to protect what you value most."
-      }
+        "afterText": "we specialize in providing tailored security solutions for homes and businesses in Mérida, Yucatán. With a wide range of security cameras and professional monitoring services, we are here to protect what you value most."
+      },
+      "text2": ""
     },
     "WhyUs": {
       "title": "Why Choose Us?",
       "cards": {
         "tech": {
           "title": "Advanced Technology",
-          "description": "Our cameras are equipped with the latest in video surveillance technology, ensuring clear and sharp images even in low-light conditions."
+          "description": "Our security cameras in Mérida are equipped with the latest surveillance technology, ensuring clear and sharp images, even in low light conditions."
         },
         "monitoring": {
           "title": "24/7 Monitoring",
-          "description": "We offer continuous monitoring services, ensuring your property is protected at all times. Our team is ready to respond to any incident."
+          "description": "We offer continuous monitoring services, ensuring your property is protected at all times. Our team is ready to respond to any eventuality."
         },
         "installation": {
-          "title": "Professional Installation",
-          "description": "Our highly trained technicians ensure fast and efficient installation, positioning each camera to maximize its effectiveness."
+          "title": "Professional Security System Installation",
+          "description": "We have highly trained technicians who perform the installation quickly and efficiently, ensuring each camera is positioned to maximize its effectiveness."
         }
       }
     },
@@ -208,7 +300,7 @@
         },
         "company": {
           "text": "Business",
-          "textHover": "Enhance your business security",
+          "textHover": "Increase your business's security",
           "imgAlt": "Illustration of an office building"
         }
       }
@@ -217,104 +309,106 @@
       "title": "Find the Perfect Solution for Your Home",
       "tabs": {
         "house": {
-          "tabName": "Single-Family Home",
+          "tabName": "Single Family House",
           "title": "Protection at the Right Time",
-          "text": "Maria, worried about strange movements near her house and her family's safety, contacted our company. Within 48 hours, we installed cameras with night vision and remote monitoring. One night, the cameras detected an intruder. Thanks to the alert, Maria called the authorities, and now she lives peacefully and securely.",
-          "ctaText": "Request a Free Evaluation"
+          "text": "Maria, worried about strange movements near her house and the safety of her family, contacted our company. Within 48 hours, we installed cameras with night vision and remote monitoring, which one night detected an intruder. Thanks to the alert, Maria called the authorities and now lives peacefully and protected.",
+          "ctaText": "Request a Free Assessment"
         },
         "apartment": {
           "tabName": "Apartment",
-          "title": "Personalized Surveillance for Apartments",
-          "text": "Carlos lived in an apartment and noticed packages disappearing from the entrance. We strategically installed cameras in common areas and access points. A week later, the cameras identified the culprit, and with the evidence, management took action. Now, all residents enjoy greater security.",
-          "ctaText": "Request a Free Evaluation"
+          "title": "Personalized Monitoring for Apartments",
+          "text": "Carlos lived in an apartment and noticed packages disappearing from the entrance. We installed strategic cameras in common areas and access points. A week later, the security system identified the culprit, and with the evidence, the management took action. Now, all residents enjoy greater security.",
+          "ctaText": "Request a Free Assessment"
         },
         "residential": {
-          "tabName": "Private and Residential Communities",
-          "title": "Comprehensive Protection for Residential Areas",
-          "text": "In a private community, neighbors reported car thefts. We designed a camera system for entrances, common areas, and interested homes. One night, the cameras caught a theft attempt, and the alert prevented the incident. Since then, the community has felt safer.",
-          "ctaText": "Request a Free Evaluation"
+          "tabName": "Gated Communities and Residences",
+          "title": "Comprehensive Protection for Residences",
+          "text": "In a gated community, neighbors were reporting car thefts. We designed a security system with alarms and cameras for entrances, common areas, and each interested house. One night, the cameras captured a theft attempt, and the alert prevented the incident. Since then, the community lives more peacefully.",
+          "ctaText": "Request a Free Assessment"
         },
         "hightValue": {
-          "tabName": "High-Value Homes",
+          "tabName": "High Value Homes",
           "title": "Exclusive Care for Luxury Homes",
-          "text": "Maria, worried about strange movements near her house and her family's safety, contacted our company. Within 48 hours, we installed cameras with night vision and remote monitoring. One night, the cameras detected an intruder. Thanks to the alert, Maria called the authorities, and now she lives peacefully and securely.",
-          "ctaText": "Request a Free Evaluation"
+          "text": "Mariana lived in a house with high-value items, but she knew her home needed more protection. She decided to contact us to install security equipment in her Mérida home. Since the installation of the cameras and the monitoring system, she has gained peace of mind knowing her property is constantly monitored. Now, she feels safer, confident that she made the best decision to protect her assets.",
+          "ctaText": "Request a Free Assessment"
         }
       }
     },
     "TabsCompany": {
       "title": "Find the Perfect Solution for Your Business",
+      "text1": "Security cameras in businesses offer multiple benefits beyond simple surveillance. Here are some of the key functions the security system serves in a commercial environment.",
+      "text2": "Criminals or dishonest workers are less likely to act if they know they are being recorded, as they have managed to evade human supervision.",
       "tabs": {
         "restaurant": {
           "tabName": "Restaurants",
-          "title": "Monitoring of Long-Time Employees in Restaurant Chains",
-          "text": "These employees tend to take goods through unnoticed routines initially but are discovered through repeated suspicious behaviors. Our task is to monitor these behaviors until the misconduct is caught red-handed.",
+          "title": "Employee Supervision in Restaurant Chains",
+          "text": "Employees may steal merchandise and not be seen at first, but they are discovered through frequent incidents that raise suspicions. We monitor these behaviors until we capture the moment of theft.",
           "ctaText": "Request a Quote for My Restaurant"
         },
         "cash": {
-          "tabName": "Pawnshops",
-          "title": "Monitoring in Pawnshops Where Employees and Clients Commit Theft",
-          "text": "This crime can occur through price changes by employees and involves both dishonest customers and sellers. Our task is to monitor these behaviors until the misconduct is caught red-handed.",
-          "ctaText": "Request a Quote for My Pawnshop"
+          "tabName": "Pawn Shops",
+          "title": "Security Systems in Pawn Shops Against Theft",
+          "text": "This crime can be committed through price changes by employees and involves both customers and sellers in this dishonest practice. Our job is to monitor these behaviors until the misconduct is caught in the act.",
+          "ctaText": "Request a Quote for My Pawn Shop"
         },
         "retail": {
-          "tabName": "Retail",
-          "title": "Monitoring Employees and Customers in Retail Stores",
-          "text": "Retail stores are often vulnerable to internal and external theft. Our team focuses on identifying employees engaging in dishonest actions, such as inventory mismanagement, and monitoring customers with suspicious behavior. We ensure evidence is gathered in each case to protect your assets and maintain the proper flow of your operations.",
-          "ctaText": "Request a Quote for My Retail Store"
+          "tabName": "Retail Stores",
+          "title": "Monitoring of Customers and Employees in Retail Stores",
+          "text": "Stores are often vulnerable to both internal and external theft. Our team focuses on identifying employees who may engage in unethical practices, such as mishandling inventories, and monitoring customers with suspicious behaviors. We ensure evidence collection in each case to protect your assets and maintain the proper flow of your business operations.",
+          "ctaText": "Request a Quote for My Store"
         },
         "hotel": {
           "tabName": "Hotels",
           "title": "Comprehensive Security for the Hospitality Sector",
-          "text": "We provide surveillance in common areas, parking lots, and sensitive zones such as storage rooms or cash registers. These areas are often targeted for dishonest actions that can compromise the safety and experience of your guests. Our team implements measures to identify risk patterns and protect your facilities continuously.",
+          "text": "We provide surveillance in common areas, parking lots, and sensitive areas such as storage rooms or cash registers. These areas are often targets for malicious actions that can compromise the security and experience of your customers. Our team implements measures like CCTV (Closed Circuit TV), alarms, and security cameras to identify risk patterns and protect your facilities in Mérida consistently.",
           "ctaText": "Request a Quote for My Hotel"
         },
         "industry": {
           "tabName": "Industries",
           "title": "Monitoring Critical Areas in Plants and Factories",
-          "text": "We safeguard your facilities and machinery with high-precision cameras designed to capture suspicious activity in real time. Our approach includes supervising restricted access areas, monitoring sensitive materials, and detecting unauthorized behavior that could compromise your production continuity.",
+          "text": "We protect your facilities and machinery in Yucatán with high-precision cameras, designed to capture suspicious activity in real-time. Our approach includes monitoring restricted access areas, overseeing sensitive materials, and detecting unauthorized behaviors that may compromise the continuity of your production.",
           "ctaText": "Request a Quote for My Plant or Factory"
         },
         "offices": {
           "tabName": "Offices",
           "title": "Access Control and Monitoring in Corporate Offices",
-          "text": "We implement security systems that ensure the protection of your employees, visitors, and business assets. From monitoring servers and confidential files to controlling access in strategic areas, our service provides a safe work environment by identifying and preventing potential risks.",
+          "text": "We implement security systems that ensure the protection of your employees, visitors, and business assets. From monitoring servers and confidential files to controlling access in strategic areas, our service ensures a safe working environment, identifying and preventing potential risks.",
           "ctaText": "Request a Quote for My Office"
         },
         "education": {
           "tabName": "Education",
           "title": "Protection for Schools and Universities",
-          "text": "We ensure surveillance in educational facilities by supervising access points, common areas, and spaces such as laboratories or recreational zones. Our focus is on preventing incidents and guaranteeing a safe environment for both students and academic staff, adapting to each institution's specific needs.",
+          "text": "We ensure surveillance in educational facilities, monitoring access points, common areas, and spaces like laboratories or recreational zones. Our approach focuses on preventing incidents and ensuring a safe environment for both students and academic staff, adapting to the specific needs of each institution.",
           "ctaText": "Request a Quote for My Educational Institution"
         },
         "construction": {
           "tabName": "Construction",
-          "title": "Monitoring Construction Sites and Projects",
-          "text": "We install specialized cameras to prevent theft of materials and machinery at construction sites. Additionally, we monitor real-time activity to detect unusual behaviors or risks that might delay your project's progress, ensuring everything stays on track.",
+          "title": "Monitoring at Construction Sites",
+          "text": "We install specialized cameras to prevent theft of materials and machinery at construction sites. Additionally, we monitor activity in real-time, detecting unusual behaviors or risks that may delay the progress of your project, ensuring everything proceeds as planned.",
           "ctaText": "Request a Quote for My Construction Project"
         },
         "transport": {
           "tabName": "Transport and Logistics",
-          "title": "Security for Stations and Transport Fleets",
-          "text": "We provide strategic surveillance in stations, terminals, and moving vehicles. Our system includes real-time monitoring to protect both passengers and goods during transit, preventing vandalism, theft, or any incident that compromises safety.",
-          "ctaText": "Request a Quote for My Transportation Business"
+          "title": "Security for Transport Stations and Fleets",
+          "text": "We provide strategic surveillance at stations, terminals, and moving vehicles. Our system includes real-time monitoring to protect both passengers and goods during transit, preventing acts of vandalism, theft, or any incident that compromises security.",
+          "ctaText": "Request a Quote for My Transport Business"
         },
         "government": {
           "tabName": "Government",
-          "title": "Security in Government Offices and Infrastructure",
-          "text": "We ensure monitoring in public buildings and critical areas such as essential service plants, workstations, and high-traffic spaces. Our focus is on identifying potential threats and preventing vandalism, ensuring the continuity and safety of governmental operations.",
+          "title": "Security for Government Offices and Infrastructure",
+          "text": "We guarantee monitoring in public buildings and critical areas like essential services plants, workstations, and high-traffic spaces. We focus on identifying potential threats and preventing vandalism, ensuring the continuity and security of government operations.",
           "ctaText": "Request a Quote for My Government Entity"
         },
         "entertainment": {
           "tabName": "Entertainment",
           "title": "Surveillance for Cinemas, Theaters, and Gyms",
-          "text": "We ensure protection in recreational and cultural spaces through monitoring systems designed to oversee both customer and staff areas. Our approach includes supervising sensitive points such as ticket offices, storage rooms, and restricted accesses to prevent incidents that could affect your business operations.",
+          "text": "We ensure protection in recreational and cultural spaces through monitoring systems designed to oversee both customer and staff areas. Our approach includes supervision in sensitive points like box offices, storage rooms, and restricted access, preventing incidents that could affect the operation of your business.",
           "ctaText": "Request a Quote for My Entertainment Business"
         },
         "finance": {
           "tabName": "Financial Sector",
           "title": "Security for Banks and Financial Offices",
-          "text": "We provide high-precision surveillance systems to protect sensitive areas like safes, ATMs, and confidential files. Additionally, we monitor in real time to identify any suspicious activity that could jeopardize the safety of your employees, clients, or financial assets.",
+          "text": "We provide high-precision surveillance systems to protect sensitive areas such as vaults, ATMs, and confidential files. Additionally, we monitor in real-time to identify any suspicious activity that may endanger the security of your employees, customers, or financial assets.",
           "ctaText": "Request a Quote for My Financial Institution"
         }
       }
@@ -324,36 +418,75 @@
       "cards": {
         "prevention": {
           "title": "Crime Prevention",
-          "description": "The visible presence of cameras deters criminals, reducing the risk of theft or vandalism."
+          "description": "The visible presence of cameras in Yucatán discourages criminals, reducing the risk of theft or vandalism."
         },
         "peace": {
           "title": "Peace of Mind",
-          "description": "Knowing your home or business is protected allows you to live and work with peace of mind."
+          "description": "The presence of CCTV (Closed Circuit TV) will give you peace of mind knowing your home or business in Mérida is protected, allowing you to live and work without worry."
         },
         "support": {
           "title": "Personalized Support",
-          "description": "Our team is available to answer your questions and adapt our services to your specific needs."
+          "description": "Our team is available to answer your questions and tailor our services to your specific needs."
         }
       }
     },
     "Testimonials": {
       "title": "Our Satisfied Clients",
-      "imagesAlt": "Photo of a client",
       "cards": {
-        "juan": {
-          "name": "Juan Pérez",
-          "charge": "Satisfied Client",
+        "carlos": {
+          "name": "Carlos Sánchez",
+          "charge": "Homeowner",
           "description": {
-            "beforeText": "Since I installed cameras from",
-            "afterText": ", I feel much safer. The monitoring service is exceptional."
+            "beforeText": "Since I installed the cameras from",
+            "afterText": "I feel much more at ease knowing that my home is protected. The installation was quick, and the 24/7 monitoring gives me the security I needed."
           }
         },
-        "maria": {
-          "name": "María López",
-          "charge": "Business Owner",
+        "laura": {
+          "name": "Laura González",
+          "charge": "Tenant",
           "description": {
-            "beforeText": "The installation was quick and professional. I recommend",
-            "afterText": "to all my friends and family."
+            "beforeText": "I was surprised by the quality of the cameras from",
+            "afterText": "and how easy it is to monitor everything. Without a doubt, investing in security was the best decision for my home."
+          }
+        },
+        "jose": {
+          "name": "José Martínez",
+          "charge": "Apartment Owner",
+          "description": {
+            "beforeText": "I received exceptional service from",
+            "afterText": "The cameras have clear images, even at night, and the notification system alerted me in time of a break-in attempt. I feel much safer now."
+          }
+        },
+        "ana": {
+          "name": "Ana Pérez",
+          "charge": "Homeowner",
+          "description": {
+            "beforeText": "",
+            "afterText": "provided us with very professional service. The 24-hour monitoring service gives us peace of mind, and the quality of the cameras is excellent. Highly recommended!"
+          }
+        },
+        "gerardo": {
+          "name": "Gerardo López",
+          "charge": "Restaurant Owner",
+          "description": {
+            "beforeText": "Installing security cameras in my restaurant was an excellent decision. The continuous monitoring allows me to maintain control over operations, and it has helped improve the safety of my staff and customers. I will definitely continue working with",
+            "afterText": ""
+          }
+        },
+        "carolina": {
+          "name": "Carolina Mendoza",
+          "charge": "Office Manager",
+          "description": {
+            "beforeText": "",
+            "afterText": "installed a video surveillance system for our office, and it has been amazing. The camera quality is excellent, and the support is always fast and professional."
+          }
+        },
+        "ricardo": {
+          "name": "Ricardo Álvarez",
+          "charge": "Store Owner",
+          "description": {
+            "beforeText": "Thanks to the monitoring service from",
+            "afterText": "I have been able to reduce internal theft and improve security in my store. Additionally, the remote monitoring system allows us to have full control over security, even when we're not on-site."
           }
         }
       }
@@ -363,34 +496,279 @@
     "Hero": {
       "title": {
         "beforeText": "Welcome to",
-        "afterText": "The Security Your Business Needs"
+        "afterText": "The security your business needs"
       },
-      "cta": "Get a Quote for Your Business",
-      "imgAlt": "Illustration of people in a business environment",
+      "cta": "Get a quote for your business",
+      "imgAlt": "Illustration of an office building",
       "text": {
         "beforeText": "At",
-        "afterText": "we specialize in providing tailored security solutions for businesses in Mérida, Yucatán. With a wide range of security cameras and professional monitoring services, we are here to protect what matters most to you."
-      }
+        "afterText": "we specialize in providing customized security equipment for businesses in Mérida, Yucatán. With a wide range of security cameras and professional monitoring services, we are here to protect your business and employees."
+      },
+      "text2": ""
     }
   },
   "ResidentialPage": {
     "Hero": {
       "title": {
         "beforeText": "Welcome to",
-        "afterText": "The Security Your Home Needs"
+        "afterText": "The security your home needs"
       },
-      "cta": "Get a Quote for Your Home",
+      "cta": "Get a quote for your home",
       "imgAlt": "Illustration of a person analyzing homes",
       "text": {
         "beforeText": "At",
-        "afterText": "we specialize in providing tailored security solutions for homes in Mérida, Yucatán. With a wide range of security cameras and professional monitoring services, we are here to protect what matters most to you."
+        "afterText": "we specialize in offering personalized security solutions for homes in Mérida, Yucatán. With a wide range of security cameras, CCTV (Closed-Circuit Television), and professional monitoring services, we are here to protect what matters most to you."
+      },
+      "text2": "Find the perfect solution for your home."
+    }
+  },
+  "QuotePage": {
+    "form": {
+      "title": "Quote your monitoring service",
+      "screens": {
+        "selectService": {
+          "title": "Select your service",
+          "description": "Choose the type of service to quote",
+          "options": {
+            "company": {
+              "text": "Business",
+              "textHover": "Quote security for your business",
+              "imgAlt": "Illustration of an office building"
+            },
+            "residential": {
+              "text": "Residential",
+              "textHover": "Quote security for your home",
+              "imgAlt": "Illustration of a house"
+            }
+          }
+        },
+        "contactInfo": {
+          "title": "Contact",
+          "description": "Provide your contact details"
+        },
+        "companySector": {
+          "title": "Business Information",
+          "description": "Choose your company's sector from the available options",
+          "sectors": {
+            "agriculture": "Agriculture",
+            "real-estate-and-rentals": "Real Estate and Rentals",
+            "retail-and-wholesale-trade": "Retail and Wholesale Trade",
+            "construction": "Construction",
+            "education": "Education",
+            "entertainment": "Entertainment",
+            "factories": "Factories",
+            "livestock": "Livestock",
+            "lodging": "Lodging and Hospitality",
+            "manufacturing-industry": "Manufacturing Industry",
+            "media": "Media",
+            "research-and-development": "Research and Development",
+            "maquiladoras": "Maquiladoras",
+            "mining": "Mining",
+            "fishing": "Fishing",
+            "shopping malls": "Shopping Malls",
+            "healthcare": "Healthcare",
+            "professional-and-cultural-services": "Cultural and Professional Services",
+            "financial-and-insurance-services": "Financial and Insurance Services",
+            "business-support": "Business Support Services",
+            "forestry": "Forestry",
+            "information-technology": "Information Technology",
+            "transportation-and-storage": "Transportation and Storage",
+            "other": "Other"
+          },
+          "imagesAlt": "Business sector image"
+        },
+        "companyEmployees": {
+          "title": "Company Size",
+          "description": "Select your company's employee range"
+        },
+        "features": {
+          "title": "Features you are interested in the service",
+          "description": "Select the features you are interested in your monitoring service",
+          "features": {
+            "monitoring": {
+              "title": "Real-time Monitoring",
+              "description": "24/7 surveillance with suspicious activity detection."
+            },
+            "notification": {
+              "title": "Notifications and Alerts",
+              "description": "Automatic notifications via SMS or email about incidents."
+            },
+            "storage": {
+              "title": "Recordings",
+              "description": "Cloud recordings with remote access and secure backup."
+            },
+            "reporting": {
+              "title": "Custom Reports",
+              "description": "Event reports and activity statistics."
+            },
+            "emergency": {
+              "title": "Emergency Response",
+              "description": "Contact with authorities and action protocols."
+            },
+            "tech": {
+              "title": "Advanced Technology",
+              "description": "AI for smart detection and HD/4K cameras."
+            },
+            "support": {
+              "title": "Customer Service",
+              "description": "24/7 support, training, and preventive maintenance."
+            },
+            "plans": {
+              "title": "Custom Plans",
+              "description": "Flexible options based on customer needs."
+            }
+          }
+        },
+        "residentialType": {
+          "title": "Residential Information",
+          "description": "Select the type of residence you want to protect",
+          "types": {
+            "apartment": "Apartment",
+            "cottage": "Cottage",
+            "townhouse": "Townhouse",
+            "single-family": "Single-family Home",
+            "port": "House by the port",
+            "condo": "Condominium",
+            "duplex": "Duplex",
+            "other": "Other"
+          }
+        },
+        "contact": {
+          "inputs": {
+            "company": {
+              "name": {
+                "label": "Company Name",
+                "placeholder": "My Company S.A. de C.V.",
+                "errorMessage": "Enter your company name"
+              },
+              "email": {
+                "label": "Company Email",
+                "placeholder": "sample@mycompany.com",
+                "errorMessage": "Enter a valid company email"
+              },
+              "phone": {
+                "label": "Company Phone",
+                "placeholder": "52 999 123 4567",
+                "errorMessage": "Enter a valid phone number"
+              },
+              "address": {
+                "label": "Company Address",
+                "placeholder": "Street 60 #123, Downtown",
+                "errorMessage": "Enter your company address"
+              }
+            },
+            "residential": {
+              "name": {
+                "label": "Name",
+                "placeholder": "Miguel Pérez",
+                "errorMessage": "Enter your name"
+              },
+              "email": {
+                "label": "Email",
+                "placeholder": "sample@email.com",
+                "errorMessage": "Enter a valid email"
+              },
+              "phone": {
+                "label": "Phone",
+                "placeholder": "52 999 123 4567",
+                "errorMessage": "Enter a valid phone number"
+              },
+              "address": {
+                "label": "Address",
+                "placeholder": "Street 60 #123, Downtown",
+                "errorMessage": "Enter your address"
+              }
+            }
+          },
+          "messages": {
+            "error": {
+              "title": "Form not available",
+              "text": "The quote form is not available at this moment. Please try again later.",
+              "confirmButtonText": "Understood"
+            },
+            "success": {
+              "title": "Thank you for submitting your details!",
+              "text": "We will contact you as soon as possible to provide more information.",
+              "confirmButtonText": "Understood"
+            }
+          }
+        },
+        "companyDetails": {
+          "title": "Company Details",
+          "description": "Provide information about your company",
+          "branches": {
+            "question": "How many branches does your company have?"
+          },
+          "wifi": {
+            "question": "Does your company have WiFi in its premises?",
+            "options": {
+              "yes": "Yes",
+              "no": "No"
+            }
+          },
+          "user": {
+            "question": "Who will use the monitoring system?",
+            "options": {
+              "owner": "Business Owner",
+              "manager": "Managers",
+              "employee": "Employees",
+              "family": "Family and trusted personnel",
+              "other": "Other"
+            }
+          },
+          "alreadyCameras": {
+            "question": "Do you already have security cameras installed?",
+            "options": {
+              "yes": "Yes, I only want monitoring",
+              "no": "No, I want installation as well",
+              "maintenance": "I only want maintenance"
+            }
+          }
+        },
+        "residentialDetails": {
+          "title": "Residential Details",
+          "description": "Provide information about your residence",
+          "rooms": {
+            "question": "How many rooms does your residence have?"
+          },
+          "wifi": {
+            "question": "Does your home have WiFi?",
+            "options": {
+              "yes": "Yes",
+              "no": "No"
+            }
+          },
+          "monitoring": {
+            "question": "What do you want to monitor?",
+            "options": {
+              "employees": "Service employees",
+              "children": "Children",
+              "perimeter": "Property perimeter",
+              "pets": "Pets",
+              "assets": "Assets and valuables",
+              "other": "Other"
+            }
+          },
+          "alreadyCameras": {
+            "question": "Do you already have security cameras installed?",
+            "options": {
+              "yes": "Yes, I only want monitoring",
+              "no": "No, I want installation as well"
+            }
+          }
+        }
+      },
+      "buttons": {
+        "next": "Next",
+        "back": "Back",
+        "submit": "Submit"
       }
     }
   },
   "Blog": {
     "Hero": {
       "title": "C4 Blog",
-      "text": "Discover the latest news and tips on security on our blog. Stay informed about trends and updates in video surveillance and the protection of homes and businesses."
+      "text": "Discover the latest news and tips on security in our blog. Stay informed about trends and updates in video surveillance and the protection of homes and businesses."
     },
     "Posts": {
       "by": "by",
