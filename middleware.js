@@ -13,41 +13,44 @@ export default async function middleware(request) {
     const username = process.env.DASHBOARD_USER
     const password = process.env.DASHBOARD_PASSWORD
     const endpoint = `${process.env.DASHBOARD_HOST}/api/login/`
+    console.log({ username, password, endpoint })
 
-    try {
-      const authResponse = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password }),
-      })
+    // try {
+    const authResponse = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password }),
+      redirect: 'follow'
+    })
+    console.log({authResponse})
 
-      if (!authResponse.ok) {
-        console.error('Authentication failed')
-        return new NextResponse(
-          JSON.stringify({ error: 'Authentication failed' }),
-          { status: 401, headers: { 'Content-Type': 'application/json' } }
-        )
-      }
-
-      const data = await authResponse.json()
-      const token = data.data.token
-      console.log({ data, token})
-
-      const responseWithCookie = NextResponse.next()
-      responseWithCookie.cookies.set('Authorization', `Token ${token}`, { httpOnly: true })
-      console.debug('Token set:', token)
-
-      responseWithCookie.headers.set('Authorization', `Token ${token}`)
-      console.debug('Token added to headers:', token)
-      return responseWithCookie
-
-    } catch (error) {
-      console.error('Login failed:', error.message)
+    if (!authResponse.ok) {
+      console.error('Authentication failed')
       return new NextResponse(
-        JSON.stringify({ error: 'Authentication error', details: error }),
-        { status: 500, headers: { 'Content-Type': 'application/json' } }
+        JSON.stringify({ error: 'Authentication failed' }),
+        { status: 401, headers: { 'Content-Type': 'application/json' } }
       )
     }
+
+    const data = await authResponse.json()
+    const token = data.data.token
+    console.log({ data, token})
+
+    const responseWithCookie = NextResponse.next()
+    responseWithCookie.cookies.set('Authorization', `Token ${token}`, { httpOnly: true })
+    console.debug('Token set:', token)
+
+    responseWithCookie.headers.set('Authorization', `Token ${token}`)
+    console.debug('Token added to headers:', token)
+    return responseWithCookie
+
+    // } catch (error) {
+    //   console.error('Login failed:', error.message, error)
+    //   return new NextResponse(
+    //     JSON.stringify({ error: 'Authentication error', details: error }),
+    //     { status: 500, headers: { 'Content-Type': 'application/json' } }
+    //   )
+    // }
 
   }
 
