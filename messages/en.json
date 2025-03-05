@@ -24,6 +24,14 @@
       "title": "Privacy Notice",
       "description": "Learn about our privacy policy and how we protect your data at C4 Business and Residential."
     },
+    "terms-and-conditions": {
+      "title": "Terms and Conditions",
+      "description": "Learn about the terms and conditions of C4 Business and Residential."
+    },
+    "notFound": {
+      "title": "Page Not Found",
+      "description": "The page you are looking for does not exist. Return to the home page."
+    },
     "keywords": "security, security cameras, monitoring, Mérida, Yucatán, protection, high-definition cameras, alarms, access control",
     "author": "C4 Business and Residential"
   },

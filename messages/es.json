@@ -24,6 +24,14 @@
       "title": "Aviso de Privacidad",
       "description": "Conoce nuestra política de privacidad y cómo protegemos tus datos en C4 Empresarial y Residencial."
     },
+    "terms-and-conditions": {
+      "title": "Términos y Condiciones",
+      "description": "Conoce los términos y condiciones de uso de C4 Empresarial y Residencial."
+    },
+    "notFound": {
+      "title": "Página no encontrada",
+      "description": "La página que buscas no existe. Por favor, regresa a la página de inicio."
+    },
     "keywords": "seguridad, cámaras de seguridad, monitoreo, Mérida, Yucatán, protección, cámaras de alta definición, alarmas, control de acceso",
     "author": "C4 Empresarial y Residential"
   },

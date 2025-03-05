@@ -12,7 +12,12 @@ export async function getDocData(locale, name) {
 
 
   const fullPath = path.join(docsDirectory, locale, `${name}.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  let fileContents
+  try {
+    fileContents = fs.readFileSync(fullPath, 'utf8')
+  } catch (err) {
+    return null
+  }
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents)

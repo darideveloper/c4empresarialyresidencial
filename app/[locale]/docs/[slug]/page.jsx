@@ -1,7 +1,7 @@
 // Libs
 import { getTranslations } from 'next-intl/server'
 import { getDocData } from '@/libs/docs'
-
+import { notFound } from 'next/navigation'
 
 // Components
 import Title from '@/components/ui/Title'
@@ -10,14 +10,16 @@ import Title from '@/components/ui/Title'
 import '@/css/globals.sass'
 import '@/css/post-content.sass'
 
-// Current page
-const page = "privacy"
 
 export default async function PrivacyNotice({ params }) {
 
-  const { locale } = await params
-  const docData = await getDocData(locale, page)
+  // Get doc data
+  const { slug, locale } = await params
+  const docData = await getDocData(locale, slug)
 
+  if (!docData) {
+    notFound()
+  }
 
   return (
     <section
@@ -49,8 +51,16 @@ export default async function PrivacyNotice({ params }) {
 
 export async function generateMetadata({ params }) {
 
-  const { locale } = await params
+  const { locale, slug } = await params
   const t = await getTranslations({ locale, namespace: 'Meta' })
+
+  const docData = await getDocData(locale, slug)
+  if (!docData) {
+    return {
+      description: t('notFound.description'),
+      title: t('notFound.title'),
+    }
+  }
 
   const image = {
     url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/og-images/home.jpg`,
@@ -60,14 +70,14 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    description: t(`${page}.description`),
-    title: t(`${page}.title`),
+    description: t(`${slug}.description`),
+    title: t(`${slug}.title`),
 
     // Open Graph metadata
     openGraph: {
-      title: t(`${page}.title`),
-      description: t(`${page}.description`),
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/${page}`,
+      title: t(`${slug}.title`),
+      description: t(`${slug}.description`),
+      url: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/${slug}`,
       siteName: t('title'),
       images: [image],
       locale,
@@ -77,8 +87,8 @@ export async function generateMetadata({ params }) {
     // Twitter metadata
     twitter: {
       card: "summary_large_image",
-      title: t(`${page}.title`),
-      description: t(`${page}.description`),
+      title: t(`${slug}.title`),
+      description: t(`${slug}.description`),
       images: [image],
       creator: "@DeveloperDari",
     },
