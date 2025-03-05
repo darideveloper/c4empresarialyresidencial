@@ -227,8 +227,10 @@
           },
           "privacy": {
             "label": {
-              "pre": "Leí y acepto el",
-              "link": "aviso de privacidad"
+              "text1": "Leí y acepto el",
+              "link1": "aviso de privacidad",
+              "text2": "y los",
+              "link2": "términos y condiciones"
             },
             "errorMessage": "Debes aceptar el aviso de privacidad"
           }

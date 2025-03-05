@@ -27,17 +27,28 @@ export default function Form({ inputsData, onSubmit, submitText = "", tInputs, s
 
   // Translations
   const tPrivacy = useTranslations('General.Contact.form.inputs.privacy')
+
   const privacyLink = (
     <p>
-      {tPrivacy('label.pre')} &nbsp;
+      {tPrivacy('label.text1')} &nbsp;
       <Link 
-        href="/privacy"
+        href="/docs/privacy"
         className={`
           text-blue
         `}
         target="_blank"
       >
-        {tPrivacy('label.link')}
+        {tPrivacy('label.link1')}
+      </Link>
+      &nbsp;{tPrivacy('label.text2')}&nbsp;
+      <Link 
+        href="/docs/terms-and-conditions"
+        className={`
+          text-blue
+        `}
+        target="_blank"
+      >
+        {tPrivacy('label.link2')}
       </Link>
     </p>
   )

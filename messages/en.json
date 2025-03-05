@@ -227,8 +227,10 @@
           },
           "privacy": {
             "label": {
-              "pre": "I have read and agree to the",
-              "link": "privacy notice"
+              "text1": "I have read and accept the",
+              "link1": "privacy notice",
+              "text2": "and the",
+              "link2": "terms and conditions"
             },
             "errorMessage": "You must accept the privacy notice"
           }
