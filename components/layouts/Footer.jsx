@@ -17,7 +17,11 @@ export default function Footer() {
   const links = [
     {
       "name": "privacy",
-      "link": "/privacy"
+      "link": "/docs/privacy"
+    },
+    {
+      "name": "terms",
+      "link": "/docs/terms-and-conditions"
     }
   ]
 
