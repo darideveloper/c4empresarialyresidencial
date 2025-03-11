@@ -31,37 +31,13 @@ export default function HomePage() {
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": process.env.NEXT_PUBLIC_SITE_URL
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": tMeta('company.title'),
-          "item": `${process.env.NEXT_PUBLIC_SITE_URL}/es/company`
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": tMeta('residential.title'),
-          "item": `${process.env.NEXT_PUBLIC_SITE_URL}/es/residential`
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": tMeta('quote.title'),
-          "item": `${process.env.NEXT_PUBLIC_SITE_URL}/es/quote`
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": tMeta('blog.title'),
-          "item": `${process.env.NEXT_PUBLIC_SITE_URL}/es/blog`
-        }
-      ]
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": process.env.NEXT_PUBLIC_SITE_URL
+      }
+    ]
     },
   }
 
